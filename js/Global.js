@@ -144,13 +144,14 @@ $(document).ready(function () {
    $(".Fax-content-add-recipient").css('display','block').addClass('anim-txt').show(300);
   }
 
-  $("#backspace").click(function(){   
+  $("#backspace").click(function(){     
    $(".Fax-content-confirm ul li:first-child").css('height','70px');
    var faxtxt = $(".display").val();
    $(".fax-keyboard-section").hide();
    
-   $('.fax-keyboard-confirm-section').show().css('display','flex').addClass('anim-appear');
-   $(".hi-light-copy").show();
+   $('.fax-keyboard-confirm-section').show(500).css('display','flex').addClass('anim-appear');
+   $(".hi-light-copy").animate({marginTop:'75px', opacity:'1'}).show(10); 
+   
    $(".icon-rt").css('display','block');      
    $(".icon-rt .done-but, .fax-send-count").css('display','none');
    $(".icon-rt .but-text").css('visibility', 'visible');
@@ -168,7 +169,7 @@ $(document).ready(function () {
    $(".send-to-cont").click(function(){
       $(".icon-rt .send-but").css('display','none');
       $(".icon-rt .done-but").css('display','none');
-      $(".icon-rt .done-button").css('display','block');
+      $(".icon-rt .done-button").css('display','none');
       $(".Send-to-contact .Send-check-child1").css('margin-top','0px');
       $(".Fax-Section .Fax-content").hide();
       $(".Fax-content-add-recipient").addClass('anim-disappear').hide(600);
@@ -176,14 +177,15 @@ $(document).ready(function () {
       $(".Fax-content-confirm").hide();
       $(".Send-to-contact").css('display','block').addClass('anim-appear');
       $(".fax-keyboard-confirm-section").css('display','block').addClass('anim-appear');
-      $(".fax-keyboard-confirm-section .done-but").show();
+      $(".fax-keyboard-confirm-section .done-but").hide();
+      $(".fax-keyboard-confirm-section").css('width','696px');
       // $(".hi-light-copy").css('width','460px');
       $('.hi-light-copy').animate({width: '460px'},500); 
    });
-   $(".done-button").click(function(){
+   $(".set-tick").click(function(){
       $(".Fax-content-confirm").removeClass('anim-disappear');
-      $(".fax-txt-head-bind .fax-txt").hide();
-      $(".fax-keyboard-confirm-section").css('display','block').addClass('anim-txt');
+      $(".fax-txt-head-bind .fax-txt").hide();      
+      $(".fax-keyboard-confirm-section").css({display:'block', width: '480px'}).addClass('anim-txt');
       $(".Fax-content-confirm").css('display','block').addClass('anim-txt');
       $(".Send-to-contact").addClass('anim-disappear').hide(300);
       $(".fax-send-count").css('display','block');
@@ -527,9 +529,9 @@ $(document).ready(function () {
    });
 
    function faxkeyboard(){         
-      $('.hi-light-copy').hide();       
+      $('.hi-light-copy').animate({marginTop:'-80px', opacity:'0'}).hide(50);       
       $(".fax-keyboard-section").addClass('transitionBU');
-      $(".fax-keyboard-section").css({'opacity':'1', marginTop:'40px'}).show(100);      
+      $(".fax-keyboard-section").css({'opacity':'1', marginTop:'40px'}).show(50);      
       $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();      
       $(".Top-shade").hide();
       $(".Bottom-shade").hide();                  
@@ -692,10 +694,13 @@ $(document).ready(function () {
       if ($('input.faxcheckbox').prop('checked')) {         
          var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
          $('#count-checked-checkboxes').text(countCheckedCheckboxes);
+         var countCheckedCheckboxess = $checkboxes.filter(':checked').length;
+         $('#count-checked-checkboxess').text(countCheckedCheckboxes);
       }         
       $checkboxes.change(function(){
          var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
          $('#count-checked-checkboxes').text(countCheckedCheckboxes);
+         $('#count-checked-checkboxess').text(countCheckedCheckboxes);
          
          $('#edit-count-checked-checkboxes').val(countCheckedCheckboxes);
       });
@@ -837,5 +842,5 @@ $("span.down").click(function(){
                   var elem = document.querySelector('.carousel');
                   var instance = M.Carousel.getInstance(elem);
                   instance.set(middle_slide);
-            }, 1500);         
+            }, 1000);         
          });

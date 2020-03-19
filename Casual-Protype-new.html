@@ -8,7 +8,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
       <!-- <script src="https://github.com/bas2k/jquery.appear/blob/master/jquery.appear.js"></script> -->
       
-      <title>HP Casual UI Protype ++</title>
+      <title>HP Casual UI Protype</title>
       <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
       <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
    </head>
@@ -471,7 +471,7 @@
             </div>
             <!--Fax keyboard-->
 
-            <div class="fax-keyboard-confirm-section">
+            <div class="fax-keyboard-confirm-section" style="display: flex;">
                              
                <div class="Fax-content-confirm">
                   <ul class="">
@@ -530,7 +530,7 @@
             
                <div class="Send-to-contact Copy-Content" style="display: flex;">
                   
-                  <div class="">
+                  <div class="row" style="display: flex;">
                      <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
                         <li class="empty">&nbsp;</li>
                         <li class="Send-check-child1" style="display: flex;">                        
@@ -554,11 +554,22 @@
                            </div>
                            <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 3 &#62;</span></div>
                         </li>
+                        <li class="Send-check-child">                       
+                           <div class="set-content2">                                                               
+                              <input id="send-check5" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
+                              <label for="send-check5" class=""></label>
+                           </div>
+                           <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 4 &#62;</span></div>
+                        </li>
                      
                         <li>
                            &nbsp;
                         </li>
                   </ul>
+                  <div class="count-checkboxes-wrapper col">
+                     <span id="count-checked-checkboxess">0</span> 
+                     <img class="set-tick" src="./images/Icons_SVG/Group 2760@2x.png"/>
+                 </div>
                   
                   </div>
                </div>
