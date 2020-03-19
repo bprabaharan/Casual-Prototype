@@ -472,7 +472,7 @@
             <!--Fax keyboard-->
 
             <div class="fax-keyboard-confirm-section" style="display: flex;">
-                             
+              </div>               
                <div class="Fax-content-confirm">
                   <ul class="">
                      <li>&nbsp;</li>
@@ -530,7 +530,7 @@
             
                <div class="Send-to-contact Copy-Content" style="display: flex;">
                   
-                  <div class="row" style="display: flex;">
+                  <div class="" style="display: flex;">
                      <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
                         <li class="empty">&nbsp;</li>
                         <li class="Send-check-child1" style="display: flex;">                        
@@ -574,22 +574,23 @@
                   </div>
                </div>
 
-               <div class="fax-animation" style="margin: 0 auto;">
-                  <div class="fax-animation-content" style="text-align: center; vertical-align: middle;padding-top: 2%;display: inline-grid; ">
+               <div class="fax-animation">
+                  <div class="fax-animation-content" style="text-align: center; vertical-align: middle; display:grid; ">
                      <img class="fax-gif-anim" src="./images/Gif-images/fax_animation.gif">
-                     <span class="cancel-fax">Canceling...</span>
-                     <div class="show">
-                        <rece class="Scanning-txt">Scanning...</rece>
-                        <rece class="Scanning-txt">Printing...</rece>
-                        <rece class="Scanning-txt">Complete!</rece>
-                         <p class="show-lines"></p>
-                     </div> 
+                     <span class="cancel-fax">Canceling...</span>                      
+                  </div>
+                  <div class="show">
+                     <p class="Dialing-txt">Dialing &#60; contact/fax number&#62;...</p>
+                     <p class="Connecting-txt">Connecting &#60;contact/fax number&#62;...</p>
+                     <p class="Scanning">Scanning...</p>
+                     <p class="Faxing-page">Faxing page &#60;xx&#62; to &#60;fax number&#62;...</p>
+                     <p class="Fax-sent">Fax sent successfully! Pages sent &#60;x&#62;</p>
                   </div>
                </div>
-      </div>
+      
 
             <!--Settings Section starts here-->
-            <div class="Settings-Section Copy-Content" style="display: flex;">
+            <!-- <div class="Settings-Section Copy-Content" style="display: flex;">
               
                <div class="row">
                   <ul class="Section-checkbox-list col" id="Fax-input-but">
@@ -630,7 +631,7 @@
                      <img class="set-tick" src="./images/Icons_SVG/Group 2760@2x.png"/>
                  </div>
                </div>
-            </div>
+            </div> -->
             <!--Settings Section Ends here-->
                </div>
                <div class="icon-rt copy-button" style="padding-top: 77px;padding-left: 16px;">
@@ -674,36 +675,7 @@
          </div>
          <!--Landing Section Ends here-->
         
-         <!-- Dot loading Setion-->
-         <div class="row Dot-Section1 dis-flex">
-            <div class="icon-lt">
-               <a class="carousel-item" href="#" >
-               <img class="back-btn" src="./images/Icons_SVG/back_btn_u35.png">
-               </a>
-            </div>
-            <div class="Print-content Dot-Section" style="text-align: center; vertical-align: middle;padding-top: 3%;">
-               <img class="copy-gif-anim" src="./images/Gif-images/copy_animation.gif">
-               <p class="Copying-txt">Copying...</p>
-               <p class="Printing-txt">Printing...</p>
-               <p class="Complete-txt">Complete!</p>
-               <p class="Cancel-copy">Task Canceled</p>
-            </div>
-            <div class="" style="opacity: 0.3;">
-               <div class="icon-help">
-                  <a class="carousel-item" href="#" >
-                  <img class="Help-btn" src="./images/Icons_SVG/Help Icon.png">
-                  </a>
-               </div>
-            </div>
-            <div class="" style="opacity: 1.0; padding-left: 44px;">
-               <div class="icon-cancel">
-                  <a class="carousel-item" href="#" >
-                  <img class="Cancel-btn" src="./images/Icons_SVG/Cancel Icon.png">
-                  </a>
-               </div>
-            </div>
-         </div>
-         <!--Dot ending section--> 
+          
       </div>
       <!--  Scripts-->
       <script src="./js/materialize.js"></script>
