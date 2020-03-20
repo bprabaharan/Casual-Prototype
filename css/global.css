@@ -84,7 +84,7 @@
   }
 .dis-flex{display: flex;}
 .anim-txt{
-    animation: floatText 1s ease-in-out; 
+    animation: floatText 0.3s ease-in-out; 
     visibility: visible;
     white-space: nowrap;
     position: relative;
@@ -93,7 +93,7 @@
     visibility: hidden;
     position: relative;
     white-space: nowrap;
-    animation: floatText .5s ease-in-out;
+    animation: floatText .3s ease-in-out;
   }
   @keyframes floatText{
     from {
@@ -138,24 +138,24 @@
 .transitionLR{
     transition: 1s;
     transform: translateX(-130%);
-    animation: floatText 1s ease-in-out;
+    animation: floatText .3s ease-in-out;
 }
 .optionLandingLR{
     transition-timing-function: ease-in;
     transition: 1s;
     transform: translateX(0%);
-    animation: optionLand 1s ease-in-out;
+    animation: optionLand .3s ease-in-out;
 }
 .transitionLR-holder{
     transition-timing-function: ease-in;
     transition: 1s;
     transform: translateX(-80%);
-    animation: floatText 1s ease-in-out;
+    animation: floatText .3s ease-in-out;
 }
 .transitionLR-reload{
     position: relative;
     white-space: nowrap;
-    animation: reload .5s ease-in-out;
+    animation: reload .3s ease-in-out;
 }
 @keyframes reload{
     from {
@@ -179,21 +179,21 @@
     transition-timing-function: ease-in;
     transition: 1s;
     transform: translateX(0%);
-    animation: floatText 1s ease-in-out;
+    animation: floatText .3s ease-in-out;
 }
 .transitionCopy{
     transition-timing-function: ease-in;
-    transition: .8s;
+    transition: .3s;
     transform: translateX(0%);
 }
 .transitionRL{
         transition-timing-function: ease-in-out;
-        transition: .5s;
+        transition: .3s;
         transform: translateX(30%);
 }
 .transitionBU{
     position: absolute;
-    animation: shimmy .6s ease-in-out;
+    animation: shimmy .3s ease-in-out;
 }
 @keyframes shimmy {
     from {
@@ -308,15 +308,15 @@
   .Fax-Section ul{height: 206px; overflow-y: auto; float: left;}
   .Fax-content-add-recipient ul li{display: flex;}
   .Fax-content-add-recipient ul li:first-child{height: 70px;}
-  .Fax-content-add-recipient ul{margin-left: 20px;}
+  .Fax-content-add-recipient ul{margin-left: 40px;}
   .Fax-content-add-recipient{height: 240px; overflow-y: auto;}
   .Fax-content-confirm,.Send-to-contact{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
   .fax-keyboard-section{width: 640px; margin-top: 40px;}
   /* .Fax-content-confirm{width: 696px;} */
   .fax-keyboard-confirm-section{ padding-left: 25px; display: flex;}
   /* .fax-keyboard-confirm-section .Send-to-contact{width: 486px;} */
-  .fax-keyboard-confirm-section ul li, .Fax-content-add-recipient ul li{color: #fff; font-size: 2.875rem; height: 90px; }
-  .Fax-content-confirm ul li{display: flex;}
+  .Fax-content-confirm ul li, .Fax-content-add-recipient ul li{color: #fff; font-size: 2.875rem; height: 90px; }
+  .Fax-content-confirm ul li{padding-left: 25px; display: flex;}
 
   .Fax-content ul li{display: flex;}
   .Fax-content ul li:first-child{height: 70px;}
@@ -718,12 +718,19 @@
           .5em 0 0 white;}}
   
   /*Dot animation ends here*/
-  .Dot-Section .Cancel-copy, .Copying-txt, .Printing-txt, .Complete-txt , .show .show-line{
+  .Dot-Section .Cancel-copy, .Copying-txt, .Printing-txt, .Complete-txt , .show .show-line {
       color: white;
       font-family:  'hp-simplified';
       font-size: 46px;
       text-align: center;
   }
+  .Dialing-txt, .Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .cancel-fax{
+    color: white;
+    font-family:  'hp-simplified';
+    font-size: 42px;
+    text-align: center;
+}
+.cancel-fax{margin-top: 10%;}
   .swapMe-up{width: 700px; height: 78px; display: flex;}
   .swapMe-up .up1{    
       width: 392px;
@@ -983,7 +990,7 @@
 
 .anim-appear {
     animation-name: slide;
-    animation-duration: 0.6s;
+    animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -1002,7 +1009,7 @@
 
 .anim-disappear {
     animation-name: slide-d;
-    animation-duration: .6s;
+    animation-duration: .3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -1021,7 +1028,7 @@ to {
 /*second block animation*/
 .anim-appear-sec-block {
     animation-name: slidesecblock;
-    animation-duration: 1s;
+    animation-duration: .3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -1044,7 +1051,7 @@ to {
 
 .anim-appear-bot-top {
     animation-name: slidebottotop;
-    animation-duration: 1s;
+    animation-duration: .3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -1062,7 +1069,7 @@ to {
   }
 .anim-disappear-top-bot {
 animation-name: slidetoptobot;
-animation-duration: 1s;
+animation-duration: .3s;
 animation-timing-function: ease-in-out;
 animation-iteration-count: 1;
 animation-fill-mode: forwards;
@@ -1080,11 +1087,11 @@ to {
 }
 .anim-reappear-left-right {
     animation-name: slidelefttorgt;
-    animation-duration: 1s;
+    animation-duration: .6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    opacity: 0;
+    opacity: 0.3;
   }
   @keyframes slidelefttorgt {
     from {
@@ -1108,7 +1115,7 @@ button:focus {
     color: #fff;
     font-size: 36px;
     margin-top: 70px;
-    margin-left: 460px;
+    margin-left: 420px;
 }
 #count-checked-checkboxess{
     width: 50px;
@@ -1141,3 +1148,6 @@ button:focus {
     padding: 0 .75rem;
     min-height: 1px;
 }
+.fax-animation-content img{width: 120px; height: 120px;}
+.fax-animation .show p, .fax-gif-anim{margin: 0 auto;}
+.fax-animation{width: 100%;}

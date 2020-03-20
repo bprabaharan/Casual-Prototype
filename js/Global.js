@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+   $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css('display','none');
+   $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent").css('display','none');
    function delayScanMode(){
      
       
@@ -22,7 +23,7 @@ $(document).ready(function () {
              }, 300 );
 
   
-}
+   }
     $(".check-box-list input[type=checkbox]").click(function (event) {
        
        if ($(this).is(":checked")) {     
@@ -44,10 +45,7 @@ $(document).ready(function () {
           } 
        }
    });
-
- 
-
-    $(".check-box-list1 input[type=checkbox]").click(function (event) {       
+   $(".check-box-list1 input[type=checkbox]").click(function (event) {       
        if ($(this).is(":checked")) {
          history_details.pop();
           $(".check-box-list1 input[type=checkbox]").removeAttr("checked");
@@ -108,13 +106,6 @@ $(document).ready(function () {
  
 
  $(document).ready(function(){
-  // if($("#introduction .carousel a").hasClass('active')) {
-   //   console.log("testing first load");
-   //  $(".carousel .carousel-item").eq(0).removeClass("active");     
-    // var test = $(".carousel .carousel-item").eq(2).addClass("active");     
-     
- //  }  
-
    $(".icon-round").hide();
    $(".second-Row").hide();		 
    $(".third-Row").hide();
@@ -137,7 +128,7 @@ $(document).ready(function () {
    $(".Print-content-color .example3").hide();
    $(".Send-to-contact .Copy-Content").hide();	
    $(".Dot-Section .Cancel-copy").hide();
-   $(".option-landing").hide();
+   $(".option-landing").css('display','none');
    $(".option-landing-firstpage").hide();
    $(".optionli-child2").hide();
    $(".optionli-child3").hide();
@@ -145,12 +136,11 @@ $(document).ready(function () {
    $(".option-landing-sides").hide();
    $(".option-landing-color").hide();
    $(".option-landing-resize").hide();
-   $(".Printing-txt").hide();
-   $(".Complete-txt").hide();
-   $(".Copying-txt").hide();
+  
    $(".done-but-round").hide();
    $(".show .show-line").hide();
    $(".fax-keyboard-section").hide();
+   $(".Fax-content-confirm").hide();
    $(".Settings-Section ").hide();
    $(".Fax-content-add-recipient").hide();        
    $(".fax-keyboard-confirm-section").hide();
@@ -163,72 +153,75 @@ $(document).ready(function () {
 /*Add Recipient click button event*/
 
    $(".add-receipient").click(function(){
+      history_details.push("showFaxaddreceipient()");
       $(".send-but").hide();
-      $('.hi-light-copy').animate({width: '696px'},300);
-      // $(".fax-keyboard-confirm-section").css('width','696px');
+      $('.hi-light-copy').animate({width: '696px'},300);   
       $(".Fax-content-add-recipient .fax-check-child1").css('margin-top','0px');
-      $(".Fax-content-confirm").addClass('anim-disappear').hide(1000);
-      $(".Fax-content-confirm").css('width','696px;');
-      $(".fax-keyboard-confirm-section").css('width','696px');
-      setTimeout(addreceipient, 300);
+      $(".Fax-content-confirm").css('width','696px;').addClass('anim-disappear').hide(600);
+      $(".Fax-content-confirm").css('width','696px');
+      setTimeout( function(){
+         $(".Fax-content-add-recipient").css('display','block').addClass('anim-txt').show(300);
+      },300);
   });
 
-  function addreceipient(){
-   $(".Fax-content-add-recipient").css('display','block').addClass('anim-txt').show(300);
-  }
-
-  $("#backspace").click(function(){     
+  $("#backspace").click(function(){ 
+   history_details.push("showFaxbackspace()");
    $(".Fax-content-confirm ul li:first-child").css('height','70px');
+   // $(".fax-keyboard-confirm-section").css('width','696px');
    var faxtxt = $(".display").val();
-   $(".fax-keyboard-section").hide();
-   
-   $('.fax-keyboard-confirm-section').show(500).css('display','flex').addClass('anim-appear');
-   $(".hi-light-copy").animate({marginTop:'75px', opacity:'1'}).show(10); 
-   
+   $(".fax-keyboard-section").removeClass('transitionBU').addClass('anim-disappear-top-bot').hide(600);
+   $(".hi-light-copy").animate({width: '460px', marginTop:'75px', opacity:'1'}).show(); 
+   $('.Fax-content-confirm').show(100).css('display','flex').addClass('anim-appear');
+      
    $(".icon-rt").css('display','block');      
    $(".icon-rt .done-but, .fax-send-count").css('display','none');
    $(".icon-rt .but-text").css('visibility', 'visible');
-   $('.hi-light-copy').animate({width: '460px'},100);
-   $(".Fax-content-confirm").css('width','696px;');
-   
-   $(".fax-keyboard-confirm-section").css('width','480px');
+   $(".Fax-content-confirm").css({width:'696px', display:'block'});   
+   // $(".fax-keyboard-confirm-section").css('width','480px');
    $(".Top-shade").show();
    $(".Bottom-shade").show();
-   $(".fax-keyboard-confirm-section .fax-check-child1").css('margin-top','0px');
-   $('.fax-keyboard-confirm-section .fax-txt-head-bind').html(' <span class="fax-txt">'+ faxtxt +'</span> ');                  
+   $(".Fax-content-confirm .fax-check-child1").css('margin-top','0px');
+   $('.Fax-content-confirm .fax-txt-head-bind').html(' <span class="fax-txt">'+ faxtxt +'</span> ');                  
 });
 
 /*Send to contact click button event*/
    $(".send-to-cont").click(function(){
+      history_details.push("showFaxsendtocont()");
       $(".icon-rt .send-but").css('display','none');
       $(".icon-rt .done-but").css('display','none');
       $(".icon-rt .done-button").css('display','none');
+      $(".count-checkboxes-wrapper").css('opacity','1');
+      $(".Fax-content-confirm").removeClass('anim-disappear');
+      $(".Send-to-contact").removeClass('anim-disappear');     
+      $(".Send-to-contact").css('margin-top','0px');
+      $(".Top-shade").css('width','500px')
       $(".Send-to-contact .Send-check-child1").css('margin-top','0px');
       $(".Fax-Section .Fax-content").hide();
-      $(".Fax-content-add-recipient").addClass('anim-disappear').hide(600);
-      $(".fax-keyboard-confirm-section").css('width','485px');
+      $(".Fax-content-add-recipient").addClass('anim-disappear').hide(300);
+      $(".Send-to-contact").css('width','485px');
       $(".Fax-content-confirm").hide();
-      $(".Send-to-contact").css('display','block').addClass('anim-appear');
-      $(".fax-keyboard-confirm-section").css('display','block').addClass('anim-appear');
-      $(".fax-keyboard-confirm-section .done-but").hide();
-      $(".fax-keyboard-confirm-section").css('width','696px');
+      $(".Send-to-contact").css('display','block').addClass('anim-appear');      
+      $(".Send-to-contact .done-but").hide();
+      $(".Send-to-contact").css('width','696px');
       // $(".hi-light-copy").css('width','460px');
-      $('.hi-light-copy').animate({width: '460px'},500); 
+      $('.hi-light-copy').animate({width: '460px'},300); 
    });
    $(".set-tick").click(function(){
-      $(".Fax-content-confirm").removeClass('anim-disappear');
+      $(".count-checkboxes-wrapper").css('opacity','0');
+      $(".Fax-content-confirm ul li:first-child").css('height','70px');
+      $(".Fax-content-confirm").removeClass('anim-disappear');      
+      $(".Fax-content-add-recipient").removeClass('anim-disappear');
       $(".fax-txt-head-bind .fax-txt").hide();      
-      $(".fax-keyboard-confirm-section").css({display:'block', width: '480px'}).addClass('anim-txt');
+      $(".Fax-content-confirm").css({display:'block', width: '480px'}).addClass('anim-txt');
       $(".Fax-content-confirm").css('display','block').addClass('anim-txt');
-      $(".Send-to-contact").addClass('anim-disappear').hide(300);
+      $(".Send-to-contact").removeClass('anim-txt').addClass('anim-disappear').hide(300);
       $(".fax-send-count").css('display','block');
-      $(".fax-keyboard-confirm-section .fax-check-child1").css('margin-top','0px');
-      $(".icon-rt .send-but").css('display','block');
+      $(".Fax-content-confirm .fax-check-child1").css('margin-top','0px');
+      $(".icon-rt .send-but, .icon-rt").css('display','block');
       $(".icon-rt .done-but").css('display','none');
       $(".icon-rt .done-button").css('display','none');
    });
-   $(".icon-rt .send-but").click(function(){
-         $(".Fax-content-confirm").hide();
+   $(".icon-rt .send-but").click(function(){    
          $(".icon-rt, .hi-light-copy ").hide();
          $(".Top-shade").hide();
          $(".Bottom-shade").hide();
@@ -236,42 +229,59 @@ $(document).ready(function () {
          $(".Cancel-btn").css('opacity','1');
          $(".fax-animation").addClass('anim-appear').show(500);
          $(".fax-keyboard-confirm-section").css('width','696px');
-         
-         var index = 0;
-         var total = $('rece').size() - 1;
-         setInterval(function(){               
-            var rece = $('rece:eq(' + index + ')');
-            $('p.show-lines').html(rece.text()).fadeIn("slow");               
-            if(index == total){
-               index = 0;
-            } else {
-               index++;
-            }               
-         }, 3800);
+         //msgdisplay();
+         function msgdisplay1(){
+            $(".Dialing-txt").css({display:'block', opacity:'1'});            
+         }
+         function msgdisplay2(){
+            $(".Dialing-txt").css({display:'none', opacity:'0'});
+            $(".Connecting-txt").css('display','block');
+         }
+         function msgdisplay3(){
+            $(".Connecting-txt").css('display','none');
+            $(".Dialing-txt").css('display','none');
+            $(".Scanning").css('display','block');
+         }
+         function msgdisplay4(){
+            $(".Connecting-txt").css('display','none');
+            $(".Dialing-txt").css('display','none');
+            $(".Scanning").css('display','none');
+            $(".Faxing-page").css('display','block');
+         }
+         function msgdisplay5(){
+            $(".Connecting-txt").css('display','none');
+            $(".Dialing-txt").css('display','none');
+            $(".Scanning").css('display','none');
+            $(".Faxing-page").css('display','none');
+            $(".Fax-sent").css('display','block');
+         }
+         setTimeout(msgdisplay1, 0);
+         setTimeout(msgdisplay2, 3000);
+         setTimeout(msgdisplay3, 6000);
+         setTimeout(msgdisplay4, 9000);
+         setTimeout(msgdisplay5, 11000);
 
+         $(".Fax-content-confirm").hide();         
             $(".icon-cancel .Cancel-btn").click(function(){
-                  $(".Cancel-btn").css('opacity','0.3');
-                  $(".fax-animation").hide();
-                  $(".fax-keyboard-confirm-section").addClass('anim-reappear-left-right');
-                  $(".Fax-content-confirm").show();
-                  $(".icon-rt, .hi-light-copy ").show();
-                  $(".Top-shade").show();
-                  $(".Bottom-shade").show();
-                  $(".fax-keyboard-confirm-section").css('width','486px');
+               $(".Cancel-btn").css('opacity','0.3');                  
+               $(".fax-gif-anim").hide();
+               $(".fax-animation .show").hide();            
+               $(".fax-animation-content .cancel-fax").css('display','block').show(2000);
+                 setTimeout( function(){ $(".Print-content-main").css('display','block')},4000);
+                 setTimeout( function(){ $(".Main-content").hide(); location.reload();},4000);   
+                               
             });
+
+
          setTimeout(faxanimation, 12800);
    });
 
    function faxanimation(){
       console.log("animation end");
+      $(".Print-content-main").css('display','block');
       $(".Cancel-btn").css('opacity','0.3');
-      $(".fax-animation").hide();
-      $(".fax-keyboard-confirm-section").addClass('anim-reappear-left-right');
-      $(".Fax-content-confirm").show();
-      $(".icon-rt, .hi-light-copy ").show();
-      $(".Top-shade").show();
-      $(".Bottom-shade").show();
-      $(".fax-keyboard-confirm-section").css('width','486px');
+      $(".fax-animation, .Print-content-copy").hide();
+      location.reload();
    }
    $(".fax-keyboard-confirm-section .done-but").click(function(){
        $(".fax-keyboard-confirm-section .hi-light-copy").hide();
@@ -296,7 +306,10 @@ $(document).ready(function () {
    }
    
    $(".send-contact").click(function(){
-       $(".Fax-content-add-recipient").hide();
+       $(".Fax-content-add-recipient").addClass('anim-disappear').hide();
+       $(".hi-light-copy").css('width','480px');
+       $(".Fax-Section").addClass('anim-disappear').hide(300);
+       $(".Top-shade").css('width','500px')
        $(".Send-to-contact").show();
        $('.fax-keyboard-confirm-section .done-but').show();       
    });
@@ -547,7 +560,7 @@ $(document).ready(function () {
 
 
    $(".Fax-Page").click(function(){ 
-      history_details.push("showLandingPage()"); 
+      history_details.push("showFaxLandingPage()"); 
       if($(this).hasClass('active')) {
          $(".back-btn").css('opacity','1'); 
          $('.hi-light-copy').animate({width: '690px'},500);     
@@ -569,13 +582,13 @@ $(document).ready(function () {
    $(".fax-number").click(function(){
          history_details.push("showFirstLandingPage()");
          $(".Fax-Section").addClass('anim-disappear');         
-         $(".Fax-Section").hide(1000);        
-         setTimeout(faxkeyboard,1100);         
+         $(".Fax-Section").hide(300);        
+         setTimeout(faxkeyboard,600);         
    });
 
    function faxkeyboard(){         
       $('.hi-light-copy').animate({marginTop:'-80px', opacity:'0'}).hide(50);       
-      $(".fax-keyboard-section").addClass('transitionBU');
+      $(".fax-keyboard-section").addClass('anim-appear-bot-top');
       $(".fax-keyboard-section").css({'opacity':'1', marginTop:'40px'}).show(50);      
       $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();      
       $(".Top-shade").hide();
@@ -587,10 +600,10 @@ $(document).ready(function () {
          $(".clear").show();
       });
 
-      $(".back_btn").click(function(){
-          $(".keyboard").hide();
-          $(".fax_btn").show();
-      });
+      // $(".back_btn").click(function(){
+      //     $(".keyboard").hide();
+      //     $(".fax_btn").show();
+      // });
       
       var $display = $('#display');
       $display.val();
