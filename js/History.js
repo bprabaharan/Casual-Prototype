@@ -5,6 +5,14 @@ $(".back-btn").click(function(){
     eval(history_details[history_details.length-1]);
 });
 
+function showCopyLandingPage(){
+    history_details.pop();
+    location.reload(false);
+    // $(".Main-content").hide();
+    // $(".Print-content-main").css('width','696px').delay(100).show(100);
+    // $(".back-btn").css('opacity','.3');
+    
+}
 function showLandingPage(){    
     $(".hi-light-copy").animate({marginTop:'-50px',opacity:'0'},1000).hide();
     $(".Fax-Section").hide(1000);
@@ -22,7 +30,12 @@ function showFirstLandingPage(){
     $(".Fax-Section").delay(1500).removeClass('anim-disappear').addClass('anim-reappear-left-right').show(300);    
     history_details.pop();
 }
-
+function showCopies1(){
+    console.log('showCopies1');	
+    window.doneButTick1 = function(){ alert('hi')};
+    // history_details.pop();
+    console.log(history_details);
+}
 function showOption(){
     console.log('showOption');
     $(".option-content, .option-function").css({'opacity':'0.3'});

@@ -2,6 +2,7 @@ $(document).ready(function () {
 
    function delayScanMode(){
      
+      
       $(".option-landing-scanmode").hide();
       $(".option-landing").hide();
       $(".option-landing-sides").hide();
@@ -18,18 +19,28 @@ $(document).ready(function () {
          $(".option-landing").css({'opacity':'1','visibility': 'visible'}); 
          }, 600 );
          // $(".option-function").css({'opacity':'1','visibility': 'visible'}); 
-             }, 600 );
+             }, 300 );
 
   
 }
     $(".check-box-list input[type=checkbox]").click(function (event) {
-       if ($(this).is(":checked")) {          
+       
+       if ($(this).is(":checked")) {     
+         history_details.pop();
          $(".check-box-list input[type=checkbox]").removeAttr("checked"); 
          $('#'+this.attributes.id.value).attr("checked", "checked");          
-          if($(this).val() ==="Document" || $(this).val() ==="Photo" || $(this).val() ==="ID Card"){                              
+          if($(this).val() ==="Document" || $(this).val() ==="Photo" || $(this).val() ==="ID Card"){ 
+                                     
              $('#scan').find('span').text(event.target.value); 
              $(".option-landing .optionli").css('margin-top','0px');
-             setTimeout(delayScanMode, 500)                       
+             $(".option-landing-scanmode").css({'opacity':'0.3'});
+            setTimeout( function(){
+               $(".option-landing-scanmode .option-content").animate({'margin-left':'-2.162em'},600);
+               $(".option-landing-scanmode .option-function").hide(200);
+            // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
+            setTimeout(delayScanMode, 300);
+            }, 600 );
+                                    
           } 
        }
    });
@@ -38,34 +49,56 @@ $(document).ready(function () {
 
     $(".check-box-list1 input[type=checkbox]").click(function (event) {       
        if ($(this).is(":checked")) {
+         history_details.pop();
           $(".check-box-list1 input[type=checkbox]").removeAttr("checked");
           $('#'+this.attributes.id.value).attr("checked", "checked");                                 
            if($(this).val() ==="1 to 1-Sided" || $(this).val() ==="1 to 2-Sided"){ 
+              console.log('checked Sided');
              $("#sides").find('span').text(event.target.value);
              $(".option-landing .optionli").css('margin-top','-97px'); 
-             setTimeout(delayScanMode, 500);
+             $(".option-landing-sides").css({'opacity':'0.3'});
+             setTimeout( function(){
+                $(".option-landing-sides .option-content").animate({'margin-left':'-2.162em'},600);
+                $(".option-landing-sides .option-function").hide(200);
+             // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
+             setTimeout(delayScanMode, 300);
+            }, 600 ); 
           }	
        }
    });
    $(".check-box-list2 input[type=checkbox]").click(function (event) {
-       if ($(this).is(":checked")) {          
+       if ($(this).is(":checked")) {   
+         history_details.pop();       
           $(".check-box-list2 input[type=checkbox]").removeAttr("checked");
           $('#'+this.attributes.id.value).attr("checked", "checked");            
           if($(this).val() ==="Automatic" || $(this).val() ==="Color" || $(this).val() ==="Grayscale" ){                   
              $('#color').find('span').text(event.target.value);
              $(".option-landing .optionli").css('margin-top','-185px');               
-             setTimeout(delayScanMode, 500);                
+             $(".option-landing-color").css({'opacity':'0.3'});
+             setTimeout( function(){
+                $(".option-landing-color .option-content").animate({'margin-left':'-2.162em'},600);
+                $(".option-landing-color .option-function").hide(200);
+             // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
+             setTimeout(delayScanMode, 300);
+            }, 600 );                   
           }
        }
    });
    $(".check-box-list3 input[type=checkbox]").click(function (event) {
        if ($(this).is(":checked")) {
+         history_details.pop();
           $(".check-box-list3 input[type=checkbox]").removeAttr("checked");
           $('#'+this.attributes.id.value).attr("checked", "checked");            
           if($(this).val() ==="None" || $(this).val() ==="Custom" || $(this).val() ==="Fit to Page" ){             
              $('.option-landing #resize').find('span').text(event.target.value);
              $(".option-landing .optionli").css('margin-top','-270px'); 
-             setTimeout(delayScanMode, 500); 
+             $(".option-landing-resize").css({'opacity':'0.3'});
+             setTimeout( function(){
+                $(".option-landing-resize .option-content").animate({'margin-left':'-2.162em'},600);
+                $(".option-landing-resize .option-function").hide(200);
+             // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
+             setTimeout(delayScanMode, 300);
+            }, 600 );  
            }
        }
    });
@@ -290,25 +323,26 @@ $(document).ready(function () {
       if(history_details.indexOf('delayScanMode()') === -1){
          history_details.push('delayScanMode()');
       }
-      console.log("option clicked",history_details);
-    $(".option-landing").css({'opacity':'0.3'});
-    setTimeout( function(){
-       $(".option-landing .option-content").animate({'margin-left':'-2.162em'},600);
-       $(".option-landing .option-function").hide(200);
-      setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 200 );
-    }, 600 );
-   
-   $(".option-landing-scanmode .optionli-scan-child1").css('margin-top','-10px');
-   $(".option-landing-scanmode").css({'opacity':'0.3','position':'fixed'}); 
-   setTimeout( function(){   
-      $(".option-content").css({'margin-left':'2.162em'});
-      $(".option-landing-scanmode").css({ 'margin-left': '0px'});
-   },600 );
-   setTimeout( function(){$(".option-landing-scanmode").show();  }, 700 );
-   setTimeout( function(){
-      $(".option-content").animate({ 'margin-left': '0px'},600);
-      setTimeout( function(){ $(".option-landing-scanmode").css({'opacity':'1'}); },600);
-   }, 800 );
+      console.log("option scan clicked",history_details);
+
+      $(".option-landing").css({'opacity':'0.3'});
+      setTimeout( function(){
+         $(".option-landing .option-content").animate({'margin-left':'-2.162em'},600);
+         $(".option-landing .option-function").hide(200);
+        setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
+      }, 600 );
+     
+     $(".option-landing-scanmode .optionli-scan-child1").css('margin-top','-10px');
+     $(".option-landing-scanmode").css({'opacity':'0.3','position':'fixed'}); 
+     setTimeout( function(){   
+        $(".option-content").css({'margin-left':'2.162em'});
+        $(".option-landing-scanmode").css({ 'margin-left': '0px'});
+     },900 );
+     setTimeout( function(){$(".option-landing-scanmode").show();  }, 900 );
+     setTimeout( function(){
+        $(".option-content").animate({ 'margin-left': '0px'},600);
+        setTimeout( function(){ $(".option-landing-scanmode").css({'opacity':'1'}); },600);
+     }, 900 );
 
 
     if( event.target.textContent ==="Document"){ 
@@ -326,25 +360,27 @@ $(document).ready(function () {
       if(history_details.indexOf('delayScanMode()') === -1){
          history_details.push('delayScanMode()');
       }
-      console.log("option clicked",history_details);
+      console.log("option sides clicked",history_details);
       $(".option-landing").css({'opacity':'0.3'});
       setTimeout( function(){
          $(".option-landing .option-content").animate({'margin-left':'-2.162em'},600);
          $(".option-landing .option-function").hide(200);
-        setTimeout( function(){$(".option-landing").css({'margin-left':'-82.162em'});  }, 200 );
+        setTimeout( function(){$(".option-landing").css({'margin-left':'-82.162em'});  }, 300 );
       }, 600 );
 
       $(".option-landing-sides .optionli-land-child1").css('margin-top','-21px');
       $(".option-landing-sides").css({'opacity':'0.3','position':'fixed'}); 
       setTimeout( function(){   
          $(".option-content").css({'margin-left':'2.162em'});
+         $(".option-content").css({'margin-left':'20%'});
          $(".option-landing-sides").css({ 'margin-left': '0px'});
-      },600 );
-      setTimeout( function(){$(".option-landing-sides").show();  }, 700 );
+      },900 );
+      setTimeout( function(){$(".option-landing-sides").show();$(".option-content").css({'margin-left':'35%'});  }, 900 );
       setTimeout( function(){
          $(".option-content").animate({ 'margin-left': '0px'},600);
+
          setTimeout( function(){ $(".option-landing-sides").css({'opacity':'1'}); },600);
-      }, 800 );
+      }, 900 );
 
        if(event.target.textContent ==="1 to 1-Sided"){ 
           $(".optionli-land-child1").css('margin-top','-21px');
@@ -359,24 +395,26 @@ $(document).ready(function () {
       if(history_details.indexOf('delayScanMode()') === -1){
          history_details.push('delayScanMode()');
       }
-      console.log("option clicked",history_details);
+      console.log("option color clicked",history_details);
       $(".option-landing").css({'opacity':'0.3'});
       setTimeout( function(){
          $(".option-landing .option-content").animate({'margin-left':'-2.162em'},600);
          $(".option-landing .option-function").hide(200);
-        setTimeout( function(){$(".option-landing").css({'margin-left':'-112.162em'});  }, 200 );
+        setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
       }, 600 );
-      $(".option-landing-color .optionli-land-child1").css('margin-top','-24px');
-      $(".option-landing-color").css({'opacity':'0.3','position':'fixed'}); 
-      setTimeout( function(){   
-         $(".option-content").css({'margin-left':'2.162em'});
-         $(".option-landing-color").css({ 'margin-left': '0px'});
-      },600 );
-      setTimeout( function(){$(".option-landing-color").show();  }, 700 );
-      setTimeout( function(){
-         $(".option-content").animate({ 'margin-left': '0px'},600);
-         setTimeout( function(){ $(".option-landing-color").css({'opacity':'1'}); },600);
-      }, 800 );
+     
+     $(".option-landing-color .optionli-scan-child1").css('margin-top','-24px');
+     $(".option-landing-color").css({'opacity':'0.3','position':'fixed'}); 
+     setTimeout( function(){   
+        $(".option-content").css({'margin-left':'2.162em'});
+        $(".option-landing-color").css({ 'margin-left': '0px'});
+     },900 );
+     setTimeout( function(){$(".option-landing-color").show();  }, 900 );
+     setTimeout( function(){
+        $(".option-content").animate({ 'margin-left': '0px'},600);
+        setTimeout( function(){ $(".option-landing-color").css({'opacity':'1'}); },600);
+     }, 900 );
+      
 
        if(event.target.textContent ==="Automatic"){ 
           $(".optionli-color-child1").css('margin-top','-24px');
@@ -393,25 +431,26 @@ $(document).ready(function () {
       if(history_details.indexOf('delayScanMode()') === -1){
          history_details.push('delayScanMode()');
       }
-      console.log("option clicked",history_details);
+      console.log("option resize clicked",history_details);
       $(".option-landing").css({'opacity':'0.3'});
       setTimeout( function(){
          $(".option-landing .option-content").animate({'margin-left':'-2.162em'},600);
          $(".option-landing .option-function").hide(200);
-        setTimeout( function(){$(".option-landing").css({'margin-left':'-152.162em'});  }, 200 );
+        setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
       }, 600 );
-      $(".option-landing-resize .optionli-land-child1").css('margin-top','-24px');
-      $(".option-landing-resize").css({'opacity':'0.3','position':'fixed'}); 
-      setTimeout( function(){   
-         $(".option-content").css({'margin-left':'2.162em'});
-         $(".option-landing-resize").css({ 'margin-left': '0px'});
-      },600 );
-      setTimeout( function(){$(".option-landing-resize").show();  }, 700 );
-      setTimeout( function(){
-         $(".option-content").animate({ 'margin-left': '0px'},600);
-         setTimeout( function(){ $(".option-landing-resize").css({'opacity':'1'}); },600);
-      }, 800 );
-
+     
+     $(".option-landing-resize .optionli-scan-child1").css('margin-top','-24px');
+     $(".option-landing-resize").css({'opacity':'0.3','position':'fixed'}); 
+     setTimeout( function(){   
+        $(".option-content").css({'margin-left':'2.162em'});
+        $(".option-landing-resize").css({ 'margin-left': '0px'});
+     },900 );
+     setTimeout( function(){$(".option-landing-resize").show();  }, 900 );
+     setTimeout( function(){
+        $(".option-content").animate({ 'margin-left': '0px'},600);
+        setTimeout( function(){ $(".option-landing-resize").css({'opacity':'1'}); },600);
+     }, 900 );
+      
        if(event.target.textContent ==="None"){ 
           $(".optionli-resize-child1").css('margin-top','-24px');
        }else if( event.target.textContent ==="Custom" )
@@ -431,6 +470,8 @@ $(document).ready(function () {
    });
 
    $("#introduction .copy-page").click(function(){
+      console.log('copy Landing-copy');
+      history_details.push("showCopyLandingPage()");
          if($(this).hasClass('active')) {
             $(".back-btn").css('opacity','1');                        
             $(".back-btn").css('cursor','pointer');  
@@ -450,19 +491,18 @@ $(document).ready(function () {
          }       
      });
    
-   var history_details = [];
-   $(".back-btn").click(function(){
-      console.log(history_details,history_details.length-1);
-      eval(history_details[history_details.length-1]);
-   })
 
-   $(".copy-num").click(function(){		 	
+   $(".copy-num").click(function(){		 
+      console.log('copies1 click');
+      history_details.push('showCopies1()');
       /*$(".hi-light-copy").css({'width':'450px'},{'transition':' width 2s'});*/
       $('.hi-light-copy').animate({width: '552px'},100);     
       // $(".hi-light-copy").addClass('move-me-3');
       // $(".icon-round").css('transition','1s');
       // $(".icon-round").show(1000);
+      $(".scrollspy").css({'width':'525px'}); 
       $(".copy-button .done-but").animate({width: '80px', height : '90px'},100);
+
       $(".copy-button .done-but").addClass('move-me-2');	   
       // $(".Copy-Content .example1").addClass('First-block-animation').hide(500);	
       $(".Copy-Content .example1").animate({left: '-2.162em'},300);
@@ -484,7 +524,13 @@ $(document).ready(function () {
    });
  
 
-   $(".Print-content-copy .done-but-tick1").click(function(){	
+   $(".Print-content-copy .done-but-tick1").click(function(){
+      console.log('copy button click');	
+      doneButTick1()
+      //$(".scrollspy").css({'width':'680px'});   
+   });
+
+   function doneButTick1(){
       $('.hi-light-copy').animate({width: '420px'},100);
       $(".example2 .copy-ul .copy-num1").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
       $(".example2 .menu-num").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
@@ -497,8 +543,7 @@ $(document).ready(function () {
       $(".Print-content-copy .example2").hide(100);
       $(".Print-content-copy .example1").show(300);	
       $(".Copy-Content .example1").animate({"opacity": "1"}).show(600);	 
-      //$(".scrollspy").css({'width':'680px'});   
-   });
+   }
 
 
    $(".Fax-Page").click(function(){ 
@@ -578,7 +623,7 @@ $(document).ready(function () {
       }
   });
   $(".options").click(function(){
-     console.log('hi');
+     console.log('click options');
       history_details.push("showOption()");
       $(".option-landing ul li:first-child").css('height','82px');
       $(".done-but").hide();
@@ -593,6 +638,7 @@ $(document).ready(function () {
       $(".example1").hide(); 
       $(".Print-content-copy .option-landing").show();
       onScreenEntryOptions(); 
+      $(".scrollspy").css({'width':'696px'}); 
       $(".Print-content-copy .option-landing .optionli").css('margin-top','-1px'); 
    }
    function hidebut(){    
