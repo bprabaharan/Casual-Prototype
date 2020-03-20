@@ -1,6 +1,8 @@
 $(document).ready(function () {
+  
    $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css('display','none');
    $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent").css('display','none');
+
    function delayScanMode(){
      
       
@@ -106,6 +108,7 @@ $(document).ready(function () {
  
 
  $(document).ready(function(){
+    
    $(".icon-round").hide();
    $(".second-Row").hide();		 
    $(".third-Row").hide();
@@ -149,7 +152,7 @@ $(document).ready(function () {
 
 
    $(".icon-cancel .Cancel-btn").css('opacity','0.3');
-
+   
 /*Add Recipient click button event*/
 
    $(".add-receipient").click(function(){

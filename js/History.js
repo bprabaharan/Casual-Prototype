@@ -35,8 +35,19 @@ function showFirstLandingPage(){
 }
 function showCopies1(){
     console.log('showCopies1');	
-    window.doneButTick1 = function(){ alert('hi')};
-    // history_details.pop();
+    $('.hi-light-copy').animate({width: '420px'},100);
+    $(".example2 .copy-ul .copy-num1").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
+    $(".example2 .menu-num").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
+    $(".copy-button .done-but").animate({width: '210px', height : '90px'},100);
+    $(".copy-button .but-text").show(100);
+    $(".copy-button .done-but-tick1").hide(0);
+    $(".options").show();
+    $(".copy-button .done-but").removeClass('move-me-2');	
+    $(".copy-button").show(10);
+    $(".Print-content-copy .example2").hide(100);
+    $(".Print-content-copy .example1").show(300);	
+    $(".Copy-Content .example1").animate({"opacity": "1"}).show(600);
+    history_details.pop();
     console.log(history_details);
 }
 function showFaxbackspace(){   
