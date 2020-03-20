@@ -483,15 +483,13 @@
                         <div class="fax-txt-head-bind"></div>
                         <span class="fax-send-count">&#60;<span id="count-checked-checkboxes">0</span> Recipients&#62;</span>
                      </li>
-                     <li class="fax-check-child">
-                       
+                     <li class="fax-check-child">                       
                         <div class="fax-content2">                                                               
                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
                         </div>
                         <div class="fax-txt-head add-receipient"><span style="padding-left: 10px;">Add Recipient</span></div>
                      </li>
-                     <li class="fax-check-child">
-                       
+                     <li class="fax-check-child">                       
                         <div class="fax-content2">                                                               
                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
                         </div>
@@ -510,26 +508,20 @@
                         <img class="copy-icon" src="./images/Icons_SVG/u17.png">                      
                         <div class="fax-content2" style="padding-left: 10px;">                                                               
                            <span class="send-to-cont">Send to Contacts</span> 
-                        </div>
-                                              
+                        </div>                                              
                      </li>
-                     <li class="fax-check-child">
-                       
+                     <li class="fax-check-child">                       
                         <div class="fax-content2">                                                               
                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
                         </div>
                         <div class="fax-txt-head fax-number1"><span style="padding-left: 10px;">Enter FAX Number</span></div>
-                     </li>
-                    
+                     </li>                    
                      <li>
                         &nbsp;
                      </li>
                  </ul>
-
-               </div>
-            
-               <div class="Send-to-contact Copy-Content" style="display: flex;">
-                  
+               </div>            
+               <div class="Send-to-contact Copy-Content" style="display: flex;">                  
                   <div class="" style="display: flex;">
                      <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
                         <li class="empty">&nbsp;</li>
@@ -580,11 +572,12 @@
                      <span class="cancel-fax">Canceling...</span>                      
                   </div>
                   <div class="show">
-                     <p class="Dialing-txt">Dialing &#60; contact/fax number&#62;...</p>
-                     <p class="Connecting-txt">Connecting &#60;contact/fax number&#62;...</p>
+                     <!-- <p class="Dialing-txt">'Dialing &#60; contact/ '+' <div class="fax-txt-head-bind"></div> + ' &#62;...'</p> -->
+                     <p class="Dialing-txt">'Dialing &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span> &#62;...'</p>                     
+                     <p class="Connecting-txt">Connecting &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span>&#62;...</p>
                      <p class="Scanning">Scanning...</p>
-                     <p class="Faxing-page">Faxing page &#60;xx&#62; to &#60;fax number&#62;...</p>
-                     <p class="Fax-sent">Fax sent successfully! Pages sent &#60;x&#62;</p>
+                     <p class="Faxing-page">Faxing page &#60;<span class='count-checked-checkboxes1'></span>&#62; to &#60;<span class='fax-animation-count'></span> &#62;...</p>
+                     <p class="Fax-sent">Fax sent successfully! Pages sent &#60;<span class='fax-animation-count'></span> &#62;</p>
                   </div>
                </div>
       
