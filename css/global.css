@@ -1151,3 +1151,13 @@ button:focus {
 .fax-animation-content img{width: 120px; height: 120px;}
 .fax-animation .show p, .fax-gif-anim{margin: 0 auto;}
 .fax-animation{width: 100%;}
+
+.carousel .copy-page{ background-image: url("../images/Icons_SVG/copy_l.svg");}
+.carousel .copy-page:hover,
+.carousel .copy-page:focus {
+    background: #fff;
+    border-radius: 50%;
+    width: 166px;
+    height: 166px;
+    background-image: url('../images/Icons_SVG/copy_l.svg');  
+}

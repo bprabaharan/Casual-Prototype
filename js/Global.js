@@ -136,6 +136,7 @@ $(document).ready(function () {
    $(".Fax-content-confirm ul li:first-child").css('height','70px');
    // $(".fax-keyboard-confirm-section").css('width','696px');
    var faxtxt = $(".display").val();
+   var faxtext = $(".display").val();
    $(".fax-keyboard-section").removeClass('transitionBU').addClass('anim-disappear-top-bot').hide(600);
    $(".hi-light-copy").animate({width: '460px', marginTop:'75px', opacity:'1'}).show(); 
    $('.Fax-content-confirm').show(100).css('display','flex').addClass('anim-appear');
@@ -148,7 +149,8 @@ $(document).ready(function () {
    $(".Top-shade").show();
    $(".Bottom-shade").show();
    $(".Fax-content-confirm .fax-check-child1").css('margin-top','0px');
-   $('.Fax-content-confirm .fax-txt-head-bind').html(' <span class="fax-txt">'+ faxtxt +'</span> ');                  
+   $('.Fax-content-confirm .fax-txt-head-bind').html(' <span class="fax-txt">'+ faxtxt +'</span> '); 
+   $('.fax-animation-count').html(' <span class="fax-txt1">'+ faxtext +'</span> ');                  
 });
 
 /*Send to contact click button event*/
@@ -443,8 +445,10 @@ $(document).ready(function () {
       //$(".second-Row").addClass('secondrow-push');
    });
 
+
    $("#introduction .copy-page").click(function(){
          if($(this).hasClass('active')) {
+            
             $(".back-btn").css('opacity','1');                        
             $(".back-btn").css('cursor','pointer');  
             $(".Smarttask-Page").animate({zoom:'.9', opacity:'.2'}).hide(300);
@@ -704,11 +708,14 @@ $(document).ready(function () {
          $('#count-checked-checkboxes').text(countCheckedCheckboxes);
          var countCheckedCheckboxess = $checkboxes.filter(':checked').length;
          $('#count-checked-checkboxess').text(countCheckedCheckboxes);
+         var countCheckedCheckboxes1 = $checkboxes.filter(':checked').length;
+         $('.count-checked-checkboxes1').text(countCheckedCheckboxes);
       }         
       $checkboxes.change(function(){
          var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
          $('#count-checked-checkboxes').text(countCheckedCheckboxes);
          $('#count-checked-checkboxess').text(countCheckedCheckboxes);
+         $('.count-checked-checkboxes1').text(countCheckedCheckboxes);
          
          $('#edit-count-checked-checkboxes').val(countCheckedCheckboxes);
       });

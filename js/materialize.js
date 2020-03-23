@@ -11049,9 +11049,9 @@ $jscomp.polyfill = function (e, r, p, m) {
             tweenedOpacity = i === half && delta > 0 ? 1 - tween : 1;
           } else {
             zTranslation = this.options.dist * (i * 2 - tween * dir);
-            //tweenedOpacity = 1 - numVisibleOffset * (i * 0.8900 - tween * dir);
+            tweenedOpacity = 1 - numVisibleOffset * (i * 0.8900 - tween * dir);
 			//tweenedOpacity = 1 - numVisibleOffset * (i * 1.398999 - tween * dir);
-			tweenedOpacity = 1 - numVisibleOffset * (i * 1.1009009209 - tween * dir);
+			// tweenedOpacity = 1 - numVisibleOffset * (i * 1.1009009209 - tween * dir);
           }
           // Don't show wrapped items.
           if (!this.noWrap || this.center - i >= 0) {
