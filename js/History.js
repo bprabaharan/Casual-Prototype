@@ -5,6 +5,15 @@ $(".back-btn").click(function(){
     eval(history_details[history_details.length-1]);
 });
 
+function showCopyLandingPage(){
+    history_details.pop();
+    location.reload(false);
+    // $(".Main-content").hide();
+    // $(".Print-content-main").css('width','696px').delay(100).show(100);
+    // $(".back-btn").css('opacity','.3');
+    
+}
+
 function showFaxLandingPage(){    
     $(".hi-light-copy").animate({marginTop:'72px',opacity:'1'},1000).hide();
     $(".Fax-Section").hide(1000);
@@ -23,6 +32,23 @@ function showFirstLandingPage(){
     $(".Top-shade,.Bottom-shade").show();
     $(".Fax-Section").delay(1500).removeClass('anim-disappear').addClass('anim-reappear-left-right').show(300);    
     history_details.pop();
+}
+function showCopies1(){
+    console.log('showCopies1');	
+    $('.hi-light-copy').animate({width: '420px'},100);
+    $(".example2 .copy-ul .copy-num1").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
+    $(".example2 .menu-num").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
+    $(".copy-button .done-but").animate({width: '210px', height : '90px'},100);
+    $(".copy-button .but-text").show(100);
+    $(".copy-button .done-but-tick1").hide(0);
+    $(".options").show();
+    $(".copy-button .done-but").removeClass('move-me-2');	
+    $(".copy-button").show(10);
+    $(".Print-content-copy .example2").hide(100);
+    $(".Print-content-copy .example1").show(300);	
+    $(".Copy-Content .example1").animate({"opacity": "1"}).show(600);
+    history_details.pop();
+    console.log(history_details);
 }
 function showFaxbackspace(){   
    $(".Top-shade").hide();
