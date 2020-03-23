@@ -302,28 +302,29 @@
   .example1 ul li{color: #fff; font-size: 2.875rem; height: 90px; }
   .Scanning-txt{color: #fff; font-size: 2.875rem; }
   .example2 ul li{color: #fff; font-size: 2.875rem;text-align: center; height: 90px;}
-  .example3 ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; cursor: pointer;}
-  .example4 ul li, .Send-to-contact ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px;}
-  .Fax-Section ul li{color: #fff; font-size: 2.875rem;  font-family: 'hp-simplified' !important; height: 90px; padding: 0px 40px; width: 640px;}
+  .example3 ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 60px; cursor: pointer;}
+  .example4 ul li, .Send-to-contact ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 60px;}
+  .Fax-Section ul li{color: #fff; font-size: 2.875rem;  font-family: 'hp-simplified' !important; height: 90px; padding: 0px 60px; width: 640px;}
   .Fax-Section ul{height: 206px; overflow-y: auto; float: left;}
   .Fax-content-add-recipient ul li{display: flex;}
   .Fax-content-add-recipient ul li:first-child{height: 70px;}
-  .Fax-content-add-recipient ul{margin-left: 40px;}
-  .Fax-content-add-recipient{height: 240px; overflow-y: auto;}
+  .Fax-content-add-recipient ul{margin-left: 60px;}
+  .Fax-content-add-recipient{height: 240px; overflow-y: auto; width: 500px;}
   .Fax-content-confirm,.Send-to-contact{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
-  .fax-keyboard-section{width: 640px; margin-top: 40px;}
+  .fax-keyboard-section{width: 696px; margin-top: 40px;}
+  .keyboard{width: 658px; margin-left: 19px;}
   /* .Fax-content-confirm{width: 696px;} */
   .fax-keyboard-confirm-section{ padding-left: 25px; display: flex;}
   /* .fax-keyboard-confirm-section .Send-to-contact{width: 486px;} */
   .Fax-content-confirm ul li, .Fax-content-add-recipient ul li{color: #fff; font-size: 2.875rem; height: 90px; }
-  .Fax-content-confirm ul li{padding-left: 25px; display: flex;}
+  .Fax-content-confirm ul li{padding-left: 50px; display: flex;}
 
   .Fax-content ul li{display: flex;}
   .Fax-content ul li:first-child{height: 70px;}
-  .Send-to-contact ul li:first-child{height: 70px;}
+  .Send-to-contact ul li:first-child{height: 74px;}
   .Send-to-contact ul li{display: flex;}
   .set-content2 label {
-    border: 2px solid #fff;
+    border: 4px solid #fff;
     border-radius: 4px;
 }
   .option-landing ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 5px 40px; width: 680px;}
@@ -485,9 +486,12 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
+    width: 240px;
     font-family: Arial;
     font-size: 2.875rem;
     padding: 5px 59px;
+    margin: 0 auto;
+    text-align: center;
     text-decoration: none;
     text-shadow: 0px 1px 0px #000000;
     font-family: 'hp-simplified';
@@ -1105,7 +1109,7 @@ to {
   }
 button:focus {
     outline: none;
-    background-color: #0095d9;
+    background-color: #5c5c5c8c;
 }
 .count-checkboxes-wrapper{
     width: 200px;
@@ -1115,7 +1119,7 @@ button:focus {
     color: #fff;
     font-size: 36px;
     margin-top: 70px;
-    margin-left: 420px;
+    margin-left: 468px;
 }
 #count-checked-checkboxess{
     width: 50px;
@@ -1148,6 +1152,9 @@ button:focus {
     padding: 0 .75rem;
     min-height: 1px;
 }
+.fax-animation-content, .fax-animation .show{width: 696px;}
+.fax-send-count, .fax-txt-head-bind{font-size: 34px;
+    padding-top: 9px;}
 .fax-animation-content img{width: 120px; height: 120px;}
 .fax-animation .show p, .fax-gif-anim{margin: 0 auto;}
 .fax-animation{width: 100%;}
@@ -1161,3 +1168,4 @@ button:focus {
     height: 166px;
     background-image: url('../images/Icons_SVG/copy_l.svg');  
 }
+.Print-content-copy{border: 1px solid red;}
