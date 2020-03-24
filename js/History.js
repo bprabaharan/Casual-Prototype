@@ -35,9 +35,11 @@ function showFirstLandingPage(){
 }
 function showCopies1(){
     console.log('showCopies1');	
-    $('.hi-light-copy').animate({width: '420px'},100);
-    $(".example2 .copy-ul .copy-num1").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
-    $(".example2 .menu-num").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
+    $('.hi-light-copy').animate({width: '395px'},300);
+    $('.scrollspy').animate({width: '440px'},300);
+    $('#Landing-copy-page').css({'left':'0px'});
+    //$(".example2 .copy-ul .copy-num1").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
+    //$(".example2 .menu-num").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
     $(".copy-button .done-but").animate({width: '210px', height : '90px'},100);
     $(".copy-button .but-text").show(100);
     $(".copy-button .done-but-tick1").hide(0);
@@ -112,8 +114,9 @@ function showOption(){
       $(".example1").css({'animation': 'floatText .0s ease-in-out'});
       $(".example1").css({'margin-left':'-2.162em'}); 
       $(".example1").css({'opacity':'0.3'});
-      $('.hi-light-copy').animate({width: '420px'},300);
-      $('.scrollspy').animate({width: '420px'},300);
+      $('.hi-light-copy').animate({width: '395px'},300);
+      $('.scrollspy').animate({width: '440px'},300);
+      $(".copy-button").css({'padding-left':'0px'});
       $(".done-but,.copy-button").show(600);
       $(".copy-num").css({'margin-top':'-100px'});
       setTimeout( function(){ 

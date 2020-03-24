@@ -322,7 +322,7 @@ $(document).ready(function () {
        $(".copy-num").css('margin-top','-8px');   
        $(this).addClass('active');
        // $(this).parents('.example1').find('.copy-num').html('<li class="copy-num" style="margin-top: -10px;"># Copies'+ selText +'</li>');
-       $('.example1').find('.copy-num').html('<img class="copy-icon" src="./images/Icons_SVG/u17.png">#Copies <span class="copies-txt">'+ selText +'</span>');
+       $('.example1').find('.copy-num').html('<img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Copies <span class="copies-txt">'+ selText +'</span>');
     });
 
     function onScreenEntryOptions(){
@@ -356,7 +356,7 @@ $(document).ready(function () {
      },900 );
      setTimeout( function(){$(".option-landing-scanmode").show();  }, 900 );
      setTimeout( function(){
-        $(".option-content").animate({ 'margin-left': '0px'},600);
+        $(".option-content").animate({ 'margin-left': '10px'},600);
         setTimeout( function(){ $(".option-landing-scanmode").css({'opacity':'1'}); },600);
      }, 900 );
 
@@ -393,7 +393,7 @@ $(document).ready(function () {
       },900 );
       setTimeout( function(){$(".option-landing-sides").show();$(".option-content").css({'margin-left':'35%'});  }, 900 );
       setTimeout( function(){
-         $(".option-content").animate({ 'margin-left': '0px'},600);
+         $(".option-content").animate({ 'margin-left': '10px'},600);
 
          setTimeout( function(){ $(".option-landing-sides").css({'opacity':'1'}); },600);
       }, 900 );
@@ -427,7 +427,7 @@ $(document).ready(function () {
      },900 );
      setTimeout( function(){$(".option-landing-color").show();  }, 900 );
      setTimeout( function(){
-        $(".option-content").animate({ 'margin-left': '0px'},600);
+        $(".option-content").animate({ 'margin-left': '10px'},600);
         setTimeout( function(){ $(".option-landing-color").css({'opacity':'1'}); },600);
      }, 900 );
       
@@ -463,7 +463,7 @@ $(document).ready(function () {
      },900 );
      setTimeout( function(){$(".option-landing-resize").show();  }, 900 );
      setTimeout( function(){
-        $(".option-content").animate({ 'margin-left': '0px'},600);
+        $(".option-content").animate({ 'margin-left': '10px'},600);
         setTimeout( function(){ $(".option-landing-resize").css({'opacity':'1'}); },600);
      }, 900 );
       
@@ -512,7 +512,7 @@ $(document).ready(function () {
       console.log('copies1 click');
       history_details.push('showCopies1()');
       /*$(".hi-light-copy").css({'width':'450px'},{'transition':' width 2s'});*/
-      $('.hi-light-copy').animate({width: '552px'},100);     
+      $('.hi-light-copy').animate({width: '545px'},100);     
       // $(".hi-light-copy").addClass('move-me-3');
       // $(".icon-round").css('transition','1s');
       // $(".icon-round").show(1000);
@@ -542,15 +542,17 @@ $(document).ready(function () {
 
    $(".Print-content-copy .done-but-tick1").click(function(){
       console.log('copy button click');	
-      doneButTick1()
-      //$(".scrollspy").css({'width':'680px'});   
+      doneButTick1();
+      $("#Landing-copy-page").css({'left':'0px'});
+      $(".scrollspy").css({'width':'437px'});
+
    });
 
    function doneButTick1(){
-      $('.hi-light-copy').animate({width: '420px'},100);
+      $('.hi-light-copy').animate({width: '395px'},100);
       $(".example2 .copy-ul .copy-num1").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
       $(".example2 .menu-num").delay(150).animate({opacity : 1, left : "2.162em"}, 1000).hide();
-      $(".copy-button .done-but").animate({width: '210px', height : '90px'},100);
+      $(".copy-button .done-but").animate({width: '240px', height : '90px'},100);
       $(".copy-button .but-text").show(100);
       $(".copy-button .done-but-tick1").hide(0);
       $(".options").show();
@@ -566,7 +568,7 @@ $(document).ready(function () {
       history_details.push("showFaxLandingPage()"); 
       if($(this).hasClass('active')) {
          $(".back-btn").css('opacity','1'); 
-         $('.hi-light-copy').animate({width: '690px'},500);     
+         $('.hi-light-copy').animate({width: '658px'},500);     
          $(".Landing-Page").show(10);
          $(".example1").css('display','none');
          $(".Landing-Page .Main-content").show();
@@ -645,7 +647,7 @@ $(document).ready(function () {
       $(".done-but").hide();
       $(".example1").addClass('transitionLR');
       setTimeout(hideexample1, 300); 
-      $('.hi-light-copy').animate({width: '690px'},300);
+      $('.hi-light-copy').animate({width: '658px'},300);
       setTimeout(hidebut, 1000);         
    });
 
@@ -655,7 +657,7 @@ $(document).ready(function () {
       $(".Print-content-copy .option-landing").show();
       onScreenEntryOptions(); 
       $(".scrollspy").css({'width':'696px'}); 
-      $(".Print-content-copy .option-landing .optionli").css('margin-top','-1px'); 
+      $(".Print-content-copy .option-landing .optionli").css('margin-top','-5px'); 
    }
    function hidebut(){    
       $(".icon-rt").hide(10); 
@@ -862,7 +864,25 @@ $("span.down").click(function(){
            $(this).attr('id', key);
        });
    });
-
+  
+   $("#Landing-copy-page ul li").mouseover(function(){
+      $(".hi-light-copy").css("border", "8px solid #FFFFFF");
+  });
+  $("#Landing-copy-page ul li").mouseleave(function(){
+      $(".hi-light-copy").css("border", "4px solid #FFFFFF");
+   });
+ 
+    $(".done-but").mouseover(function(){
+      if (!$(this).hasClass("move-me-2")) {
+         $(".done-but").css({"background-color": "#FFFFFF","color":"#000"});
+       }
+      
+  });
+  $(".done-but").mouseleave(function(){
+   if (!$(this).hasClass("move-me-2")) {
+   $(".done-but").css({"background-color": "transparent","color":"#FFFFFF"});
+   }
+   });
    // document.addEventListener('DOMContentLoaded', function() {
    //    //find wich slide is the middle one
    //    var carousel_items = document.querySelectorAll('.carousel-item').length;
