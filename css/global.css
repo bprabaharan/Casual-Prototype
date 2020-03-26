@@ -310,7 +310,8 @@
   .Fax-content-add-recipient ul li:first-child{height: 70px;}
   .Fax-content-add-recipient ul{margin-left: 60px;}
   .Fax-content-add-recipient{height: 240px; overflow-y: auto; width: 500px;}
-  .Fax-content-confirm,.Send-to-contact{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
+  .Fax-content-confirm  {text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
+  .Send-to-contact .Send-checkbox-faxlist{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
   .fax-keyboard-section{width: 696px; margin-top: 40px;}
   .keyboard{width: 658px; margin-left: 19px;}
   /* .Fax-content-confirm{width: 696px;} */
@@ -1157,9 +1158,9 @@ button:focus {
     padding-top: 9px;}
 .fax-animation-content img{width: 120px; height: 120px;}
 .fax-animation .show p, .fax-gif-anim{margin: 0 auto;}
-.fax-animation{width: 100%;}
+.fax-animation{width: 696px;}
 
-.carousel .copy-page{ background-image: url("../images/Icons_SVG/copy_l.svg");}
+/* .carousel .copy-page{ background-image: url("../images/Icons_SVG/copy_l.svg");}
 .carousel .copy-page:hover,
 .carousel .copy-page:focus {
     background: #fff;
@@ -1167,5 +1168,100 @@ button:focus {
     width: 166px;
     height: 166px;
     background-image: url('../images/Icons_SVG/copy_l.svg');  
+} */
+
+.number-new{
+    background-color: #9999994f;
+    margin: 3px 1px;    
+    width: 126px;
+    height: 53px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
 }
-.Print-content-copy{border: 1px solid red;}
+.number-new-highlight{
+    margin: 3px 1px;    
+    width: 126px;
+    height: 53px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    text-align: center;
+    border-radius: 4px;background-color: #999999bd;
+}
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 21%;
+    left: 0;
+    top: 0;
+    width: 696px;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe00;
+    margin: auto;
+    padding: 20px;
+  
+    width: 80%;
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-content{display: flex;}
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.alphabat-num{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background: #fff;
+}
+.copy-icon-new, .option-icon{width: 50px; height: 50px;}
+.alphabat-num span{
+    font-size: 66px;
+    padding: 30px;
+}
+.number-new-num{
+    margin: 3px 1px;    
+    width: 100px;
+    height: 100px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    text-align: center;
+    border-radius: 4px;background-color: #fff;
+}

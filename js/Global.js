@@ -102,7 +102,6 @@ $(document).ready(function () {
            }
        }
    });
-
  });
 
  
@@ -235,6 +234,7 @@ $(document).ready(function () {
          $(".back-btn").css('opacity','0.3');
          $(".Cancel-btn").css('opacity','1');
          $(".fax-animation").addClass('anim-appear').show(500);
+         $(".fax-animation").css('overflow','inherit');
          $(".fax-keyboard-confirm-section").css('width','696px');
          //msgdisplay();
          function msgdisplay1(){
@@ -318,7 +318,7 @@ $(document).ready(function () {
        $(".hi-light-copy").css('width','545px');
        $(".Fax-Section").addClass('anim-disappear').hide(300);
        $(".Top-shade").css('width','500px')
-       $(".Send-to-contact").show();
+       $(".Send-to-contact").addClass('anim-txt').show();
        $('.fax-keyboard-confirm-section .done-but').show();       
    });
    $(".send-to-cont").click(function(){
@@ -605,7 +605,8 @@ $(document).ready(function () {
    $(".fax-number").click(function(){
          history_details.push("showFirstLandingPage()");
          $(".Fax-Section").addClass('anim-disappear');         
-         $(".Fax-Section").hide(300);        
+         $(".Fax-Section").hide(300);   
+         $(".scrollspy").css('width','696px');     
          setTimeout(faxkeyboard,600);         
    });
 
@@ -629,16 +630,15 @@ $(document).ready(function () {
       // });
       
       var $display = $('#display');
-      $display.val();
-      
+      $display.val();      
        $('#clear_btn').click(function(){
-        $('.display').val($('.display').val().substring(0, $('.display').val().length - 1));
-     
+        $('.display').val($('.display').val().substring(0, $('.display').val().length - 1));     
       });
 
       $(document).on('click', 'button.number', function(){
           if($display.val() != 0) {
               $display.val($display.val() + $(this).val());
+              console.log($display.val());
           } else {
               $display.val($(this).val());
           }          
@@ -928,3 +928,62 @@ $("span.down").click(function(){
                   instance.set(middle_slide);
             }, 1000);         
          });
+
+      $(function(){
+         $(".clear").hide();
+         $(".keys").click(function(){
+            $(".clear").show();
+         });
+
+      // $(".back_btn").click(function(){
+      //     $(".keyboard").hide();
+      //     $(".fax_btn").show();
+      // });
+      
+      var $display = $('#display');
+      $display.val();      
+       $('#clear_btn').click(function(){
+        $('.display').val($('.display').val().substring(0, $('.display').val().length - 1));     
+      });
+
+      $(document).on('click', 'button.number-new', function(){
+          if($display.val() != 0) {
+              $display.val($display.val() + $(this).val());
+              
+          } else {
+              $display.val($(this).val());
+          }          
+      });
+
+      function phoneno(){          
+          $('#display').keypress(function(e) {
+              var a = [];
+              var k = e.which;
+
+              for (i = 48; i < 58; i++)
+                  a.push(i);
+
+              if (!(a.indexOf(k)>=0))
+                  e.preventDefault();
+          });
+      }
+  });
+  // Get the modal
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("one");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function myFunction() {
+   modal.style.display = "none";
+}
