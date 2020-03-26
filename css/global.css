@@ -313,7 +313,7 @@
   .Fax-content-confirm  {text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
   .Send-to-contact .Send-checkbox-faxlist{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
   .fax-keyboard-section{width: 696px; margin-top: 40px;}
-  .keyboard{width: 658px; margin-left: 19px;}
+  .keyboard{width: 696px; margin-left: 19px;}
   /* .Fax-content-confirm{width: 696px;} */
   .fax-keyboard-confirm-section{ padding-left: 25px; display: flex;}
   /* .fax-keyboard-confirm-section .Send-to-contact{width: 486px;} */
@@ -1173,8 +1173,8 @@ button:focus {
 .number-new{
     background-color: #9999994f;
     margin: 3px 1px;    
-    width: 126px;
-    height: 53px;
+    width: 130px;
+    height: 54px;
     color: white;
     border-radius: 4px;
     border: none;
@@ -1187,9 +1187,9 @@ button:focus {
     border-radius: 4px;
 }
 .number-new-highlight{
-    margin: 3px 1px;    
-    width: 126px;
-    height: 53px;
+    margin: 4px 2px;    
+    width: 130px;
+    height: 54px;
     color: white;
     border-radius: 4px;
     border: none;
@@ -1206,7 +1206,7 @@ button:focus {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 21%;
+    padding-top: 19%;
     left: 0;
     top: 0;
     width: 696px;
@@ -1221,8 +1221,7 @@ button:focus {
 .modal-content {
     background-color: #fefefe00;
     margin: auto;
-    padding: 20px;
-  
+    padding: 20px;  
     width: 80%;
 }
   
@@ -1240,10 +1239,7 @@ button:focus {
     cursor: pointer;
 }
 .alphabat-num{
-    width: 100px;
-    height: 100px;
     margin: 5px;
-    background: #fff;
 }
 .copy-icon-new, .option-icon{width: 50px; height: 50px;}
 .alphabat-num span{
@@ -1251,17 +1247,16 @@ button:focus {
     padding: 30px;
 }
 .number-new-num{
-    margin: 3px 1px;    
-    width: 100px;
-    height: 100px;
-    color: white;
+    margin: 4px 2px;    
+    width: 164px;
+    height: 108px;
+    color: #000;
     border-radius: 4px;
     border: none;
     text-align: justify;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2.5em;
     text-align: right;
-    color: white;
     text-align: center;
     border-radius: 4px;background-color: #fff;
 }
