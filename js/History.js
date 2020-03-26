@@ -29,8 +29,8 @@ function showFirstLandingPage(){
     $(".fax-keyboard-section").removeClass('transitionBU').animate({marginTop:'250px',opacity:'0'},600).hide(600);
     $(".Fax-Section").removeClass('anim-txt');
     $(".hi-light-copy").delay(300).animate({marginTop:'70px',opacity:'1', width:'658px'},300).show(300);
-    $(".scrollspy").css('width','600px');
-    $(".Top-shade,.Bottom-shade").show();
+    $(".scrollspy").css('width','600px');    
+    $(".Top-shade,.Bottom-shade").show(); 
     $(".Fax-Section").delay(1500).removeClass('anim-disappear').addClass('anim-reappear-left-right').show(300);    
     history_details.pop();
 }
