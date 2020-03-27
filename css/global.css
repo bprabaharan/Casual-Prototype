@@ -246,7 +246,7 @@
     padding-right: 0px;
     opacity: 0;
   }
-  .scrollspy{width: 696px;}
+  .scrollspy{width: 437px;}
   .example2 span:hover{
      /* Apply animation to this element */	
    -moz-animation: example2 3s linear infinite;
@@ -765,7 +765,7 @@
       width: 530px; 
       height: 78px;
   }
-  .copies-txt{margin-left: 90px !important;}
+  .copies-txt{margin-left: 70px !important;}
   
   .checkbox{padding-left: 20%;}
   .option-content2{margin-left: 35%;}
