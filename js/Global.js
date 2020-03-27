@@ -158,6 +158,7 @@ $(document).ready(function () {
    $(".add-receipient").click(function(){
       history_details.push("showFaxaddreceipient()");
       $(".send-but").hide();
+      $(".scrollspy").css('width','600px');
       $('.hi-light-copy').animate({width: '696px'},300);   
       $(".Fax-content-add-recipient .fax-check-child1").css('margin-top','0px');
       $(".Fax-content-confirm").css('width','696px;').addClass('anim-disappear').hide(600);
@@ -172,10 +173,11 @@ $(document).ready(function () {
    $(".Fax-content-confirm ul li:first-child").css('height','70px');
    // $(".fax-keyboard-confirm-section").css('width','696px');
    var faxtxt = $(".display").val();
+   var faxtext = $(".display").val();
    $(".fax-keyboard-section").removeClass('transitionBU').addClass('anim-disappear-top-bot').hide(600);
-   $(".hi-light-copy").animate({width: '460px', marginTop:'75px', opacity:'1'}).show(); 
+   $(".hi-light-copy").animate({width: '395px', marginTop:'75px', opacity:'1'}).show(); 
    $('.Fax-content-confirm').show(100).css('display','flex').addClass('anim-appear');
-      
+      $(".scrollspy").css('width','437px');
    $(".icon-rt").css('display','block');      
    $(".icon-rt .done-but, .fax-send-count").css('display','none');
    $(".icon-rt .but-text").css('visibility', 'visible');
@@ -184,11 +186,12 @@ $(document).ready(function () {
    $(".Top-shade").show();
    $(".Bottom-shade").show();
    $(".Fax-content-confirm .fax-check-child1").css('margin-top','0px');
-   $('.Fax-content-confirm .fax-txt-head-bind').html(' <span class="fax-txt">'+ faxtxt +'</span> ');                  
+   $('.Fax-content-confirm .fax-txt-head-bind').html(' <span class="fax-txt">'+ faxtxt +'</span> '); 
+   $('.fax-animation-count').html(' <span class="fax-txt1">'+ faxtext +'</span> ');                  
 });
 
 /*Send to contact click button event*/
-   $(".send-to-cont").click(function(){
+   $(".send-to-cont1").click(function(){
       history_details.push("showFaxsendtocont()");
       $(".icon-rt .send-but").css('display','none');
       $(".icon-rt .done-but").css('display','none');
@@ -207,9 +210,11 @@ $(document).ready(function () {
       $(".Send-to-contact .done-but").hide();
       $(".Send-to-contact").css('width','696px');
       // $(".hi-light-copy").css('width','460px');
-      $('.hi-light-copy').animate({width: '460px'},300); 
+      $('.hi-light-copy').animate({width: '395px'},300); 
    });
    $(".set-tick").click(function(){
+      $('.hi-light-copy').animate({width: '395px'},300);
+      $(".scrollspy").css({width:'437px'});
       $(".count-checkboxes-wrapper").css('opacity','0');
       $(".Fax-content-confirm ul li:first-child").css('height','70px');
       $(".Fax-content-confirm").removeClass('anim-disappear');      
@@ -220,7 +225,7 @@ $(document).ready(function () {
       $(".Send-to-contact").removeClass('anim-txt').addClass('anim-disappear').hide(300);
       $(".fax-send-count").css('display','block');
       $(".Fax-content-confirm .fax-check-child1").css('margin-top','0px');
-      $(".icon-rt .send-but, .icon-rt").css('display','block');
+      $(".icon-rt .send-but, .icon-rt").css({display:'block', width:'240px'});
       $(".icon-rt .done-but").css('display','none');
       $(".icon-rt .done-button").css('display','none');
    });
@@ -231,6 +236,7 @@ $(document).ready(function () {
          $(".back-btn").css('opacity','0.3');
          $(".Cancel-btn").css('opacity','1');
          $(".fax-animation").addClass('anim-appear').show(500);
+         $(".fax-animation").css('overflow','inherit');
          $(".fax-keyboard-confirm-section").css('width','696px');
          //msgdisplay();
          function msgdisplay1(){
@@ -316,6 +322,18 @@ $(document).ready(function () {
        $(".Send-to-contact").show();
        $('.fax-keyboard-confirm-section .done-but').show();       
    });
+   $(".send-to-cont").click(function(){
+      history_details.push("showFaxsendtocont()");
+      console.log("send to content to fax");
+      $(".Fax-content-add-recipient").addClass('anim-disappear').hide();
+      $(".hi-light-copy").css('width','545px');
+      $(".Fax-Section").addClass('anim-disappear').hide(300);
+      $(".Top-shade").css('width','500px')
+      $(".Send-to-contact").removeClass('anim-disappear').show();
+      $(".count-checkboxes-wrapper").css('opacity','1');
+      
+      $('.fax-keyboard-confirm-section .done-but').show();       
+  });
   
    $(".menu-num li").click(function(){
        var selText = $(this).text();
@@ -386,16 +404,25 @@ $(document).ready(function () {
 
       $(".option-landing-sides .optionli-land-child1").css('margin-top','-21px');
       $(".option-landing-sides").css({'opacity':'0.3','position':'fixed'}); 
+      $(".option-landing-sides .option-function").css({'visibility':'hidden'});
       setTimeout( function(){   
          $(".option-content").css({'margin-left':'2.162em'});
-         $(".option-content").css({'margin-left':'20%'});
+
+         // $(".option-content").css({'margin-left':'20%'});
          $(".option-landing-sides").css({ 'margin-left': '0px'});
       },900 );
-      setTimeout( function(){$(".option-landing-sides").show();$(".option-content").css({'margin-left':'35%'});  }, 900 );
+      setTimeout( function(){
+         $(".option-landing-sides").show();
+         $(".option-content").css({'margin-left':'2.162em'}); 
+       }, 900 );
       setTimeout( function(){
          $(".option-content").animate({ 'margin-left': '10px'},600);
 
-         setTimeout( function(){ $(".option-landing-sides").css({'opacity':'1'}); },600);
+         setTimeout( function(){ 
+            $(".option-landing-sides .option-function").css({'visibility':'visible'});
+            $(".option-landing-sides").css({'opacity':'1'}); 
+         },600);
+
       }, 900 );
 
        if(event.target.textContent ==="1 to 1-Sided"){ 
@@ -491,26 +518,39 @@ $(document).ready(function () {
          if($(this).hasClass('active')) {
             $(".back-btn").css('opacity','1');                        
             $(".back-btn").css('cursor','pointer');  
-            $(".Smarttask-Page").animate({zoom:'.9', opacity:'.2'}).hide(300);
-            $(".Menu-Page").animate({zoom:'.9', opacity:'.2'}).hide(300);
-            $(".ID-Page").animate({zoom:'.9', opacity:'.2'}).hide(300);
-            $(".Scan-Page").animate({zoom:'.9', opacity:'.2'}).hide(300);
-            $(".indicators .active").animate({zoom:'.9', opacity:'.2'}).hide(300);            
-            $(".copy-page").animate({opacity: '0', left:'-250px'}).hide(600);
-            $(".Print-content-main").hide(300);		   
-            $(".Landing-Page .Main-content").show(300);
-            $(".Copy-Content .example1").delay(300).animate({ opacity : 1, left : "0px" }, 600).show(2000);            
+            $(".Smarttask-Page").animate({zoom:'.9', opacity:'.2'}).hide(100);
+            $(".Menu-Page").animate({zoom:'.9', opacity:'.2'}).hide(100);
+            $(".ID-Page").animate({zoom:'.9', opacity:'.2'}).hide(100);
+            $(".Scan-Page").animate({zoom:'.9', opacity:'.2'}).hide(100);
+            $(".indicators .active").animate({zoom:'.9', opacity:'.2'}).hide(100);            
+            $(".copy-page").animate({opacity: '0', left:'-250px'},600).hide(400);
+            $(".Print-content-main").hide(400);	
+            $(".hi-light-copy").hide();
+            // $(".Copy-Content .example1").delay(300).show(500);
+            $(".Copy-Content .example1").animate({ opacity : 1, left : "0px" }).hide(00);  	   
+            
+            setTimeout( function(){  
+                        
+            $(".Landing-Page .Main-content").show(00);
+            $(".Copy-Content .example1").show(00);
+            $(".hi-light-copy").show(000);
             $(".Landing-Page .example1").css('visibility','visible');            
             $(".icon-rt").css('display','block');
             $(".send-but").css('display','none');            
-            $(".icon-rt .but-text").css('visibility','visible');                      
+            $(".icon-rt .but-text").css('visibility','visible');  
+               }, 400 );
+                                
          }       
      });
    
 
    $(".copy-num").click(function(){		 
       console.log('copies1 click');
-      history_details.push('showCopies1()');
+
+      if(history_details.indexOf('showCopies1()') === -1){
+         history_details.push('showCopies1()');
+      }
+
       /*$(".hi-light-copy").css({'width':'450px'},{'transition':' width 2s'});*/
       $('.hi-light-copy').animate({width: '545px'},100);     
       // $(".hi-light-copy").addClass('move-me-3');
@@ -568,7 +608,10 @@ $(document).ready(function () {
       history_details.push("showFaxLandingPage()"); 
       if($(this).hasClass('active')) {
          $(".back-btn").css('opacity','1'); 
-         $('.hi-light-copy').animate({width: '658px'},500);     
+
+         $('.hi-light-copy').animate({width: '658px'},500); 
+         $(".hi-light-copy").css('margin-left','19px');
+
          $(".Landing-Page").show(10);
          $(".example1").css('display','none');
          $(".Landing-Page .Main-content").show();
@@ -587,7 +630,8 @@ $(document).ready(function () {
    $(".fax-number").click(function(){
          history_details.push("showFirstLandingPage()");
          $(".Fax-Section").addClass('anim-disappear');         
-         $(".Fax-Section").hide(300);        
+         $(".Fax-Section").hide(300);   
+         $(".scrollspy").css('width','696px');     
          setTimeout(faxkeyboard,600);         
    });
 
@@ -646,9 +690,11 @@ $(document).ready(function () {
       $(".option-landing ul li:first-child").css('height','82px');
       $(".done-but").hide();
       $(".example1").addClass('transitionLR');
-      setTimeout(hideexample1, 300); 
-      $('.hi-light-copy').animate({width: '658px'},300);
-      setTimeout(hidebut, 1000);         
+
+      setTimeout(hideexample1, 600); 
+      $('.hi-light-copy').animate({width: '658px'},600);
+      setTimeout(hidebut, 700);         
+
    });
 
      
@@ -760,11 +806,14 @@ $(document).ready(function () {
          $('#count-checked-checkboxes').text(countCheckedCheckboxes);
          var countCheckedCheckboxess = $checkboxes.filter(':checked').length;
          $('#count-checked-checkboxess').text(countCheckedCheckboxes);
+         var countCheckedCheckboxes1 = $checkboxes.filter(':checked').length;
+         $('.count-checked-checkboxes1').text(countCheckedCheckboxes);
       }         
       $checkboxes.change(function(){
          var countCheckedCheckboxes = $checkboxes.filter(':checked').length;
          $('#count-checked-checkboxes').text(countCheckedCheckboxes);
          $('#count-checked-checkboxess').text(countCheckedCheckboxes);
+         $('.count-checked-checkboxes1').text(countCheckedCheckboxes);
          
          $('#edit-count-checked-checkboxes').val(countCheckedCheckboxes);
       });

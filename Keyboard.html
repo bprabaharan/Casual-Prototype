@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <!-- <script src="https://github.com/bas2k/jquery.appear/blob/master/jquery.appear.js"></script> -->
+      
+      <title>HP Casual UI Protype</title>
+      <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+      <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+   </head>
+   <body class="js-focus-visible" style="visibility: hidden;">
+      <div id="loader" class="center">Loading!</div>     
+            <!--Fax Keyboard -->
+            <div class="fax-keyboard-section" id="fax-keyboard-section" style="display: block;">
+                <div class="row">
+                <div class="keyboard">
+                    <div>
+                        <div style="clear:both";>
+                            <div style="width:600px; float:left;">
+                            <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="Enter email |"  pattern="\d{10}">					
+                            </div>
+                            <!-- <div  class="clear_btn">
+                            <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
+                            </div> -->
+                        </div>
+                        <div class="keys">
+                            <button href="#" type="button" class="number-new" id="one" value="">abc</button>
+                            <button href="#" type="button" class="number-new" id="two" value="d">def</button>
+                            <button href="#" type="button" class="number-new" id="three" value="g">ghi</button>
+                            <button href="#" type="button" class="number-new" id="four" value="j">jkl</button>
+                            <button href="#" type="button" class="number-new clear1" id="clear_btn" value="&#9003">&#9003</button>
+                            <!-- <button href="#" type="button" class="number-new" id="hash" value="#">back</button> -->
+                            <!-- <button href="&#9003" type="button" class="clear1 number-new-highlight" id="clear_btn" value="">
+                                <img class="copy-icon-new" src="../Casual-Prototype/images/Icons_SVG/backsapce_off_s.svg">
+                            </button> -->
+                            <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617"></button> -->
+                            <button href="#" type="button" class="number-new" id="five" value="5">mno</button>
+                            <button href="#" type="button" class="number-new" id="hash" value="#">pqrs</button>
+                            <button href="#" type="button" class="number-new" id="hash" value="#">tuv</button>
+                            <button href="#" type="button" class="number-new" id="hash" value="#">wxyz</button>
+                            <button href="#" type="button" class="number-new-highlight" id="hash" value="#">add</button>
+                            <button href="#" type="button" class="number-new-highlight" id="five" value="5">.com</button>
+                            <button href="#" type="button" class="number-new" id="five" value="5">@</button>
+                            <button href="#" type="button" class="number-new" id="five" value="5">._-</button>
+                            <button href="#" type="button" class="number-new-highlight" id="five" value="5">123#</button>
+                            <button href="&#8592" type="button" class="backbtn number-new-highlight" id="backspace" value="&#8617" style="margin-left: 4px;">
+                            <img class="copy-icon-new" src="./images/Icons_SVG/arrow_s.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="alphabat-num">                                
+                                <button href="#" type="button" onclick="myFunction()" class="number-new number-new-num" id="one1" value="a">a</button>                                                             
+                            </div>  
+                            <div class="alphabat-num">
+                                <button href="#" type="button" onclick="myFunction()" class="number-new-num number-new" id="two2" value="b">b</button>                              
+                            </div>  
+                            <div class="alphabat-num">
+                                <button href="#" type="button" onclick="myFunction()" class="number-new-num number-new" id="three3" value="c">c</button>                              
+                            </div>                            
+                        </div>                
+                    </div>
+                </div>
+            </div>
+            <!--Fax keyboard-->
+   
+         
+      <!--  Scripts-->
+      <script> 
+         document.onreadystatechange = function() { 
+             $(".fax-keyboard-section").css('display','block');
+             if (document.readyState !== "complete") { 
+                 document.querySelector( 
+                   "body").style.visibility = "hidden"; 
+                 document.querySelector( 
+                   "#loader").style.visibility = "visible"; 
+             } else { 
+                 document.querySelector( 
+                   "#loader").style.display = "none"; 
+                 document.querySelector( 
+                   "body").style.visibility = "visible"; 
+             } 
+         }; 
+     </script> 
+      <script src="./js/materialize.js"></script>
+      <script src="./js/init.js"></script>
+      <script src="./js/History.js"></script>
+      <script src="./js/Global.js"></script>
+      <script src="./js/Keyboard.js"></script>
+   </body>
+</html>
