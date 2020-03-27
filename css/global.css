@@ -93,7 +93,7 @@
     visibility: hidden;
     position: relative;
     white-space: nowrap;
-    animation: floatText .3s ease-in-out;
+    /* animation: floatText .3s ease-in-out; */
   }
   @keyframes floatText{
     from {
@@ -246,7 +246,7 @@
     padding-right: 0px;
     opacity: 0;
   }
-  .scrollspy{width: 437px;}
+  .scrollspy{width: 696px;}
   .example2 span:hover{
      /* Apply animation to this element */	
    -moz-animation: example2 3s linear infinite;
@@ -302,33 +302,35 @@
   .example1 ul li{color: #fff; font-size: 2.875rem; height: 90px; }
   .Scanning-txt{color: #fff; font-size: 2.875rem; }
   .example2 ul li{color: #fff; font-size: 2.875rem;text-align: center; height: 90px;}
-  .example3 ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; cursor: pointer;}
-  .example4 ul li, .Send-to-contact ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px;}
-  .Fax-Section ul li{color: #fff; font-size: 2.875rem;  font-family: 'hp-simplified' !important; height: 90px; padding: 0px 40px; width: 640px;}
+  .example3 ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 60px; cursor: pointer;}
+  .example4 ul li, .Send-to-contact ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 60px;}
+  .Fax-Section ul li{color: #fff; font-size: 2.875rem;  font-family: 'hp-simplified' !important; height: 90px; padding: 0px 60px; width: 640px;}
   .Fax-Section ul{height: 206px; overflow-y: auto; float: left;}
   .Fax-content-add-recipient ul li{display: flex;}
   .Fax-content-add-recipient ul li:first-child{height: 70px;}
-  .Fax-content-add-recipient ul{margin-left: 40px;}
-  .Fax-content-add-recipient{height: 240px; overflow-y: auto;}
-  .Fax-content-confirm,.Send-to-contact{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
-  .fax-keyboard-section{width: 640px; margin-top: 40px;}
+  .Fax-content-add-recipient ul{margin-left: 60px;}
+  .Fax-content-add-recipient{height: 240px; overflow-y: auto; width: 500px;}
+  .Fax-content-confirm  {text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
+  .Send-to-contact .Send-checkbox-faxlist{text-align: center; height: 240px; overflow-y: auto; padding-left: 5px;}
+  .fax-keyboard-section{width: 696px; margin-top: 40px;}
+  .keyboard{width: 690px; margin-left: 19px;} /* Ranjith changed 696 to 690 */
   /* .Fax-content-confirm{width: 696px;} */
   .fax-keyboard-confirm-section{ padding-left: 25px; display: flex;}
   /* .fax-keyboard-confirm-section .Send-to-contact{width: 486px;} */
   .Fax-content-confirm ul li, .Fax-content-add-recipient ul li{color: #fff; font-size: 2.875rem; height: 90px; }
-  .Fax-content-confirm ul li{padding-left: 25px; display: flex;}
+  .Fax-content-confirm ul li{padding-left: 50px; display: flex;}
 
   .Fax-content ul li{display: flex;}
   .Fax-content ul li:first-child{height: 70px;}
-  .Send-to-contact ul li:first-child{height: 70px;}
+  .Send-to-contact ul li:first-child{height: 74px;}
   .Send-to-contact ul li{display: flex;}
   .set-content2 label {
-    border: 2px solid #fff;
+    border: 4px solid #fff;
     border-radius: 4px;
 }
   .option-landing ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 5px 50px; width: 680px;}
   .option-landing-scanmode ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 13px 45px; width: 680px;}
-  .option-landing-sides ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; width: 680px;}
+  .option-landing-sides ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; width: 680px;overflow: hidden;white-space: nowrap;}
   .option-landing-firstpage ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; width: 680px;}
   .option-landing-color ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; width: 680px;}
   .option-landing-resize ul li{color: #fff; font-size: 2.875rem; height: 90px; padding: 0px 40px; width: 680px;}
@@ -487,9 +489,12 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
+    width: 240px;
     font-family: Arial;
     font-size: 2.875rem;
     padding: 5px 59px;
+    margin: 0 auto;
+    text-align: center;
     text-decoration: none;
     text-shadow: 0px 1px 0px #000000;
     font-family: 'hp-simplified';
@@ -760,7 +765,7 @@
       width: 530px; 
       height: 78px;
   }
-  .copies-txt{margin-left: 70px !important;}
+  .copies-txt{margin-left: 90px !important;}
   
   .checkbox{padding-left: 20%;}
   .option-content2{margin-left: 35%;}
@@ -1107,7 +1112,7 @@ to {
   }
 button:focus {
     outline: none;
-    background-color: #0095d9;
+    background-color: #5c5c5c8c;
 }
 .count-checkboxes-wrapper{
     width: 200px;
@@ -1117,7 +1122,7 @@ button:focus {
     color: #fff;
     font-size: 36px;
     margin-top: 70px;
-    margin-left: 420px;
+    margin-left: 468px;
 }
 #count-checked-checkboxess{
     width: 50px;
@@ -1150,6 +1155,110 @@ button:focus {
     padding: 0 .75rem;
     min-height: 1px;
 }
+.fax-animation-content, .fax-animation .show{width: 696px;}
+.fax-send-count, .fax-txt-head-bind{font-size: 34px;
+    padding-top: 9px;}
 .fax-animation-content img{width: 120px; height: 120px;}
 .fax-animation .show p, .fax-gif-anim{margin: 0 auto;}
-.fax-animation{width: 100%;}
+.fax-animation{width: 696px;}
+
+/* .carousel .copy-page{ background-image: url("../images/Icons_SVG/copy_l.svg");}
+.carousel .copy-page:hover,
+.carousel .copy-page:focus {
+    background: #fff;
+    border-radius: 50%;
+    width: 166px;
+    height: 166px;
+    background-image: url('../images/Icons_SVG/copy_l.svg');  
+} */
+
+.number-new{
+    background-color: #9999994f;
+    margin: 3px 1px;    
+    width: 130px;
+    height: 54px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+.number-new-highlight{
+    margin: 4px 2px;    
+    width: 130px;
+    height: 54px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    text-align: center;
+    border-radius: 4px;background-color: #999999bd;
+}
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 19%;
+    left: 0;
+    top: 0;
+    width: 696px;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe00;
+    margin: auto;
+    padding: 20px;  
+    width: 80%;
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-content{display: flex;}
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.alphabat-num{
+    margin: 4px;
+}
+.copy-icon-new, .option-icon{width: 50px; height: 50px;}
+.alphabat-num span{
+    font-size: 66px;
+    padding: 30px;
+}
+.number-new-num{
+    margin: 0px 0px;    
+    width: 164px;
+    height: 108px;
+    color: #000;
+    border-radius: 4px;
+    border: none;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: right;
+    text-align: center;
+    border-radius: 4px;background-color: #fff;
+}
