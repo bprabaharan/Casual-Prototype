@@ -28,27 +28,28 @@
                             </div> -->
                         </div>
                         <div class="keys">
-                            <button href="#" type="button" class="number-new" id="one" value="">abc</button>
-                            <button href="#" type="button" class="number-new" id="two" value="d">def</button>
-                            <button href="#" type="button" class="number-new" id="three" value="g">ghi</button>
-                            <button href="#" type="button" class="number-new" id="four" value="j">jkl</button>
-                            <button href="#" type="button" class="number-new clear1" id="clear_btn" value="&#9003">&#9003</button>
+                            <button href="#" type="button" class="number-new" id="key1" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key2" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key3" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key4" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new-highlight clear1" id="clear_btn" value="&#9003">&#9003</button>
                             <!-- <button href="#" type="button" class="number-new" id="hash" value="#">back</button> -->
                             <!-- <button href="&#9003" type="button" class="clear1 number-new-highlight" id="clear_btn" value="">
                                 <img class="copy-icon-new" src="../Casual-Prototype/images/Icons_SVG/backsapce_off_s.svg">
                             </button> -->
                             <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617"></button> -->
-                            <button href="#" type="button" class="number-new" id="five" value="5">mno</button>
-                            <button href="#" type="button" class="number-new" id="hash" value="#">pqrs</button>
-                            <button href="#" type="button" class="number-new" id="hash" value="#">tuv</button>
-                            <button href="#" type="button" class="number-new" id="hash" value="#">wxyz</button>
-                            <button href="#" type="button" class="number-new-highlight" id="hash" value="#">add</button>
-                            <button href="#" type="button" class="number-new-highlight" id="five" value="5">.com</button>
-                            <button href="#" type="button" class="number-new" id="five" value="5">@</button>
-                            <button href="#" type="button" class="number-new" id="five" value="5">._-</button>
-                            <button href="#" type="button" class="number-new-highlight" id="five" value="5">123#</button>
-                            <button href="&#8592" type="button" class="backbtn number-new-highlight" id="backspace" value="&#8617" style="margin-left: 4px;">
-                            <img class="copy-icon-new" src="./images/Icons_SVG/arrow_s.svg">
+                            <button href="#" type="button" class="number-new" id="key5" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key6" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key7" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key8" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new-highlight" id="keyAdd" value="#">add</button>
+                            <button href="#" type="button" class="number-new-highlight" id="key9" onclick="changeKeyboard(this)" value=""></button>
+                            <button href="#" type="button" class="number-new" id="key10" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new" id="key11" value="" onclick="chooseLetters(this)"></button>
+                            <button href="#" type="button" class="number-new-highlight" id="key12" value="" onclick="changeKeyboard(this)"></button>
+                            <button href="&#8592" type="button" class="backbtn number-new-highlight" id="backspace" value="&#8594" style="margin-left: 4px;font-size: 50px;
+                            font-weight: bold;">
+                            <!-- <img class="copy-icon-new" src="./images/Icons_SVG/arrow_s.svg"> -->&#8594;
                             </button>
                         </div>
                     </div>
@@ -58,13 +59,13 @@
                         <!-- Modal content -->
                         <div class="modal-content">
                             <div class="alphabat-num">                                
-                                <button href="#" type="button" onclick="myFunction()" class="number-new number-new-num" id="one1" value="a">a</button>                                                             
+                                <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>                                                             
                             </div>  
                             <div class="alphabat-num">
-                                <button href="#" type="button" onclick="myFunction()" class="number-new-num number-new" id="two2" value="b">b</button>                              
+                                <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>                              
                             </div>  
                             <div class="alphabat-num">
-                                <button href="#" type="button" onclick="myFunction()" class="number-new-num number-new" id="three3" value="c">c</button>                              
+                                <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>                              
                             </div>                            
                         </div>                
                     </div>
@@ -90,10 +91,10 @@
              } 
          }; 
      </script> 
-      <script src="./js/materialize.js"></script>
-      <script src="./js/init.js"></script>
+      <!-- <script src="./js/materialize.js"></script> -->
+      <!-- <script src="./js/init.js"></script>
       <script src="./js/History.js"></script>
-      <script src="./js/Global.js"></script>
+      <script src="./js/Global.js"></script> -->
       <script src="./js/Keyboard.js"></script>
    </body>
 </html>
