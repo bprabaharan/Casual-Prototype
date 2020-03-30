@@ -1,5 +1,8 @@
 var emailAlphabetsKey = ["abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz", ".com", "@", "._-", "123#"];
 var emailNumbersKey = ["1", "2", "3", "4", "5", "6", "7", "8", "abc", "9", "0", "!@#"];
+var emailHostnameKey = [".com",".net",".edu",".org",".biz",".gov"];
+var emailSpecialKey = [",*#","%&~","()!?","';:","/\\+=","[]#","!?","#L$","abc","@","._-","123"];
+
 $(function() {
 
 
@@ -59,11 +62,14 @@ function alphabetsKey(data) {
 function changeKeyboard(data) {
     var value = $(data).attr('value');
 
-    if (value === "123#") {
-
+    if (value === "123#" || value === "123") {
         alphabetsKey(emailNumbersKey);
     } else if (value === "abc") {
         alphabetsKey(emailAlphabetsKey);
+    } else if (value === ".com") {
+        chooseLetters(emailHostnameKey);
+    } else if (value === "!@#"){
+        alphabetsKey(emailSpecialKey); 
     }
 
 }
@@ -83,13 +89,21 @@ window.onclick = function(event) {
 }
 
 function chooseLetters(data) {
+    $('.alphabat-num').css({'visibility':'hidden'});
+    console.log(data);
+    if($.isArray(data)) {
+        var letters = data;
+      } else {
+        var value = $(data).attr('value');
+        var letters = value.split('');
+      }
 
-    var value = $(data).attr('value');
-
-    var letters = value.split('');
+   
+   
     if (letters.length > 1) {
         $.each(letters, function(index, value) {
             var i = index + 1;
+            $('#showLetter' + i).css({'visibility':'visible'});
             $('#chooseLetter' + i).val(value);
             $('#chooseLetter' + i).html(value);
         });

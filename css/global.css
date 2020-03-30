@@ -1827,8 +1827,9 @@ button:focus {
 .modal-content {
     background-color: #fefefe00;
     margin: auto;
-    padding: 20px;
+    padding:0px !important;
     width: 80%;
+    height: 90%;
 }
 
 
@@ -1842,7 +1843,7 @@ button:focus {
 }
 
 .modal-content {
-    display: flex;
+    display: block;
 }
 
 .close:hover,
@@ -1853,7 +1854,10 @@ button:focus {
 }
 
 .alphabat-num {
-    margin: 4px;
+    height: 7.3em;
+    width: 140px;
+    float: left;
+    /* display: none; */
 }
 
 .copy-icon-new,
