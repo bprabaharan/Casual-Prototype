@@ -1,604 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-      <!-- <script src="https://github.com/bas2k/jquery.appear/blob/master/jquery.appear.js"></script> -->
 
-      
-      <title>Casual UI Protype</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- <script src="https://github.com/bas2k/jquery.appear/blob/master/jquery.appear.js"></script> -->
 
-      <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
-      <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
-   </head>
-   <body class="js-focus-visible" style="visibility: hidden;">
-      <div id="loader" class="center">Loading!</div>
-      <div class="Print-container" >
-         <!--Landing Section Starts here-->          		
-         <div class="Landing-Page dis-flex">
-            <div class="icon-lt">               
-               <a class="carousel-item" href="#">
-                  <img class="back-btn" src="./images/Icons_SVG/back_l.svg">
-               </a>
+
+    <title>Casual UI Protype</title>
+
+    <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+</head>
+
+<body class="js-focus-visible" style="visibility: hidden;">
+    <div id="loader" class="center">Loading!</div>
+    <div class="Print-container">
+        <!--Landing Section Starts here-->
+        <div class="Landing-Page dis-flex">
+            <div class="icon-lt">
+                <a class="carousel-item" href="#">
+                    <img class="back-btn" src="./images/Icons_SVG/back_l.svg">
+                </a>
             </div>
             <div class="Print-content-main Print-content">
-               <div id="introduction" class="scrollspy">
-                  <div class="carousel" id="carousel">
-                     <a class="carousel-item Smarttask-Page" href="#" content="menu"  id="one">
-                        <img src="./images/Icons_SVG/smarttask_l.svg">
-                     </a> 
-                     <a class="carousel-item Menu-Page" href="#"  id="two" >
-                        <img src="./images/Icons_SVG/menu_l.svg">			
-                     </a>
-                     <a class="carousel-item copy-page" href="#" id="three">
-                        <img src="./images/Icons_SVG/copy_l.svg">
-                     </a>
-                     <a class="carousel-item ID-Page" href="#" id="four" >
-                        <img src="./images/Icons_SVG/id_l.svg">
-                     </a>
-                     <a class="carousel-item Scan-Page" href="#" id="five">
-                        <img src="./images/Icons_SVG/scan_l.svg">
-                     </a>          
-                     <a class="carousel-item Fax-Page" href="#" content="menu" id="six">
-                        <img src="./images/Icons_SVG/fax_l.svg">
-                     </a> 
-                                             
-                  </div>
-               </div>
-            </div>
-           <div class="Main-content Print-content" >
-            <div class="Top-shade">
-               <div class="swapMe-down"> 
-                  <span class="down1"></span> 
-                  <span class="down2"></span>
-               </div>
-            </div>
+                <div id="introduction" class="scrollspy">
+                    <div class="carousel" id="carousel">
+                        <a class="carousel-item Smarttask-Page" href="#" content="menu" id="one">
+                            <img src="./images/Icons_SVG/smarttask_l.svg">
+                        </a>
+                        <a class="carousel-item Menu-Page" href="#" id="two">
+                            <img src="./images/Icons_SVG/menu_l.svg">
+                        </a>
+                        <a class="carousel-item copy-page" href="#" id="three">
+                            <img src="./images/Icons_SVG/copy_l.svg">
+                        </a>
+                        <a class="carousel-item ID-Page" href="#" id="four">
+                            <img src="./images/Icons_SVG/id_l.svg">
+                        </a>
+                        <a class="carousel-item Scan-Page" href="#" id="five">
+                            <img src="./images/Icons_SVG/scan_l.svg">
+                        </a>
+                        <a class="carousel-item Fax-Page" href="#" content="menu" id="six">
+                            <img src="./images/Icons_SVG/fax_l.svg">
+                        </a>
 
-            <div class="Print-content Dot-Section" style="text-align: center; vertical-align: middle;padding-top: 0%;">
-               <img class="copy-gif-anim" src="./images/Gif-images/copy_animation.gif">
-               <div class="show">
-                     <rec class="copying-txt">Copying...</rec>
-                     <rec class="copying-txt">Printing...</rec>
-                     <rec class="copying-txt">Complete!</rec>
-                      <p class="show-line"></p>
-                  </div> 
-               <!-- <p class="Copying-txt" style="margin-top: -6px;">Copying...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Main-content Print-content">
+                <div class="Top-shade">
+                    <div class="swapMe-down">
+                        <span class="down1"></span>
+                        <span class="down2"></span>
+                    </div>
+                </div>
+
+                <div class="Print-content Dot-Section" style="text-align: center; vertical-align: middle;padding-top: 0%;">
+                    <img class="copy-gif-anim" src="./images/Gif-images/copy_animation.gif">
+                    <div class="show">
+                        <rec class="copying-txt">Copying...</rec>
+                        <rec class="copying-txt">Printing...</rec>
+                        <rec class="copying-txt">Complete!</rec>
+                        <p class="show-line"></p>
+                    </div>
+                    <!-- <p class="Copying-txt" style="margin-top: -6px;">Copying...</p>
                <p class="Printing-txt"  style="margin-top: -6px;">Printing...</p>
                <p class="Complete-txt"  style="margin-top: -6px;">Complete!</p> -->
-               
-               <p class="Cancel-copy" style="margin-top: 80px;">Task Canceled</p>
-            </div>
 
-            <div class="Print-content-copy Copy-Content" style="display: flex;">
-               <div class="hi-light-copy"></div>
-
-              
-
-               <div class="scrollspy dis-flex">
-                  <div class="example1" id="Landing-copy-page" style="width: 440px;">
-                     <ul style="padding-left: 15px;">  <!-- Temp added paading left -->
-                        <li>&nbsp;</li>
-                        <li class="copy-num" style="margin-top: -5px;display: flex;">
-                            <span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Copies</span>
-                            <span class="copy-right-side">01</span></li>
-                        <li class="options"><img class="option-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Options</li>
-                        <li>&nbsp;</li>                        
-                     </ul>
-				      </div>
-                  
-                  <div class="example2" style="display: flex;">
-                     <div>
-                        <ul class="copy-ul">                           
-                           <li class="copy-num1">&nbsp;&nbsp;&nbsp;&nbsp; Copies </li>
-                        </ul>
-                     </div>
-                     <div class="menu-num" style="display: flex; padding-left: 230px; ">
-                       
-                        <ul class="no-second-row">
-                           <li>&nbsp;</li>
-                           <li class="num-second" style="margin-top: -8px;"><span>0</span>&nbsp;&nbsp;<span>1</span></li>
-                           <!-- <li><span>0</span>&nbsp;&nbsp;<span>1</span></li> -->
-                           <li><span>0</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>0</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>1</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>2</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>3</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>4</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>5</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>6</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>7</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>8</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>0</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>1</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>2</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>3</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>4</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>5</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>6</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>7</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>8</span></li>
-                           <li><span>9</span>&nbsp;&nbsp;<span>9</span></li>
-                           <li>&nbsp;</li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="example3" style="display: flex;margin-top: -15px;">
-                     <div>
-                        <ul class="copy-color-1">
-                           <li>&nbsp;</li>
-                           <li class="copy-color-1-1" style="margin-top: -10px;">Documents</li>
-                           <li>Color</li>
-                           <li>Paper Sided</li>
-                           <li>&nbsp;</li>
-                        </ul>
-                     </div>
-                     <div style="display: flex; padding-left: 50px; width: 300px;">
-                        <ul class="copy-color-2">
-                           <li>&nbsp;</li>
-                           <li class="copy-color-2-1" style="margin-top: -10px;">B/W </li>
-                           <li>CMYK</li>
-                           <li>Black Only</li>                           
-                           <li>&nbsp;</li>
-                        </ul>                        
-                     </div>
-                  </div>
-
-                  <div class="example4" style="display: flex;margin-top: -15px;">
-                     <div>
-                        <ul class="copy-color-3">
-                           <li>&nbsp;</li>
-                           <li class="copy-color-3-1" style="margin-top: -10px;">B/W </li>
-                           <li>CMYK</li>
-                           <li>Black Only</li>                           
-                           <li>&nbsp;</li>
-                        </ul>
-                     </div>
-                     <div>
-                        <ul class="">
-                           <li><img class="done-but-tick2" src="./images/Icons_SVG/Component 15-14.png"></li>                          
-                        </ul>                        
-                     </div>
-                  </div>
-
-                  <div class="option-landing" style="display: flex;margin-top: -15px;">
-                     <div>
-                        <ul class="option1">
-                           <li>&nbsp;</li>
-                           <li class="optionli" style="margin-top: -1%;">
-                              <div class="option-content">Scan Mode</div>
-                              <div class="option-scan  option-function" id="scan"><span>Document</span></div>
-                           </li>
-                           <li>
-                              <div class="option-content">Sides</div>
-                              <div class="option-sides  option-function" id="sides"><span>1 to 1-sided</span></div>                              
-                           </li>
-                           <li>
-                              <div class="option-content">Color</div>
-                              <div class="option-color  option-function" id="color"><span>Automatic</span></div>                              
-                           </li>
-                           <li>
-                              <div class="option-content">Resize</div>
-                              <div class="option-resize  option-function" id="resize"><span>None</span></div>
-                           </li>
-                           <li>&nbsp;</li>
-                        </ul>
-                     </div>
-                  </div>
-                  
-                  <div class="option-landing-scanmode" style="margin-top: 68px;">
-                     <div>
-                        <ul class="optionli-scan-child check-box-list">
-                           <!-- <li>&nbsp;</li> -->
-                           <li class="optionli-scan-child1" style="display: flex;">
-                              <div class="option-content">Document</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-scan1" class="checkbox" type="checkbox" value="Document" checked="checked">
-                                 <label for="trigger-scan1" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-scan-child2" style="display: flex;">
-                              <div class="option-content">Photo</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-scan2" class="checkbox" type="checkbox" value="Photo">
-                                 <label for="trigger-scan2" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-scan-child2" style="display: flex;">
-                              <div class="option-content">ID Card</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-scan3" class="checkbox" type="checkbox" value="ID Card">
-                                 <label for="trigger-scan3" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-land-child3">
-                              &nbsp;
-                           </li>
-                       </ul>
-                     </div>
-                  </div>
-
-                  <div class="option-landing-sides" style="display: flex;">
-                     <div>
-                        <ul class="optionli-land-child check-box-list1">
-                           <li>&nbsp;</li>
-                           <li class="optionli-land-child1">
-                              <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;1 to 1-Sided</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-Slide1" class="checkbox" type="checkbox" value="1 to 1-Sided" checked="checked">
-                                 <label for="trigger-Slide1" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-land-child2">
-                              <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;1 to 2-Sided</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-Slide2" class="checkbox" type="checkbox" value="1 to 2-Sided">
-                                 <label for="trigger-Slide2" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-land-child3">
-                              &nbsp;
-                           </li>
-                       </ul>
-                     </div>
-                  </div>
-
-                  <div class="option-landing-color" style="display: flex;">
-                     <div>
-                        <ul class="optionli-color-child check-box-list2">
-                           <li>&nbsp;</li>
-                           <li class="optionli-color-child1" style="display: flex;">
-                              <div class="option-content">Automatic</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-color1" class="checkbox" type="checkbox" value="Automatic" checked="checked">
-                                 <label for="trigger-color1" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-color-child2">
-                              <div class="option-content">Color</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-color2" class="checkbox" type="checkbox" value="Color">
-                                 <label for="trigger-color2" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-color-child2">
-                              <div class="option-content">Grayscale</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-color3" class="checkbox" type="checkbox" value="Grayscale">
-                                 <label for="trigger-color3" class=""></label>
-                              </div>
-                           </li>
-                           <li>
-                              &nbsp;
-                           </li>
-                       </ul>
-                     </div>
-                  </div>
-
-                  <div class="option-landing-resize" style="display: flex;">
-                     <div>
-                        <ul class="optionli-resize-child check-box-list3">
-                           <li>&nbsp;</li>
-                           <li class="optionli-resize-child1" style="display: flex;">
-                              <div class="option-content">None</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-resize1" class="checkbox" type="checkbox" value="None" checked="checked">
-                                 <label for="trigger-resize1" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-resize-child2" style="display: flex;">
-                              <div class="option-content">Custom</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-resize2" class="checkbox" type="checkbox" value="Custom">
-                                 <label for="trigger-resize2" class=""></label>
-                              </div>
-                           </li>
-                           <li class="optionli-resize-child2" style="display: flex;">
-                              <div class="option-content">Fit to Page</div>
-                              <div class="option-content2  option-function">                                                               
-                                 <input id="trigger-resize3" class="checkbox" type="checkbox" value="Fit to Page">
-                                 <label for="trigger-resize3" class=""></label>
-                              </div>
-                           </li>
-                           <li>
-                              &nbsp;
-                           </li>
-                       </ul>
-                     </div>
-                  </div>
-
-                  <div class="option-landing-firstpage" style="display: flex;margin-top: 67px;">
-                     <div>
-                        <ul class="option-landing-second">
-                           <li>&nbsp;</li>
-                           <li class="optionli" style="margin-top: -1%;"><div class="option-content1">Document</div class="option-content"></li>
-                           <li><div class="option-content1">1 to 1-sides</div></li>
-                           <li><div class="option-content1">Automatic</div></li>
-                           <li><div class="option-content">Resize</div><div class="option-content1">None</div></li>
-                           <li>&nbsp;</li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <!--Fax Section starts here-->
-            <div class="Fax-Section Copy-Content" id="fax-landing-page" style="display: flex;">
-               <!-- <div class="hi-light-copy"></div> -->
-               <div class="Fax-content">
-                  <ul class="">
-                     <li class="firstli">&nbsp;</li>
-                     <li class="Section-check-child1" style="display: flex;">                        
-                        <div class="fax-content2">                                                               
-                           <img class="copy-icon" src="./images/Icons_SVG/u17.png">
-                        </div>
-                        <div class="fax-txt-head send-contact"><span style="padding-left: 10px;">Send to Contact</span></div>
-                     </li>
-                     <li class="Section-check-child">
-                       
-                        <div class="fax-content2">                                                               
-                           <img class="copy-icon" src="./images/Icons_SVG/u17.png">
-                        </div>
-                        <div class="fax-txt-head fax-number"><span style="padding-left: 10px;">Enter FAX Number</span></div>
-                     </li>
-                     <li class="Section-check-child">
-                       
-                        <div class="fax-content2">                                                               
-                           <img class="copy-icon" src="./images/Icons_SVG/u17.png">
-                        </div>
-                        <div class="fax-txt-head"><span style="padding-left: 10px;">Received FAX</span></div>
-                     </li>
-                     <li class="empty">
-                        &nbsp;
-                     </li>
-                 </ul>
-               </div>
-            </div>
-            <!--Fax Section Ends here-->
-
-            <!--Fax Keyboard -->
-            <div class="fax-keyboard-section" id="fax-keyboard-section">
-               <div class="row">              
-               <div class="keyboard">
-               <div>
-                  <div style="clear:both";>
-                     <div style="width:600px; float:left;">
-                        <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="| Enter number"  maxlength="10" pattern="\d{10}">					
-                     </div>
-                     <div  class="clear_btn">
-                        <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
-                     </div>
+                    <p class="Cancel-copy" style="margin-top: 80px;">Task Canceled</p>
                 </div>
-                        <div class="keys">
-                           <button href="#" type="button" class="number" id="one" value="1">1</button>
-                           <button href="#" type="button" class="number" id="two" value="2">2</button>
-                           <button href="#" type="button" class="number" id="three" value="3">3</button>
-                           <button href="#" type="button" class="number" id="four" value="4">4</button>
-                           <button href="#" type="button" class="number" id="five" value="5">5</button>
-                           <button href="#" type="button" class="number" id="hash" value="#">#</button>
-                           <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">&#8617</button> -->
-                           <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">
+
+                <div class="Print-content-copy Copy-Content" style="display: flex;">
+                    <div class="hi-light-copy"></div>
+
+
+
+                    <div class="scrollspy dis-flex">
+                        <div class="example1" id="Landing-copy-page" style="width: 440px;">
+                            <ul style="padding-left: 15px;">
+                                <!-- Temp added paading left -->
+                                <li>&nbsp;</li>
+                                <li class="copy-num" style="margin-top: -5px;display: flex;">
+                                    <span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Copies</span>
+                                    <span class="copy-right-side">01</span></li>
+                                <li class="options"><img class="option-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Options</li>
+                                <li>&nbsp;</li>
+                            </ul>
+                        </div>
+
+                        <div class="example2" style="display: flex;">
+                            <div>
+                                <ul class="copy-ul">
+                                    <li class="copy-num1">&nbsp;&nbsp;&nbsp;&nbsp; Copies </li>
+                                </ul>
+                            </div>
+                            <div class="menu-num" style="display: flex; padding-left: 230px; ">
+
+                                <ul class="no-second-row">
+                                    <li>&nbsp;</li>
+                                    <li class="num-second" style="margin-top: -8px;"><span>0</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <!-- <li><span>0</span>&nbsp;&nbsp;<span>1</span></li> -->
+                                    <li><span>0</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>0</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>1</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>2</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>3</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>4</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>5</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>6</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>7</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>8</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>0</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>1</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>2</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>3</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>4</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>5</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>6</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>7</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>8</span></li>
+                                    <li><span>9</span>&nbsp;&nbsp;<span>9</span></li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="example3" style="display: flex;margin-top: -15px;">
+                            <div>
+                                <ul class="copy-color-1">
+                                    <li>&nbsp;</li>
+                                    <li class="copy-color-1-1" style="margin-top: -10px;">Documents</li>
+                                    <li>Color</li>
+                                    <li>Paper Sided</li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </div>
+                            <div style="display: flex; padding-left: 50px; width: 300px;">
+                                <ul class="copy-color-2">
+                                    <li>&nbsp;</li>
+                                    <li class="copy-color-2-1" style="margin-top: -10px;">B/W </li>
+                                    <li>CMYK</li>
+                                    <li>Black Only</li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="example4" style="display: flex;margin-top: -15px;">
+                            <div>
+                                <ul class="copy-color-3">
+                                    <li>&nbsp;</li>
+                                    <li class="copy-color-3-1" style="margin-top: -10px;">B/W </li>
+                                    <li>CMYK</li>
+                                    <li>Black Only</li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="">
+                                    <li><img class="done-but-tick2" src="./images/Icons_SVG/Component 15-14.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="option-landing" style="display: flex;margin-top: -15px;">
+                            <div>
+                                <ul class="option1">
+                                    <li>&nbsp;</li>
+                                    <li class="optionli" style="margin-top: -1%;">
+                                        <div class="option-content">Scan Mode</div>
+                                        <div class="option-scan  option-function" id="scan"><span>Document</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="option-content">Sides</div>
+                                        <div class="option-sides  option-function" id="sides"><span>1 to 1-sided</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="option-content">Color</div>
+                                        <div class="option-color  option-function" id="color"><span>Automatic</span></div>
+                                    </li>
+                                    <li>
+                                        <div class="option-content">Resize</div>
+                                        <div class="option-resize  option-function" id="resize"><span>None</span></div>
+                                    </li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="option-landing-scanmode" style="margin-top: 68px;">
+                            <div>
+                                <ul class="optionli-scan-child check-box-list">
+                                    <!-- <li>&nbsp;</li> -->
+                                    <li class="optionli-scan-child1" style="display: flex;">
+                                        <div class="option-content">Document</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-scan1" class="checkbox" type="checkbox" value="Document" checked="checked">
+                                            <label for="trigger-scan1" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-scan-child2" style="display: flex;">
+                                        <div class="option-content">Photo</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-scan2" class="checkbox" type="checkbox" value="Photo">
+                                            <label for="trigger-scan2" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-scan-child2" style="display: flex;">
+                                        <div class="option-content">ID Card</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-scan3" class="checkbox" type="checkbox" value="ID Card">
+                                            <label for="trigger-scan3" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-land-child3">
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="option-landing-sides" style="display: flex;">
+                            <div>
+                                <ul class="optionli-land-child check-box-list1">
+                                    <li>&nbsp;</li>
+                                    <li class="optionli-land-child1">
+                                        <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;1 to 1-Sided</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-Slide1" class="checkbox" type="checkbox" value="1 to 1-Sided" checked="checked">
+                                            <label for="trigger-Slide1" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-land-child2">
+                                        <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;1 to 2-Sided</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-Slide2" class="checkbox" type="checkbox" value="1 to 2-Sided">
+                                            <label for="trigger-Slide2" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-land-child3">
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="option-landing-color" style="display: flex;">
+                            <div>
+                                <ul class="optionli-color-child check-box-list2">
+                                    <li>&nbsp;</li>
+                                    <li class="optionli-color-child1" style="display: flex;">
+                                        <div class="option-content">Automatic</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-color1" class="checkbox" type="checkbox" value="Automatic" checked="checked">
+                                            <label for="trigger-color1" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-color-child2">
+                                        <div class="option-content">Color</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-color2" class="checkbox" type="checkbox" value="Color">
+                                            <label for="trigger-color2" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-color-child2">
+                                        <div class="option-content">Grayscale</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-color3" class="checkbox" type="checkbox" value="Grayscale">
+                                            <label for="trigger-color3" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="option-landing-resize" style="display: flex;">
+                            <div>
+                                <ul class="optionli-resize-child check-box-list3">
+                                    <li>&nbsp;</li>
+                                    <li class="optionli-resize-child1" style="display: flex;">
+                                        <div class="option-content">None</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-resize1" class="checkbox" type="checkbox" value="None" checked="checked">
+                                            <label for="trigger-resize1" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-resize-child2" style="display: flex;">
+                                        <div class="option-content">Custom</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-resize2" class="checkbox" type="checkbox" value="Custom">
+                                            <label for="trigger-resize2" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li class="optionli-resize-child2" style="display: flex;">
+                                        <div class="option-content">Fit to Page</div>
+                                        <div class="option-content2  option-function">
+                                            <input id="trigger-resize3" class="checkbox" type="checkbox" value="Fit to Page">
+                                            <label for="trigger-resize3" class=""></label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="option-landing-firstpage" style="display: flex;margin-top: 67px;">
+                            <div>
+                                <ul class="option-landing-second">
+                                    <li>&nbsp;</li>
+                                    <li class="optionli" style="margin-top: -1%;">
+                                        <div class="option-content1">Document</div class="option-content">
+                                    </li>
+                                    <li>
+                                        <div class="option-content1">1 to 1-sides</div>
+                                    </li>
+                                    <li>
+                                        <div class="option-content1">Automatic</div>
+                                    </li>
+                                    <li>
+                                        <div class="option-content">Resize</div>
+                                        <div class="option-content1">None</div>
+                                    </li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Fax Section starts here-->
+                        <div class="Fax-Section Copy-Content" id="fax-landing-page" style="display: flex;">
+                            <!-- <div class="hi-light-copy"></div> -->
+                            <div class="Fax-content">
+                                <ul class="">
+                                    <li class="firstli">&nbsp;</li>
+                                    <li class="Section-check-child1" style="display: flex;">
+                                        <div class="fax-content2">
+                                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                        </div>
+                                        <div class="fax-txt-head send-contact"><span style="padding-left: 10px;">Send to Contact</span></div>
+                                    </li>
+                                    <li class="Section-check-child">
+
+                                        <div class="fax-content2">
+                                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                        </div>
+                                        <div class="fax-txt-head fax-number"><span style="padding-left: 10px;">Enter FAX Number</span></div>
+                                    </li>
+                                    <li class="Section-check-child">
+
+                                        <div class="fax-content2">
+                                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                        </div>
+                                        <div class="fax-txt-head"><span style="padding-left: 10px;">Received FAX</span></div>
+                                    </li>
+                                    <li class="empty">
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Fax Section Ends here-->
+
+                        <!--Fax Keyboard -->
+                        <div class="fax-keyboard-section" id="fax-keyboard-section">
+                            <div class="row">
+                                <div class="keyboard">
+                                    <div>
+                                        <div style="clear:both" ;>
+                                            <div style="width:600px; float:left;">
+                                                <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="| Enter number" maxlength="10" pattern="\d{10}">
+                                            </div>
+                                            <div class="clear_btn">
+                                                <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
+                                            </div>
+                                        </div>
+                                        <div class="keys">
+                                            <button href="#" type="button" class="number" id="one" value="1">1</button>
+                                            <button href="#" type="button" class="number" id="two" value="2">2</button>
+                                            <button href="#" type="button" class="number" id="three" value="3">3</button>
+                                            <button href="#" type="button" class="number" id="four" value="4">4</button>
+                                            <button href="#" type="button" class="number" id="five" value="5">5</button>
+                                            <button href="#" type="button" class="number" id="hash" value="#">#</button>
+                                            <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">&#8617</button> -->
+                                            <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">
                               <img class="copy-icon" src="./images/Icons_SVG/arrow_s.svg">
                            </button>
-                           <div style="margin-top:5px;">
-                              <button href="#" type="button" class="number" id="six" value="6">6</button>
-                              <button href="#" type="button" class="number" id="seven" value="7">7</button>
-                              <button href="#" type="button" class="number" id="eight" value="8">8</button>
-                              <button href="#" type="button" class="number" id="nine" value="9">9</button>
-                              <button href="#" type="button" class="number" id="zero" value="0">0</button>
-                              <button href="#" type="button" class="number" id="star" value="*">*</button>
-                           </div>
+                                            <div style="margin-top:5px;">
+                                                <button href="#" type="button" class="number" id="six" value="6">6</button>
+                                                <button href="#" type="button" class="number" id="seven" value="7">7</button>
+                                                <button href="#" type="button" class="number" id="eight" value="8">8</button>
+                                                <button href="#" type="button" class="number" id="nine" value="9">9</button>
+                                                <button href="#" type="button" class="number" id="zero" value="0">0</button>
+                                                <button href="#" type="button" class="number" id="star" value="*">*</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!--Fax keyboard-->
+                        <!--Fax keyboard-->
 
-            <div class="fax-keyboard-confirm-section" style="display: flex;">
-              </div>               
-               <div class="Fax-content-confirm">
-                  <ul class="">
-                     <li>&nbsp;</li>
-                     <li class="fax-check-child1">                        
-                        <div class="fax-content2">                                                               
-                         <span class="fax-confirm-txt">Send to&nbsp;</span> 
+                        <div class="fax-keyboard-confirm-section" style="display: flex;">
+                        </div>
+                        <div class="Fax-content-confirm">
+                            <ul class="slidetext">
+                                <li>&nbsp;</li>
+                                <li class="fax-check-child1 slidetext-content">
+                                    <div class="fax-content2">
+                                        <span class="fax-confirm-txt">Send to&nbsp;</span>
+                                    </div>
+                                    <div class="fax-txt-head-bind"></div>
+                                    <span class="fax-send-count">&#60;<span id="count-checked-checkboxes">0</span> Recipients&#62;</span>
+                                </li>
+                                <li class="fax-check-child">
+                                    <div class="fax-content2">
+                                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                    </div>
+                                    <div class="fax-txt-head add-receipient"><span style="padding-left: 10px;">Add Recipient</span></div>
+                                </li>
+
+                                <li class="fax-check-child">
+                                    <div class="fax-content2">
+                                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                    </div>
+                                    <div class="fax-txt-head"><span style="padding-left: 10px;">Options</span></div>
+                                </li>
+                                <li class="empty">
+                                    &nbsp;
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="Fax-content-add-recipient">
+                            <ul class="">
+                                <li>&nbsp;</li>
+                                <li class="fax-check-child1">
+                                    <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                    <div class="fax-content2" style="padding-left: 10px;">
+                                        <span class="send-to-cont">Send to Contacts</span>
+
+                                    </div>
+                                </li>
+                                <li class="fax-check-child">
+
+                                    <div class="fax-content2">
+                                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                    </div>
+                                    <div class="fax-txt-head fax-number1"><span style="padding-left: 10px;">Enter FAX Number</span></div>
+
+                                </li>
+
+                                <li>
+                                    &nbsp;
+                                </li>
+                            </ul>
 
                         </div>
-                        <div class="fax-txt-head-bind"></div>
-                        <span class="fax-send-count">&#60;<span id="count-checked-checkboxes">0</span> Recipients&#62;</span>
-                     </li>
-                     <li class="fax-check-child">                       
+                        <div class="Send-to-contact Copy-Content" style="display: flex;">
 
-                        <div class="fax-content2">                                                               
-                           <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                            <div class="" style="display: flex;">
+                                <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
+                                    <li class="empty">&nbsp;</li>
+                                    <li class="Send-check-child1" style="display: flex;">
+                                        <div class="set-content2">
+                                            <input id="send-check1" name="set-input" class="faxcheckbox" type="checkbox" value="Automatic" checked="checked">
+                                            <label for="send-check1" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 1 &#62;</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check2" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
+                                            <label for="send-check2" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 2 &#62;</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check4" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
+                                            <label for="send-check4" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 3 &#62;</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check5" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
+                                            <label for="send-check5" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 4 &#62;</span></div>
+                                    </li>
+
+                                    <li>
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                                <div class="count-checkboxes-wrapper col">
+                                    <span id="count-checked-checkboxess">0</span>
+                                    <img class="set-tick" src="./images/Icons_SVG/Group 2760@2x.png" />
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="fax-txt-head add-receipient"><span style="padding-left: 10px;">Add Recipient</span></div>
-                     </li>
 
-                     <li class="fax-check-child">                       
+                        <div class="fax-animation">
+                            <div class="fax-animation-content" style="text-align: center; vertical-align: middle; display:grid; ">
+                                <img class="fax-gif-anim" src="./images/Gif-images/fax_animation.gif">
+                                <span class="cancel-fax">Canceling...</span>
+                            </div>
+                            <div class="show">
 
-                        <div class="fax-content2">                                                               
-                           <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                <!-- <p class="Dialing-txt">'Dialing &#60; contact/ '+' <div class="fax-txt-head-bind"></div> + ' &#62;...'</p> -->
+                                <p class="Dialing-txt">'Dialing &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span> &#62;...'</p>
+                                <p class="Connecting-txt">Connecting &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span>&#62;...</p>
+                                <p class="Scanning">Scanning...</p>
+                                <p class="Faxing-page">Faxing page &#60;<span class='count-checked-checkboxes1'></span>&#62; to &#60;<span class='fax-animation-count'></span> &#62;...</p>
+                                <p class="Fax-sent">Fax sent successfully! Pages sent &#60;<span class='fax-animation-count'></span> &#62;</p>
+
+                            </div>
                         </div>
-                        <div class="fax-txt-head"><span style="padding-left: 10px;">Options</span></div>
-                     </li>
-                     <li class="empty">
-                        &nbsp;
-                     </li>
-                 </ul>
-               </div>
 
-               <div class="Fax-content-add-recipient">
-                  <ul class="">
-                     <li>&nbsp;</li>
-                     <li class="fax-check-child1">  
-                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">                      
-                        <div class="fax-content2" style="padding-left: 10px;">                                                               
-                           <span class="send-to-cont">Send to Contacts</span> 
 
-                        </div>                                              
-                     </li>
-                     <li class="fax-check-child">                       
-
-                        <div class="fax-content2">                                                               
-                           <img class="copy-icon" src="./images/Icons_SVG/u17.png">
-                        </div>
-                        <div class="fax-txt-head fax-number1"><span style="padding-left: 10px;">Enter FAX Number</span></div>
-
-                     </li>                    
-
-                     <li>
-                        &nbsp;
-                     </li>
-                 </ul>
-
-               </div>            
-               <div class="Send-to-contact Copy-Content" style="display: flex;">                  
-
-                  <div class="" style="display: flex;">
-                     <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
-                        <li class="empty">&nbsp;</li>
-                        <li class="Send-check-child1" style="display: flex;">                        
-                           <div class="set-content2">                                                               
-                              <input id="send-check1" name="set-input" class="faxcheckbox" type="checkbox" value="Automatic" checked="checked">
-                              <label for="send-check1" class=""></label>
-                           </div>
-                           <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 1 &#62;</span></div>
-                        </li>
-                        <li class="Send-check-child">                       
-                           <div class="set-content2">                                                               
-                              <input id="send-check2" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
-                              <label for="send-check2" class=""></label>
-                           </div>
-                           <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 2 &#62;</span></div>
-                        </li>
-                        <li class="Send-check-child">                       
-                           <div class="set-content2">                                                               
-                              <input id="send-check4" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
-                              <label for="send-check4" class=""></label>
-                           </div>
-                           <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 3 &#62;</span></div>
-                        </li>
-                        <li class="Send-check-child">                       
-                           <div class="set-content2">                                                               
-                              <input id="send-check5" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
-                              <label for="send-check5" class=""></label>
-                           </div>
-                           <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 4 &#62;</span></div>
-                        </li>
-                     
-                        <li>
-                           &nbsp;
-                        </li>
-                  </ul>
-                  <div class="count-checkboxes-wrapper col">
-                     <span id="count-checked-checkboxess">0</span> 
-                     <img class="set-tick" src="./images/Icons_SVG/Group 2760@2x.png"/>
-                 </div>
-                  
-                  </div>
-               </div>
-
-               <div class="fax-animation">
-                  <div class="fax-animation-content" style="text-align: center; vertical-align: middle; display:grid; ">
-                     <img class="fax-gif-anim" src="./images/Gif-images/fax_animation.gif">
-                     <span class="cancel-fax">Canceling...</span>                      
-                  </div>
-                  <div class="show">
-
-                     <!-- <p class="Dialing-txt">'Dialing &#60; contact/ '+' <div class="fax-txt-head-bind"></div> + ' &#62;...'</p> -->
-                     <p class="Dialing-txt">'Dialing &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span> &#62;...'</p>                     
-                     <p class="Connecting-txt">Connecting &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span>&#62;...</p>
-                     <p class="Scanning">Scanning...</p>
-                     <p class="Faxing-page">Faxing page &#60;<span class='count-checked-checkboxes1'></span>&#62; to &#60;<span class='fax-animation-count'></span> &#62;...</p>
-                     <p class="Fax-sent">Fax sent successfully! Pages sent &#60;<span class='fax-animation-count'></span> &#62;</p>
-
-                  </div>
-               </div>
-      
-
-            <!--Settings Section starts here-->
-            <!-- <div class="Settings-Section Copy-Content" style="display: flex;">
+                        <!--Settings Section starts here-->
+                        <!-- <div class="Settings-Section Copy-Content" style="display: flex;">
               
                <div class="row">
                   <ul class="Section-checkbox-list col" id="Fax-input-but">
@@ -640,106 +650,115 @@
                  </div>
                </div>
             </div> -->
-            <!--Settings Section Ends here-->
-               </div>
+                        <!--Settings Section Ends here-->
+                    </div>
 
-               <div class="icon-rt copy-button" style="padding-top: 73px;padding-left: 2px;">
+                    <div class="icon-rt copy-button" style="padding-top: 73px;padding-left: 2px;">
 
-                     <a href="#" class="done-but">
-                        <img class="done-but-tick1" src="./images/Icons_SVG/Component 15-14.png">
-                        <span class="but-text">Copy</span>
-                     <a href="#" class="send-but"><span class="send-text">Send</span></a>
-                     <a href="#" class="done-button"><span class="send-text">Done</span></a>
-                  
-                  <img class="done-but-round" src="./images/Icons_SVG/Rectangle 2036.png">
-                  
-               </a>
-               </div>
+                        <a href="#" class="done-but">
+                            <img class="done-but-tick1" src="./images/Icons_SVG/Component 15-14.png">
+                            <span class="but-text">Copy</span>
+                            <a href="#" class="send-but"><span class="send-text">Send</span></a>
+                            <a href="#" class="done-button"><span class="send-text">Done</span></a>
 
-               <!--End Content area-->
+                            <img class="done-but-round" src="./images/Icons_SVG/Rectangle 2036.png">
 
-                
+                        </a>
+                    </div>
 
+                    <!--End Content area-->
+
+
+
+                </div>
+                <div class="Bottom-shade">
+                    <div class="swapMe-up">
+                        <div class="up1"></div>
+                        <div class="up2"></div>
+                    </div>
+                </div>
             </div>
-            <div class="Bottom-shade">
-               <div class="swapMe-up">
-                  <div class="up1"></div> 
-                  <div class="up2"></div>
-               </div>
-            </div>
-         </div>
             <div class="" style="opacity: 0.3;">
-               <div class="icon-help">
-                  <a class="carousel-item" href="#" >
-                  <img class="Help-btn" src="./images/Icons_SVG/help_l.svg">
-                  </a>
-               </div>
+                <div class="icon-help">
+                    <a class="carousel-item" href="#">
+                        <img class="Help-btn" src="./images/Icons_SVG/help_l.svg">
+                    </a>
+                </div>
             </div>
             <div class="" style="padding-left: 44px;">
-               <div class="icon-cancel">
-                  <a class="carousel-item" href="#" >
-                  <img class="Cancel-btn" src="./images/Icons_SVG/cancel_l.svg">
-                  </a>
-               </div>
+                <div class="icon-cancel">
+                    <a class="carousel-item" href="#">
+                        <img class="Cancel-btn" src="./images/Icons_SVG/cancel_l.svg">
+                    </a>
+                </div>
             </div>
-         </div>
-         <!--Landing Section Ends here-->
-        
-         <!-- Dot loading Setion-->
-         <div class="row Dot-Section1 dis-flex">
+        </div>
+        <!--Landing Section Ends here-->
+
+        <!-- Dot loading Setion-->
+        <div class="row Dot-Section1 dis-flex">
             <div class="icon-lt">
-               <a class="carousel-item" href="#" >
-               <img class="back-btn" src="./images/Icons_SVG/back_btn_u35.png">
-               </a>
+                <a class="carousel-item" href="#">
+                    <img class="back-btn" src="./images/Icons_SVG/back_btn_u35.png">
+                </a>
             </div>
             <div class="Print-content Dot-Section" style="text-align: center; vertical-align: middle;padding-top: 3%;">
-               <img class="copy-gif-anim" src="./images/Gif-images/copy_animation.gif">
-               <p class="Copying-txt">Copying...</p>
-               <p class="Printing-txt">Printing...</p>
-               <p class="Complete-txt">Complete!</p>
-               <p class="Cancel-copy">Task Canceled</p>
+                <img class="copy-gif-anim" src="./images/Gif-images/copy_animation.gif">
+                <p class="Copying-txt">Copying...</p>
+                <p class="Printing-txt">Printing...</p>
+                <p class="Complete-txt">Complete!</p>
+                <p class="Cancel-copy">Task Canceled</p>
             </div>
             <div class="" style="opacity: 0.3;">
-               <div class="icon-help">
-                  <a class="carousel-item" href="#" >
-                  <img class="Help-btn" src="./images/Icons_SVG/Help Icon.png">
-                  </a>
-               </div>
+                <div class="icon-help">
+                    <a class="carousel-item" href="#">
+                        <img class="Help-btn" src="./images/Icons_SVG/Help Icon.png">
+                    </a>
+                </div>
             </div>
             <div class="" style="opacity: 1.0; padding-left: 44px;">
-               <div class="icon-cancel">
-                  <a class="carousel-item" href="#" >
-                  <img class="Cancel-btn" src="./images/Icons_SVG/Cancel Icon.png">
-                  </a>
-               </div>
+                <div class="icon-cancel">
+                    <a class="carousel-item" href="#">
+                        <img class="Cancel-btn" src="./images/Icons_SVG/Cancel Icon.png">
+                    </a>
+                </div>
             </div>
-         </div>
-         <!--Dot ending section--> 
-      </div>
-      <!--  Scripts-->
-      <script> 
-         document.onreadystatechange = function() { 
-             if (document.readyState !== "complete") { 
-                 document.querySelector( 
-                   "body").style.visibility = "hidden"; 
-                 document.querySelector( 
-                   "#loader").style.visibility = "visible"; 
-             } else { 
-                 document.querySelector( 
-                   "#loader").style.display = "none"; 
-                 document.querySelector( 
-                   "body").style.visibility = "visible"; 
-             } 
-         }; 
-     </script> 
+        </div>
+        <!--Dot ending section-->
+    </div>
+    <!--  Scripts-->
+    <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+                document.querySelector(
+                    "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                    "#loader").style.display = "none";
+                document.querySelector(
+                    "body").style.visibility = "visible";
+            }
+        };
+    </script>
 
-      <script src="./js/materialize.js"></script>
-      <script src="./js/init.js"></script>
-      <script src="./js/History.js"></script>
-      <script src="./js/Global.js"></script>
-      <script src="./js/Keyboard.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".slidetext").mouseover(function() {
+                $(".slidetext-content").addClass('transcrolltxt');
+            });
+            $(".slidetext").mouseout(function() {
+                $(".slidetext-content").removeClass('transcrolltxt').animate({});
+            });
+        });
+    </script>
 
-
-   </body>
+    <script src="./js/materialize.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/History.js"></script>
+    <script src="./js/Global.js"></script>
+    <script src="./js/Keyboard.js"></script>
+</body>
 
 </html>
