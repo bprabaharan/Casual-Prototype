@@ -1,8 +1,8 @@
-var emailAlphabetsKey = ["abc","def","ghi","jkl","mno","pqrs","tuv","wxyz",".com","@","._-","123#"];
-var emailNumbersKey = ["1","2","3","4","5","6","7","8","abc","9","0","!@#"];
+var emailAlphabetsKey = ["abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz", ".com", "@", "._-", "123#"];
+var emailNumbersKey = ["1", "2", "3", "4", "5", "6", "7", "8", "abc", "9", "0", "!@#"];
 $(function() {
-    
-  
+
+
     $(".clear").hide();
     $(".keys").click(function() {
         $(".clear").show();
@@ -28,7 +28,7 @@ $(function() {
     //     }
     // });
 
-    
+
 
     function phoneno() {
         $('#display').keypress(function(e) {
@@ -46,24 +46,24 @@ $(function() {
     alphabetsKey(emailAlphabetsKey);
 });
 
-function alphabetsKey(data){
+function alphabetsKey(data) {
     console.log(data);
     $.each(data, function(index, value) {
-        var i = index+1;
-        $('#key'+i).val(value);
-        $('#key'+i).html(value);
-          
-      });
+        var i = index + 1;
+        $('#key' + i).val(value);
+        $('#key' + i).html(value);
+
+    });
 }
 
-function changeKeyboard(data){
+function changeKeyboard(data) {
     var value = $(data).attr('value');
-    
-    if(value === "123#"){
-        
-        alphabetsKey(emailNumbersKey); 
-    }else if (value === "abc"){
-        alphabetsKey(emailAlphabetsKey); 
+
+    if (value === "123#") {
+
+        alphabetsKey(emailNumbersKey);
+    } else if (value === "abc") {
+        alphabetsKey(emailAlphabetsKey);
     }
 
 }
@@ -81,33 +81,39 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
 function chooseLetters(data) {
-   
+
     var value = $(data).attr('value');
-    
-    var letters = value.split(''); 
-    if(letters.length > 1){
-    $.each(letters, function(index, value) {
-        var i = index+1;
-        $('#chooseLetter'+i).val(value);
-        $('#chooseLetter'+i).html(value);    
-      });
-      modal.style.display = "block";
-    }else{
+
+    var letters = value.split('');
+    if (letters.length > 1) {
+        $.each(letters, function(index, value) {
+            var i = index + 1;
+            $('#chooseLetter' + i).val(value);
+            $('#chooseLetter' + i).html(value);
+        });
+        modal.style.display = "block";
+    } else {
         console.log(value);
         myFunction(data);
     }
 }
+
 function myFunction(data) {
     console.log();
     modal.style.display = "none";
     var $display = $('#display');
     $display.val();
     var value = $(data).attr('value');
-         if ($display.val() != 0) {
-            $display.val($display.val() +value);
+    if ($display.val() != 0) {
+        $display.val($display.val() + value);
 
-        } else {
-            $display.val(value);
-        }
+    } else {
+        $display.val(value);
+    }
+}
+
+function modelclose() {
+    modal.style.display = "none";
 }
