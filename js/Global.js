@@ -784,47 +784,7 @@ $(document).ready(function() {
         $(".Top-shade").hide();
         $(".Bottom-shade").hide();
     }
-    $(function() {
-        $(".clear").hide();
-        $(".keys").click(function() {
-            $(".clear").show();
-        });
-
-        // $(".back_btn").click(function(){
-        //     $(".keyboard").hide();
-        //     $(".fax_btn").show();
-        // });
-
-        var $display = $("#display");
-        $display.val();
-
-        $("#clear_btn").click(function() {
-            $(".display").val(
-                $(".display")
-                .val()
-                .substring(0, $(".display").val().length - 1)
-            );
-        });
-
-        $(document).on("click", "button.number", function() {
-            if ($display.val() != 0) {
-                $display.val($display.val() + $(this).val());
-            } else {
-                $display.val($(this).val());
-            }
-        });
-
-        function phoneno() {
-            $("#display").keypress(function(e) {
-                var a = [];
-                var k = e.which;
-
-                for (i = 48; i < 58; i++) a.push(i);
-
-                if (!(a.indexOf(k) >= 0)) e.preventDefault();
-            });
-        }
-    });
+   
     $(".options").click(function() {
         console.log("click options");
         history_details.push("showOption()");
