@@ -10998,7 +10998,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           centerTweenedOpacity = 1;
         } else {
           alignment = 'translateX(' + (this.el.clientWidth - this.itemWidth) / 2 + 'px) ';
-          alignment += 'translateY(' + (this.el.clientHeight - this.itemHeight) / 2 + 'px)';
+          alignment += 'translateY(0px)';
           centerTweenedOpacity = 1 - numVisibleOffset * tween;
         }
 
