@@ -771,12 +771,14 @@ $(document).ready(function() {
     });
 
     function faxkeyboard() {
+        console.log("faxkeyboard");
         $(".hi-light-copy")
             .animate({ marginTop: "-80px", opacity: "0" })
             .hide(50);
         $(".fax-keyboard-section").addClass("anim-appear-bot-top");
         $(".fax-keyboard-section")
-            .css({ opacity: "1", marginTop: "40px" })
+            .css({ opacity: "1", marginTop: "0px" })
+            // .css({ opacity: "1", marginTop: "40px" })
             .show(50);
         $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
         $(".Top-shade").hide();

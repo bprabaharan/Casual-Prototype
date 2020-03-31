@@ -11,26 +11,12 @@ $(function() {
         $(".clear").show();
     });
 
-    // $(".back_btn").click(function(){
-    //     $(".keyboard").hide();
-    //     $(".fax_btn").show();
-    // });
 
     var $display = $('#display');
     $display.val();
     $('#clear_btn').click(function() {
         $('.display').val($('.display').val().substring(0, $('.display').val().length - 1));
     });
-
-    // $(document).on('click', 'button.number-new', function() {
-    //     if ($display.val() != 0) {
-    //         $display.val($display.val() + $(this).val());
-
-    //     } else {
-    //         $display.val($(this).val());
-    //     }
-    // });
-
 
 
     function phoneno() {
@@ -75,13 +61,7 @@ function changeKeyboard(data) {
 }
 // Get the modal
 var modal = document.getElementById("myModal");
-// var btn = document.getElementById("key1");
-// var span = document.getElementsByClassName("close")[0];
 
-
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";

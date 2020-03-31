@@ -449,40 +449,79 @@
                         <!--Fax Section Ends here-->
 
                         <!--Fax Keyboard -->
-                        <div class="fax-keyboard-section" id="fax-keyboard-section">
+                        <div class="fax-keyboard-section" id="fax-keyboard-section" style="display: none !important;">
                             <div class="row">
                                 <div class="keyboard">
                                     <div>
                                         <div style="clear:both" ;>
                                             <div style="width:600px; float:left;">
-                                                <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="| Enter number" maxlength="10" pattern="\d{10}">
+                                                <div class="Lt-shadow1"></div>
+                                                <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="Enter email |" pattern="\d{10}">
+                                                <div class="Rt-shadow"></div>
                                             </div>
-                                            <div class="clear_btn">
+                                            <!-- <div  class="clear_btn">
                                                 <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
-                                            </div>
+                                                </div> -->
                                         </div>
                                         <div class="keys">
-                                            <button href="#" type="button" class="number" id="one" value="1">1</button>
-                                            <button href="#" type="button" class="number" id="two" value="2">2</button>
-                                            <button href="#" type="button" class="number" id="three" value="3">3</button>
-                                            <button href="#" type="button" class="number" id="four" value="4">4</button>
-                                            <button href="#" type="button" class="number" id="five" value="5">5</button>
-                                            <button href="#" type="button" class="number" id="hash" value="#">#</button>
-                                            <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">&#8617</button> -->
-                                            <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">
-                              <img class="copy-icon" src="./images/Icons_SVG/arrow_s.svg">
-                           </button>
-                                            <div style="margin-top:5px;">
-                                                <button href="#" type="button" class="number" id="six" value="6">6</button>
-                                                <button href="#" type="button" class="number" id="seven" value="7">7</button>
-                                                <button href="#" type="button" class="number" id="eight" value="8">8</button>
-                                                <button href="#" type="button" class="number" id="nine" value="9">9</button>
-                                                <button href="#" type="button" class="number" id="zero" value="0">0</button>
-                                                <button href="#" type="button" class="number" id="star" value="*">*</button>
-                                            </div>
+                                            <button href="#" type="button" class="number-new" id="key1" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key2" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key3" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key4" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new-highlight clear1" id="clear_btn" value="&#9003">&#9003</button>
+                                            <!-- <button href="#" type="button" class="number-new" id="hash" value="#">back</button> -->
+                                            <!-- <button href="&#9003" type="button" class="clear1 number-new-highlight" id="clear_btn" value="">
+                                                    <img class="copy-icon-new" src="../Casual-Prototype/images/Icons_SVG/backsapce_off_s.svg">
+                                                </button> -->
+                                            <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617"></button> -->
+                                            <button href="#" type="button" class="number-new" id="key5" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key6" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key7" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key8" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new-highlight" id="keyAdd" value="#">add</button>
+                                            <button href="#" type="button" class="number-new-highlight" id="key9" onclick="changeKeyboard(this)" value=""></button>
+                                            <button href="#" type="button" class="number-new" id="key10" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new" id="key11" value="" onclick="chooseLetters(this)"></button>
+                                            <button href="#" type="button" class="number-new-highlight" id="key12" value="" onclick="changeKeyboard(this)"></button>
+                                            <button href="&#8592" type="button" class="backbtn number-new-highlight" id="backspace" value="&#8594" style="margin-left: 4px;font-size: 50px;
+                                                font-weight: bold; background-color: #ffffff; color: black;">
+                                                <!-- <img class="copy-icon-new" src="./images/Icons_SVG/arrow_s.svg"> -->&#8594;
+                                                </button>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-header">
+                                        <button type="button" class="model-close" data-dismiss="modal" aria-label="Close">                      
+                                          <img class="copy-icon-new" src="./images/Icons_SVG/Cancel Icon.png" onclick="modelclose(this)" />
+                                        </button>
+                                    </div>
+                    
+                                    <div class="modal-content">
+                                        <div class="alphabat-num" id="showLetter1">
+                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>
+                                        </div>
+                                        <div class="alphabat-num"  id="showLetter2">
+                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>
+                                        </div>
+                                        <div class="alphabat-num"  id="showLetter3">
+                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>
+                                        </div>
+                                        <div class="alphabat-num" id="showLetter4">
+                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter4" value=""></button>
+                                        </div>
+                                        <div class="alphabat-num" id="showLetter5">
+                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter5" value=""></button>
+                                        </div>
+                                        <div class="alphabat-num" id="showLetter6">
+                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter6" value=""></button>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                    
                             </div>
                         </div>
                         <!--Fax keyboard-->
@@ -753,6 +792,48 @@
             });
         });
     </script>
+
+<script>
+    document.onreadystatechange = function() {
+        // $(".fax-keyboard-section").css('display', 'block');
+        if (document.readyState !== "complete") {
+            document.querySelector(
+                "body").style.visibility = "hidden";
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+        }
+    };
+</script>
+<script type="text/javascript">
+    // $(document).ready(function($) {
+    //     let data = [
+    //         "admin@jqueryscript.net",
+    //         "admin@cssscript.com"
+    //     ]
+    //     $("#display1").email_multiple({
+    //         data: data
+    //             // reset: true
+    //     });
+    // });
+    // var _gaq = _gaq || [];
+    // _gaq.push(['_setAccount', 'UA-36251023-1']);
+    // _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    // _gaq.push(['_trackPageview']);
+
+    // (function() {
+    //     var ga = document.createElement('script');
+    //     ga.type = 'text/javascript';
+    //     ga.async = true;
+    //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //     var s = document.getElementsByTagName('script')[0];
+    //     s.parentNode.insertBefore(ga, s);
+    // })();
+</script>
 
     <script src="./js/materialize.js"></script>
     <script src="./js/init.js"></script>
