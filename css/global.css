@@ -235,7 +235,7 @@ html {
 .transcrolltxt {
     transition-timing-function: ease-in;
     transition: 5s;
-    transform: translateX(-30%);
+    transform: translateX(-100%);
     animation: scrollText 3s ease-in-out;
 }
 
@@ -1391,12 +1391,16 @@ input[type="checkbox"]:checked+label {
         margin-right: 6rem;
         width: 696px !important;
     }
+    .Print-content-main {
+        padding-top: 2%;
+    }
     .Print-content,
     .Print-content-main {
         height: 15rem !important;
         -webkit-perspective: 40rem !important;
         perspective: 40rem !important;
         width: 696px !important;
+        /* padding-top: 2%; */
     }
     .carousel .carousel-item {
         visibility: hidden;
@@ -1829,7 +1833,7 @@ button:focus {
 .modal-content {
     background-color: #fefefe00;
     margin: auto;
-    padding:0px !important;
+    padding: 0px !important;
     width: 80%;
     height: 90%;
 }

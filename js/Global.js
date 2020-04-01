@@ -41,7 +41,7 @@ $(document).ready(function() {
                     .find("span")
                     .text(event.target.value);
                 $(".option-landing .optionli").css("margin-top", "0px");
-                $(".option-landing-scanmode").css({ opacity: "0.3" });
+                $(".option-landing-scanmode").css({ opacity: "1" });
                 setTimeout(function() {
                     $(".option-landing-scanmode .option-content").animate({ "margin-left": "-2.162em" },
                         600
@@ -93,7 +93,7 @@ $(document).ready(function() {
                     .find("span")
                     .text(event.target.value);
                 $(".option-landing .optionli").css("margin-top", "-185px");
-                $(".option-landing-color").css({ opacity: "0.3" });
+                $(".option-landing-color").css({ opacity: "1" });
                 setTimeout(function() {
                     $(".option-landing-color .option-content").animate({ "margin-left": "-2.162em" },
                         600
@@ -119,7 +119,7 @@ $(document).ready(function() {
                     .find("span")
                     .text(event.target.value);
                 $(".option-landing .optionli").css("margin-top", "-270px");
-                $(".option-landing-resize").css({ opacity: "0.3" });
+                $(".option-landing-resize").css({ opacity: "1" });
                 setTimeout(function() {
                     $(".option-landing-resize .option-content").animate({ "margin-left": "-2.162em" },
                         600
@@ -259,6 +259,7 @@ $(document).ready(function() {
         $(".hi-light-copy").animate({ width: "395px" }, 300);
     });
     $(".set-tick").click(function() {
+        history_details.push("set_tick()");
         $(".hi-light-copy").animate({ width: "395px" }, 300);
         $(".scrollspy").css({ width: "437px" });
         $(".count-checkboxes-wrapper").css("opacity", "0");
@@ -380,6 +381,7 @@ $(document).ready(function() {
     }
 
     $(".send-contact").click(function() {
+        history_details.push("send_contact()");
         $(".Fax-content-add-recipient")
             .addClass("anim-disappear")
             .hide();
@@ -765,9 +767,9 @@ $(document).ready(function() {
     $(".fax-number").click(function() {
         history_details.push("showFirstLandingPage()");
         $(".Fax-Section").addClass("anim-disappear");
-        $(".Fax-Section").hide(300);
+        $(".Fax-Section").hide(100);
         $(".scrollspy").css("width", "696px");
-        setTimeout(faxkeyboard, 600);
+        setTimeout(faxkeyboard, 300);
     });
 
     function faxkeyboard() {
@@ -784,7 +786,7 @@ $(document).ready(function() {
         $(".Top-shade").hide();
         $(".Bottom-shade").hide();
     }
-   
+
     $(".options").click(function() {
         console.log("click options");
         history_details.push("showOption()");

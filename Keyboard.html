@@ -12,6 +12,66 @@
     <title>HP Casual UI Protype</title>
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <style>
+        span.email-ids {
+            float: left;
+            /* padding: 4px; */
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            background: transparent;
+            padding: 3px 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        
+        span.cancel-email {
+            border: 1px solid #ccc;
+            width: 18px;
+            display: block;
+            float: right;
+            text-align: center;
+            margin-left: 20px;
+            border-radius: 49%;
+            height: 18px;
+            line-height: 15px;
+            margin-top: 1px;
+            cursor: pointer;
+        }
+        
+        .email-id-row {
+            border: 1px solid #ccc;
+        }
+        
+        .all-mail {
+            display: flex;
+            width: 696px;
+            overflow-x: auto;
+        }
+        
+        .email-id-row input {
+            border: 0;
+            outline: 0;
+        }
+        
+        span.to-input {
+            display: block;
+            float: left;
+            padding-right: 11px;
+        }
+        
+        .email-id-row {
+            padding-top: 6px;
+            padding-bottom: 7px;
+            /*margin-top: 23px;*/
+        }
+        
+        input:-internal-autofill-selected {
+            background-color: rgb(18, 18, 19, 0) !important;
+            background-image: none !important;
+            color: -internal-light-dark-color( white) !important;
+        }
+    </style>
 </head>
 
 <body class="js-focus-visible" style="visibility: hidden;">
@@ -24,6 +84,7 @@
                     <div style="clear:both" ;>
                         <div style="width:600px; float:left;">
                             <div class="Lt-shadow1"></div>
+                            <input type="text" id="essai" placeholder="Email">
                             <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="Enter email |" pattern="\d{10}">
                             <div class="Rt-shadow"></div>
                         </div>
@@ -71,10 +132,10 @@
                     <div class="alphabat-num" id="showLetter1">
                         <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>
                     </div>
-                    <div class="alphabat-num"  id="showLetter2">
+                    <div class="alphabat-num" id="showLetter2">
                         <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>
                     </div>
-                    <div class="alphabat-num"  id="showLetter3">
+                    <div class="alphabat-num" id="showLetter3">
                         <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>
                     </div>
                     <div class="alphabat-num" id="showLetter4">
@@ -118,24 +179,11 @@
                 "admin@jqueryscript.net",
                 "admin@cssscript.com"
             ]
-            $("#display1").email_multiple({
+            $("#essai").email_multiple({
                 data: data
                     // reset: true
             });
         });
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
     </script>
     <!-- <script src="./js/materialize.js"></script> -->
     <!-- <script src="./js/init.js"></script>
