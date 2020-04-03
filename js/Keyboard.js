@@ -15,7 +15,14 @@ $(function() {
     var $display = $('#display');
     $display.val();
     $('#clear_btn').click(function() {
-        $('.display').val($('.display').val().substring(0, $('.display').val().length - 1));
+        var display = $('#display').val().length;
+        var multiEmaail = $("#multiEmail > span").length;
+        if(display > 0){
+            $('#display').val($('#display').val().substring(0, $('#display').val().length - 1));
+        } else if(multiEmaail > 0){
+            $('#multiEmail').children().last().remove();
+        }
+        
     });
 
 
@@ -95,7 +102,6 @@ function chooseLetters(data) {
 }
 
 function myFunction(data) {
-    console.log();
     modal.style.display = "none";
     var $display = $('#display');
     $display.val();
@@ -110,4 +116,13 @@ function myFunction(data) {
 
 function modelclose() {
     modal.style.display = "none";
+}
+
+function addMultiEmail(){
+    var email = $("#display").val();
+    var email_regex = /^([A-Za-z0-9_\-\.\+])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+   if(email_regex.test(email)){
+       $("#multiEmail").append("<span class='ei_box ei_valid'>"+email+"</span>");
+       $("#display").val('');
+   }
 }

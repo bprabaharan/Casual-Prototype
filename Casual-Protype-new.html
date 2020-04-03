@@ -15,6 +15,7 @@
 
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link rel="stylesheet" href="./css/jquery.emailinput.min.css">
 </head>
 
 <body class="js-focus-visible" style="visibility: hidden;">
@@ -455,9 +456,13 @@
                                     <div>
                                         <div style="clear:both" ;>
                                             <div style="width:600px; float:left;">
-                                                <div class="Lt-shadow1"></div>
-                                                <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="Enter email |" pattern="\d{10}">
-                                                <div class="Rt-shadow"></div>
+                                                <div class="display ei">
+                                                    <div  id="multiEmail">
+                    
+                                                    </div>
+                                                   
+                                                </div>
+                                                <input type="email" style="font-size: 20px;width:40%;float: left;color:#fff"  value='' id="display"  size="10" placeholder="Enter email |" pattern="\d{10}">
                                             </div>
                                             <!-- <div  class="clear_btn">
                                                 <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
@@ -469,16 +474,12 @@
                                             <button href="#" type="button" class="number-new" id="key3" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key4" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new-highlight clear1" id="clear_btn" value="&#9003">&#9003</button>
-                                            <!-- <button href="#" type="button" class="number-new" id="hash" value="#">back</button> -->
-                                            <!-- <button href="&#9003" type="button" class="clear1 number-new-highlight" id="clear_btn" value="">
-                                                    <img class="copy-icon-new" src="../Casual-Prototype/images/Icons_SVG/backsapce_off_s.svg">
-                                                </button> -->
-                                            <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617"></button> -->
+                                          
                                             <button href="#" type="button" class="number-new" id="key5" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key6" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key7" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key8" value="" onclick="chooseLetters(this)"></button>
-                                            <button href="#" type="button" class="number-new-highlight" id="keyAdd" value="#">add</button>
+                                            <button href="#" type="button" class="number-new-highlight" id="keyAdd" onclick="addMultiEmail()" value="#">add</button>
                                             <button href="#" type="button" class="number-new-highlight" id="key9" onclick="changeKeyboard(this)" value=""></button>
                                             <button href="#" type="button" class="number-new" id="key10" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key11" value="" onclick="chooseLetters(this)"></button>
@@ -791,6 +792,7 @@
                 $(".slidetext-content").removeClass('transcrolltxt').animate({});
             });
         });
+       
     </script>
 
     <script>

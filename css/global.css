@@ -1915,3 +1915,49 @@ button:focus {
     white-space: nowrap;
     overflow: hidden;
 }
+
+
+/*--------------For multiEmail--------------*/
+
+
+div.ei, input.ei {
+    min-height: 22px;
+    max-height: 37px;
+    color: #fff;
+    /* padding: 5px; */
+    cursor: text;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 60%;
+    float: left;
+  }
+  
+  .ei_box {
+    display: block;
+    margin: 1px;
+    padding: 1px 3px;
+    width: auto;
+    float: left
+  }
+  
+  span.ei_valid {
+    border: 1px solid #333333;
+    background-color: #333333;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #fff;
+    padding: 4px;
+  }
+  
+  span.ei_invalid {
+    border: 1px solid #b55e5e;
+    background-color: #333333;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #fff;
+    padding: 4px;
+  }
+  #eai_input{
+    color: #fff;
+  }
+  

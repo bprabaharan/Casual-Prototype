@@ -12,66 +12,9 @@
     <title>HP Casual UI Protype</title>
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <style>
-        span.email-ids {
-            float: left;
-            /* padding: 4px; */
-            border: 1px solid #ccc;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            background: transparent;
-            padding: 3px 10px;
-            border-radius: 5px;
-            color: #fff;
-        }
-        
-        span.cancel-email {
-            border: 1px solid #ccc;
-            width: 18px;
-            display: block;
-            float: right;
-            text-align: center;
-            margin-left: 20px;
-            border-radius: 49%;
-            height: 18px;
-            line-height: 15px;
-            margin-top: 1px;
-            cursor: pointer;
-        }
-        
-        .email-id-row {
-            border: 1px solid #ccc;
-        }
-        
-        .all-mail {
-            display: flex;
-            width: 696px;
-            overflow-x: auto;
-        }
-        
-        .email-id-row input {
-            border: 0;
-            outline: 0;
-        }
-        
-        span.to-input {
-            display: block;
-            float: left;
-            padding-right: 11px;
-        }
-        
-        .email-id-row {
-            padding-top: 6px;
-            padding-bottom: 7px;
-            /*margin-top: 23px;*/
-        }
-        
-        input:-internal-autofill-selected {
-            background-color: rgb(18, 18, 19, 0) !important;
-            background-image: none !important;
-            color: -internal-light-dark-color( white) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/jquery.emailinput.min.css">
+    <!-- <script type="text/javascript" src="./js/jquery.emailinput.min.js"></script> -->
+    
 </head>
 
 <body class="js-focus-visible" style="visibility: hidden;">
@@ -83,14 +26,16 @@
                 <div>
                     <div style="clear:both" ;>
                         <div style="width:600px; float:left;">
-                            <div class="Lt-shadow1"></div>
-                            <input type="text" id="essai" placeholder="Email">
-                            <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="Enter email |" pattern="\d{10}">
-                            <div class="Rt-shadow"></div>
+                            
+                            <div class="display ei">
+                                <div  id="multiEmail">
+
+                                </div>
+                               
+                            </div>
+                            <input type="email" style="font-size: 20px;width:40%;float: left;color:#fff"  value='' id="display"  size="10" placeholder="Enter email |" pattern="\d{10}">
                         </div>
-                        <!-- <div  class="clear_btn">
-                            <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
-                            </div> -->
+                       
                     </div>
                     <div class="keys">
                         <button href="#" type="button" class="number-new" id="key1" value="" onclick="chooseLetters(this)"></button>
@@ -98,16 +43,12 @@
                         <button href="#" type="button" class="number-new" id="key3" value="" onclick="chooseLetters(this)"></button>
                         <button href="#" type="button" class="number-new" id="key4" value="" onclick="chooseLetters(this)"></button>
                         <button href="#" type="button" class="number-new-highlight clear1" id="clear_btn" value="&#9003">&#9003</button>
-                        <!-- <button href="#" type="button" class="number-new" id="hash" value="#">back</button> -->
-                        <!-- <button href="&#9003" type="button" class="clear1 number-new-highlight" id="clear_btn" value="">
-                                <img class="copy-icon-new" src="../Casual-Prototype/images/Icons_SVG/backsapce_off_s.svg">
-                            </button> -->
-                        <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617"></button> -->
+                       
                         <button href="#" type="button" class="number-new" id="key5" value="" onclick="chooseLetters(this)"></button>
                         <button href="#" type="button" class="number-new" id="key6" value="" onclick="chooseLetters(this)"></button>
                         <button href="#" type="button" class="number-new" id="key7" value="" onclick="chooseLetters(this)"></button>
                         <button href="#" type="button" class="number-new" id="key8" value="" onclick="chooseLetters(this)"></button>
-                        <button href="#" type="button" class="number-new-highlight" id="keyAdd" value="#">add</button>
+                        <button href="#" type="button" class="number-new-highlight" id="keyAdd" onclick="addMultiEmail()" value="#">add</button>
                         <button href="#" type="button" class="number-new-highlight" id="key9" onclick="changeKeyboard(this)" value=""></button>
                         <button href="#" type="button" class="number-new" id="key10" value="" onclick="chooseLetters(this)"></button>
                         <button href="#" type="button" class="number-new" id="key11" value="" onclick="chooseLetters(this)"></button>
@@ -158,6 +99,7 @@
 
     <!--  Scripts-->
     <script>
+        // $('.display').emailinput({ onlyValidValue: true, delim: ',' }); // initialize
         document.onreadystatechange = function() {
             $(".fax-keyboard-section").css('display', 'block');
             if (document.readyState !== "complete") {
@@ -171,26 +113,26 @@
                 document.querySelector(
                     "body").style.visibility = "visible";
             }
+           
         };
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function($) {
-            let data = [
-                "admin@jqueryscript.net",
-                "admin@cssscript.com"
-            ]
-            $("#essai").email_multiple({
-                data: data
-                    // reset: true
+
+        $(document).ready(function() {
+        $("#multiEmail").mouseover(function() {
+                $(".display").addClass('transcrolltxt');
+            });
+            $("#multiEmail").mouseout(function() {
+                $(".display").removeClass('transcrolltxt').animate({});
             });
         });
     </script>
+    
+     
     <!-- <script src="./js/materialize.js"></script> -->
     <!-- <script src="./js/init.js"></script>
       <script src="./js/History.js"></script>
       <script src="./js/Global.js"></script> -->
     <script src="./js/Keyboard.js"></script>
-    <script src="./js/jquery.email.multiple.js"></script>
+    <!-- <script src="./js/jquery.email.multiple.js"></script> -->
 
 </body>
 

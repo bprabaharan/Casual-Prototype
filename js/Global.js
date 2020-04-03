@@ -925,6 +925,13 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             $("#edit-count-checked-checkboxes").val(countCheckedCheckboxes);
         });
+
+        $("#multiEmail").mouseover(function() {
+            $(".display").addClass('transcrolltxt');
+        });
+        $("#multiEmail").mouseout(function() {
+            $(".display").removeClass('transcrolltxt').animate({});
+        });
     });
 
     $(".swapMe-up .up1").click(function() {
