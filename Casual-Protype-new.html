@@ -38,7 +38,7 @@
                             <img src="./images/Icons_SVG/menu_l.svg">
                         </a>
                         <a class="carousel-item copy-page" href="#" id="three">
-                            <img src="./images/Icons_SVG/copy_l.svg">
+                            <!-- <img src="./images/Icons_SVG/copy_l.svg"> -->
                         </a>
                         <a class="carousel-item ID-Page" href="#" id="four">
                             <img src="./images/Icons_SVG/id_l.svg">
@@ -47,7 +47,7 @@
                             <img src="./images/Icons_SVG/scan_l.svg">
                         </a>
                         <a class="carousel-item Fax-Page" href="#" content="menu" id="six">
-                            <img src="./images/Icons_SVG/fax_l.svg">
+                            <!-- <img src="./images/Icons_SVG/fax_l.svg"> -->
                         </a>
 
                     </div>
@@ -309,14 +309,18 @@
                                 <ul class="optionli-land-child check-box-list1">
                                     <li>&nbsp;</li>
                                     <li class="optionli-land-child1">
-                                        <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;1 to 1-Sided</div>
+                                        <div class="option-content"><img class="onetoone" src="./images/Icons_SVG/1-1.svg">
+                                            <span class="onetoone-span">1 to 1-Sided</span></div>
                                         <div class="option-content2  option-function">
                                             <input id="trigger-Slide1" class="checkbox" type="checkbox" value="1 to 1-Sided" checked="checked">
                                             <label for="trigger-Slide1" class=""></label>
                                         </div>
                                     </li>
                                     <li class="optionli-land-child2">
-                                        <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;1 to 2-Sided</div>
+                                        <div class="option-content"><img class="onetoone" src="./images/Icons_SVG/1-2.svg">
+                                            <span class="onetoone-span">1 to 2-Sided</span>
+                                        </div>
+
                                         <div class="option-content2  option-function">
                                             <input id="trigger-Slide2" class="checkbox" type="checkbox" value="1 to 2-Sided">
                                             <label for="trigger-Slide2" class=""></label>
@@ -430,7 +434,7 @@
                                     <li class="Section-check-child">
 
                                         <div class="fax-content2">
-                                            <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                            <img class="fax-num" src="./images/Icons_SVG/faxnumber_m.svg">
                                         </div>
                                         <div class="fax-txt-head fax-number"><span style="padding-left: 10px;">Enter FAX Number</span></div>
                                     </li>
@@ -457,12 +461,12 @@
                                         <div style="clear:both" ;>
                                             <div style="width:600px; float:left;">
                                                 <div class="display ei">
-                                                    <div  id="multiEmail">
-                    
+                                                    <div id="multiEmail">
+
                                                     </div>
-                                                   
+
                                                 </div>
-                                                <input type="email" style="font-size: 20px;width:40%;float: left;color:#fff"  value='' id="display"  size="10" placeholder="Enter email |" pattern="\d{10}">
+                                                <input type="email" style="font-size: 36px;width:40%;float: left;color:#fff" value='' id="display" size="10" placeholder="Enter email |" pattern="\d{10}">
                                             </div>
                                             <!-- <div  class="clear_btn">
                                                 <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
@@ -474,7 +478,7 @@
                                             <button href="#" type="button" class="number-new" id="key3" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key4" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new-highlight clear1" id="clear_btn" value="&#9003">&#9003</button>
-                                          
+
                                             <button href="#" type="button" class="number-new" id="key5" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key6" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key7" value="" onclick="chooseLetters(this)"></button>
@@ -527,8 +531,8 @@
                         </div>
                         <!--Fax keyboard-->
 
-                        <div class="fax-keyboard-confirm-section" style="display: flex;">
-                        </div>
+
+
                         <div class="Fax-content-confirm">
                             <ul class="slidetext">
                                 <li>&nbsp;</li>
@@ -792,7 +796,6 @@
                 $(".slidetext-content").removeClass('transcrolltxt').animate({});
             });
         });
-       
     </script>
 
     <script>
