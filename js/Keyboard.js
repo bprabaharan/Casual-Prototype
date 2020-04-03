@@ -122,7 +122,7 @@ function addMultiEmail(){
     var email = $("#display").val();
     var email_regex = /^([A-Za-z0-9_\-\.\+])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
    if(email_regex.test(email)){
-       $("#multiEmail").append("<span class='ei_box ei_valid'>"+email+"</span>");
+       $("#multiEmail").append("<span class='ei_box ei_valid'>"+email+" </span>");
        $("#display").val('');
    }
 }
