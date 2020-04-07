@@ -15,7 +15,7 @@
 
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link rel="stylesheet" href="./css/jquery.emailinput.min.css">
+    <!-- <link rel="stylesheet" href="./css/jquery.emailinput.min.css"> -->
 </head>
 
 <body class="js-focus-visible" style="visibility: hidden;">
@@ -26,6 +26,8 @@
             <div class="icon-lt">
                 <a class="carousel-item" href="#">
                     <img class="back-btn" src="./images/Icons_SVG/back_l.svg">
+                    <!-- <img class="back-btn" src="./images/Icons_SVG/fax_locked_l.svg"> -->
+
                 </a>
             </div>
             <div class="Print-content-main Print-content">
@@ -87,9 +89,14 @@
                                 <!-- Temp added paading left -->
                                 <li>&nbsp;</li>
                                 <li class="copy-num" style="margin-top: -5px;display: flex;">
-                                    <span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Copies</span>
+                                    <span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/Mask Group 2.svg">
+                                        <span class="copy-txt">Copies</span>
+                                    </span>
                                     <span class="copy-right-side">01</span></li>
-                                <li class="options"><img class="option-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Options</li>
+                                <li class="options">
+                                    <img class="option-icon" src="./images/Icons_SVG/options_m.svg">
+                                    <span class="copy-txt">Options</span>
+                                </li>
                                 <li>&nbsp;</li>
                             </ul>
                         </div>
@@ -418,7 +425,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <!--Fax Section starts here-->
                         <div class="Fax-Section Copy-Content" id="fax-landing-page" style="display: flex;">
                             <!-- <div class="hi-light-copy"></div> -->
@@ -432,14 +438,12 @@
                                         <div class="fax-txt-head send-contact"><span style="padding-left: 10px;">Send to Contact</span></div>
                                     </li>
                                     <li class="Section-check-child">
-
                                         <div class="fax-content2">
                                             <img class="fax-num" src="./images/Icons_SVG/faxnumber_m.svg">
                                         </div>
                                         <div class="fax-txt-head fax-number"><span style="padding-left: 10px;">Enter FAX Number</span></div>
                                     </li>
                                     <li class="Section-check-child">
-
                                         <div class="fax-content2">
                                             <img class="copy-icon" src="./images/Icons_SVG/u17.png">
                                         </div>
@@ -452,9 +456,61 @@
                             </div>
                         </div>
                         <!--Fax Section Ends here-->
-
                         <!--Fax Keyboard -->
-                        <div class="fax-keyboard-section" id="fax-keyboard-section" style="display: none !important;">
+                        <div class="fax-keyboard-section" id="fax-keyboard-section">
+                            <div class="row">
+                                <div class="keyboard">
+                                    <div>
+                                        <div style="clear:both" ;>
+                                            <div style="width:600px; float:left;">
+                                                <!-- <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="| Enter Fax" maxlength="10" pattern="\d{10}"> -->
+                                                <div class="display ei">
+                                                    <div  id="multiFax">
+                    
+                                                    </div>
+                                                   
+                                                </div>
+                                                <input type="text" style="width:40%;float: left;color:#fff" 
+                                                 value='' id="display"  size="10" placeholder="Enter Fax |">
+                                            
+                                            
+                                            </div>
+                                            <!-- <div class="clear_btn">
+                                                <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
+                                            </div> -->
+                                        </div>
+                                        <div class="keys">
+                                            <button href="#" type="button" class="number" id="one" value="1"><span class="fax-key">1</span></button>
+                                            <button href="#" type="button" class="number" id="two" value="2"><span class="fax-key">2</span><span class="fax-keys">ABC</span></button>
+                                            <button href="#" type="button" class="number" id="three" value="3"><span class="fax-key">3</span><span class="fax-keys">DEF</span></button>
+                                            <button href="#" type="button" class="number" id="four" value="4"><span class="fax-key">4</span><span class="fax-keys">GHI</span></button>
+                                            <button href="#" type="button" class="number number-spchar clear backspance-keyb"   id="clear_btn" value="">
+												<img class="keyboard-icon" src="./images/Icons_SVG/backspace_m.svg">												
+											</button>
+                                            <button href="#" type="button" class="number" id="five" value="5"><span class="fax-key">5</span><span class="fax-keys">JKL</span></button>
+                                            <button href="#" type="button" class="number" id="six" value="6"><span class="fax-key">6</span><span class="fax-keys">MNO</span></button>
+                                            <button href="#" type="button" class="number" id="seven" value="7"><span class="fax-key">7</span><span class="fax-keys">PQRS</span></button>
+                                            <button href="#" type="button" class="number" id="eight" value="8"><span class="fax-key">8</span><span class="fax-keys">TUV</span></button>
+                                            <button href="#" type="button" class="number number-spchar" id="hash"  onclick="addNumbers()" value="">												
+												<img class="keyboard-icon" src="./images/Icons_SVG/add_m.svg">												
+											</button>
+                                            <button href="#" type="button" class="number" id="hash" value="#"><span class="fax-key">#</span><span class="fax-keys"></span></button>
+                                            <button href="#" type="button" class="number" id="nine" value="9"><span class="fax-key">9</span><span class="fax-keys">WXYZ</span></button>
+                                            <button href="#" type="button" class="number" id="zero" value="0"><span class="fax-key">0</span><span class="fax-keys"></span></button>
+                                            <button href="#" type="button" class="number" id="star" value="*"><span class="fax-key">*</span><span class="fax-keys"></span></button>
+                                            <!-- <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">&#8617</button> -->
+                                            <button href="&#8592" type="button" class="backbtn" id="backspace" value="&#8617">
+												<img class="keyboard-icon" src="./images/Icons_SVG/arrow_m.svg">
+											</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        
+                        <!-- Key Board 
+                            <div class="fax-keyboard-section" id="fax-keyboard-section" style="display: none !important;">
                             <div class="row">
                                 <div class="keyboard">
                                     <div>
@@ -462,15 +518,13 @@
                                             <div style="width:600px; float:left;">
                                                 <div class="display ei">
                                                     <div id="multiEmail">
-
                                                     </div>
-
                                                 </div>
                                                 <input type="email" style="font-size: 36px;width:40%;float: left;color:#fff" value='' id="display" size="10" placeholder="Enter email |" pattern="\d{10}">
                                             </div>
-                                            <!-- <div  class="clear_btn">
+                                            <!-<div  class="clear_btn">
                                                 <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
-                                                </div> -->
+                                                </div> --
                                         </div>
                                         <div class="keys">
                                             <button href="#" type="button" class="number-new" id="key1" value="" onclick="chooseLetters(this)"></button>
@@ -478,7 +532,6 @@
                                             <button href="#" type="button" class="number-new" id="key3" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key4" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new-highlight clear1" id="clear_btn" value="&#9003">&#9003</button>
-
                                             <button href="#" type="button" class="number-new" id="key5" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key6" value="" onclick="chooseLetters(this)"></button>
                                             <button href="#" type="button" class="number-new" id="key7" value="" onclick="chooseLetters(this)"></button>
@@ -490,49 +543,45 @@
                                             <button href="#" type="button" class="number-new-highlight" id="key12" value="" onclick="changeKeyboard(this)"></button>
                                             <button href="&#8592" type="button" class="backbtn number-new-highlight" id="backspace" value="&#8594" style="margin-left: 4px;font-size: 50px;
                                                 font-weight: bold; background-color: #ffffff; color: black;">
-                                                <!-- <img class="copy-icon-new" src="./images/Icons_SVG/arrow_s.svg"> -->&#8594;
-                                                </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- The Modal -->
-                                <div id="myModal" class="modal">
-                                    <!-- Modal content -->
-                                    <div class="modal-header">
-                                        <button type="button" class="model-close" data-dismiss="modal" aria-label="Close">                      
+                                                <img class="copy-icon-new" src="./images/Icons_SVG/arrow_s.svg">
+                                                &#8594; 
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- The Modal  -->
+            <div id="myModal" class="modal">
+                <!-- Modal content  -->
+                <div class="modal-header">
+                    <button type="button" class="model-close" data-dismiss="modal" aria-label="Close">                      
                                           <img class="copy-icon-new" src="./images/Icons_SVG/Cancel Icon.png" onclick="modelclose(this)" />
                                         </button>
-                                    </div>
+                </div>
+                <div class="modal-content">
+                    <div class="alphabat-num" id="showLetter1">
+                        <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>
+                    </div>
+                    <div class="alphabat-num" id="showLetter2">
+                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>
+                    </div>
+                    <div class="alphabat-num" id="showLetter3">
+                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>
+                    </div>
+                    <div class="alphabat-num" id="showLetter4">
+                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter4" value=""></button>
+                    </div>
+                    <div class="alphabat-num" id="showLetter5">
+                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter5" value=""></button>
+                    </div>
+                    <div class="alphabat-num" id="showLetter6">
+                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter6" value=""></button>
+                    </div>
+                </div>
+            </div>
 
-                                    <div class="modal-content">
-                                        <div class="alphabat-num" id="showLetter1">
-                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>
-                                        </div>
-                                        <div class="alphabat-num" id="showLetter2">
-                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>
-                                        </div>
-                                        <div class="alphabat-num" id="showLetter3">
-                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>
-                                        </div>
-                                        <div class="alphabat-num" id="showLetter4">
-                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter4" value=""></button>
-                                        </div>
-                                        <div class="alphabat-num" id="showLetter5">
-                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter5" value=""></button>
-                                        </div>
-                                        <div class="alphabat-num" id="showLetter6">
-                                            <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter6" value=""></button>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!--Fax keyboard-->
-
-
-
+        <!-- </div>
+    </div> -->
+    
                         <div class="Fax-content-confirm">
                             <ul class="slidetext">
                                 <li>&nbsp;</li>
@@ -545,14 +594,13 @@
                                 </li>
                                 <li class="fax-check-child">
                                     <div class="fax-content2">
-                                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                        <img class="copy-icon" src="./images/Icons_SVG/add_contact_s.svg">
                                     </div>
                                     <div class="fax-txt-head add-receipient"><span style="padding-left: 10px;">Add Recipient</span></div>
                                 </li>
-
                                 <li class="fax-check-child">
                                     <div class="fax-content2">
-                                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                        <img class="copy-icon" src="./images/Icons_SVG/options_m.svg">
                                     </div>
                                     <div class="fax-txt-head"><span style="padding-left: 10px;">Options</span></div>
                                 </li>
@@ -566,21 +614,17 @@
                             <ul class="">
                                 <li>&nbsp;</li>
                                 <li class="fax-check-child1">
-                                    <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                    <img class="copy-icon" src="./images/Icons_SVG/send_l.svg">
                                     <div class="fax-content2" style="padding-left: 10px;">
                                         <span class="send-to-cont">Send to Contacts</span>
-
                                     </div>
                                 </li>
                                 <li class="fax-check-child">
-
                                     <div class="fax-content2">
-                                        <img class="copy-icon" src="./images/Icons_SVG/u17.png">
+                                        <img class="copy-icon" src="./images/Icons_SVG/fax_l.svg">
                                     </div>
                                     <div class="fax-txt-head fax-number1"><span style="padding-left: 10px;">Enter FAX Number</span></div>
-
                                 </li>
-
                                 <li>
                                     &nbsp;
                                 </li>

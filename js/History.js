@@ -64,24 +64,15 @@ function send_contact() {
 function set_tick() {
     $(".hi-light-copy").animate({ width: "545px" }, 300);
     $(".scrollspy").css({ width: "500px" });
-
     $(".count-checkboxes-wrapper").css("opacity", "1");
     $(".Fax-content-confirm ul li:first-child").css("height", "70px");
     $(".Fax-content-confirm").addClass("anim-disappear");
     $(".Fax-content-add-recipient").addClass("anim-disappear");
-
-
     $(".fax-txt-head-bind .fax-txt").show();
-
     $(".Fax-content-confirm").hide();
     $(".Send-to-contact").removeClass('anim-disappear').show(300);
-
     $(".Fax-content-confirm").hide();
-
     $(".fax-send-count").css("display", "none");
-
-
-
     $(".Fax-content-confirm .fax-check-child1").css("margin-top", "0px");
     $(".icon-rt .send-but, .icon-rt").css({ display: "none", width: "240px" });
     $(".icon-rt .done-but").css("display", "none");
@@ -92,14 +83,9 @@ function set_tick() {
 function showCopies1() {
     console.log("showCopies1");
     $(".hi-light-copy").animate({ width: "420px" }, 100);
-    $(".example2 .copy-ul .copy-num1")
-        .delay(150)
-        .animate({ opacity: 1, left: "2.162em" }, 1000)
-        .hide();
-    $(".example2 .menu-num")
-        .delay(150)
-        .animate({ opacity: 1, left: "2.162em" }, 1000)
-        .hide();
+    // $(".example2").removeClass('anim-appear').addClass('anim-disappear');
+    $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
+    $(".example2 .menu-num").delay(150).animate({ opacity: '0' }, 1000).hide();
     $(".copy-button .done-but").animate({ width: "210px", height: "90px" }, 100);
     $(".copy-button .but-text").show(100);
     $(".copy-button .done-but-tick1").hide(0);
@@ -116,6 +102,8 @@ function showCopies1() {
 }
 
 function showFaxbackspace() {
+    $(".Send-to-contact, .Fax-content-add-recipient").hide();
+    $(".fax-keyboard-confirm-section .done-but").hide();
     $(".Top-shade").hide();
     $(".Bottom-shade").hide();
     $(".fax-keyboard-section")
@@ -188,9 +176,7 @@ function showFaxsendtocont() {
 function showOption() {
     console.log("showOption");
     $(".option-content, .option-function").css({ opacity: "0.3" });
-    $(".option-landing .option-content").animate({ "margin-left": "-2.162em" },
-        600
-    );
+    $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
     $(".option-landing .option-function").hide(300);
     setTimeout(function() {
         $(".option-landing").hide();
@@ -203,7 +189,7 @@ function showOption() {
         $(".hi-light-copy").animate({ width: "395px" }, 300);
         $(".scrollspy").animate({ width: "437px" }, 300);
         $(".done-but,.copy-button").show(600);
-        $(".copy-num").css({ "margin-top": "-100px" });
+        $(".copy-num").css({ "margin-top": "-90px" });
         setTimeout(function() {
             $(".example1").show();
             $(".example1").animate({ "margin-left": "0em" }, 600);
