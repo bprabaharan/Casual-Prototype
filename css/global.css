@@ -511,9 +511,10 @@ html {
 
 .Send-to-contact .Send-checkbox-faxlist {
     text-align: center;
-    height: 240px;
+    height: 220px;
     overflow-y: auto;
     padding-left: 5px;
+    width: 580px;
 }
 
 .fax-keyboard-section {
@@ -561,17 +562,18 @@ html {
 }
 
 .Send-to-contact ul li:first-child {
-    height: 74px;
+    height: 70px;
 }
 
 .Send-to-contact ul li {
     display: flex;
 }
 
-.set-content2 label {
+
+/* .set-content2 label {
     border: 4px solid #fff;
     border-radius: 4px;
-}
+} */
 
 .option-landing ul li {
     color: #fff;
@@ -1287,6 +1289,7 @@ html {
     width: 332px;
     margin-left: 2.162em;
     opacity: 0.3;
+    display: flex;
 }
 
 .option-function {
@@ -1295,22 +1298,59 @@ html {
 
 input[type="checkbox"]+label {
     cursor: pointer;
+    height: 66px;
+    width: 66px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    /* background-color: #FFFFFF; */
+    /* background: url("../images/Icons_SVG/checkbox_unchecked_s.svg") left center no-repeat; */
+}
+
+.Send-checkbox-faxlist input[type="checkbox"]+label {
+    cursor: pointer;
+    height: 66px;
+    width: 66px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    /* background-color: #FFFFFF; */
+    background: url("../images/Icons_SVG/checkbox_unchecked_s.svg") left center no-repeat;
+}
+
+.Send-checkbox-faxlist input[type="checkbox"]+label:before {
+    background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
+}
+
+.Send-checkbox-faxlist input[type="checkbox"]+label::before {
+    cursor: pointer;
     height: 56px;
     width: 56px;
     display: inline-block;
     padding: 0 0 0 0px;
+    background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
 }
 
 input[type="checkbox"]:checked+label {
+    background: #fff;
+    height: 66px;
+    width: 66px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    background: url("../images/Icons_SVG/checkbox_checked_s.svg") left center no-repeat;
+}
+
+.optionli-scan-child input[type="checkbox"]:checked+label,
+.option-landing-sides input[type="checkbox"]:checked+label,
+.option-landing-color input[type="checkbox"]:checked+label,
+.option-landing-resize input[type="checkbox"]:checked+label {
     background: #ccc;
     height: 56px;
     width: 56px;
     display: inline-block;
     padding: 0 0 0 0px;
-    background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat;
+    background: url("../images/Icons_SVG/checkmark_m.svg") left center no-repeat;
 }
 
-input[type="checkbox"]+label::before {
+input[type="checkbox"]:checked+label::before {
     height: 56px;
     width: 56px;
     display: inline-block;
@@ -1980,20 +2020,20 @@ button:focus {
 div.ei,
 input.ei {
     min-height: 22px;
-    max-height: 50px;
+    /*max-height: 37px;*/
     color: #fff;
     /* padding: 5px; */
     cursor: text;
     overflow-y: scroll;
     overflow-x: hidden;
-    max-width: 56%;
+    max-width: 60%;
     float: left;
 }
 
 .ei_box {
     display: block;
     margin: 1px;
-    padding: 1px 12px;
+    padding: 1px 3px;
     width: auto;
     float: left
 }
@@ -2001,10 +2041,10 @@ input.ei {
 span.ei_valid {
     border: 1px solid #333333;
     background-color: #333333;
-    border-radius: 25px;
+    border-radius: 4px;
     cursor: pointer;
     color: #fff;
-    /* padding: 4px; */
+    padding: 4px;
     font-size: 28px;
 }
 
@@ -2015,6 +2055,7 @@ span.ei_comma {
     float: left;
     display: block
 }
+
 span.ei_invalid {
     border: 1px solid #b55e5e;
     background-color: #333333;
@@ -2056,4 +2097,26 @@ span.ei_invalid {
     width: 50px;
     height: 50px;
     margin-bottom: 3px;
+}
+
+.modal .modal-content {
+    padding: 64px !important;
+}
+
+.keyboard-cancel {
+    /* width: 70px; */
+    height: 80px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.keyboard-icon-pop {
+    width: 68px;
+    height: 68px;
+}
+
+.option-img,
+.option-img img {
+    width: 66px;
+    height: 66px;
 }
