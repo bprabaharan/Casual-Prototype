@@ -190,16 +190,17 @@ $(document).ready(function() {
         history_details.push("showFaxbackspace()");
         $(".Fax-content-confirm ul li:first-child").css("height", "70px");
         // $(".fax-keyboard-confirm-section").css('width','696px');
-        var faxtxt = $(".display").val();
-        var faxtext = $(".display").val();
         var multiFax = '';
         var multiplFax = '';
-        $("#multiFax > span").each(function(){
-            // console.log($(this).text())
-            multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
-            multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
+        $("#multiFax > span").each(function(index,item){
+            var last_item = $("#multiFax > span").length-1;
+                console.log(index,last_item);
+            if(index != last_item){
+                multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
+                multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
+            }
+            
         });
-        console.log(multiFax);
         $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(300);
 
         setTimeout(function() {

@@ -133,15 +133,17 @@ function myFunction(data) {
         if (history_details.indexOf("showFaxbackspace()") === -1) {
             history_details.push("showFaxbackspace()");
         }
-        if( $(".display").val() != ''){
-            var faxtxt = $(".display").val();
-            var faxtext = $(".display").val();
+        if( $display.val() == ''){
             var multiFax = '';
             var multiplFax = '';
-            $("#multiFax > span").each(function(){
-                // console.log($(this).text())
-                multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
-                multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
+            $("#multiFax > span").each(function(index,item){
+                var last_item = $("#multiFax > span").length-1;
+                console.log(index,last_item);
+                if(index != last_item){
+                    multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
+                    multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
+                }
+                
             });
             $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
             $(".fax-animation-count").html(multiplFax);
