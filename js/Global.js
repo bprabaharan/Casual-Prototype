@@ -741,6 +741,7 @@ $(document).ready(function() {
         doneButTick1();
         $("#Landing-copy-page").css({ left: "0px" });
         $(".scrollspy").css({ width: "437px" });
+        history_details.pop();
     });
 
     function doneButTick1() {
