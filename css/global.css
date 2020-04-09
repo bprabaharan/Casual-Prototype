@@ -1860,7 +1860,12 @@ button:focus {
     position: absolute;
     margin-left: 135px;
 }
-
+.dummy-icon {
+    height: 45px;
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
 /* .carousel .Fax-Page:hover,
 .carousel .Fax-Page:focus {
