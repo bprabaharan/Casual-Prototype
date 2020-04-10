@@ -1,5 +1,5 @@
 var history_details = [];
-
+var activScreen_history = [];
 $(".back-btn").click(function() {
     console.log(history_details, history_details.length - 1);
     eval(history_details[history_details.length - 1]);

@@ -677,6 +677,12 @@ $(document).ready(function() {
 
     $("#introduction .copy-page").click(function() {
         history_details.push("showCopyLandingPage()");
+
+        $('.swapMe-up').css('pointer-events', 'auto'); 
+        $('.swapMe-down').css('pointer-events', 'none'); 
+        activScreen_history.push(".example1");
+        // By defalult first li active. So swape down disable 
+       
         if ($(this).hasClass("active")) {
             $(".back-btn").css("opacity", "1");
             $(".back-btn").css("cursor", "pointer");
@@ -707,6 +713,13 @@ $(document).ready(function() {
         if (history_details.indexOf("showCopies1()") === -1) {
             history_details.push("showCopies1()");
         }
+        if (activScreen_history.indexOf(".example2") === -1) {
+            activScreen_history.push(".example2");
+        }
+
+        $('.swapMe-up').css('pointer-events', 'auto'); 
+        $('.swapMe-down').css('pointer-events', 'none'); 
+        // By defalult first li active. So swape down disable 
 
         /*$(".hi-light-copy").css({'width':'450px'},{'transition':' width 2s'});*/
         $(".hi-light-copy").animate({ width: "545px" }, 100);
@@ -1105,3 +1118,46 @@ $(".Fax-content ul li, .Fax-content-confirm ul li, .Fax-content-add-recipient ul
 $(document).on("click", "ul li:not(:last-child)", function(e) {
     console.log('clicked');
 })
+
+$('.swapMe-up').click(function() {
+    console.log(activScreen_history[activScreen_history.length-1]);
+    console.log($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').text()));
+    console.log($(activScreen_history[activScreen_history.length-1]).css('display'));
+    if($(activScreen_history[activScreen_history.length-1]).css('display') == 'block'||
+    $(activScreen_history[activScreen_history.length-1]).css('display') == 'flex'){
+        
+        if($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text()) != ""){
+            $(activScreen_history[activScreen_history.length-1]+' ul li.active').next().addClass("active").prev().removeClass("active");
+        }
+        if ($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text()) === "") {
+            console.log('next'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text())+'next');
+            $('.swapMe-up').css('pointer-events', 'none');
+        } 
+        if ($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text()) != "") {
+            // console.log('prev'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text())+'prev');
+            $('.swapMe-down').css('pointer-events', 'auto');
+        }
+    }
+});
+$('.swapMe-down').click(function() {
+    console.log(activScreen_history[activScreen_history.length-1]);
+    console.log($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').text()));
+    console.log($(activScreen_history[activScreen_history.length-1]).css('display'));
+    if($(activScreen_history[activScreen_history.length-1]).css('display') == 'block' ||
+    $(activScreen_history[activScreen_history.length-1]).css('display') == 'flex'){
+       
+        if($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text()) != ""){
+            $(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().addClass("active").next().removeClass("active");
+        }
+        if ($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text()) === "") {
+            console.log('prev'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text())+'prev');
+            $('.swapMe-down').css('pointer-events', 'none');
+        } 
+        if ($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text()) != "") {
+            // console.log('next'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text())+'next');
+            $('.swapMe-up').css('pointer-events', 'auto');
+        }
+    }
+});
+
+
