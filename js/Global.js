@@ -383,7 +383,7 @@ $(document).ready(function() {
         $(".copy-num").css("margin-top", "-8px");
         $(this).addClass("active");
         // $(this).parents('.example1').find('.copy-num').html('<li class="copy-num" style="margin-top: -10px;"># Copies'+ selText +'</li>');
-        $(".example1").find(".copy-num").html('<img class="copy-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Copies <span class="copies-txt">' + selText + "</span>");
+        $(".example1").find(".copy-num").html('<img class="dummy-icon" src="./images/Icons_SVG/u17.png">&nbsp;&nbsp;Copies <span class="copies-txt">' + selText + "</span>");
     });
 
     function onScreenEntryOptions() {
@@ -401,7 +401,7 @@ $(document).ready(function() {
             history_details.push("delayScanMode()");
         }
         console.log("option scan clicked", history_details);
-
+            
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
@@ -815,7 +815,13 @@ $(document).ready(function() {
     
     $(".options").click(function() {
         console.log("click options");
+        
+        $('.swapMe-up').css('pointer-events', 'auto'); 
+        $('.swapMe-down').css('pointer-events', 'none'); 
+        // By defalult first li active. So swape down disable 
+
         history_details.push("showOption()");
+        activScreen_history.push(".option-landing");
         $(".option-landing ul li:first-child").css("height", "82px");
         $(".done-but").hide();
         $(".example1").addClass("transitionLR");
@@ -1140,13 +1146,14 @@ $('.swapMe-up').click(function() {
     }
 });
 $('.swapMe-down').click(function() {
-    console.log(activScreen_history[activScreen_history.length-1]);
+    // console.log(activScreen_history[activScreen_history.length-1]);
     console.log($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').text()));
-    console.log($(activScreen_history[activScreen_history.length-1]).css('display'));
+    // console.log($(activScreen_history[activScreen_history.length-1]).css('display'));
     if($(activScreen_history[activScreen_history.length-1]).css('display') == 'block' ||
     $(activScreen_history[activScreen_history.length-1]).css('display') == 'flex'){
        
         if($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text()) != ""){
+            // alert('io');
             $(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().addClass("active").next().removeClass("active");
         }
         if ($.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text()) === "") {
