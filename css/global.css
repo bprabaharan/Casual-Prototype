@@ -217,13 +217,13 @@ html {
 
 .transitionLR-reload {
     position: relative;
-    white-space: nowrap;
-    animation: reload 0.3s ease-in-out;
+    /* white-space: nowrap; */
+    animation: reload .3s ease-in-out;
 }
 
 @keyframes reload {
     from {
-        right: 30%;
+        right: 20%;
     }
     to {
         right: 0%;
@@ -579,7 +579,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 5px 50px;
+    padding: 2px 50px;
     width: 680px;
 }
 
@@ -643,10 +643,9 @@ html {
 .option1 .option-sides,
 .option1 .option-color,
 .option1 .option-resize {
-    width: 264px;
-    align-items: center;
-    justify-content: right;
-    margin-bottom: 20px;
+    width: 100%;
+    /* align-items: center; */
+    /* justify-content: right; */
 }
 
 .optionli-land-child {
@@ -847,7 +846,7 @@ html {
 }
 
 .icon-lt .back-btn {
-    opacity: 0.3;
+    opacity: 0;
     cursor: default;
 }
 
@@ -1347,7 +1346,7 @@ input[type="checkbox"]:checked+label {
     width: 56px;
     display: inline-block;
     padding: 0 0 0 0px;
-    background: url("../images/Icons_SVG/checkmark_m.svg") left center no-repeat;
+    background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
 }
 
 input[type="checkbox"]:checked+label::before {
@@ -1578,6 +1577,22 @@ input[type="checkbox"]:checked+label::before {
 
 .number {
     background-color: #333333;
+    width: 130px;
+    height: 54px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    text-align: justify;
+    font-size: 1.5em;
+    text-align: right;
+    color: white;
+    text-align: center;
+    margin: 1px;
+    font-size: 38px;
+}
+
+.spl-number {
+    background-color: #555557;
     width: 130px;
     height: 54px;
     color: white;
@@ -1860,12 +1875,14 @@ button:focus {
     position: absolute;
     margin-left: 135px;
 }
+
 .dummy-icon {
     height: 45px;
     margin-top: 12px;
     margin-right: 10px;
     margin-left: 10px;
 }
+
 
 /* .carousel .Fax-Page:hover,
 .carousel .Fax-Page:focus {
@@ -2051,7 +2068,9 @@ span.ei_valid {
     cursor: pointer;
     color: #fff;
     padding: 4px;
-    font-size: 28px;
+    font-size: 32px;
+    border-radius: 44px;
+    padding: 0 15px;
 }
 
 span.ei_comma {
@@ -2125,4 +2144,8 @@ span.ei_invalid {
 .option-img img {
     width: 66px;
     height: 66px;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #080808;
 }

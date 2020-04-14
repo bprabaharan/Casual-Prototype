@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="https://in-media.apjonlinecdn.com/favicon/stores/1/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://in-media.apjonlinecdn.com/favicon/stores/1/favicon.png" />
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -12,6 +14,7 @@
 
 
     <title>Casual UI Protype</title>
+    <script src="./js/materialize.js"></script>
 
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -25,9 +28,7 @@
         <div class="Landing-Page dis-flex">
             <div class="icon-lt">
                 <a class="carousel-item" href="#">
-                    <img class="back-btn" src="./images/Icons_SVG/back_l.svg">
-                    <!-- <img class="back-btn" src="./images/Icons_SVG/fax_locked_l.svg"> -->
-
+                    <img class="back-btn" src="./images/Icons_SVG/back_l.svg" />
                 </a>
             </div>
             <div class="Print-content-main Print-content">
@@ -220,7 +221,10 @@
                             <div>
                                 <ul class="copy-color-1">
                                     <li>&nbsp;</li>
-                                    <li class="copy-color-1-1" style="margin-top: -10px;">Documents</li>
+                                    <li class="copy-color-1-1" style="margin-top: -10px;">
+                                        <span><img src="./images/Icons_SVG/document_l.svg"/></span>
+                                        <span>Documents</span>
+                                    </li>
                                     <li>Color</li>
                                     <li>Paper Sided</li>
                                     <li>&nbsp;</li>
@@ -249,7 +253,7 @@
                             </div>
                             <div>
                                 <ul class="">
-                                    <li><img class="done-but-tick2" src="./images/Icons_SVG/Component 15-14.png"></li>
+                                    <li><img class="done-but-tick2" src="./images/Icons_SVG/done_m.svg"></li>
                                 </ul>
                             </div>
                         </div>
@@ -257,20 +261,20 @@
                         <div class="option-landing" style="display: flex;margin-top: -15px;">
                             <div>
                                 <ul class="option1">
-                                    <li class="">&nbsp;</li>
-                                    <li class="optionli active" style="margin-top: -1%;">
+                                    <li>&nbsp;</li>
+                                    <li class="optionli option-scan active" style="margin-top: -1%;">
                                         <div class="option-content">Scan Mode</div>
                                         <div class="option-scan  option-function" id="scan"><span>Document</span></div>
                                     </li>
-                                    <li>
+                                    <li class="option-sides">
                                         <div class="option-content">Sides</div>
                                         <div class="option-sides  option-function" id="sides"><span>1 to 1-sided</span></div>
                                     </li>
-                                    <li>
+                                    <li class="option-color">
                                         <div class="option-content">Color</div>
                                         <div class="option-color  option-function" id="color"><span>Automatic</span></div>
                                     </li>
-                                    <li>
+                                    <li class="option-resize">
                                         <div class="option-content">Resize</div>
                                         <div class="option-resize  option-function" id="resize"><span>None</span></div>
                                     </li>
@@ -282,16 +286,20 @@
                         <div class="option-landing-scanmode" style="margin-top: 68px;">
                             <div>
                                 <ul class="optionli-scan-child check-box-list">
-                                    <!-- <li>&nbsp;</li> -->
-                                    <li class="optionli-scan-child1" style="display: flex;">
-                                        <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/document_l.svg">Document</div>
+                                    <li>&nbsp;</li>
+                                    <li class="optionli-scan-child1 active" style="display: flex;">
+                                        <div class="option-content">
+                                            <div class="option-img"><img src="./images/Icons_SVG/document_l.svg" /></div>
+                                            Document</div>
                                         <div class="option-content2  option-function">
                                             <input id="trigger-scan1" class="checkbox" type="checkbox" value="Document" checked="checked">
                                             <label for="trigger-scan1" class=""></label>
                                         </div>
                                     </li>
                                     <li class="optionli-scan-child2" style="display: flex;">
-                                        <div class="option-content"><img class="copy-icon" src="./images/Icons_SVG/photo_m.svg">Photo</div>
+                                        <div class="option-content">
+                                            <div class="option-img"><img src="./images/Icons_SVG/photo_m.svg" /></div>Photo</div>
+
                                         <div class="option-content2  option-function">
                                             <input id="trigger-scan2" class="checkbox" type="checkbox" value="Photo">
                                             <label for="trigger-scan2" class=""></label>
@@ -315,7 +323,7 @@
                             <div>
                                 <ul class="optionli-land-child check-box-list1">
                                     <li>&nbsp;</li>
-                                    <li class="optionli-land-child1">
+                                    <li class="optionli-land-child1 active">
                                         <div class="option-content"><img class="onetoone" src="./images/Icons_SVG/1-1.svg">
                                             <span class="onetoone-span">1:1 Sided</span></div>
                                         <div class="option-content2  option-function">
@@ -344,7 +352,7 @@
                             <div>
                                 <ul class="optionli-color-child check-box-list2">
                                     <li>&nbsp;</li>
-                                    <li class="optionli-color-child1" style="display: flex;">
+                                    <li class="optionli-color-child1 active" style="display: flex;">
                                         <div class="option-content"><img class="dummy-icon" src="./images/Icons_SVG/u17.png">Automatic</div>
                                         <div class="option-content2  option-function">
                                             <input id="trigger-color1" class="checkbox" type="checkbox" value="Automatic" checked="checked">
@@ -376,22 +384,32 @@
                             <div>
                                 <ul class="optionli-resize-child check-box-list3">
                                     <li>&nbsp;</li>
-                                    <li class="optionli-resize-child1" style="display: flex;">
-                                        <div class="option-content"><img class="onetoone" src="./images/Icons_SVG/none_l.svg">None</div>
+                                    <li class="optionli-resize-child1 active" style="display: flex;">
+                                        <div class="option-content">
+                                            <div class="option-img1"><img class="onetoone" src="./images/Icons_SVG/none_l.svg"></div>
+                                            None</div>
+
                                         <div class="option-content2  option-function">
                                             <input id="trigger-resize1" class="checkbox" type="checkbox" value="None" checked="checked">
                                             <label for="trigger-resize1" class=""></label>
                                         </div>
                                     </li>
                                     <li class="optionli-resize-child2" style="display: flex;">
-                                        <div class="option-content"><img class="onetoone" src="./images/Icons_SVG/custom_l.svg">Custom</div>
+                                        <div class="option-content">
+                                            <div class="option-img1"><img class="onetoone" src="./images/Icons_SVG/custom_l.svg"></div>
+                                            Custom</div>
                                         <div class="option-content2  option-function">
                                             <input id="trigger-resize2" class="checkbox" type="checkbox" value="Custom">
                                             <label for="trigger-resize2" class=""></label>
                                         </div>
                                     </li>
                                     <li class="optionli-resize-child2" style="display: flex;">
-                                        <div class="option-content"><img class="onetoone" src="./images/Icons_SVG/fittopage_l.svg">Fit to Page</div>
+                                        <div class="option-content">
+                                            <div class="option-img1">
+                                                <img class="onetoone" src="./images/Icons_SVG/1-1.svg">
+                                            </div>
+                                            Fit to Page
+                                        </div>
                                         <div class="option-content2  option-function">
                                             <input id="trigger-resize3" class="checkbox" type="checkbox" value="Fit to Page">
                                             <label for="trigger-resize3" class=""></label>
@@ -431,9 +449,9 @@
                             <div class="Fax-content">
                                 <ul class="">
                                     <li class="firstli">&nbsp;</li>
-                                    <li class="Section-check-child1" style="display: flex;">
+                                    <li class="Section-check-child1 active" style="display: flex;">
                                         <div class="fax-content2">
-                                            <img class="dummy-icon" src="./images/Icons_SVG/u17.png">
+                                            <img class="copy-icon" src="./images/Icons_SVG/individual_l.svg">
                                         </div>
                                         <div class="fax-txt-head send-contact"><span style="padding-left: 10px;">Send to Contact</span></div>
                                     </li>
@@ -445,7 +463,7 @@
                                     </li>
                                     <li class="Section-check-child">
                                         <div class="fax-content2">
-                                            <img class="dummy-icon" src="./images/Icons_SVG/u17.png">
+                                            <img class="copy-icon" src="./images/Icons_SVG/faxes_m.svg">
                                         </div>
                                         <div class="fax-txt-head"><span style="padding-left: 10px;">Received FAX</span></div>
                                     </li>
@@ -462,36 +480,35 @@
                                 <div class="keyboard">
                                     <div>
                                         <div style="clear:both" ;>
-                                            <div style="width:600px; float:left;">
+                                            <div style="width:690px;padding-bottom: 3px; float:left;">
                                                 <!-- <input type="tel" class="display" id="display" onkeypress="phoneno()" size="10" placeholder="| Enter Fax" maxlength="10" pattern="\d{10}"> -->
                                                 <div class="display ei">
-                                                    <div  id="multiFax">
-                    
+                                                    <div id="multiFax">
+
                                                     </div>
-                                                   
+
                                                 </div>
-                                                <input type="text" style="width:40%;float: left;color:#fff" 
-                                                 value='' id="display"  size="10" placeholder="Enter Fax |">
-                                            
-                                            
+                                                <input type="text" style="width:40%;float: left;color:#fff" value='' id="display" size="10" placeholder="Enter Fax Number">
+
+
                                             </div>
                                             <!-- <div class="clear_btn">
                                                 <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
                                             </div> -->
                                         </div>
-                                        <div class="keys">
+                                        <div class="keys" style="width:690px; height:200px; float:left;">
                                             <button href="#" type="button" class="number" id="one" value="1"><span class="fax-key">1</span></button>
                                             <button href="#" type="button" class="number" id="two" value="2"><span class="fax-key">2</span><span class="fax-keys">ABC</span></button>
                                             <button href="#" type="button" class="number" id="three" value="3"><span class="fax-key">3</span><span class="fax-keys">DEF</span></button>
                                             <button href="#" type="button" class="number" id="four" value="4"><span class="fax-key">4</span><span class="fax-keys">GHI</span></button>
-                                            <button href="#" type="button" class="number number-spchar clear backspance-keyb"   id="clear_btn" value="">
+                                            <button href="#" type="button" class="spl-number number-spchar fax-back-key clear backspance-keyb" id="clear_btn" value="">
 												<img class="keyboard-icon" src="./images/Icons_SVG/backspace_m.svg">												
 											</button>
                                             <button href="#" type="button" class="number" id="five" value="5"><span class="fax-key">5</span><span class="fax-keys">JKL</span></button>
                                             <button href="#" type="button" class="number" id="six" value="6"><span class="fax-key">6</span><span class="fax-keys">MNO</span></button>
                                             <button href="#" type="button" class="number" id="seven" value="7"><span class="fax-key">7</span><span class="fax-keys">PQRS</span></button>
                                             <button href="#" type="button" class="number" id="eight" value="8"><span class="fax-key">8</span><span class="fax-keys">TUV</span></button>
-                                            <button href="#" type="button" class="number number-spchar" id="hash"  onclick="addNumbers()" value="">												
+                                            <button href="#" type="button" class="spl-number number-spchar fax-add-key" id="hash" onclick="addNumbers()" value="">																								
 												<img class="keyboard-icon" src="./images/Icons_SVG/add_m.svg">												
 											</button>
                                             <button href="#" type="button" class="number" id="hash" value="#"><span class="fax-key">#</span><span class="fax-keys"></span></button>
@@ -507,8 +524,8 @@
                                 </div>
                             </div>
                         </div>
-                       
-                        
+
+
                         <!-- Key Board 
                             <div class="fax-keyboard-section" id="fax-keyboard-section" style="display: none !important;">
                             <div class="row">
@@ -549,48 +566,48 @@
                     </div>
                 </div>
             </div> -->
-            <!-- The Modal  -->
-            <div id="myModal" class="modal">
-                <!-- Modal content  -->
-                <div class="modal-header">
-                    <button type="button" class="model-close" data-dismiss="modal" aria-label="Close">                      
-                                          <img class="copy-icon-new" src="./images/Icons_SVG/Cancel Icon.png" onclick="modelclose(this)" />
-                                        </button>
-                </div>
-                <div class="modal-content">
-                    <div class="alphabat-num" id="showLetter1">
-                        <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>
-                    </div>
-                    <div class="alphabat-num" id="showLetter2">
-                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>
-                    </div>
-                    <div class="alphabat-num" id="showLetter3">
-                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>
-                    </div>
-                    <div class="alphabat-num" id="showLetter4">
-                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter4" value=""></button>
-                    </div>
-                    <div class="alphabat-num" id="showLetter5">
-                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter5" value=""></button>
-                    </div>
-                    <div class="alphabat-num" id="showLetter6">
-                        <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter6" value=""></button>
-                    </div>
-                </div>
-            </div>
+                        <!-- The Modal  -->
+                        <div id="myModal" class="modal">
+                            <!-- Modal content  -->
+                            <div class="modal-header">
+                                <button type="button" class="model-close" data-dismiss="modal" aria-label="Close">                      
+                                    <img class="keyboard-cancel" src="./images/Icons_SVG/cancel_m.svg" onclick="modelclose(this)" />
+                                </button>
+                            </div>
+                            <div class="modal-content">
+                                <div class="alphabat-num" id="showLetter1">
+                                    <button href="#" type="button" onclick="myFunction(this)" class="number-new number-new-num" id="chooseLetter1" value=""></button>
+                                </div>
+                                <div class="alphabat-num" id="showLetter2">
+                                    <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter2" value=""></button>
+                                </div>
+                                <div class="alphabat-num" id="showLetter3">
+                                    <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter3" value=""></button>
+                                </div>
+                                <div class="alphabat-num" id="showLetter4">
+                                    <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter4" value=""></button>
+                                </div>
+                                <div class="alphabat-num" id="showLetter5">
+                                    <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter5" value=""></button>
+                                </div>
+                                <div class="alphabat-num" id="showLetter6">
+                                    <button href="#" type="button" onclick="myFunction(this)" class="number-new-num number-new" id="chooseLetter6" value=""></button>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- </div>
+                        <!-- </div>
     </div> -->
-    
+
                         <div class="Fax-content-confirm">
                             <ul class="slidetext">
                                 <li>&nbsp;</li>
-                                <li class="fax-check-child1 slidetext-content">
+                                <li class="fax-check-child1 slidetext-content active">
                                     <div class="fax-content2">
                                         <span class="fax-confirm-txt">Send to&nbsp;</span>
                                     </div>
                                     <div class="fax-txt-head-bind"></div>
-                                    <span class="fax-send-count">&#60;<span id="count-checked-checkboxes">0</span> Recipients&#62;</span>
+                                    <span class="fax-send-count"><span id="count-checked-checkboxes">0</span> Recipients</span>
                                 </li>
                                 <li class="fax-check-child">
                                     <div class="fax-content2">
@@ -614,14 +631,14 @@
                             <ul class="">
                                 <li>&nbsp;</li>
                                 <li class="fax-check-child1">
-                                    <img class="copy-icon" src="./images/Icons_SVG/send_l.svg">
+                                    <img class="copy-icon" src="./images/Icons_SVG/individual_l.svg">
                                     <div class="fax-content2" style="padding-left: 10px;">
                                         <span class="send-to-cont">Send to Contacts</span>
                                     </div>
                                 </li>
                                 <li class="fax-check-child">
                                     <div class="fax-content2">
-                                        <img class="copy-icon" src="./images/Icons_SVG/fax_l.svg">
+                                        <img class="copy-icon" src="./images/Icons_SVG/faxnumber_m.svg">
                                     </div>
                                     <div class="fax-txt-head fax-number1"><span style="padding-left: 10px;">Enter FAX Number</span></div>
                                 </li>
@@ -636,33 +653,40 @@
                             <div class="" style="display: flex;">
                                 <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
                                     <li class="empty">&nbsp;</li>
-                                    <li class="Send-check-child1" style="display: flex;">
+                                    <li class="Send-check-child1 active" style="display: flex;">
                                         <div class="set-content2">
                                             <input id="send-check1" name="set-input" class="faxcheckbox" type="checkbox" value="Automatic" checked="checked">
                                             <label for="send-check1" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 1 &#62;</span></div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">TChalla</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check2" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
                                             <label for="send-check2" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 2 &#62;</span></div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">Clark Kent</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check4" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
                                             <label for="send-check4" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 3 &#62;</span></div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">Tony Stark</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check5" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
                                             <label for="send-check5" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 10px;">&#60; Contact 4 &#62;</span></div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">Bruce Banner</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check6" name="set-input" class="faxcheckbox" type="checkbox" value="Color">
+                                            <label for="send-check6" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span style="padding-left: 10px;">Steve Rogers</span></div>
                                     </li>
 
                                     <li>
@@ -685,11 +709,11 @@
                             <div class="show">
 
                                 <!-- <p class="Dialing-txt">'Dialing &#60; contact/ '+' <div class="fax-txt-head-bind"></div> + ' &#62;...'</p> -->
-                                <p class="Dialing-txt">'Dialing &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span> &#62;...'</p>
-                                <p class="Connecting-txt">Connecting &#60;<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span>&#62;...</p>
+                                <p class="Dialing-txt">'Dialing<span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span>...'</p>
+                                <p class="Connecting-txt">Connecting <span class='count-checked-checkboxes1'></span> / <span class='fax-animation-count'></span>...</p>
                                 <p class="Scanning">Scanning...</p>
-                                <p class="Faxing-page">Faxing page &#60;<span class='count-checked-checkboxes1'></span>&#62; to &#60;<span class='fax-animation-count'></span> &#62;...</p>
-                                <p class="Fax-sent">Fax sent successfully! Pages sent &#60;<span class='fax-animation-count'></span> &#62;</p>
+                                <p class="Faxing-page">Faxing page<span class='count-checked-checkboxes1'></span> to <span class='fax-animation-count'></span>...</p>
+                                <p class="Fax-sent">Fax sent successfully! Pages sent <span class='fax-animation-count'></span></p>
 
                             </div>
                         </div>
@@ -744,7 +768,7 @@
                     <div class="icon-rt copy-button" style="padding-top: 73px;padding-left: 2px;">
 
                         <a href="#" class="done-but">
-                            <img class="done-but-tick1" src="./images/Icons_SVG/Component 15-14.png">
+                            <img class="done-but-tick1" src="./images/Icons_SVG/tick-icon.png">
                             <span class="but-text">Copy</span>
                             <a href="#" class="send-but"><span class="send-text">Send</span></a>
                             <a href="#" class="done-button"><span class="send-text">Done</span></a>
@@ -766,7 +790,7 @@
                     </div>
                 </div>
             </div>
-            <div class="" style="opacity: 0.3;">
+            <div class="" style="opacity: 0;">
                 <div class="icon-help">
                     <a class="carousel-item" href="#">
                         <img class="Help-btn" src="./images/Icons_SVG/help_l.svg">
@@ -797,14 +821,14 @@
                 <p class="Complete-txt">Complete!</p>
                 <p class="Cancel-copy">Task Canceled</p>
             </div>
-            <div class="" style="opacity: 0.3;">
+            <div class="" style="opacity:0;">
                 <div class="icon-help">
                     <a class="carousel-item" href="#">
                         <img class="Help-btn" src="./images/Icons_SVG/Help Icon.png">
                     </a>
                 </div>
             </div>
-            <div class="" style="opacity: 1.0; padding-left: 44px;">
+            <div class="" style="opacity:0; padding-left: 44px;">
                 <div class="icon-cancel">
                     <a class="carousel-item" href="#">
                         <img class="Cancel-btn" src="./images/Icons_SVG/Cancel Icon.png">
@@ -833,10 +857,10 @@
 
     <script>
         $(document).ready(function() {
-            $(".slidetext").mouseover(function() {
+            $(".fax-check-child1").mouseover(function() {
                 $(".slidetext-content").addClass('transcrolltxt');
             });
-            $(".slidetext").mouseout(function() {
+            $(".fax-check-child1").mouseout(function() {
                 $(".slidetext-content").removeClass('transcrolltxt').animate({});
             });
         });
@@ -858,31 +882,6 @@
             }
         };
     </script>
-    <!-- <script type="text/javascript">
-        $(document).ready(function($) {
-            let data = [
-                "admin@jqueryscript.net",
-                "admin@cssscript.com"
-            ]
-            $("#display").email_multiple({
-                data: data
-                    // reset: true
-            });
-        });
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script> -->
 
     <script src="./js/materialize.js"></script>
     <script src="./js/init.js"></script>

@@ -1,8 +1,12 @@
 var history_details = [];
 var activScreen_history = [];
+
 $(".back-btn").click(function() {
     console.log(history_details, history_details.length - 1);
     eval(history_details[history_details.length - 1]);
+    $('.swapMe-up').css('pointer-events', 'auto');
+    $('.swapMe-down').css('pointer-events', 'auto');
+    ////activScreen_history.pop();
 });
 
 function showCopyLandingPage() {
