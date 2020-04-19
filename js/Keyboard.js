@@ -2,8 +2,8 @@ var emailAlphabetsKey = ["abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz
 var emailNumbersKey = ["1", "2", "3", "4", "5", "6", "7", "8", "abc", "9", "0", "!@#"];
 var emailHostnameKey = [".com", ".net", ".edu", ".org", ".biz", ".gov"];
 var emailSpecialKey = [",*#", "%&~", "()!?", "';:", "/\\+=", "[]#", "!?", "#L$", "abc", "@", "._-", "123"];
-var faxAddNumbers = [{ "img": "<img class='keyboard-icon-pop' src='./images/Icons_SVG/add_m.svg'>", "name": "addNum" },
-    { "img": "<img class='keyboard-icon-pop' src='./images/Icons_SVG/add_contact_m.svg'>", "name": "addCont" }
+var faxAddNumbers = [{ "img": "<img class='keyboard-icon-pop add_pop' src='./images/Icons_SVG/add_s_hover.svg'>", "name": "addNum" },
+    { "img": "<img class='keyboard-icon-pop add_cont_pop' src='./images/Icons_SVG/add_contact_m.svg'>", "name": "addCont" }
 ];
 
 $(function() {
@@ -137,6 +137,14 @@ function myFunction(data) {
     } else if (value === "addCont") {
         if (history_details.indexOf("showFaxbackspace()") === -1) {
             history_details.push("showFaxbackspace()");
+        }
+
+        $('.swapMe-up').css('pointer-events', 'auto');
+        $('.swapMe-down').css('pointer-events', 'auto');
+        // By defalult first li active. So swape down disable 
+        
+        if (activScreen_history.indexOf(".Send-to-contact") === -1) {
+            activScreen_history.push(".Send-to-contact");
         }
         if ($display.val() === '') {
             

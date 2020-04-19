@@ -1,0 +1,9 @@
+<svg id="Back_button" xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+  <g id="Group_2614" data-name="Group 2614" transform="translate(-612.689 -235.951)">
+    <path id="Path_1179" data-name="Path 1179" d="M685.085,253.951a54.4,54.4,0,1,0,54.4,54.4A54.4,54.4,0,0,0,685.085,253.951Zm0,102.539a48.141,48.141,0,1,1,48.143-48.14A48.142,48.142,0,0,1,685.085,356.49Z" transform="translate(0 0)" fill="#fff"/>
+    <g id="Group_2614-2" data-name="Group 2614" transform="translate(656.983 278.447)">
+      <path id="Path_1180" data-name="Path 1180" d="M663.272,261.163h0a3.1,3.1,0,0,0-2.412,1.141L639.143,288.7a3.125,3.125,0,0,0,.031,4.008l22.961,27.047a3.123,3.123,0,0,0,4.759-4.045l-18.62-21.935h44.495a3.123,3.123,0,0,0,0-6.246H648.194l17.489-21.252a3.125,3.125,0,0,0-2.411-5.108Z" transform="translate(-638.43 -261.163)" fill="#fff"/>
+    </g>
+  </g>
+  <rect id="Rectangle_2286" data-name="Rectangle 2286" width="144" height="144" fill="none"/>
+</svg>
