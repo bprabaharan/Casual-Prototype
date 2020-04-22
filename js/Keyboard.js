@@ -139,8 +139,8 @@ function myFunction(data) {
             history_details.push("showFaxbackspace()");
         }
 
-        $('.swapMe-up').css('pointer-events', 'auto');
-        $('.swapMe-down').css('pointer-events', 'auto');
+        // $('.swapMe-up').css('pointer-events', 'auto');
+        // $('.swapMe-down').css('pointer-events', 'auto');
         // By defalult first li active. So swape down disable 
         
         if (activScreen_history.indexOf(".Send-to-contact") === -1) {
@@ -169,6 +169,9 @@ function myFunction(data) {
         $(".Top-shade").css("width", "500px");
         $(".Send-to-contact").show();
         $(".fax-keyboard-confirm-section .done-but").show();
+        setTimeout(function() {
+            historyActiveScreen("");
+        }, 200);
 
     } else if ($display.val() != 0) {
         $display.val($display.val() + value);

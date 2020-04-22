@@ -25,13 +25,16 @@ $(document).ready(function() {
         }, 300);
     }
    
-    $(".check-box-list input[type=checkbox]").click(function(event) {
-        if ($(this).is(":checked")) {
-            history_details.pop();
+    $(".check-box-list li").click(function(event) {
+        history_details.pop();
+        $(".option-landing-scanmode ul").find('input[type=checkbox]:checked').removeAttr('checked');
+        $(this).find('input[type=checkbox]').attr("checked", "checked");
+        $(".check-box-list li input[type=checkbox]").each(function () {
+
+            var $this = $(this);
+            if ($this.is(':checked')) {
            
-            $(".check-box-list input[type=checkbox]").removeAttr("checked");
-            $("#" + this.attributes.id.value).attr("checked", "checked");
-           
+            
             if (
                 $(this).val() === "Document" ||
                 $(this).val() === "Photo" ||
@@ -43,7 +46,7 @@ $(document).ready(function() {
                     activScreen_history = activScreen_history.slice(0, -1);
                     },100);
                 
-                $("#scan").find("span").text(event.target.value);
+                $("#scan").find("span").text($(this).val());
                 $(".option-landing .optionli").css("margin-top", "0px");
                 $(".option-landing-scanmode").css({ opacity: "1" });
                 setTimeout(function() {
@@ -51,7 +54,7 @@ $(document).ready(function() {
                     $(".option-landing-scanmode .option-content").animate({ "margin-left": "2.162em" },
                         600
                     );
-                    historyActiveScreen();
+                   
                     $(".option-landing-scanmode .option-function").hide(100);
                     // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
                     setTimeout(delayScanMode, 300);
@@ -59,12 +62,17 @@ $(document).ready(function() {
             }
         }
     });
-    $(".check-box-list1 input[type=checkbox]").click(function(event) {
-        if ($(this).is(":checked")) {
-            history_details.pop();
-           
-            $(".check-box-list1 input[type=checkbox]").removeAttr("checked");
-            $("#" + this.attributes.id.value).attr("checked", "checked");
+    historyActiveScreen();
+    });
+    $(".check-box-list1 li").click(function(event) {
+        history_details.pop();
+        $(".option-landing-sides ul").find('input[type=checkbox]:checked').removeAttr('checked');
+        $(this).find('input[type=checkbox]').attr("checked", "checked");
+        $(".check-box-list1 li input[type=checkbox]").each(function () {
+
+            var $this = $(this);
+            if ($this.is(':checked')) {
+
             if (
                 $(this).val() === "1 to 1-Sided" ||
                 $(this).val() === "1 to 2-Sided"
@@ -90,13 +98,16 @@ $(document).ready(function() {
                 }, 600);
             }
         }
+        });
     });
-    $(".check-box-list2 input[type=checkbox]").click(function(event) {
-        if ($(this).is(":checked")) {
-            history_details.pop();
-          
-            $(".check-box-list2 input[type=checkbox]").removeAttr("checked");
-            $("#" + this.attributes.id.value).attr("checked", "checked");
+    $(".check-box-list2 li").click(function(event) {
+        history_details.pop();
+        $(".option-landing-color ul").find('input[type=checkbox]:checked').removeAttr('checked');
+        $(this).find('input[type=checkbox]').attr("checked", "checked");
+        $(".check-box-list2 li input[type=checkbox]").each(function () {
+
+            var $this = $(this);
+            if ($this.is(':checked')) {
             if (
                 $(this).val() === "Automatic" ||
                 $(this).val() === "Color" ||
@@ -119,15 +130,16 @@ $(document).ready(function() {
                     setTimeout(delayScanMode, 300);
                 }, 600);
             }
-        }
+        }    });
     });
-    $(".check-box-list3 input[type=checkbox]").click(function(event) {
-        if ($(this).is(":checked")) {
-           
-            history_details.pop();
-           
-            $(".check-box-list3 input[type=checkbox]").removeAttr("checked");
-            $("#" + this.attributes.id.value).attr("checked", "checked");
+    $(".check-box-list3 li").click(function(event) {
+        history_details.pop();
+        $(".option-landing-resize ul").find('input[type=checkbox]:checked').removeAttr('checked');
+        $(this).find('input[type=checkbox]').attr("checked", "checked");
+        $(".check-box-list2 li input[type=checkbox]").each(function () {
+
+            var $this = $(this);
+            if ($this.is(':checked')) {
             if (
                 $(this).val() === "None" ||
                 $(this).val() === "Custom" ||
@@ -153,7 +165,7 @@ $(document).ready(function() {
                     setTimeout(delayScanMode, 300);
                 }, 600);
             }
-        }
+        }   });
     });
    
 });
@@ -206,22 +218,29 @@ $(document).ready(function() {
 
     $(".add-receipient").click(function() {
         history_details.push("showFaxaddreceipient()");
+       
+        if (activScreen_history.indexOf(".Fax-content-add-recipient") === -1) {
+            activScreen_history.push(".Fax-content-add-recipient");
+        }
         $(".send-but").hide();
         $(".scrollspy").css("width", "600px");
         $(".hi-light-copy").animate({ width: "696px" }, 300);
-        $(".Fax-content-add-recipient .fax-check-child1").css("margin-top", "0px");
+        $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
         $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
               $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).addClass("anim-txt").show(300);
-        }, 300); 
+            setTimeout(function() {
+                historyActiveScreen("");
+            }, 100);
+        }, 300); 
     });
 
     $("#backspace").click(function() {
         history_details.push("showFaxbackspace()");
 
-        $('.swapMe-up').css('pointer-events', 'auto');
-        $('.swapMe-down').css('pointer-events', 'none');
+        // $('.swapMe-up').css('pointer-events', 'auto');
+        // $('.swapMe-down').css('pointer-events', 'none');
         // By defalult first li active. So swape down disable 
 
         if (activScreen_history.indexOf(".Fax-content-confirm") === -1) {
@@ -255,6 +274,9 @@ $(document).ready(function() {
             $(".Fax-content-confirm .fax-check-child1").css("margin-top", "0px");
             $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
             $(".fax-animation-count").html(multiplFax);
+            setTimeout(function() {
+                historyActiveScreen("");
+            }, 200);
         }, 600);
     });
 
@@ -284,12 +306,11 @@ $(document).ready(function() {
         console.log('set_tick clicked');
         history_details.push("set_tick()");
 
-        $('.swapMe-up').css('pointer-events', 'auto');
-        $('.swapMe-down').css('pointer-events', 'none');
+        // $('.swapMe-up').css('pointer-events', 'auto');
+        // $('.swapMe-down').css('pointer-events', 'none');
         // By defalult first li active. So swape down disable 
-        if (activScreen_history.indexOf(".Fax-content-confirm") === -1) {
             activScreen_history.push(".Fax-content-confirm");
-        }
+       
         $(".hi-light-copy").animate({ width: "395px" }, 300);
         $(".scrollspy").css({ width: "437px" });
         $(".count-checkboxes-wrapper").css("opacity", "0");
@@ -305,6 +326,9 @@ $(document).ready(function() {
         $(".icon-rt .send-but, .icon-rt").css({ display: "block", width: "240px" });
         $(".icon-rt .done-but").css("display", "none");
         $(".icon-rt .done-button").css("display", "none");
+        setTimeout(function() {
+            historyActiveScreen("");
+        }, 400);
     });
     $(".icon-rt .send-but").click(function() {
         $(".icon-rt, .hi-light-copy ").hide();
@@ -403,9 +427,10 @@ $(document).ready(function() {
         history_details.push("send_contact()");
         console.log("send_contact() clicked");
 
-        $('.swapMe-up').css('pointer-events', 'auto');
-        $('.swapMe-down').css('pointer-events', 'none');
-	if (activScreen_history.indexOf(".Send-to-contact") === -1) {
+        // $('.swapMe-up').css('pointer-events', 'auto');
+        // $('.swapMe-down').css('pointer-events', 'none');
+
+	    if (activScreen_history.indexOf(".Send-to-contact") === -1) {
             activScreen_history.push(".Send-to-contact");
         }
 
@@ -423,6 +448,7 @@ $(document).ready(function() {
             // $('.Send-to-contact').animate({ left: '0px', opacity: '1' }, 300, function() {
             //     // $('.Fax-Section').animate({ opacity: '0' }).hide();
             // }).show(600);
+            historyActiveScreen("");
             $(".count-checkboxes-wrapper").addClass('opac-view').show(300);
             $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(100);
         }, 1000);
@@ -430,9 +456,9 @@ $(document).ready(function() {
 
     $(".send-to-cont").click(function() {
         history_details.push("showFaxsendtocont()");
-	console.log("send to content to fax");
-
-
+        console.log("send to content to fax");
+        // activScreen_history.splice($.inArray(".Send-to-contact", activScreen_history), 1);
+        activScreen_history.push(".Send-to-contact");
         $(".Fax-content-add-recipient").addClass("anim-disappear").animate({ left: '-80px' }, { opacity: '0' }).hide(100);
         $(".hi-light-copy").css("width", "545px");
         $(".Fax-Section").addClass("anim-disappear").hide(300);
@@ -440,6 +466,9 @@ $(document).ready(function() {
         $(".Send-to-contact").removeClass("anim-disappear").show(600);
         $(".count-checkboxes-wrapper").css("opacity", "1");
         $(".fax-keyboard-confirm-section .done-but").show();
+        setTimeout(function() {   
+            historyActiveScreen("");  
+        }, 100);
     });
 
     $(".menu-num li").click(function() {
@@ -977,8 +1006,8 @@ $(document).ready(function() {
             history_details.push("showFaxLandingPage()");
         }
 
-        $('.swapMe-up').css('pointer-events', 'auto');
-        $('.swapMe-down').css('pointer-events', 'none');
+        // $('.swapMe-up').css('pointer-events', 'auto');
+        // $('.swapMe-down').css('pointer-events', 'none');
         // By defalult first li active. So swape down disable 
 
         if (activScreen_history.indexOf(".Fax-content") === -1) {
@@ -1007,6 +1036,7 @@ $(document).ready(function() {
     function faxtxtlanding() {
         // $(".Main-content .Fax-Section").show(1000);
         $(".Main-content .Fax-Section").css("display", "block").addClass("anim-txt");
+        historyActiveScreen("");
     }
 
     $(".fax-number").click(function() {
@@ -1199,10 +1229,10 @@ $(document).ready(function() {
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "-=90px" });
 
-        $(".Fax-Section .Section-check-child1 ").animate({ 'marginTop': "-=90px" });
-        $(".Fax-content-confirm .fax-check-child1 ").animate({ 'marginTop': "-=90px" });
+        $("" + activeScreen + "  .Section-check-child1 ").animate({ 'marginTop': "-=90px" });
+        $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "-=90px" });
         
-        $(".Fax-content-add-recipient .fax-check-child1").animate({ 'marginTop': "-=90px" });
+        $("" + activeScreen + " .fax-check-child0").animate({ 'marginTop': "-=90px" });
     });
     $(".swapMe-down .down1").click(function() {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
@@ -1217,10 +1247,10 @@ $(document).ready(function() {
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "+=90px" });
 
-        $(".Fax-Section .Section-check-child1").animate({ 'marginTop': "+=90px" });
-        $(".Fax-content-confirm .fax-check-child1 ").animate({ 'marginTop': "+=90px" });
+        $("" + activeScreen + " .Section-check-child1").animate({ 'marginTop': "+=90px" });
+        $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "+=90px" });
        
-        $(".Fax-content-add-recipient .fax-check-child1").animate({ 'marginTop': "+=90px" });
+        $("" + activeScreen + "  .fax-check-child0").animate({ 'marginTop': "+=90px" });
     });
     $(".swapMe-up .up2").click(function() {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
@@ -1235,10 +1265,10 @@ $(document).ready(function() {
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "-=90px" });
 
-        $(".Fax-Section .Section-check-child1").animate({ 'marginTop': "-=90px" });
-        $(".Fax-content-confirm .fax-check-child1 ").animate({ 'marginTop': "-=90px" });
+        $("" + activeScreen + " .Section-check-child1").animate({ 'marginTop': "-=90px" });
+        $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "-=90px" });
        
-        $(".Fax-content-add-recipient .fax-check-child1").animate({ 'marginTop': "-=90px" });
+        $("" + activeScreen + "  .fax-check-child0").animate({ 'marginTop': "-=90px" });
     });
     $(".swapMe-down .down2").click(function() {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
@@ -1253,10 +1283,10 @@ $(document).ready(function() {
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "+=90px" });
 
-        $(".Fax-Section .Section-check-child1").animate({ 'marginTop': "+=90px" });
-        $(".Fax-content-confirm .fax-check-child1 ").animate({ 'marginTop': "+=90px" });
+        $("" + activeScreen + " .Section-check-child1").animate({ 'marginTop': "+=90px" });
+        $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "+=90px" });
         
-        $(".Fax-content-add-recipient .fax-check-child1").animate({ 'marginTop': "+=90px" });
+        $("" + activeScreen + " .fax-check-child0").animate({ 'marginTop': "+=90px" });
     });
 
     $(".swapMe-down").click(function() {

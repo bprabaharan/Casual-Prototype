@@ -123,7 +123,7 @@ html {
 }
 
 .anim-txt {
-    animation: floatText 0.6s ease-in;
+    animation: floatText 0.3s ease-in-out;
     visibility: visible;
     white-space: nowrap;
     position: relative;
@@ -320,6 +320,19 @@ html {
     }
 }
 
+.opacity-view {
+    animation: opaview 0.6s ease-in-out;
+}
+
+@keyframes opaview {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes shimmy {
     from {
         bottom: 0%;
@@ -493,7 +506,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 0px 60px;
+    padding: 0px 50px;
 }
 
 .Fax-Section ul li {
@@ -502,7 +515,7 @@ html {
     font-family: "hp-simplified" !important;
     height: 90px;
     padding: 0px 60px;
-    width: 640px;
+    width: 690px;
 }
 
 .Fax-Section ul {
@@ -607,7 +620,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 2px 50px;
+    padding: 6px 60px;
     width: 680px;
 }
 
@@ -1074,7 +1087,7 @@ html {
     height: 160px;
     /* overflow-y: scroll; */
     cursor: pointer;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .Copy-Content .example1 ul {
@@ -1309,7 +1322,7 @@ html {
 }
 
 .option-content2 {
-    margin-left: 35%;
+    margin-left: 34%;
 }
 
 .option-content {
@@ -1330,7 +1343,7 @@ input[type="checkbox"]+label {
     display: inline-block;
     padding: 0 0 0 0px;
     /* background-color: #FFFFFF; */
-    /* background: url("../images/Icons_SVG/checkbox_unchecked_s.svg") left center no-repeat; */
+    /* background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat; */
 }
 
 .Send-checkbox-faxlist input[type="checkbox"]+label {
@@ -1340,11 +1353,37 @@ input[type="checkbox"]+label {
     display: inline-block;
     padding: 0 0 0 0px;
     /* background-color: #FFFFFF; */
-    background: url("../images/Icons_SVG/checkbox_unchecked_s.svg") left center no-repeat;
+    background: url("../images/Icons_SVG/checkbox _unchecked_m.svg") left center no-repeat;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Send-to-contact .Send-checkbox-faxlist::-webkit-scrollbar {
+    width: 2px;
+}
+
+.Send-to-contact .Send-checkbox-faxlist {
+    scrollbar-width: thin;
+    scrollbar-color: red yellow;
+}
+
+.Send-to-contact .Send-checkbox-faxlist::-webkit-scrollbar-track {
+    background: #212121;
+}
+
+.Send-to-contact .Send-checkbox-faxlist::-webkit-scrollbar-thumb {
+    background-color: #757373;
+    /* border-radius: 6px;
+    border: 3px solid red; */
 }
 
 .Send-checkbox-faxlist input[type="checkbox"]+label:before {
-    background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
+    background: url("../images/Icons_SVG/checkmark_checked_m.svg") left center no-repeat;
 }
 
 .Send-checkbox-faxlist input[type="checkbox"]+label::before {
@@ -1356,13 +1395,13 @@ input[type="checkbox"]+label {
     background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
 }
 
-input[type="checkbox"]:checked+label {
+.Send-checkbox-faxlist input[type="checkbox"]:checked+label {
     background: #fff;
     height: 66px;
     width: 66px;
     display: inline-block;
     padding: 0 0 0 0px;
-    background: url("../images/Icons_SVG/checkbox_checked_s.svg") left center no-repeat;
+    background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat;
 }
 
 .optionli-scan-child input[type="checkbox"]:checked+label,
@@ -1374,7 +1413,7 @@ input[type="checkbox"]:checked+label {
     width: 56px;
     display: inline-block;
     padding: 0 0 0 0px;
-    background: url("../images/Icons_SVG/radio_m.svg") left center no-repeat;
+    background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
 }
 
 input[type="checkbox"]:checked+label::before {
@@ -1428,8 +1467,8 @@ input[type="checkbox"]:checked+label::before {
         padding-top: 4%;
     }
     .Copy-Content .example2 .copy-ul {
-        padding-top: 60px;
-        padding-left: 30px;
+        padding-top: 70px;
+        padding-left: 20px;
     }
     .Print-container {
         margin: 0 auto;
@@ -1446,8 +1485,8 @@ input[type="checkbox"]:checked+label::before {
 
 @media screen and (min-width: 768px) {
     .Copy-Content .example2 .copy-ul {
-        padding-top: 60px;
-        padding-left: 30px;
+        padding-top: 70px;
+        padding-left: 20px;
     }
     .Print-container {
         margin: 0 auto;
@@ -1540,7 +1579,7 @@ input[type="checkbox"]:checked+label::before {
 @media screen and (min-width: 1366px) {
     .Copy-Content .example2 .copy-ul {
         padding-top: 66px;
-        padding-left: 30px;
+        padding-left: 20px;
     }
     .Print-container {
         margin: 0 auto;
@@ -1558,7 +1597,7 @@ input[type="checkbox"]:checked+label::before {
 @media screen and (min-width: 1824px) {
     .Copy-Content .example2 .copy-ul {
         padding-top: 66px;
-        padding-left: 30px;
+        padding-left: 20px;
     }
     .Print-container {
         margin: 0 auto;
@@ -1704,11 +1743,11 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-appear {
     animation-name: slide;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-
+    opacity: 0.3;
 }
 
 @keyframes slide {
@@ -1724,11 +1763,11 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-disappear {
     animation-name: slide-d;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-
+    opacity: 1;
 }
 
 @keyframes slide-d {
@@ -1748,7 +1787,7 @@ input[type="checkbox"]:checked+label::before {
 .anim-appear-sec-block {
     animation-name: slidesecblock;
     animation-duration: 0.3s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     opacity: 0.1;
@@ -1770,16 +1809,17 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-appear-bot-top {
     animation-name: slidebottotop;
-    animation-duration: 0.6s;
+    animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    opacity: 0.3;
 }
 
 @keyframes slidebottotop {
     from {
         transform: translateY(2.162em);
-        opacity: 0;
+        opacity: 0.3;
     }
     to {
         transform: translateY(0px);
@@ -1813,6 +1853,7 @@ input[type="checkbox"]:checked+label::before {
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    opacity: 0.3;
 }
 
 @keyframes slidelefttorgt {
@@ -1857,11 +1898,12 @@ button:focus {
     position: absolute;
     color: #fff;
     font-size: 36px;
-    margin-top: 70px;
-    margin-left: 476px;
+    margin-top: 62px;
+    margin-left: 499px;
 }
 
 #count-checked-checkboxess {
+    margin-left: 17px;
     width: 50px;
     /* float: right; */
     /* text-align: right; */
@@ -1876,10 +1918,11 @@ button:focus {
 }
 
 .set-tick {
-    width: 90px;
+    width: 120px;
     /* float: right; */
     text-align: right;
-    margin-top: 4px;
+    margin-top: -5px;
+    cursor: pointer;
 }
 
 .row {
@@ -1947,8 +1990,8 @@ button:focus {
 }
 
 .onetoone-span {
-    /* position: absolute; */
-    margin-left: 10px;
+    position: absolute;
+    margin-left: 135px;
 }
 
 .dummy-icon {
