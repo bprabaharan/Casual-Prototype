@@ -255,13 +255,13 @@ html {
 
 .transitionLR-reload {
     position: relative;
-    /* white-space: nowrap; */
-    animation: reload .3s ease-in-out;
+    white-space: nowrap;
+    animation: reload .3s ease-in;
 }
 
 @keyframes reload {
     from {
-        right: 20%;
+        right: 30%;
     }
     to {
         right: 0%;
@@ -332,7 +332,7 @@ html {
 }
 
 .opacity-view {
-    animation: opaview 0.6s ease-in-out;
+    animation: opaview 0.6s ease-in;
 }
 
 @keyframes opaview {
@@ -1352,9 +1352,10 @@ html {
     display: flex;
 }
 
-.option-function {
+
+/* .option-function {
     opacity: 0.3;
-}
+} */
 
 input[type="checkbox"]+label {
     cursor: pointer;
