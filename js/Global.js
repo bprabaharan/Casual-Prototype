@@ -392,7 +392,7 @@ $(document).ready(function() {
             }, 2000);
         });
 
-        setTimeout(faxanimation, 12800);
+        setTimeout(faxanimation, 12700);
     });
 
     function faxanimation() {
@@ -409,7 +409,7 @@ $(document).ready(function() {
         $(".Bottom-shade").hide();
         $(".Fax-content-confirm").hide();
         $(".fax-animation").show();
-        setTimeout(faxlanding, 12800);
+        setTimeout(faxlanding, 12700);
     });
 
     function faxlanding() {
@@ -483,17 +483,17 @@ $(document).ready(function() {
 
     function onScreenEntryOptions() {
         $(".option-content").animate({ marginLeft: "0px" }, 600);
-        
+
         setTimeout(function() {
-           
+
             $(".option-content").css({ opacity: "1", visibility: "visible" });
-           
+
         }, 600);
         setTimeout(function() {
-           
+
             $(".option-function").show(300);
-            $(".option-function").css({ opacity: "1", visibility: "visible" },400);
-           
+            $(".option-function").css({ opacity: "1", visibility: "visible" }, 400);
+
         }, 600);
     }
 
@@ -1086,7 +1086,7 @@ $(document).ready(function() {
             activScreen_history.push(".option-landing");
         }
 
-        $(".option-landing ul li:first-child").css("height", "82px");
+        $(".option-landing ul li:first-child").css("height", "74px");
         $(".done-but").hide();
         $(".example1").addClass("transitionLR");
 
