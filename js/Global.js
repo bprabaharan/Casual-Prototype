@@ -83,7 +83,7 @@ $(document).ready(function() {
                     activScreen_history = activScreen_history.slice(0, -1);
                     },100);
                 console.log("checked Sided");
-                $("#sides").find("span").text(event.target.value);
+                $("#sides").find("span").text($(this).val());
                 $(".option-landing .optionli").css("margin-top", "-97px");
                 $(".option-landing-sides").css({ opacity: "1" });
                 setTimeout(function() {
@@ -117,7 +117,7 @@ $(document).ready(function() {
                 setTimeout(function() {
                     activScreen_history = activScreen_history.slice(0, -1);
                     },100);
-                $("#color").find("span").text(event.target.value);
+                $("#color").find("span").text($(this).val());
                 $(".option-landing .optionli").css("margin-top", "-185px");
                 $(".option-landing-color").css({ opacity: "1" });
                 setTimeout(function() {
@@ -152,7 +152,7 @@ $(document).ready(function() {
                     },100);
                 $("#resize")
                     .find("span")
-                    .text(event.target.value);
+                    .text($(this).val());
                 $(".option-landing .optionli").css("margin-top", "-270px");
                 $(".option-landing-resize").css({ opacity: "1" });
                 setTimeout(function() {
