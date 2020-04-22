@@ -308,6 +308,7 @@ html {
     transition-timing-function: ease-in-out;
     transition: 0.3s;
     transform: translateX(30%);
+    animation: floatText 0.3s ease-in-out;
 }
 
 .transitionBU {
@@ -1110,7 +1111,7 @@ html {
     overflow-y: scroll;
     cursor: pointer;
     /* margin-top: -10px; */
-    margin: 0px 100px;
+    margin: 0px 40px;
 }
 
 .copies-num {
@@ -1358,7 +1359,7 @@ input[type="checkbox"]+label {
     display: inline-block;
     padding: 0 0 0 0px;
     /* background-color: #FFFFFF; */
-    /* background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat; */
+    /* background: url("../images/Icons_SVG/checkbox_unchecked_s.svg") left center no-repeat; */
 }
 
 .Send-checkbox-faxlist input[type="checkbox"]+label {
@@ -1918,7 +1919,6 @@ button:focus {
 }
 
 #count-checked-checkboxess {
-    margin-left: 17px;
     width: 50px;
     /* float: right; */
     /* text-align: right; */
@@ -2006,7 +2006,11 @@ button:focus {
 
 .onetoone-span {
     /* position: absolute; */
+<<<<<<< HEAD
     margin-left: 5px;
+=======
+    margin-left: 135px;
+>>>>>>> 1d6fc066dc835197a9f82d43be1c818b36ab3544
 }
 
 .dummy-icon {
