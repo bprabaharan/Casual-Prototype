@@ -238,6 +238,10 @@ html {
     animation: copytrans 0.3s ease-in-out;
 }
 
+.trigger-label{
+    pointer-events: none;
+}
+
 @keyframes copytrans {
     from {
         right: 80px;

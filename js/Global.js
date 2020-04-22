@@ -137,7 +137,7 @@ $(document).ready(function() {
         history_details.pop();
         $(".option-landing-resize ul").find('input[type=checkbox]:checked').removeAttr('checked');
         $(this).find('input[type=checkbox]').attr("checked", "checked");
-        $(".check-box-list2 li input[type=checkbox]").each(function() {
+        $(".check-box-list3 li input[type=checkbox]").each(function() {
 
             var $this = $(this);
             if ($this.is(':checked')) {
@@ -483,11 +483,17 @@ $(document).ready(function() {
 
     function onScreenEntryOptions() {
         $(".option-content").animate({ marginLeft: "0px" }, 600);
-
+        
         setTimeout(function() {
-            $(".option-function").show();
+           
             $(".option-content").css({ opacity: "1", visibility: "visible" });
-            $(".option-function").css({ opacity: "1", visibility: "visible" });
+           
+        }, 600);
+        setTimeout(function() {
+           
+            $(".option-function").show(300);
+            $(".option-function").css({ opacity: "1", visibility: "visible" },400);
+           
         }, 600);
     }
 
@@ -526,6 +532,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-landing-scanmode").show();
+            $(".option-function").css({ opacity: "1", visibility: "visible" });
             historyActiveScreen("");
         }, 900);
         setTimeout(function() {
@@ -579,6 +586,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $(".option-landing-sides").show();
             $(".option-content").css({ "margin-left": "2.162em" });
+            $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "10px" }, 600);
@@ -629,6 +637,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-landing-color").show();
+            $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "10px" }, 600);
@@ -680,7 +689,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-landing-resize").show();
-
+            $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "10px" }, 600);
