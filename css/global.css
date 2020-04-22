@@ -123,10 +123,16 @@ html {
 }
 
 .anim-txt {
-    animation: floatText 0.3s ease-in-out;
+    animation: floatText 0.6s ease-in;
     visibility: visible;
     white-space: nowrap;
     position: relative;
+}
+
+.anim-txt1 {
+    animation: floatText 0.6s ease-in;
+    visibility: visible;
+    white-space: nowrap;
 }
 
 .anim-right-left {
@@ -302,6 +308,7 @@ html {
     transition-timing-function: ease-in-out;
     transition: 0.3s;
     transform: translateX(30%);
+    animation: floatText 0.3s ease-in-out;
 }
 
 .transitionBU {
@@ -380,9 +387,10 @@ html {
     opacity: 0;
 }
 
-.scrollspy {
+
+/* .scrollspy {
     width: 437px;
-}
+} */
 
 .example2 span:hover {
     /* Apply animation to this element */
@@ -509,6 +517,10 @@ html {
     padding: 0px 50px;
 }
 
+.Send-to-contact {
+    overflow: auto;
+}
+
 .Fax-Section ul li {
     color: #fff;
     font-size: 2.875rem;
@@ -615,6 +627,10 @@ html {
     border: 4px solid #fff;
     border-radius: 4px;
 } */
+
+.option-landing {
+    width: 696px;
+}
 
 .option-landing ul li {
     color: #fff;
@@ -1095,7 +1111,7 @@ html {
     overflow-y: scroll;
     cursor: pointer;
     /* margin-top: -10px; */
-    margin: 0px 100px;
+    margin: 0px 40px;
 }
 
 .copies-num {
@@ -1343,7 +1359,7 @@ input[type="checkbox"]+label {
     display: inline-block;
     padding: 0 0 0 0px;
     /* background-color: #FFFFFF; */
-    /* background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat; */
+    /* background: url("../images/Icons_SVG/checkbox_unchecked_s.svg") left center no-repeat; */
 }
 
 .Send-checkbox-faxlist input[type="checkbox"]+label {
@@ -1365,11 +1381,6 @@ input[type="checkbox"]+label {
 
 .Send-to-contact .Send-checkbox-faxlist::-webkit-scrollbar {
     width: 2px;
-}
-
-.Send-to-contact .Send-checkbox-faxlist {
-    scrollbar-width: thin;
-    scrollbar-color: red yellow;
 }
 
 .Send-to-contact .Send-checkbox-faxlist::-webkit-scrollbar-track {
@@ -1402,6 +1413,15 @@ input[type="checkbox"]+label {
     display: inline-block;
     padding: 0 0 0 0px;
     background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat;
+}
+
+input[type="checkbox"]:checked+label {
+    background: #fff;
+    height: 66px;
+    width: 66px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    background: url("../images/Icons_SVG/checkbox_checked_s.svg") left center no-repeat;
 }
 
 .optionli-scan-child input[type="checkbox"]:checked+label,
@@ -1743,11 +1763,10 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-appear {
     animation-name: slide;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    opacity: 0.3;
 }
 
 @keyframes slide {
@@ -1763,11 +1782,10 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-disappear {
     animation-name: slide-d;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    opacity: 1;
 }
 
 @keyframes slide-d {
@@ -1787,7 +1805,7 @@ input[type="checkbox"]:checked+label::before {
 .anim-appear-sec-block {
     animation-name: slidesecblock;
     animation-duration: 0.3s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     opacity: 0.1;
@@ -1809,17 +1827,16 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-appear-bot-top {
     animation-name: slidebottotop;
-    animation-duration: 0.3s;
+    animation-duration: 0.6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    opacity: 0.3;
 }
 
 @keyframes slidebottotop {
     from {
         transform: translateY(2.162em);
-        opacity: 0.3;
+        opacity: 0;
     }
     to {
         transform: translateY(0px);
@@ -1853,7 +1870,6 @@ input[type="checkbox"]:checked+label::before {
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    opacity: 0.3;
 }
 
 @keyframes slidelefttorgt {
@@ -1903,7 +1919,6 @@ button:focus {
 }
 
 #count-checked-checkboxess {
-    margin-left: 17px;
     width: 50px;
     /* float: right; */
     /* text-align: right; */
@@ -1990,7 +2005,7 @@ button:focus {
 }
 
 .onetoone-span {
-    position: absolute;
+    /* position: absolute; */
     margin-left: 135px;
 }
 
