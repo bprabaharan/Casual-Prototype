@@ -915,7 +915,7 @@ $(document).ready(function() {
     $("#introduction .copy-page").click(function(e) {
         console.log("erwerwerwerwerwerwer", e);
         console.log('.copy-page');
-        history_details.push("showCopyLandingPage()");
+        // history_details.push("showCopyLandingPage()");
 
         // $('.swapMe-up').css('pointer-events', 'auto');
         // $('.swapMe-down').css('pointer-events', 'none');
