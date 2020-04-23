@@ -539,7 +539,7 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 900);
         setTimeout(function() {
-            $(".option-content").animate({ "margin-left": "10px" }, 600);
+            $(".option-content").animate({ "margin-left": "5px" }, 600);
             setTimeout(function() {
                 $(".option-landing-scanmode").css({ opacity: "1" });
             }, 600);
@@ -824,6 +824,35 @@ $(document).ready(function() {
     });
     /**** End FAX Back Button Mouse Event */
 
+    // $('.fax-back-key ').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
+    $('.done-but-tick1').mouseup(function() {
+        $('.done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m.svg')");
+    });
+    $('.done-but-tick1').mouseout(function() {
+        $('.done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m.svg')");
+    });
+    $('.done-but-tick1').mousedown(function() {
+        $('.done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m_hover.svg')");
+    });
+    /**** End FAX Back Button Mouse Event */
+
+
+    /**** Copies tick Button Mouse Event */
+    $('.fax-back-key').mouseup(function() {
+        $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
+        $(".fax-back-key").css('background-color', '#555557');
+    });
+    $('.fax-back-key').mouseout(function() {
+        $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
+        $(".fax-back-key").css('background-color', '#555557');
+    });
+    $('.fax-back-key').mousedown(function() {
+        $('.fax-back-key').css('background-color', "#fff")
+        $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s_hover.svg')");
+    });
+    /**** End Copies tick Button Mouse Event */
+
+
     /**** FAX next Button Mouse Event */
     $('.backbtn').mouseup(function() {
         $('.backbtn').css('background-image', "url('./images/Icons_SVG/send_s_hover.svg')");
@@ -883,7 +912,8 @@ $(document).ready(function() {
         // $('.fax-keys').css('color', "#000");
     });
 
-    $("#introduction .copy-page").click(function() {
+    $("#introduction .copy-page").click(function(e) {
+        console.log("erwerwerwerwerwerwer", e);
         console.log('.copy-page');
         history_details.push("showCopyLandingPage()");
 
@@ -947,16 +977,18 @@ $(document).ready(function() {
         // By defalult first li active. So swape down disable 
 
         /*$(".hi-light-copy").css({'width':'450px'},{'transition':' width 2s'});*/
-        $(".hi-light-copy").animate({ width: "545px" }, 100);
+        $(".hi-light-copy").animate({ width: "545px" }, 300);
         // $(".hi-light-copy").addClass('move-me-3');
         // $(".icon-round").css('transition','1s');
         // $(".icon-round").show(1000);
         $(".scrollspy").css({ width: "525px" });
         $(".copy-button .done-but").animate({ width: "80px", height: "90px" }, 100);
 
-        $(".copy-button .done-but").addClass("move-me-2");
-        // $(".Copy-Content .example1").addClass('First-block-animation').hide(500);
-        $(".Copy-Content .example1").animate({ left: "-2.162em" }, 100);
+        // $(".copy-button .done-but").addClass("move-me-2");
+        $(".copy-button .done-but").hide();
+        $(".done-but-tick1").css('cursor', 'pointer');
+        $(".Copy-Content .example1").addClass('anim-disappear').hide(500);
+        // $(".Copy-Content .example1").animate({ left: "-2.162em" }, 100);
         $(".Copy-Content .example1").animate({ opacity: "0" }).hide(100);
         // $(".Copy-Content .example2").css('opacity','0');
         // $(".Copy-Content .example2").animate({"opacity": "1"}).show(100);
@@ -984,7 +1016,9 @@ $(document).ready(function() {
         $(".example1 ul li:first-child").css("height", "84px");
         $('.swapMe-down .down1').removeAttr("style");
         $('.swapMe-up .up1').removeAttr("style");
+        $('.done-but').show();
         var selectedCopiea = $('.menu-num li.active').text();
+        $(".Copy-Content .example1").removeClass('anim-disappear').show(300);
         $(".example1").find(".copy-num").html('<span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/Mask Group 2.svg"><span class="copy-txt">Copies</span></span><span class="copy-right-side">' + selectedCopiea + '</span>');
         doneButTick1();
         $("#Landing-copy-page").css({ left: "0px" });
@@ -1136,7 +1170,7 @@ $(document).ready(function() {
         }, 4800);
 
         $(".Cancel-btn").css("opacity", "1").click(function() {
-            $(".Dot-Section .show").hide();
+            $(".Dot-Section .show").hide(100);
             setTimeout(cancelcopying, 10);
         });
 
@@ -1177,9 +1211,9 @@ $(document).ready(function() {
         // $(".Dot-Section .copy-gif-anim").hide(100);
         // $(".Dot-Section .Cancel-copy").show(10);
         $(".Dot-Section .copy-gif-anim").hide();
-        $(".Cancel-copy").show(0);
+        $(".Cancel-copy").show(100);
         $(".Cancel-btn").css({ opacity: "0" });
-        setTimeout(nextscreen, 1000);
+        setTimeout(nextscreen, 600);
     }
 
     function explode() {
@@ -1188,12 +1222,13 @@ $(document).ready(function() {
     }
 
     function nextscreen() {
+        location.reload();
         $(".Bottom-shade").hide();
         $(".Dot-Section").hide();
         $(".icon-cancel .Cancel-btn").css("opacity", "0");
         $(".Print-content-copy").hide();
-        $(".Print-content-main").css("display", "block");
-        location.reload();
+        // $(".Print-content-main").css("display", "block");
+
     }
 
     $("#return").click(function() {

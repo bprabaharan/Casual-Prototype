@@ -4,17 +4,17 @@ var activScreen_history = [];
 $(".back-btn").click(function() {
     // console.log(history_details, history_details.length - 1);
     eval(history_details[history_details.length - 1]);
-   
+
     activateOptionLanding();
     setTimeout(function() {
-    activScreen_history = activScreen_history.slice(0, -1);
-     historyActiveScreen('back');
-    },100);
+        activScreen_history = activScreen_history.slice(0, -1);
+        historyActiveScreen('back');
+    }, 100);
 
 });
 
-function historyActiveScreen(back){
-    console.log('historyActiveScreen',activScreen_history[activScreen_history.length - 1]);
+function historyActiveScreen(back) {
+    console.log('historyActiveScreen', activScreen_history[activScreen_history.length - 1]);
 
     if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()) === "") {
         $('.swapMe-down').css('pointer-events', 'none');
@@ -22,46 +22,77 @@ function historyActiveScreen(back){
         $('.swapMe-down').css('pointer-events', 'auto');
     }
     if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').next().text()) === "") {
-        
+
         $('.swapMe-up').css('pointer-events', 'none');
     } else {
         $('.swapMe-up').css('pointer-events', 'auto');
     }
 }
-function activateOptionLanding(){
 
-        if(activScreen_history[activScreen_history.length - 1] === ".example1"){
+function activateOptionLanding() {
 
-            } else if(activScreen_history[activScreen_history.length - 1] === ".option-landing"){
+    if (activScreen_history[activScreen_history.length - 1] === ".example1") {
 
-            }else if(activScreen_history[activScreen_history.length - 1] === ".example2"){
+    } else if (activScreen_history[activScreen_history.length - 1] === ".option-landing") {
 
-            }else if(activScreen_history[activScreen_history.length - 1] === ".Send-to-contact"){
+    } else if (activScreen_history[activScreen_history.length - 1] === ".example2") {
 
-            }else if(activScreen_history[activScreen_history.length - 1] === ".Fax-content-add-recipient"){
+    } else if (activScreen_history[activScreen_history.length - 1] === ".Send-to-contact") {
 
-            }else if(activScreen_history[activScreen_history.length - 1] === ".Fax-content-confirm"){
+    } else if (activScreen_history[activScreen_history.length - 1] === ".Fax-content-add-recipient") {
 
-            }else{
-                  
-                console.log('activateOptionLanding::::'+activScreen_history[activScreen_history.length - 1]);
-                $(activScreen_history[activScreen_history.length - 1] + ' ul li').removeClass("active");      
-                $(activScreen_history[activScreen_history.length - 1] + ' ul li input[type=checkbox]').each(function () {
-                    
-                    var $this = $(this);
-                    if ($this.is(':checked')) {
-                        $(this).closest('li').addClass("active");
-                    }
-                });
+    } else if (activScreen_history[activScreen_history.length - 1] === ".Fax-content-confirm") {
+
+    } else {
+
+        console.log('activateOptionLanding::::' + activScreen_history[activScreen_history.length - 1]);
+        $(activScreen_history[activScreen_history.length - 1] + ' ul li').removeClass("active");
+        $(activScreen_history[activScreen_history.length - 1] + ' ul li input[type=checkbox]').each(function() {
+
+            var $this = $(this);
+            if ($this.is(':checked')) {
+                $(this).closest('li').addClass("active");
             }
+        });
+    }
 
-       
-    
+
+
 }
+
 function showCopyLandingPage() {
     history_details.pop();
-    $(".back-btn").css("cursor", "pointer");
+
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     //   var elems = document.querySelectorAll(".carousel");
+    //     setTimeout(function() {
+    //         var carousel_items = document.querySelectorAll(".carousel-item").length;
+    //         console.log(Math.round(carousel_items / 5))
+    //         var middle_slide = Math.round(carousel_items / 5);
+    //         //   var instances = M.Carousel.init(elems);
+
+    //         window.next = function() {
+    //             var el = document.querySelector(".carousel");
+    //             var l = M.Carousel.getInstance(el);
+    //             l.next(1);
+    //         }
+    //         var elem = document.querySelector(".carousel");
+    //         var instance = M.Carousel.getInstance(elem);
+    //         instance.set($(document.body.copypage).attr('id'));
+    //         console.log("middle slide", middle_slide);
+    //         console.log("elem + ", elem);
+    //     }, 1000);
+    // });
     location.reload(false);
+    // $(".back-btn").css("cursor", "pointer");
+    console.log("-----------", $(document.body.copypage).attr('id'));
+    // var elem = document.querySelector(".carousel");
+    // console.log("===================", elem);
+    // var instance = M.Carousel.getInstance(elem);
+    // console.log("instance + ", instance);
+    // instance.set(5);
+
+
     // $(".Main-content").hide();
     // $(".Print-content-main").css('width','696px').delay(100).show(100);
     // $(".Smarttask-Page").animate({zoom: "1", opacity: ".2" }).show(100);
@@ -89,12 +120,12 @@ function showFaxLandingPage() {
     $(".Fax-Section").hide(1000);
     $(".back-btn").css("opacity", ".3");
     location.reload();
-//    $(".Main-content").hide();
+    //    $(".Main-content").hide();
 
-//    $(".Smarttask-Page").css({'transform' : 'translateX(280px)'}).show(100);
-//    $(".ID-Page").css({'transform' : 'translateX(280px)'}).show(100);
-//    $(".Scan-Page").css({'transform' : 'translateX(280px)'}).show(100);
-//    $(".Fax-Page").css({'transform' : 'translateX(280px)'}).show(100);
+    //    $(".Smarttask-Page").css({'transform' : 'translateX(280px)'}).show(100);
+    //    $(".ID-Page").css({'transform' : 'translateX(280px)'}).show(100);
+    //    $(".Scan-Page").css({'transform' : 'translateX(280px)'}).show(100);
+    //    $(".Fax-Page").css({'transform' : 'translateX(280px)'}).show(100);
 
     // $(".Print-content-main").css('width','696px').delay(100).show(100);
     // $(".Smarttask-Page").animate({zoom: "1", opacity: ".2" }).show(100);
@@ -103,7 +134,7 @@ function showFaxLandingPage() {
     // $(".Scan-Page").animate({ zoom: "1", opacity: ".2"}).show(100);
     // $(".indicators").animate({ opacity: "1", left: "0px" }).show(100);
     // $(".Fax-Page").animate({ zoom: "1", opacity: "1" }).show(100);
-  
+
     // $(".Print-content-main").show(400);
     // $(".hi-light-copy").hide();
     // // $(".Copy-Content .example1").delay(300).show(500);
@@ -164,14 +195,14 @@ function showCopies1() {
     // $(".example2").removeClass('anim-appear').addClass('anim-disappear');
     $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
     $(".example2 .menu-num").delay(150).animate({ opacity: '0' }, 1000).hide();
-    $(".copy-button .done-but").animate({ width: "210px", height: "90px" }, 100);
+    $(".copy-button .done-but").animate({ width: "240px", height: "90px" }, 100).show();
     $(".copy-button .but-text").show(100);
     $(".copy-button .done-but-tick1").hide(0);
     $(".options").show();
     $(".copy-button .done-but").removeClass("move-me-2");
     $(".copy-button").show(10);
     $(".Print-content-copy .example2").hide(100);
-    $(".Print-content-copy .example1").show(300);
+    $(".Print-content-copy .example1").removeClass('anim-disappear').show(300);
     $(".Copy-Content .example1")
         .animate({ opacity: "1", left: '0.3em' })
         .show(600);
