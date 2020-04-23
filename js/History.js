@@ -14,10 +14,13 @@ $(".back-btn").click(function() {
 });
 
 function historyActiveScreen(back){
-    console.log('historyActiveScreen',activScreen_history[activScreen_history.length - 1]);
+    // console.log('historyActiveScreen',activScreen_history[activScreen_history.length - 1]);
+    
 
+    
     if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()) === "") {
         $('.swapMe-down').css('pointer-events', 'none');
+        console.log($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()));
     } else {
         $('.swapMe-down').css('pointer-events', 'auto');
     }
@@ -26,7 +29,10 @@ function historyActiveScreen(back){
         $('.swapMe-up').css('pointer-events', 'none');
     } else {
         $('.swapMe-up').css('pointer-events', 'auto');
+        console.log($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').next().text()));
     }
+    $('.swapMe-down .down1').css('pointer-events', 'inherit');
+    $('.swapMe-up .up1').css('pointer-events', 'inherit');
 }
 function activateOptionLanding(){
 
@@ -160,6 +166,7 @@ function set_tick() {
 
 function showCopies1() {
     console.log("showCopies1");
+   
     $(".hi-light-copy").animate({ width: "420px" }, 100);
     // $(".example2").removeClass('anim-appear').addClass('anim-disappear');
     $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
