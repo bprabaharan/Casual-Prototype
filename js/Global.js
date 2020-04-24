@@ -502,7 +502,8 @@ $(document).ready(function() {
 
 
 
-    $(".option-landing ul li .option-scan").click(function(event) {
+    $(".option-landing ul .option-scan").click(function(event) {
+        console.log("option landing clicked");
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
@@ -555,7 +556,7 @@ $(document).ready(function() {
         }
     });
 
-    $(".option-landing ul li .option-sides").click(function(event) {
+    $(".option-landing ul .option-sides").click(function(event) {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
@@ -610,7 +611,7 @@ $(document).ready(function() {
         }
     });
 
-    $(".option-landing ul li .option-color").click(function(event) {
+    $(".option-landing ul .option-color").click(function(event) {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
@@ -658,8 +659,8 @@ $(document).ready(function() {
             $(".optionli-color-child1").css("margin-top", "-200px");
         }
     });
-
-    $(".option-landing ul li .option-resize").click(function() {
+    $(".option-landing-resize ul li:firstchild").css('height', '65px');
+    $(".option-landing ul .option-resize").click(function() {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
@@ -1124,7 +1125,7 @@ $(document).ready(function() {
             activScreen_history.push(".option-landing");
         }
 
-        $(".option-landing ul li:first-child").css("height", "74px");
+        $(".option-landing ul li:first-child").css("height", "78px");
         $(".done-but").hide();
         $(".example1").addClass("transitionLR");
 
