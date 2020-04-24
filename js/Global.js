@@ -65,7 +65,7 @@ $(document).ready(function() {
                 }
             }
         });
-       
+
     });
     $(".check-box-list1 li").click(function(event) {
         history_details.pop();
