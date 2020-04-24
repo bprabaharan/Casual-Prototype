@@ -53,15 +53,15 @@ $(document).ready(function() {
                     $(".option-landing .optionli").css("margin-top", "0px");
                     $(".option-landing-scanmode").css({ opacity: "1" });
                     setTimeout(function() {
-
-                        $(".option-landing-scanmode .option-content").animate({ "margin-left": "2.162em" },
-                            600
-                        );
-                        historyActiveScreen();
-                        $(".option-landing-scanmode .option-function").hide(100);
-                        // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
-                        setTimeout(delayScanMode, 300);
-                    }, 600);
+                        $(".option-landing-scanmode .option-function").hide();
+                        setTimeout(function() {
+                            $(".option-landing-scanmode .option-content").animate({ "margin-left": "2.162em" },
+                                600
+                            );
+                            historyActiveScreen();
+                            setTimeout(delayScanMode, 300);
+                        }, 600);
+                    }, 400);
                 }
             }
         });
@@ -90,15 +90,15 @@ $(document).ready(function() {
                     $(".option-landing .optionli").css("margin-top", "-90px");
                     $(".option-landing-sides").css({ opacity: "1" });
                     setTimeout(function() {
-
-                        $(".option-landing-sides .option-content").animate({ "margin-left": "2.162em" },
-                            600
-                        );
-                        historyActiveScreen();
-                        $(".option-landing-sides .option-function").hide(100);
-                        // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
-                        setTimeout(delayScanMode, 300);
-                    }, 600);
+                        $(".option-landing-sides .option-function").hide();
+                        setTimeout(function() {
+                            $(".option-landing-sides .option-content").animate({ "margin-left": "2.162em" },
+                                600
+                            );
+                            historyActiveScreen();
+                            setTimeout(delayScanMode, 300);
+                        }, 600);
+                    }, 400);
                 }
             }
         });
@@ -124,14 +124,15 @@ $(document).ready(function() {
                     $(".option-landing .optionli").css("margin-top", "-180px");
                     $(".option-landing-color").css({ opacity: "1" });
                     setTimeout(function() {
-                        $(".option-landing-color .option-content").animate({ "margin-left": "2.162em" },
-                            600
-                        );
-                        historyActiveScreen();
-                        $(".option-landing-color .option-function").hide(200);
-                        // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
-                        setTimeout(delayScanMode, 300);
-                    }, 600);
+                        $(".option-landing-color .option-function").hide();
+                        setTimeout(function() {
+                            $(".option-landing-color .option-content").animate({ "margin-left": "2.162em" },
+                                600
+                            );
+                            historyActiveScreen();
+                            setTimeout(delayScanMode, 300);
+                        }, 600);
+                    }, 400);
                 }
             }
         });
@@ -160,14 +161,15 @@ $(document).ready(function() {
                     $(".option-landing .optionli").css("margin-top", "-270px");
                     $(".option-landing-resize").css({ opacity: "1" });
                     setTimeout(function() {
-                        $(".option-landing-resize .option-content").animate({ "margin-left": "2.162em" },
-                            600
-                        );
-                        historyActiveScreen();
-                        $(".option-landing-resize .option-function").hide(200);
-                        // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
-                        setTimeout(delayScanMode, 300);
-                    }, 600);
+                        $(".option-landing-resize .option-function").hide();
+                        setTimeout(function() {
+                            $(".option-landing-resize .option-content").animate({ "margin-left": "2.162em" },
+                                600
+                            );
+                            historyActiveScreen();
+                            setTimeout(delayScanMode, 300);
+                        }, 600);
+                    }, 400);
                 }
             }
         });
