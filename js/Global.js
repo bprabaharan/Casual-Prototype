@@ -66,7 +66,7 @@ $(document).ready(function() {
                 }
             }
         });
-       
+
     });
     $(".check-box-list1 li").click(function(event) {
         history_details.pop();
@@ -919,8 +919,8 @@ $(document).ready(function() {
         // $('.fax-keys').css('color', "#000");
     });
 
-    $("#introduction .copy-page").click(function(e) {
-        console.log("erwerwerwerwerwerwer", e);
+    $("#introduction .copy-page").click(function() {
+        // console.log("erwerwerwerwerwerwer", e);
         console.log('.copy-page');
         history_details.push("showCopyLandingPage()");
 

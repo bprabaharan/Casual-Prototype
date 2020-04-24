@@ -88,9 +88,9 @@ function showCopyLandingPage() {
     //         console.log("elem + ", elem);
     //     }, 1000);
     // });
-    location.reload();
+    location.reload(false);
     // $(".back-btn").css("cursor", "pointer");
-    // console.log("-----------", $(document.body.copypage).attr('id'));
+    console.log("-----------", $(document.body.copypage).attr('id'));
     // var elem = document.querySelector(".carousel");
     // console.log("===================", elem);
     // var instance = M.Carousel.getInstance(elem);
@@ -125,7 +125,7 @@ function showFaxLandingPage() {
     $(".Fax-Section").hide(1000);
     $(".back-btn").css("opacity", ".3");
     location.reload();
-       //$(".Main-content").hide();
+    //    $(".Main-content").hide();
 
     //    $(".Smarttask-Page").css({'transform' : 'translateX(280px)'}).show(100);
     //    $(".ID-Page").css({'transform' : 'translateX(280px)'}).show(100);
@@ -140,14 +140,13 @@ function showFaxLandingPage() {
     // $(".indicators").animate({ opacity: "1", left: "0px" }).show(100);
     // $(".Fax-Page").animate({ zoom: "1", opacity: "1" }).show(100);
 
-    //$(".Print-content-main").show(400);
+    // $(".Print-content-main").show(400);
     // $(".hi-light-copy").hide();
     // // $(".Copy-Content .example1").delay(300).show(500);
     // $(".Copy-Content .example1").animate({ opacity: 1, left: "0px" }).hide(100);
     // $(".back-btn").css('opacity','0');
     // history_details.pop();
     // console.log(history_details, history_details.length - 1);
-  
 }
 
 function showFirstLandingPage() {

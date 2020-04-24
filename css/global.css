@@ -648,7 +648,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 13px 45px;
+    padding: 11px 45px;
     width: 680px;
 }
 
@@ -764,6 +764,7 @@ html {
 
 .copy-right-side {
     margin-left: 210px;
+    margin-top: -5px;
 }
 
 .hi-light-copy {
