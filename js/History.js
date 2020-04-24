@@ -297,7 +297,7 @@ function showOption() {
             $(".example1").animate({ "margin-left": "0em" }, 300);
             setTimeout(function() {
                 $(".option-function").hide();
-                $(".option-content, .option-function").css({ opacity: "0.3" });
+                // $(".option-content, .option-function").css({ opacity: "0.3" });
                 $(".example1").css({ opacity: "1" });
                 $(".icon-rt .but-text").css("visibility", "visible");
             }, 200);

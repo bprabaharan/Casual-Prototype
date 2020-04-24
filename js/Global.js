@@ -15,7 +15,7 @@ $(document).ready(function() {
         setTimeout(function() {
             // $(".option-landing").show();
             // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
-            $(".option-landing, .option-content").addClass('transitionLR-reload').show();
+            $(".option-landing, .option-content").addClass('anim-txt').show();
             $(".option-landing").animate({ "margin-left": "0px" }, 300);
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
 
@@ -60,8 +60,8 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 600);
-                    }, 400);
+                        }, 200);
+                    }, 500);
                 }
             }
         });
@@ -97,8 +97,8 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 600);
-                    }, 400);
+                        }, 200);
+                    }, 500);
                 }
             }
         });
@@ -131,8 +131,8 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 600);
-                    }, 400);
+                        }, 200);
+                    }, 500);
                 }
             }
         });
@@ -168,8 +168,8 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 600);
-                    }, 400);
+                        }, 200);
+                    }, 500);
                 }
             }
         });
