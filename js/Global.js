@@ -1177,7 +1177,7 @@ $(document).ready(function() {
             setTimeout(cancelcopying, 10);
         });
 
-        setTimeout(explode, 14000);
+        setTimeout(explode, 14800);
 
         //  $('.Copying-txt').fadeIn('slow', function(){
         //       $('.Copying-txt').delay(5000).fadeOut();

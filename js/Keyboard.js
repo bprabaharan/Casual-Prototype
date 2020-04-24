@@ -127,7 +127,7 @@ function myFunction(data) {
     console.log(data);
     $("#display").focus();
     $('#display').removeAttr('placeholder');
-    $("#display").attr("placeholder", "+");
+    // $("#display").attr("placeholder", "+");
     modal.style.display = "none";
     var $display = $('#display');
     $display.val();
@@ -142,12 +142,12 @@ function myFunction(data) {
         // $('.swapMe-up').css('pointer-events', 'auto');
         // $('.swapMe-down').css('pointer-events', 'auto');
         // By defalult first li active. So swape down disable 
-        
+
         if (activScreen_history.indexOf(".Send-to-contact") === -1) {
             activScreen_history.push(".Send-to-contact");
         }
         if ($display.val() === '') {
-            
+
             var faxtxt = $(".display").val();
             var faxtext = $(".display").val();
             var multiFax = '';
@@ -198,7 +198,7 @@ function addMultiFax() {
     var faxtxt = $("#display").val();
     var faxFormat = faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
     if (faxtxt != '') {
-        $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> , <span>");
+        $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; + <span>");
         $("#display").val('');
     }
 
