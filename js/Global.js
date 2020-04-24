@@ -57,7 +57,7 @@ $(document).ready(function() {
                         $(".option-landing-scanmode .option-content").animate({ "margin-left": "2.162em" },
                             600
                         );
-
+                        historyActiveScreen();
                         $(".option-landing-scanmode .option-function").hide(100);
                         // setTimeout( function(){$(".option-landing").css({'margin-left':'-42.162em'});  }, 300 );
                         setTimeout(delayScanMode, 300);
@@ -65,7 +65,7 @@ $(document).ready(function() {
                 }
             }
         });
-        historyActiveScreen();
+       
     });
     $(".check-box-list1 li").click(function(event) {
         history_details.pop();
