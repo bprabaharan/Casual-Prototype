@@ -15,7 +15,8 @@ $(document).ready(function() {
         setTimeout(function() {
             // $(".option-landing").show();
             // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
-            $(".option-landing, .option-content").addClass('anim-txt').show();
+
+            $(".option-landing, .option-content").addClass('transitionLR-reload').show();
             $(".option-landing").animate({ "margin-left": "0px" }, 300);
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
 
@@ -60,7 +61,7 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 200);
+                        }, 300);
                     }, 500);
                 }
             }
@@ -97,7 +98,7 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 200);
+                        }, 300);
                     }, 500);
                 }
             }
@@ -131,7 +132,7 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 200);
+                        }, 300);
                     }, 500);
                 }
             }
@@ -168,7 +169,7 @@ $(document).ready(function() {
                             );
                             historyActiveScreen();
                             setTimeout(delayScanMode, 300);
-                        }, 200);
+                        }, 300);
                     }, 500);
                 }
             }
@@ -505,11 +506,11 @@ $(document).ready(function() {
 
 
     $(".option-landing ul .option-scan").click(function(event) {
-        console.log("option landing clicked");
+        // console.log("option landing clicked");
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
-        console.log("option scan clicked", history_details);
+        console.log("option scan clicked");
 
         // $('.swapMe-up').css('pointer-events', 'auto');
         // $('.swapMe-down').css('pointer-events', 'none');
@@ -543,6 +544,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "5px" }, 600);
+            $(".option-landing-scanmode .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-scanmode").css({ opacity: "1" });
             }, 600);
@@ -596,7 +598,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "10px" }, 600);
-
+            $(".option-landing-sides .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-sides .option-function").css({
                     visibility: "visible"
@@ -647,6 +649,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "10px" }, 600);
+            $(".option-landing-color .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-color").css({ opacity: "1" });
                 historyActiveScreen("");
@@ -699,6 +702,7 @@ $(document).ready(function() {
         }, 900);
         setTimeout(function() {
             $(".option-content").animate({ "margin-left": "10px" }, 600);
+            $(".option-landing-resize .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-resize").css({ opacity: "1" });
                 historyActiveScreen("");
