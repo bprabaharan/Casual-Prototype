@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Simple carousel</title>
+		
+		<style type="text/css">
+			#disclaimer{
+				background-image: url(http://diegolamonica.info/wp-content/themes/emerald-stretch/img/logo.gif);
+				background-position: top left;
+				background-repeat: no-repeat;
+				padding-left: 300px;
+				min-height: 161px;
+			}
+			
+			body{
+				background: #000;
+				font-family: Trebuchet MS, Verdana;
+				
+			}
+				p{
+				line-height: 2em;
+				}
+			
+			a{
+				color: #282;
+				font-weight: bold;
+				text-decoration: none;
+			}
+			
+			a:hover{
+				color: #800;
+			}
+			
+			
+		</style>
+		
+		<style type="text/css">
+			#my-carousel{  
+				display: block;  
+				width: 600px;  
+				height: 130px;  
+				background-color: #fff;  
+				border: 0;  
+				margin: 0;  
+				margin-left: auto;  
+				margin-right: auto;  
+				padding: 0;  
+				overflow: auto;  
+			}  
+
+				#my-carousel ul,  
+				#my-carousel li{  
+					padding: 0;  
+					list-style: none;  
+					list-style-type: none;  
+				}
+				
+					#my-carousel ul{  
+						position: relative;  
+						width: 100%;  
+						margin: 0;  
+						background: #000;
+					}  
+					
+					#my-carousel li{  
+						display: block;  
+						border: 0;  
+						overflow: hidden;  
+						width: 16%;  
+						margin: 2%;  
+						
+						height: 100px;
+						
+						float: left;  
+						-moz-box-sizing: border-box;
+						-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+					}
+					
+					/* Navigation links */
+					
+					#my-carousel a.nav{
+						display: block;
+						width: 40px;
+						overflow: hidden;
+						padding: 0;
+						margin: 0;
+						height: 100%;
+					}
+						#my-carousel a.go-prev{
+							float: left;
+						}
+						#my-carousel a.go-next{
+							float: right;
+						}
+						
+					#my-carousel li{
+						text-align: center;
+						bottom: 0px;
+					}
+					#my-carousel li img{
+						width: 100%;	/* Adapt the image to the element container width */
+					}
+					
+					#my-carousel a.nav{
+						width: 60px;
+						height: 100%;
+						margin: 0;
+						padding: 0;
+						text-indent: -9999px;
+						background-repeat: no-repeat;
+						background-position: center;
+						    background-color: gray;
+					}
+						#my-carousel a.nav.go-prev{
+							background-image: url('arrow-left.png');
+						}
+						#my-carousel a.nav.go-next{
+							background-image: url('arrow-right.png');
+						}
+					
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript">
+			/* The Plugin */ 
+
+			jQuery.fn.myPlugin = function(options){
+				
+				var defaultOptions = {
+					maxSize:	120,
+					midSize:	110,
+					minSize:	80,
+					maxOpacity: 1,
+					midOpacity: 0.6,
+					minOpacity: 0.3,
+					speed:		200
+				}
+				
+				if(options==null) options = [];
+				options = jQuery.extend(defaultOptions, options);
+				var $currentVisibleItem = 0;
+				var base =this,
+				 	ul 	= jQuery('>ul', base);
+			 	
+				var $currentX	= 
+					$nearX		= 
+					$farX		=
+					$nearXR		=
+					$nearXL		=
+					$farXR		= 
+					$farXL		= 0;
+				
+				var $inProgress = false;
+				function hideTheExceding(){
+					var
+						$items = jQuery('>li', ul),
+						$from = $currentVisibleItem -2,
+						$to = $currentVisibleItem + 2;
+					
+					for(var $i=0; $i<$items.length; $i++){ 
+						if($i<$from || $i>$to){
+							jQuery($items[$i]).hide();
+							jQuery($items[$i]).removeClass('far before after');
+						}else{
+							jQuery($items[$i]).show();
+							
+							if($i == $currentVisibleItem){
+								jQuery($items[$i]).addClass('current');
+								jQuery($items[$i]).removeClass('near after before');
+								jQuery($items[$i]).css('opacity', options.maxOpacity);
+								
+							}else{
+								jQuery($items[$i]).removeClass('current after before');
+								if($i == $currentVisibleItem + 1 || $i == $currentVisibleItem -1){
+									jQuery($items[$i]).removeClass('far');
+									jQuery($items[$i]).addClass('near');
+									jQuery($items[$i]).css('opacity', options.midOpacity);
+								}else{
+									jQuery($items[$i]).removeClass('near');
+									jQuery($items[$i]).addClass('far');
+									jQuery($items[$i]).css('opacity', options.minOpacity);
+								}
+								if($i > $currentVisibleItem){
+									jQuery($items[$i]).addClass('after');
+								}else{
+									jQuery($items[$i]).addClass('before');
+								}
+							}
+						}
+						
+					}
+				}
+				function locateElements(){
+				console.log((jQuery(ul).innerHeight()-options.maxSize)/2);
+					// Center all items in the list
+					jQuery('>li',ul).css({
+						position: 'absolute',
+						marginTop: ((jQuery(ul).innerHeight()-options.maxSize)/2)+'px'
+					});
+					/*
+					* Elaborating the computed width of each visible item of the list... 
+					*/
+					
+					jQuery('>.far', ul).height(options.minSize);
+					jQuery('>.near', ul).height(options.midSize);
+					jQuery('>.current', ul).height(options.maxSize);
+					jQuery('>.far', ul).width(options.minSize);
+					jQuery('>.near', ul).width(options.midSize);
+					jQuery('>.current', ul).width(options.maxSize);
+
+					var 
+						$farWidth 		= jQuery('>.far', ul).outerWidth(),
+						$nearWidth 		= jQuery('>.near', ul).outerWidth(),
+						$currentWidth 	= jQuery('>.current', ul).outerWidth(),
+						$availWidth		= jQuery(ul).innerWidth(),
+						
+						/*
+						...to obtain the median of each position... 
+						*/
+						$currentM	= $availWidth/2,
+						$farMR		= $availWidth-10-$farWidth/2,
+						$farML		= 10+$farWidth/2,
+						$nearMR		= ($farMR - $currentM )/2 + $currentM,
+						$nearML		= ($currentM - $farML)/2 + $farML;
+					/*
+					...and then the location of each item in the area
+					*/
+					$currentX	= $currentM-$currentWidth/2;
+					$nearXR		= $nearMR-$nearWidth/2;
+					$nearXL		= $nearML-$nearWidth/2;
+					$farXR		= $farMR-$farWidth/2;
+					$farXL		= $farML-$farWidth/2;
+
+					/*
+					 *	Adapt the spacing ensuring that the first adjacent elements of the block (near left and near right)
+					 *  will be located at least at one pixel far from the central element
+					 */ 
+					if($nearXL+ $nearWidth+1>$currentX) $nearXL = $currentX-$nearWidth-1;
+					if($nearXR<$currentX+$currentWidth+1) $nearXR = $currentX+$currentWidth+1;
+					
+					jQuery('>.current',ul).css('marginLeft',  		$currentX + 'px');
+					jQuery('>.near.before',ul).css('marginLeft',  	$nearXL + 'px');
+					jQuery('>.near.after',ul).css('marginLeft',  	$nearXR +'px');
+					jQuery('>.far.before',ul).css('marginLeft',		$farXL + 'px');
+					jQuery('>.far.after',ul).css('marginLeft',   	$farXR +'px');
+					$inProgress = false;
+				}
+				function moveTo( $selector, $margin, $opacity, $w, $h, $last ){
+					$inProgress = true;
+					if($last){
+						
+						var $updateFunction = function(){
+							hideTheExceding();
+							locateElements();
+						}
+					}else{
+						updateFunction = null;
+					}
+					jQuery($selector, ul).animate({
+						marginLeft: 	$margin,
+						opacity:	$opacity,
+						width:		$w,
+						height:		$h
+					}, options.speed, $updateFunction);
+				}
+				function movePrev(event){
+					event.preventDefault();
+					
+					if($inProgress) return;
+					if($currentVisibleItem == 0) return;
+					$currentVisibleItem -=1;
+					var $nextItem = $currentVisibleItem-2;
+					
+					moveTo('>.far.after', 	jQuery(ul).innerWidth() + options.minSize, 0.1, 0, 0, 0);
+					moveTo('>.near.after',  $farXR, options.minOpacity, options.minSize, options.minSize, false);
+					moveTo('>.current', 	$nearXR, options.midOpacity, options.midSize, options.midSize, false);
+					moveTo('>.near.before', $currentX, options.maxOpacity, options.maxSize, options.maxSize, ($nextItem==-2));
+					moveTo('>.far.before', 	$nearXL, options.midOpacity, options.midSize, options.midSize, ($nextItem==-1));
+					if($nextItem>=0){
+					
+						var $nextToShow = '>li:nth-child(' + ($nextItem+1) + ')';
+						jQuery($nextToShow, ul).css({
+							opacity: '0.1',
+							display: 'block',
+							marginLeft: '-' + options.minSize + 'px'
+						});
+						moveTo($nextToShow, 	$farXL, 0.5, options.minSize, options.minSize, true);
+					}
+					
+				}
+				
+				function moveNext(event) {
+					event.preventDefault();
+					if($inProgress) return;
+					var $elements = jQuery('>li', ul).length;
+					if($elements<$currentVisibleItem+2) return;
+					$currentVisibleItem+=1;
+					var $nextItem = $currentVisibleItem+2;
+					var $nextToShow = '>li:nth-child(' + ($nextItem+1) + ')';
+					jQuery($nextToShow, ul).css({
+						opacity: '0.1',
+						display: 'block',
+						marginLeft: (jQuery(ul).innerWidth() + options.minSize) + 'px',
+						width: 0,
+						height: 0
+					});
+					
+					
+					moveTo('>.far.before', 	-options.minSize, 0, 0, 0, 0);
+					moveTo('>.near.before', $farXL, 	options.minOpacity, options.minSize, options.minSize, false);
+					moveTo('>.current', 	$nearXL, 	options.midOpacity, options.midSize, options.midSize, false);
+					moveTo('>.near.after',  $currentX,	options.maxOpacity, options.maxSize, options.maxSize, $nextItem==$elements+1);
+					moveTo('>.far.after', 	$nearXR, 	options.midOpacity, options.midSize, options.midSize, $nextItem==$elements);
+					moveTo($nextToShow, 	$farXR, 	options.minOpacity, options.minSize, options.minSize, true);
+					
+					
+				}
+				
+				return this.each(function () {
+				
+					// Create Navigator
+					jQuery(base).
+						prepend('<a class="nav go-prev" href="#">Prev</a><a href="#" class="nav go-next">Next</a>');
+					jQuery(base).css('overflow',	'hidden');
+					jQuery('.nav',base).css({
+						height: 	jQuery(base).innerHeight() + 'px',
+						display: 	'block'
+						
+					});
+					
+					jQuery('>.nav.go-prev', base).css('float','left').click(movePrev);
+					jQuery('>.nav.go-next', base).css('float','right').click(moveNext);
+					jQuery('>ul',base).css({
+						marginLeft: 	jQuery('>.nav', base).outerWidth() + 'px',
+						width: 			(jQuery(base).innerWidth() - jQuery('>.nav', base).outerWidth()*2) + 'px',
+						padding:		0,
+						height: 		jQuery(base).innerHeight() + 'px',
+						display: 		'block'
+					});
+					
+					hideTheExceding();
+					
+					locateElements();
+					
+					
+				});
+			}
+			
+		</script>
+		<script type="text/javascript">
+			/* The startup code */
+			$(document).ready(function(){
+				jQuery("#my-carousel").myPlugin();
+			});
+		</script>
+	</head>
+	<body>
+		
+		<div id="my-carousel">
+			<ul>
+				<li>
+					<img src="./images/Icons_SVG/smarttask_l.svg">
+				</li>
+				<li>
+					<img src="./images/Icons_SVG/menu_l.svg">
+				</li>
+				<li>
+					<img src="./images/Icons_SVG/copy_l.svg">
+				</li>
+				<li>
+					<img src="./images/Icons_SVG/id_l.svg">
+				</li>
+				<li>
+					<img src="./images/Icons_SVG/scan_l.svg">
+				</li>				
+				<li>
+					<img src="./images/Icons_SVG/fax_l.svg">
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+</html>
