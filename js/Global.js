@@ -1247,7 +1247,14 @@ $(document).ready(function() {
         $(".example4").show();
     });
 
-    $(document).ready(function() {
+   
+    $(".Send-checkbox-faxlist li").click(function(event) { 
+        
+        if ($(this).find('input[type=checkbox]').prop("checked")) {
+            $(this).find('input[type=checkbox]:checked').removeAttr('checked');
+        } else {
+            $(this).find('input[type=checkbox]').attr("checked", "checked");
+        }
         var $checkboxes = $('.Send-checkbox-faxlist input[name="set-input"]');
         if ($("input.faxcheckbox").prop("checked")) {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
@@ -1264,6 +1271,9 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             $("#edit-count-checked-checkboxes").val(countCheckedCheckboxes);
         });
+    });
+    $(document).ready(function() {
+       
 
         $("#multiEmail").mouseover(function() {
             $(".display").addClass('transcrolltxt');
