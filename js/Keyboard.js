@@ -128,17 +128,24 @@ function myFunction(data) {
     $("#display").focus();
     $('#display').removeAttr('placeholder');
     $("#display").attr("placeholder", "+");
+    // $("#display").val("+");
     modal.style.display = "none";
     var $display = $('#display');
     $display.val();
     var value = $(data).attr('value');
     if (value === "addNum") {
-        addMultiFax();
+        // addMultiFax();
+        if($("#display").val() === ""){
+            $("#display").val("+")
+        }else{
+            $("#display").val("+"+$("#display").val("+"));
+        }
+
     } else if (value === "addCont") {
         addMultiFax();
-        if (history_details.indexOf("showFaxbackspace()") === -1) {
-            history_details.push("showFaxbackspace()");
-        }
+        // if (history_details.indexOf("showFaxbackspace()") === -1) {
+        //     history_details.push("showFaxbackspace()");
+        // }
 
         // $('.swapMe-up').css('pointer-events', 'auto');
         // $('.swapMe-down').css('pointer-events', 'auto');
@@ -197,7 +204,12 @@ function addMultiEmail() {
 
 function addMultiFax() {
     var faxtxt = $("#display").val();
-    var faxFormat = faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
+    if(faxtxt.charAt(0) != "+"){
+        var faxFormat = '+'+faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
+    }else{
+        var faxFormat = faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
+    }
+   
     if (faxtxt != '') {
         $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; <span>");
         $("#display").val('');
