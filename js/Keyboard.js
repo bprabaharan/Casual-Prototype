@@ -127,7 +127,7 @@ function myFunction(data) {
     console.log(data);
     $("#display").focus();
     $('#display').removeAttr('placeholder');
-    $("#display").attr("placeholder", "+");
+    // $("#display").attr("placeholder", "+");
     // $("#display").val("+");
     modal.style.display = "none";
     var $display = $('#display');
@@ -137,8 +137,6 @@ function myFunction(data) {
         // addMultiFax();
         if($("#display").val() === ""){
             $("#display").val("+")
-        }else{
-            $("#display").val("+"+$("#display").val("+"));
         }
 
     } else if (value === "addCont") {
@@ -204,8 +202,8 @@ function addMultiEmail() {
 
 function addMultiFax() {
     var faxtxt = $("#display").val();
-    if(faxtxt.charAt(0) != "+"){
-        var faxFormat = '+'+faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
+    if(faxtxt.charAt(0) === "+"){
+        var faxFormat = faxtxt.substring(0, 4) + '-' + faxtxt.substring(3);
     }else{
         var faxFormat = faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
     }
