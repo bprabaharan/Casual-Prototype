@@ -1114,7 +1114,7 @@ html {
 
 .Copy-Content .example1 ul {
     height: 230px;
-    overflow-y: scroll;
+    overflow-y: hidden;
     cursor: pointer;
     /* margin-top: -10px; */
     margin: 0px 40px;

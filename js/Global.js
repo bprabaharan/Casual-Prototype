@@ -1143,6 +1143,8 @@ $(document).ready(function() {
     function hideexample1() {
         $(".example1").hide();
         $(".Print-content-copy .option-landing").show();
+        $(".option-landing .option-content").addClass('anim-txt').show(300);
+        $(".option-landing .option-function").addClass('opacity-view').show(300);
         historyActiveScreen("");
         onScreenEntryOptions();
         $(".scrollspy").css({ width: "696px" });

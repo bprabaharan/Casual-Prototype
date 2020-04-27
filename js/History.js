@@ -255,8 +255,10 @@ function showFaxsendtocont() {
 function showOption() {
     console.log("showOption");
     $(".option-content, .option-function").css({ opacity: "1" });
-    $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 300);
+    $(".option-landing .option-content").animate({ "margin-left": "2.162em" }, 300);
     $(".option-landing .option-function").hide(200);
+    $(".option-landing .option-content").removeClass('anim-txt').show(300);
+    $(".option-landing .option-function").removeClass('opacity-view').show(300);
     setTimeout(function() {
         $(".option-landing").hide();
         $(".example1").removeClass("transitionLR");
