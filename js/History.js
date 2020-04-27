@@ -67,36 +67,9 @@ function activateOptionLanding() {
 
 function showCopyLandingPage() {
     history_details.pop();
-<<<<<<< HEAD
     location.reload(false);
     // $(".back-btn").css("cursor", "pointer");
     // console.log("-----------", $(document.body.copypage).attr('id'));
-=======
-
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     //   var elems = document.querySelectorAll(".carousel");
-    //     setTimeout(function() {
-    //         var carousel_items = document.querySelectorAll(".carousel-item").length;
-    //         console.log(Math.round(carousel_items / 5))
-    //         var middle_slide = Math.round(carousel_items / 5);
-    //         //   var instances = M.Carousel.init(elems);
-
-    //         window.next = function() {
-    //             var el = document.querySelector(".carousel");
-    //             var l = M.Carousel.getInstance(el);
-    //             l.next(1);
-    //         }
-    //         var elem = document.querySelector(".carousel");
-    //         var instance = M.Carousel.getInstance(elem);
-    //         instance.set($(document.body.copypage).attr('id'));
-    //         console.log("middle slide", middle_slide);
-    //         console.log("elem + ", elem);
-    //     }, 1000);
-    // });
-    location.reload(false);
-    // $(".back-btn").css("cursor", "pointer");
-    console.log("-----------", $(document.body.copypage).attr('id'));
->>>>>>> 6ec0707670e668794e7d618e7ca6c0ff87b942c1
     // var elem = document.querySelector(".carousel");
     // console.log("===================", elem);
     // var instance = M.Carousel.getInstance(elem);
@@ -125,18 +98,10 @@ function showCopyLandingPage() {
 }
 
 function showFaxLandingPage() {
-<<<<<<< HEAD
     $(".Fax-Section").hide(100);
     $(".hi-light-copy").animate({ marginTop: "72px", opacity: "0" }, 100).hide();
 
     $(".back-btn").css("opacity", "0");
-=======
-    $(".hi-light-copy")
-        .animate({ marginTop: "72px", opacity: "1" }, 1000)
-        .hide();
-    $(".Fax-Section").hide(1000);
-    $(".back-btn").css("opacity", ".3");
->>>>>>> 6ec0707670e668794e7d618e7ca6c0ff87b942c1
     location.reload();
     //    $(".Main-content").hide();
 

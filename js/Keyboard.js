@@ -127,7 +127,7 @@ function myFunction(data) {
     console.log(data);
     $("#display").focus();
     $('#display').removeAttr('placeholder');
-    // $("#display").attr("placeholder", "+");
+    $("#display").attr("placeholder", "+");
     modal.style.display = "none";
     var $display = $('#display');
     $display.val();
@@ -135,6 +135,7 @@ function myFunction(data) {
     if (value === "addNum") {
         addMultiFax();
     } else if (value === "addCont") {
+        addMultiFax();
         if (history_details.indexOf("showFaxbackspace()") === -1) {
             history_details.push("showFaxbackspace()");
         }
@@ -143,35 +144,35 @@ function myFunction(data) {
         // $('.swapMe-down').css('pointer-events', 'auto');
         // By defalult first li active. So swape down disable 
 
-        if (activScreen_history.indexOf(".Send-to-contact") === -1) {
-            activScreen_history.push(".Send-to-contact");
-        }
-        if ($display.val() === '') {
+        // if (activScreen_history.indexOf(".Send-to-contact") === -1) {
+        //     activScreen_history.push(".Send-to-contact");
+        // }
+        // if ($display.val() === '') {
 
-            var faxtxt = $(".display").val();
-            var faxtext = $(".display").val();
-            var multiFax = '';
-            var multiplFax = '';
-            $("#multiFax > span").each(function() {
-                // console.log($(this).text())
-                multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
-                multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
-            });
-            $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
-            $(".fax-animation-count").html(multiplFax);
-        }
-        // $(".Fax-content-add-recipient").addClass("anim-disappear").hide();
-        $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(300);
-        $(".Top-shade").show();
-        $(".Bottom-shade").show();
-        $(".hi-light-copy").animate({ width: "545px", marginTop: "75px", opacity: "1" }).show();
-        $(".Fax-Section").addClass("anim-disappear").hide(300);
-        $(".Top-shade").css("width", "500px");
-        $(".Send-to-contact").show();
-        $(".fax-keyboard-confirm-section .done-but").show();
-        setTimeout(function() {
-            historyActiveScreen("");
-        }, 200);
+        //     var faxtxt = $(".display").val();
+        //     var faxtext = $(".display").val();
+        //     var multiFax = '';
+        //     var multiplFax = '';
+        //     $("#multiFax > span").each(function() {
+        //         // console.log($(this).text())
+        //         multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
+        //         multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
+        //     });
+        //     $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
+        //     $(".fax-animation-count").html(multiplFax);
+        // }
+        // // $(".Fax-content-add-recipient").addClass("anim-disappear").hide();
+        // $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(300);
+        // $(".Top-shade").show();
+        // $(".Bottom-shade").show();
+        // $(".hi-light-copy").animate({ width: "545px", marginTop: "75px", opacity: "1" }).show();
+        // $(".Fax-Section").addClass("anim-disappear").hide(300);
+        // $(".Top-shade").css("width", "500px");
+        // $(".Send-to-contact").show();
+        // $(".fax-keyboard-confirm-section .done-but").show();
+        // setTimeout(function() {
+        //     historyActiveScreen("");
+        // }, 200);
 
     } else if ($display.val() != 0) {
         $display.val($display.val() + value);
@@ -198,7 +199,7 @@ function addMultiFax() {
     var faxtxt = $("#display").val();
     var faxFormat = faxtxt.substring(0, 3) + '-' + faxtxt.substring(3);
     if (faxtxt != '') {
-        $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; + <span>");
+        $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; <span>");
         $("#display").val('');
     }
 

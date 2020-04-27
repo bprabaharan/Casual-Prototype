@@ -7,6 +7,7 @@ body {
     background: #000;
     font-family: "hp-simplified";
     margin-top: 15%;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 header,
@@ -1027,7 +1028,7 @@ html {
 
 .done-but:active {
     position: relative;
-    top: 1px;
+    top: 0px;
 }
 
 ::-webkit-scrollbar {
