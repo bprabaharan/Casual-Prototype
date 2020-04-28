@@ -9,6 +9,8 @@ $(document).ready(function() {
         $(".option-landing-sides").hide();
         $(".option-landing-color").hide();
         $(".option-landing-resize").hide();
+        $(".option-landing-bright").hide();
+
         //  $(".option-landing").removeClass('transitionLR');
         $(".option-landing").css({ "margin-left": "80px" });
 
@@ -209,6 +211,7 @@ $(document).ready(function() {
     $(".option-landing-sides").hide();
     $(".option-landing-color").hide();
     $(".option-landing-resize").hide();
+    $(".option-landing-bright").hide();
 
     $(".done-but-round").hide();
     $(".show .show-line").hide();
@@ -735,6 +738,46 @@ $(document).ready(function() {
         } else if (event.target.textContent === "Fit to Page") {
             $(".optionli-resize-child1").css("margin-top", "-200px");
         }
+    });
+
+    $(".option-landing ul .option-bright").click(function() {
+        if (history_details.indexOf("delayScanMode()") === -1) {
+            history_details.push("delayScanMode()");
+        }
+        console.log("option bright clicked", history_details);
+        // $('.swapMe-up').css('pointer-events', 'auto');
+        // $('.swapMe-down').css('pointer-events', 'none');
+        // By defalult first li active. So swape down disable 
+
+        if (activScreen_history.indexOf(".option-landing-bright") === -1) {
+            activScreen_history.push(".option-landing-bright");
+        }
+
+        $(".option-landing").css({ opacity: "0.3" });
+        setTimeout(function() {
+            $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
+            $(".option-landing .option-function").hide(200);
+            setTimeout(function() {
+                $(".option-landing").css({ "margin-left": "-42.162em" });
+            }, 300);
+        }, 600);
+
+       
+        setTimeout(function() {
+            $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
+            $(".option-landing-bright").css({ "margin-left": "0px" });
+            $(".option-landing-bright").show();
+            $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc"})
+            $(".hi-light-copy").animate({ width: "400px", marginLeft: "145px", }, 300);
+            setTimeout(function() {
+            $(".hi-light-copy").hide();
+            $(".copy-drag-content").show();
+            },400);
+            historyActiveScreen("");
+        }, 900);
+       
+       
+       
     });
     //---- Ranjith end ------
     $(".carousel-item.scan-icon").click(function() {
@@ -1273,13 +1316,15 @@ $(document).ready(function() {
 
 
     $(".Send-checkbox-faxlist li").click(function(event) {
-
+       
         if ($(this).find('input[type=checkbox]').prop("checked")) {
             $(this).find('input[type=checkbox]:checked').removeAttr('checked');
         } else {
             $(this).find('input[type=checkbox]').attr("checked", "checked");
         }
         var $checkboxes = $('.Send-checkbox-faxlist input[name="set-input"]');
+        var contactpersion = $checkboxes.filter(":checked").length;            
+                   
         if ($("input.faxcheckbox").prop("checked")) {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
@@ -1287,6 +1332,16 @@ $(document).ready(function() {
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+        } else {
+            var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
+            $("#count-checked-checkboxes").text(countCheckedCheckboxes);
+            var countCheckedCheckboxess = $checkboxes.filter(":checked").length;
+            $("#count-checked-checkboxess").text(countCheckedCheckboxes);
+            var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
+            $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+             if (contactpersion === 0) {
+                                $("#count-checked-checkboxess").text("");
+                            } 
         }
         $checkboxes.change(function() {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
@@ -1295,6 +1350,7 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             $("#edit-count-checked-checkboxes").val(countCheckedCheckboxes);
         });
+        
     });
     $(document).ready(function() {
 
