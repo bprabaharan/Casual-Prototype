@@ -2380,9 +2380,10 @@ input[type=range]+.thumb {
     background-color: unset !important;
 }
 input[type=range]+.thumb.active {
-    margin-left: 150px !important;
-    margin-top: 60px;
+    margin-left: 170px !important;
+    margin-top: 40px;
+    opacity: 1;
 }
 input[type=range]+.thumb.active .value {
-    font-size: 20px;
+    font-size: 46px;
 }

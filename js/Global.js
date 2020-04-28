@@ -1313,13 +1313,15 @@ $(document).ready(function() {
 
 
     $(".Send-checkbox-faxlist li").click(function(event) {
-
+       
         if ($(this).find('input[type=checkbox]').prop("checked")) {
             $(this).find('input[type=checkbox]:checked').removeAttr('checked');
         } else {
             $(this).find('input[type=checkbox]').attr("checked", "checked");
         }
         var $checkboxes = $('.Send-checkbox-faxlist input[name="set-input"]');
+        var contactpersion = $checkboxes.filter(":checked").length;            
+                   
         if ($("input.faxcheckbox").prop("checked")) {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
@@ -1327,6 +1329,16 @@ $(document).ready(function() {
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+        } else {
+            var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
+            $("#count-checked-checkboxes").text(countCheckedCheckboxes);
+            var countCheckedCheckboxess = $checkboxes.filter(":checked").length;
+            $("#count-checked-checkboxess").text(countCheckedCheckboxes);
+            var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
+            $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+             if (contactpersion === 0) {
+                                $("#count-checked-checkboxess").text("");
+                            } 
         }
         $checkboxes.change(function() {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
@@ -1335,6 +1347,7 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             $("#edit-count-checked-checkboxes").val(countCheckedCheckboxes);
         });
+        
     });
     $(document).ready(function() {
 
