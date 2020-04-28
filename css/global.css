@@ -1289,7 +1289,8 @@ html {
 .Scanning,
 .Faxing-page,
 .Fax-sent,
-.cancel-fax {
+.cancel-fax,
+.Faxing-pagenext {
     color: white;
     font-family: "hp-simplified";
     font-size: 42px;
