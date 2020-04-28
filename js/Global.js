@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
-    $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent").css("display", "none");
+    $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
 
     function delayScanMode() {
 
@@ -347,7 +347,7 @@ $(document).ready(function() {
         $(".Bottom-shade").hide();
         $(".back-btn").css("opacity", "0");
         $(".Cancel-btn").css({ opacity: "1", cursor: "pointer" });
-        $(".fax-animation").addClass("anim-appear").show(500);
+        $(".fax-animation").show(500);
         $(".fax-animation").css("overflow", "inherit");
         $(".fax-keyboard-confirm-section").css("width", "696px");
         //msgdisplay();
@@ -371,20 +371,34 @@ $(document).ready(function() {
             $(".Dialing-txt").css("display", "none");
             $(".Scanning").css("display", "none");
             $(".Faxing-page").css("display", "block");
+
         }
 
         function msgdisplay5() {
+            console.log("message 5");
             $(".Connecting-txt").css("display", "none");
             $(".Dialing-txt").css("display", "none");
             $(".Scanning").css("display", "none");
             $(".Faxing-page").css("display", "none");
+            $(".Faxing-pagenext").css("display", "block");
+        }
+
+
+        function msgdisplay6() {
+
+            $(".Connecting-txt").css("display", "none");
+            $(".Dialing-txt").css("display", "none");
+            $(".Scanning").css("display", "none");
+            $(".Faxing-page").css("display", "none");
+            $(".Faxing-pagenext").css("display", "none");
             $(".Fax-sent").css("display", "block");
         }
-        setTimeout(msgdisplay1, 0);
+        setTimeout(msgdisplay1, 1000);
         setTimeout(msgdisplay2, 3000);
         setTimeout(msgdisplay3, 6000);
-        setTimeout(msgdisplay4, 9000);
-        setTimeout(msgdisplay5, 11000);
+        setTimeout(msgdisplay4, 8000);
+        setTimeout(msgdisplay5, 9000);
+        setTimeout(msgdisplay6, 11000);
 
         $(".Fax-content-confirm").hide();
         $(".icon-cancel .Cancel-btn").click(function() {
@@ -1268,9 +1282,9 @@ $(document).ready(function() {
         // $(".Dot-Section .copy-gif-anim").hide(100);
         // $(".Dot-Section .Cancel-copy").show(10);
         $(".Dot-Section .copy-gif-anim").hide();
-        $(".Cancel-copy").show(100);
+        $(".Cancel-copy").show();
         $(".Cancel-btn").css({ opacity: "0" });
-        setTimeout(nextscreen, 600);
+        setTimeout(nextscreen, 1000);
     }
 
     function explode() {
