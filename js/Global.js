@@ -458,7 +458,10 @@ $(document).ready(function() {
             activScreen_history.push(".Send-to-contact");
         }
 
-
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            console.log("empty value");
+            $("#count-checked-checkboxess").val("");
+        }
         //activScreen_history.push(".Send-to-contact");
         // $(".Fax-Section").addClass("anim-disappear").hide(2000);
         $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {
@@ -1294,7 +1297,6 @@ $(document).ready(function() {
         });
     });
     $(document).ready(function() {
-
 
         $("#multiEmail").mouseover(function() {
             $(".display").addClass('transcrolltxt');
