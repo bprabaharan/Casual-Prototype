@@ -704,7 +704,8 @@ html {
 .option1 .option-scan,
 .option1 .option-sides,
 .option1 .option-color,
-.option1 .option-resize {
+.option1 .option-resize,
+.option1 .option-bright {
     width: 100%;
     /* align-items: center; */
     /* justify-content: right; */
@@ -730,7 +731,8 @@ html {
 .option1 .option-scan span,
 .option1 .option-sides span,
 .option1 .option-color span,
-.option1 .option-resize span {
+.option1 .option-resize span,
+.option1 .option-bright span {
     float: right;
     text-align: right;
 }
@@ -1463,7 +1465,8 @@ input[type="checkbox"]:checked+label::before {
 .option-scan,
 .option-sides,
 .option-color,
-.option-resize {
+.option-resize,
+.option-bright {
     cursor: pointer;
 }
 
@@ -2291,4 +2294,11 @@ span.ei_invalid {
 
 input[type=text]:not(.browser-default):focus:not([readonly]) {
     box-shadow: 0 1px 0 0 #080808;
+}
+
+@-moz-document url-prefix() {
+    .option-landing {
+        scrollbar-width: none;
+        overflow: hidden;
+    }
 }
