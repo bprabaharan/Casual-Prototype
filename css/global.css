@@ -687,6 +687,7 @@ html {
     width: 680px;
 }
 
+
 .option1 li,
 .option-landing-resize li {
     display: flex;
@@ -2302,4 +2303,89 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
         scrollbar-width: none;
         overflow: hidden;
     }
+}
+
+/*Slider css*/
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 400px;
+	  height:90px;
+	  border-radius: 45px;
+      -webkit-appearance: none;
+	  /* background:linear-gradient(to right, #000 , #fff);; */
+	  border: 1px solid #ccc;
+	  margin-left:70px;
+    }
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 90px;
+      -webkit-appearance: none;
+      color: #fff;
+      margin-top: -1px;
+      background: rgb(8, 8, 8);
+      background: linear-gradient(90deg, rgba(8, 8, 8, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }    
+   input[type='range']::-webkit-slider-thumb {
+      width: 90px;
+      margin-top: 0px;;
+	  opacity:1;
+	  border:1px solid #f3f3f338;
+	   border-radius: 45px;
+      -webkit-appearance: none;
+      height: 90px;
+      cursor: pointer;
+      background: #fff;
+      /*box-shadow: -450px 0 0 400px #f00;*/
+	  box-shadow: -400px 1px 0px 350px rgba(255,255,255,1);
+	  filter: brightness(1);
+	  /*background-image:url("./images/Icons_SVG/drag.png" );*/
+		
+    }
+	input[type='range']::-webkit-slider-thumb:hover{
+		border:3px solid #fff;
+        /* background-image:url("./images/Icons_SVG/drag.svg" ); */
+        background-image:url("../images/Icons_SVG/drag.svg" );
+
+	}
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #f00; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #f00;
+}
+/**/
+.copy-drag-content img{width:90px; height:90px; margin-top: 15px; }
+.copy-drag-content{
+	width: 696px;
+    background:#000;
+    margin: 0px auto;
+    display: none;
+    margin-top: 58px;
+}
+.tick-btn{float:right; cursor: pointer;}
+.bright-icon{
+	background-position: center;
+    background-size: cover;
+	/* zoom:.8; */
+}
+input[type=range]+.thumb {
+    background-color: unset !important;
+}
+input[type=range]+.thumb.active {
+    margin-left: 170px !important;
+    margin-top: 40px;
+    opacity: 1;
+}
+input[type=range]+.thumb.active .value {
+    font-size: 46px;
 }

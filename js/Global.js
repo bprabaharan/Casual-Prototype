@@ -9,13 +9,15 @@ $(document).ready(function() {
         $(".option-landing-sides").hide();
         $(".option-landing-color").hide();
         $(".option-landing-resize").hide();
+        $(".option-landing-bright").hide();
+
         //  $(".option-landing").removeClass('transitionLR');
         $(".option-landing").css({ "margin-left": "80px" });
 
         setTimeout(function() {
             // $(".option-landing").show();
             // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
-
+            $(".Top-shade").css("background","linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
             $(".option-landing, .option-content").addClass('transitionLR-reload').show();
             $(".option-landing").animate({ "margin-left": "0px" }, 300);
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
@@ -28,6 +30,41 @@ $(document).ready(function() {
             // $(".option-function").css({'opacity':'1','visibility': 'visible'});
         }, 300);
     }
+
+    
+    
+    $(".setBright").click(function(event) {
+        history_details.pop();
+   
+
+        if ($("#brightCount").val() != "") {
+
+            // activateOptionLanding();
+            setTimeout(function() {
+                activScreen_history = activScreen_history.slice(0, -1);
+            }, 100);
+            // $(".option-landing").hide();
+            $("#bright").find("span").text($("#brightCount").val());
+            $(".option-landing .optionli").css("margin-top", "-360px");
+            $(".hi-light-copy").css({"background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
+            $(".option-landing .option-content").css({ "margin-left": "0px" });
+            setTimeout(function() {
+                $(".hi-light-copy").show();
+                // $(".option-landing-bright .option-function").hide();
+                setTimeout(function() {
+                    // $(".option-landing-bright").animate({ "margin-left": "2.162em" },
+                    //     600
+                    // );
+                    historyActiveScreen();
+                    $(".hi-light-copy").animate({ "width":"658px", "margin-left": "19px"}, 400);
+                    // $(".hi-light-copy").css({ "width":"658px", "margin-left": "19px", "background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
+                    // $(".option-landing .option-content").css({ "margin-left": "2.162em" });
+                    // $(".hi-light-copy").show();
+                    setTimeout(delayScanMode, 300);
+                }, 300);
+            }, 500);
+        }
+    });
 
     $(".check-box-list li").click(function(event) {
         history_details.pop();
@@ -209,6 +246,7 @@ $(document).ready(function() {
     $(".option-landing-sides").hide();
     $(".option-landing-color").hide();
     $(".option-landing-resize").hide();
+    $(".option-landing-bright").hide();
 
     $(".done-but-round").hide();
     $(".show .show-line").hide();
@@ -733,6 +771,55 @@ $(document).ready(function() {
             $(".optionli-resize-child1").css("margin-top", "-200px");
         }
     });
+
+    $(".option-landing ul .option-bright").click(function() {
+        if (history_details.indexOf("setBright()") === -1) {
+            history_details.push("setBright()");
+        }
+        console.log("option bright clicked", history_details);
+
+        if (activScreen_history.indexOf(".option-landing-bright") === -1) {
+            activScreen_history.push(".option-landing-bright");
+        }
+
+        $(".option-landing").css({ opacity: "0.3" });
+        setTimeout(function() {
+            $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
+            $(".option-landing .option-function").hide(200);
+            setTimeout(function() {
+                $(".option-landing").css({ "margin-left": "-42.162em" });
+            }, 300);
+        }, 600);
+
+        
+        setTimeout(function() {
+            $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
+            $(".option-landing-bright").css({ "margin-left": "0px" });
+            $(".option-landing-bright").show();
+            $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc"})
+            $(".hi-light-copy").animate({ width: "395px", marginLeft: "145px", }, 400);
+            setTimeout(function() {
+            $(".hi-light-copy").hide();
+            $(".Top-shade").css('background', 'unset');
+            $(".copy-drag-content").show();
+            if (parseInt($("#brightCount").val()) === 0) {
+                $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
+                }
+            },500);
+            historyActiveScreen("");
+        }, 600);  
+       
+    });
+
+    $("#brightCount").change(function(){
+        if (parseInt($("#brightCount").val()) === 10) {
+                 $("#bright-icon").attr("src", "./images/Icons_SVG/darker_m.svg");
+            } else if(parseInt($("#brightCount").val()) < 10) { 
+                $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
+            }
+    
+    });
+
     //---- Ranjith end ------
     $(".carousel-item.scan-icon").click(function() {
         $(".Landing-Page").hide(0);
@@ -1270,13 +1357,15 @@ $(document).ready(function() {
 
 
     $(".Send-checkbox-faxlist li").click(function(event) {
-
+       
         if ($(this).find('input[type=checkbox]').prop("checked")) {
             $(this).find('input[type=checkbox]:checked').removeAttr('checked');
         } else {
             $(this).find('input[type=checkbox]').attr("checked", "checked");
         }
         var $checkboxes = $('.Send-checkbox-faxlist input[name="set-input"]');
+        var contactpersion = $checkboxes.filter(":checked").length;            
+                   
         if ($("input.faxcheckbox").prop("checked")) {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
@@ -1284,6 +1373,16 @@ $(document).ready(function() {
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+        } else {
+            var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
+            $("#count-checked-checkboxes").text(countCheckedCheckboxes);
+            var countCheckedCheckboxess = $checkboxes.filter(":checked").length;
+            $("#count-checked-checkboxess").text(countCheckedCheckboxes);
+            var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
+            $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+             if (contactpersion === 0) {
+                                $("#count-checked-checkboxess").text("");
+                            } 
         }
         $checkboxes.change(function() {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
@@ -1292,6 +1391,7 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             $("#edit-count-checked-checkboxes").val(countCheckedCheckboxes);
         });
+        
     });
     $(document).ready(function() {
 
