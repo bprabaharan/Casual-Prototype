@@ -839,11 +839,11 @@ $(document).ready(function() {
 
     $("#brightCount").change(function() {
         if (parseInt($("#brightCount").val()) < 10 && parseInt($("#brightCount").val()) > 0) {
-            $("#bright-icon-txt").css('opacity', 0+"."+ parseInt($("#brightCount").val()));
-        } else if(parseInt($("#brightCount").val()) === 10) {
-            $("#bright-icon-txt").css('opacity',1);
-        } else if(parseInt($("#brightCount").val()) === 0) {
-            $("#bright-icon-txt").css('opacity',0.1);
+            $("#bright-icon-txt").css('opacity', 0 + "." + parseInt($("#brightCount").val()));
+        } else if (parseInt($("#brightCount").val()) === 10) {
+            $("#bright-icon-txt").css('opacity', 1);
+        } else if (parseInt($("#brightCount").val()) === 0) {
+            $("#bright-icon-txt").css('opacity', 0.1);
         }
 
     });
@@ -930,6 +930,7 @@ $(document).ready(function() {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_pressed_l.svg')");
     });
     /**** End FAX Mouse Event */
+
     /**** FAX ADD Button Mouse Event */
     $('.fax-add-key img').css('background-image', "url('./images/Icons_SVG/add_m.svg')");
     $('.fax-add-key').mouseup(function() {
