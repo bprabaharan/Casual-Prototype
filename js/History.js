@@ -315,7 +315,7 @@ function delayScanMode() {
 
 function setBright() {
     history_details.pop();
-
+    // $(".Top-shade").show();
     $(".Top-shade").css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
     $(".option-landing .optionli").css("margin-top", "-360px");
     $(".hi-light-copy").css({ "background-color": "unset", "border": "4px solid rgb(255, 255, 255)" })
