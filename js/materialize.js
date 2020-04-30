@@ -12339,7 +12339,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_calcRangeOffset",
       value: function _calcRangeOffset() {
-        var width = this.$el.width() - 15;
+        var width = this.$el.width() - 80;
         var max = parseFloat(this.$el.attr('max')) || 100; // Range default max
         var min = parseFloat(this.$el.attr('min')) || 0; // Range default min
         var percent = (parseFloat(this.$el.val()) - min) / (max - min);

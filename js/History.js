@@ -40,6 +40,8 @@ function activateOptionLanding() {
 
     } else if (activScreen_history[activScreen_history.length - 1] === ".option-landing") {
 
+    } else if (activScreen_history[activScreen_history.length - 1] === ".option-landing-bright") {
+
     } else if (activScreen_history[activScreen_history.length - 1] === ".example2") {
 
     } else if (activScreen_history[activScreen_history.length - 1] === ".Send-to-contact") {
@@ -309,4 +311,47 @@ function delayScanMode() {
 
     history_details.pop();
     console.log(history_details, history_details.length - 1);
+}
+
+function setBright() {
+    history_details.pop();
+
+    $(".Top-shade").css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
+    $(".option-landing .optionli").css("margin-top", "-360px");
+    $(".hi-light-copy").css({ "background-color": "unset", "border": "4px solid rgb(255, 255, 255)" })
+    $(".option-landing .option-content").css({ "margin-left": "0px" });
+    setTimeout(function() {
+        $(".hi-light-copy").show();
+
+        setTimeout(function() {
+
+            historyActiveScreen();
+            $(".hi-light-copy").animate({ "width": "658px", "margin-left": "19px" }, 400);
+            setTimeout(delayOptions, 300);
+        }, 300);
+    }, 500);
+    // }
+}
+
+function delayOptions() {
+    $(".option-landing-bright").hide();
+
+    //  $(".option-landing").removeClass('transitionLR');
+    $(".option-landing").css({ "margin-left": "80px" });
+
+    setTimeout(function() {
+        // $(".option-landing").show();
+        // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
+
+        $(".option-landing, .option-content").addClass('transitionLR-reload').show();
+        $(".option-landing").animate({ "margin-left": "0px" }, 300);
+        $(".option-landing").css({ opacity: "1", visibility: "visible" });
+
+        setTimeout(function() {
+            // $(".option-function").addClass('transitionLR-reload').show();
+            $(".option-function").addClass('opacity-view').show();
+
+        }, 200);
+        // $(".option-function").css({'opacity':'1','visibility': 'visible'});
+    }, 300);
 }

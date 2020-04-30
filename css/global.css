@@ -2313,15 +2313,13 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
         overflow: hidden;
-        width: 430px;
+        width: 400px;
         height: 90px;
         border-radius: 45px;
         -webkit-appearance: none;
-        /* background-color: #ccc;
-        border: 1px solid #ccc; */
-        margin-left: 40px;
-        background: rgb(8, 8, 8);
-        background: linear-gradient(90deg, rgba(8, 8, 8, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        /* background:linear-gradient(to right, #000 , #fff);; */
+        border: 1px solid #ccc;
+        margin-left: 70px;
     }
     input[type='range']::-webkit-slider-runnable-track {
         height: 90px;
@@ -2334,7 +2332,9 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
     input[type='range']::-webkit-slider-thumb {
         width: 90px;
         margin-top: 0px;
+        ;
         opacity: 1;
+        border: 1px solid #f3f3f338;
         border-radius: 45px;
         -webkit-appearance: none;
         height: 90px;
@@ -2396,6 +2396,7 @@ input[type="range"]::-ms-fill-upper {
 
 .tick-btn {
     float: right;
+    cursor: pointer;
 }
 
 .bright-icon {
