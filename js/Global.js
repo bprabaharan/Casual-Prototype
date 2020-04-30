@@ -1049,7 +1049,7 @@ $(document).ready(function() {
             $(".copy-page").animate({ opacity: "0", left: "-250px" }).hide(300);
             $(".Print-content-main").hide(300);
             // $(".hi-light-copy").show();
-            // $(".Copy-Content .example1").delay(300).show(500);
+            $(".Copy-Content .example1").css({"margin-left":"2.162em"});
             $(".Copy-Content .example1").animate({ opacity: 1, left: "0px" }).hide(100);
             $(".copy-button .done-but").css({ width: "240px", height: "90px" });
             setTimeout(function() {
@@ -1062,6 +1062,7 @@ $(document).ready(function() {
                 // $(".icon-rt .but-text").css("visibility", "visible");
             }, 400);
             setTimeout(function() {
+                $(".Copy-Content .example1").animate({ "margin-left": "0px" },200);
                 $(".Landing-Page .example1").css({ "visibility": "visible" });
                 historyActiveScreen("");
                 $(".icon-rt .but-text").css("visibility", "visible");
