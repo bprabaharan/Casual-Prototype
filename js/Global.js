@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
+    $('.marquee').marquee();
 
     function delayScanMode() {
 
@@ -17,7 +18,7 @@ $(document).ready(function() {
         setTimeout(function() {
             // $(".option-landing").show();
             // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
-            $(".Top-shade").css("background","linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
+            $(".Top-shade").css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
             $(".option-landing, .option-content").addClass('transitionLR-reload').show();
             $(".option-landing").animate({ "margin-left": "0px" }, 300);
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
@@ -31,11 +32,11 @@ $(document).ready(function() {
         }, 300);
     }
 
-    
-    
+
+
     $(".setBright").click(function(event) {
         history_details.pop();
-   
+
 
         if ($("#brightCount").val() != "") {
 
@@ -46,7 +47,7 @@ $(document).ready(function() {
             // $(".option-landing").hide();
             $("#bright").find("span").text($("#brightCount").val());
             $(".option-landing .optionli").css("margin-top", "-360px");
-            $(".hi-light-copy").css({"background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
+            $(".hi-light-copy").css({ "background-color": "unset", "border": "4px solid rgb(255, 255, 255)" })
             $(".option-landing .option-content").css({ "margin-left": "0px" });
             setTimeout(function() {
                 $(".hi-light-copy").show();
@@ -56,7 +57,7 @@ $(document).ready(function() {
                     //     600
                     // );
                     historyActiveScreen();
-                    $(".hi-light-copy").animate({ "width":"658px", "margin-left": "19px"}, 400);
+                    $(".hi-light-copy").animate({ "width": "658px", "margin-left": "19px" }, 400);
                     // $(".hi-light-copy").css({ "width":"658px", "margin-left": "19px", "background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
                     // $(".option-landing .option-content").css({ "margin-left": "2.162em" });
                     // $(".hi-light-copy").show();
@@ -496,7 +497,10 @@ $(document).ready(function() {
             activScreen_history.push(".Send-to-contact");
         }
 
-
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            console.log("empty value");
+            $("#count-checked-checkboxess").val("");
+        }
         //activScreen_history.push(".Send-to-contact");
         // $(".Fax-Section").addClass("anim-disappear").hide(2000);
         $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {
@@ -778,9 +782,11 @@ $(document).ready(function() {
         }
         console.log("option bright clicked", history_details);
 
+
         if (activScreen_history.indexOf(".option-landing-bright") === -1) {
             activScreen_history.push(".option-landing-bright");
         }
+        $(".Top-shade").hide();
 
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
@@ -791,33 +797,33 @@ $(document).ready(function() {
             }, 300);
         }, 600);
 
-        
+
         setTimeout(function() {
             $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
             $(".option-landing-bright").css({ "margin-left": "0px" });
             $(".option-landing-bright").show();
-            $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc"})
+            $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc" })
             $(".hi-light-copy").animate({ width: "395px", marginLeft: "145px", }, 400);
             setTimeout(function() {
-            $(".hi-light-copy").hide();
-            $(".Top-shade").css('background', 'unset');
-            $(".copy-drag-content").show();
-            if (parseInt($("#brightCount").val()) === 0) {
-                $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
+                $(".hi-light-copy").hide();
+                $(".Top-shade").css('background', 'unset');
+                $(".copy-drag-content").show();
+                if (parseInt($("#brightCount").val()) === 0) {
+                    $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
                 }
-            },500);
+            }, 500);
             historyActiveScreen("");
-        }, 600);  
-       
+        }, 600);
+
     });
 
-    $("#brightCount").change(function(){
+    $("#brightCount").change(function() {
         if (parseInt($("#brightCount").val()) === 10) {
-                 $("#bright-icon").attr("src", "./images/Icons_SVG/darker_m.svg");
-            } else if(parseInt($("#brightCount").val()) < 10) { 
-                $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
-            }
-    
+            $("#bright-icon").attr("src", "./images/Icons_SVG/darker_m.svg");
+        } else if (parseInt($("#brightCount").val()) < 10) {
+            $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
+        }
+
     });
 
     //---- Ranjith end ------
@@ -1264,7 +1270,7 @@ $(document).ready(function() {
 
     /*Copy button click event*/
     $(".Cancel-btn").css({ opacity: "0" });
-    $(".copy-button .but-text").click(function() {
+    $(".copy-button .done-but").click(function() {
         $(".Print-content-copy").hide(10);
         $(".Top-shade").hide(10);
         $(".Bottom-shade").hide(10);
@@ -1326,10 +1332,13 @@ $(document).ready(function() {
         // $(".icon-cancel .Cancel-btn").css('cursor','pointer');
         // $(".Dot-Section .copy-gif-anim").hide(100);
         // $(".Dot-Section .Cancel-copy").show(10);
+
         $(".Dot-Section .copy-gif-anim").hide();
-        $(".Cancel-copy").show();
+        setTimeout(function() {
+            $(".Cancel-copy").show();
+        }, 600);
         $(".Cancel-btn").css({ opacity: "0" });
-        setTimeout(nextscreen, 1000);
+        setTimeout(nextscreen, 2000);
     }
 
     function explode() {
@@ -1358,15 +1367,14 @@ $(document).ready(function() {
 
 
     $(".Send-checkbox-faxlist li").click(function(event) {
-       
+
         if ($(this).find('input[type=checkbox]').prop("checked")) {
             $(this).find('input[type=checkbox]:checked').removeAttr('checked');
         } else {
             $(this).find('input[type=checkbox]').attr("checked", "checked");
         }
         var $checkboxes = $('.Send-checkbox-faxlist input[name="set-input"]');
-        var contactpersion = $checkboxes.filter(":checked").length;            
-                   
+        var  contactpersion  =  $checkboxes.filter(":checked").length;                       
         if ($("input.faxcheckbox").prop("checked")) {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
@@ -1380,10 +1388,8 @@ $(document).ready(function() {
             var countCheckedCheckboxess = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
-            $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
-             if (contactpersion === 0) {
-                                $("#count-checked-checkboxess").text("");
-                            } 
+            $(".count-checked-checkboxes1").text(countCheckedCheckboxes); 
+            if  (contactpersion  ===  0)  {                 $("#count-checked-checkboxess").text("");             }
         }
         $checkboxes.change(function() {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
@@ -1392,10 +1398,9 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             $("#edit-count-checked-checkboxes").val(countCheckedCheckboxes);
         });
-        
+
     });
     $(document).ready(function() {
-
 
         $("#multiEmail").mouseover(function() {
             $(".display").addClass('transcrolltxt');

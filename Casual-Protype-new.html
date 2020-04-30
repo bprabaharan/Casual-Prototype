@@ -10,6 +10,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script>
     <!-- <script src="https://github.com/bas2k/jquery.appear/blob/master/jquery.appear.js"></script> -->
 
 
@@ -439,10 +440,10 @@
                         <div class="option-landing-bright" style="display: flex;">
                             <div>
                                 <div class="copy-drag-content">
-                                    <img class="bright-icon" id="bright-icon" src="">					
+                                    <img class="bright-icon" id="bright-icon" src="">
                                     <input id="brightCount" class="Slider" type="range" min="0" max="10" value="0">
                                     <img class="tick-btn setBright" src="./images/Icons_SVG/done_m.svg">
-                                 </div>
+                                </div>
                             </div>
                         </div>
                         <div class="option-landing-firstpage" style="display: flex;margin-top: 67px;">
@@ -626,9 +627,10 @@
                         <div class="Fax-content-confirm">
                             <ul class="slidetext">
                                 <li>&nbsp;</li>
-                                <li class="fax-check-child1 slidetext-content active">
+                                <li class="fax-check-child1 slidetext-content1 marquee active">
                                     <div class="fax-content2">
-                                        <span class="fax-confirm-txt">Send to&nbsp;</span>
+                                        <span class="fax-confirm-txt ">Send to&nbsp;</span>
+
                                     </div>
                                     <div class="fax-txt-head-bind"></div>
                                     <span class="fax-send-count"><span id="count-checked-checkboxes">0</span> Recipients</span>
@@ -738,7 +740,9 @@
                                 <!-- <p class="Faxing-page">Faxing page<span class='count-checked-checkboxes1'></span> to <span class='fax-animation-count'></span>...</p> -->
                                 <p class="Faxing-page">Faxing page 1 of 3</p>
                                 <p class="Faxing-pagenext">Faxing page 3 of 3</p>
-                                <p class="Fax-sent">Fax sent successfully! 3 Pages sent to <span class='fax-animation-count'></span></p>
+                                <p class="Fax-sent">Pages sent 3 of 3
+                                    <!-- <span class='fax-animation-count'></span> -->
+                                </p>
                             </div>
                         </div>
 
