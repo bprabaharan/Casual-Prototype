@@ -2409,7 +2409,7 @@ input[type="range"]::-ms-fill-upper {
     position: absolute;
     margin-left: -92px;
     /* border: 1px solid red; */
-    opacity: .3;
+    opacity: .1;
 }
 
 input[type=range]+.thumb {

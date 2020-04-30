@@ -838,8 +838,12 @@ $(document).ready(function() {
     });
 
     $("#brightCount").change(function() {
-        if (parseInt($("#brightCount").val()) === 10) {
-            $("#bright-icon-txt").css('opacity', 'parseInt($("#brightCount").val()) === 10)');
+        if (parseInt($("#brightCount").val()) < 10 && parseInt($("#brightCount").val()) > 0) {
+            $("#bright-icon-txt").css('opacity', 0+"."+ parseInt($("#brightCount").val()));
+        } else if(parseInt($("#brightCount").val()) === 10) {
+            $("#bright-icon-txt").css('opacity',1);
+        } else if(parseInt($("#brightCount").val()) === 0) {
+            $("#bright-icon-txt").css('opacity',0.1);
         }
 
     });
