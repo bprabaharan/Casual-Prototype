@@ -17,7 +17,7 @@ $(document).ready(function() {
         setTimeout(function() {
             // $(".option-landing").show();
             // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
-
+            $(".Top-shade").css("background","linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
             $(".option-landing, .option-content").addClass('transitionLR-reload').show();
             $(".option-landing").animate({ "margin-left": "0px" }, 300);
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
@@ -30,6 +30,41 @@ $(document).ready(function() {
             // $(".option-function").css({'opacity':'1','visibility': 'visible'});
         }, 300);
     }
+
+    
+    
+    $(".setBright").click(function(event) {
+        history_details.pop();
+   
+
+        if ($("#brightCount").val() != "") {
+
+            // activateOptionLanding();
+            setTimeout(function() {
+                activScreen_history = activScreen_history.slice(0, -1);
+            }, 100);
+            // $(".option-landing").hide();
+            $("#bright").find("span").text($("#brightCount").val());
+            $(".option-landing .optionli").css("margin-top", "-360px");
+            $(".hi-light-copy").css({"background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
+            $(".option-landing .option-content").css({ "margin-left": "0px" });
+            setTimeout(function() {
+                $(".hi-light-copy").show();
+                // $(".option-landing-bright .option-function").hide();
+                setTimeout(function() {
+                    // $(".option-landing-bright").animate({ "margin-left": "2.162em" },
+                    //     600
+                    // );
+                    historyActiveScreen();
+                    $(".hi-light-copy").animate({ "width":"658px", "margin-left": "19px"}, 400);
+                    // $(".hi-light-copy").css({ "width":"658px", "margin-left": "19px", "background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
+                    // $(".option-landing .option-content").css({ "margin-left": "2.162em" });
+                    // $(".hi-light-copy").show();
+                    setTimeout(delayScanMode, 300);
+                }, 300);
+            }, 500);
+        }
+    });
 
     $(".check-box-list li").click(function(event) {
         history_details.pop();
@@ -738,13 +773,10 @@ $(document).ready(function() {
     });
 
     $(".option-landing ul .option-bright").click(function() {
-        if (history_details.indexOf("delayScanMode()") === -1) {
-            history_details.push("delayScanMode()");
+        if (history_details.indexOf("setBright()") === -1) {
+            history_details.push("setBright()");
         }
         console.log("option bright clicked", history_details);
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
 
         if (activScreen_history.indexOf(".option-landing-bright") === -1) {
             activScreen_history.push(".option-landing-bright");
@@ -759,23 +791,35 @@ $(document).ready(function() {
             }, 300);
         }, 600);
 
-       
+        
         setTimeout(function() {
             $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
             $(".option-landing-bright").css({ "margin-left": "0px" });
             $(".option-landing-bright").show();
             $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc"})
-            $(".hi-light-copy").animate({ width: "400px", marginLeft: "145px", }, 300);
+            $(".hi-light-copy").animate({ width: "395px", marginLeft: "145px", }, 400);
             setTimeout(function() {
             $(".hi-light-copy").hide();
+            $(".Top-shade").css('background', 'unset');
             $(".copy-drag-content").show();
-            },400);
+            if (parseInt($("#brightCount").val()) === 0) {
+                $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
+                }
+            },500);
             historyActiveScreen("");
-        }, 900);
-       
-       
+        }, 600);  
        
     });
+
+    $("#brightCount").change(function(){
+        if (parseInt($("#brightCount").val()) === 10) {
+                 $("#bright-icon").attr("src", "./images/Icons_SVG/darker_m.svg");
+            } else if(parseInt($("#brightCount").val()) < 10) { 
+                $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
+            }
+    
+    });
+
     //---- Ranjith end ------
     $(".carousel-item.scan-icon").click(function() {
         $(".Landing-Page").hide(0);
