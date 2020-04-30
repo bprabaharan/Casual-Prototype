@@ -2405,6 +2405,13 @@ input[type="range"]::-ms-fill-upper {
     /* zoom:.8; */
 }
 
+.bright-icon-txt {
+    position: absolute;
+    margin-left: -92px;
+    /* border: 1px solid red; */
+    opacity: .3;
+}
+
 input[type=range]+.thumb {
     background-color: unset !important;
 }
