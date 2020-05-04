@@ -764,7 +764,7 @@ $(document).ready(function() {
             }, 300);
         }, 600);
 
-        $(".option-landing-resize .optionli-scan-child1").css(
+        $(".option-landing-resize .optionli-resize-child1").css(
             "margin-top",
             "-24px"
         );
@@ -787,7 +787,7 @@ $(document).ready(function() {
         }, 900);
 
         if (event.target.textContent === "None") {
-            $(".optionli-resize-child1").css("margin-top", "-24px");
+            $(".optionli-resize-child1").css("margin-top", "0px");
         } else if (event.target.textContent === "Custom") {
             $(".optionli-resize-child1").css("margin-top", "-112px");
         } else if (event.target.textContent === "Fit to Page") {
@@ -837,7 +837,7 @@ $(document).ready(function() {
 
     });
 
-    $("#brightCount").change(function() {
+    $("#brightCount").on('input', function () {
         if (parseInt($("#brightCount").val()) < 10 && parseInt($("#brightCount").val()) > 0) {
             $("#bright-icon-txt").css('opacity', 0 + "." + parseInt($("#brightCount").val()));
         } else if (parseInt($("#brightCount").val()) === 10) {
