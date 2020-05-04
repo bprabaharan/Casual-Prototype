@@ -295,17 +295,22 @@ $(document).ready(function() {
             $(".icon-rt .done-but, .fax-send-count").css("display", "none");
             $(".icon-rt .but-text").css("visibility", "visible");
             $(".Fax-content-confirm").css({ width: "696px", display: "block" });
-            $(".Top-shade").show();
-            $(".Bottom-shade").show();
-            $(".Fax-content-confirm .fax-check-child1").css("margin-top", "0px");
-            $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
-            $(".fax-animation-count").html(multiplFax);
-            if ($('.Fax-content-confirm .fax-txt-head-bind > span').last().text().trim() == ';') {
-                $('.Fax-content-confirm .fax-txt-head-bind > span').last().remove();
+
+            $(".Top-shade").show();            
+            $(".Bottom-shade").show();            
+            $(".Fax-content-confirm .fax-check-child1").css("margin-top",  "0px");            
+            $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);            
+            $(".fax-animation-count, .fax-animation-dialing").html(multiplFax);            
+            if  ($('.Fax-content-confirm .fax-txt-head-bind > span').last().text().trim()  ===  ';')  {                
+                $('.Fax-content-confirm .fax-txt-head-bind > span').last().remove();            
+            }            
+            if  ($('.fax-animation-count > span').last().text().trim()  ===  ';')  {                
+                $('.fax-animation-count > span').last().remove();            
+            }            
+            if  ($('.fax-animation-dialing > span').last().text().trim()  ===  ';')  {                
+                $('.fax-animation-dialing > span').last().remove();            
             }
-            if ($('.fax-animation-count > span').last().text().trim() == ';') {
-                $('.fax-animation-count > span').last().remove();
-            }
+
             setTimeout(function() {
                 historyActiveScreen("");
             }, 200);
@@ -673,10 +678,7 @@ $(document).ready(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
             }, 300);
         }, 600);
-        $(".option-landing-resize .optionli-scan-child1").css(
-            "margin-top",
-            "-24px"
-        );
+        $(".option-landing-resize .optionli-resize-child1").css("margin-top", "0px");
         $(".option-landing-resize").css({ opacity: "1", position: "fixed" });
         setTimeout(function() {
             $(".option-content").css({ "margin-left": "2.162em" });
@@ -696,11 +698,11 @@ $(document).ready(function() {
         }, 900);
 
         if (event.target.textContent === "None") {
-            $(".optionli-resize-child1").css("margin-top", "-24px");
+            $(".optionli-resize-child1").css("margin-top", "0px");
         } else if (event.target.textContent === "Custom") {
-            $(".optionli-resize-child1").css("margin-top", "-112px");
+            $(".optionli-resize-child1").css("margin-top", "-90px");
         } else if (event.target.textContent === "Fit to Page") {
-            $(".optionli-resize-child1").css("margin-top", "-200px");
+            $(".optionli-resize-child1").css("margin-top", "-180px");
         }
     });
 
@@ -738,9 +740,7 @@ $(document).ready(function() {
 
     });
     /*Option landing page list click button event ends here*/
-
-
-    $("#brightCount").change(function() {
+    $("#brightCount").on('input', function() {
         if (parseInt($("#brightCount").val()) < 10 && parseInt($("#brightCount").val()) > 0) {
             $("#bright-icon-txt").css('opacity', 0 + "." + parseInt($("#brightCount").val()));
         } else if (parseInt($("#brightCount").val()) === 10) {
@@ -1173,7 +1173,7 @@ $(document).ready(function() {
         }, 4800);
 
         $(".Cancel-btn").css("opacity", "1").click(function() {
-            $(".Dot-Section .show").hide(100);
+
             setTimeout(cancelcopying, 10);
         });
 
@@ -1181,7 +1181,8 @@ $(document).ready(function() {
     });
 
     function cancelcopying() {
-        $(".Dot-Section .copy-gif-anim").hide();
+        $(".Dot-Section .show").hide(00);
+        $(".Dot-Section .copy-gif-anim").hide(00);
         setTimeout(function() {
             $(".Cancel-copy").show();
         }, 600);
