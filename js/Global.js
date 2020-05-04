@@ -284,7 +284,6 @@ $(document).ready(function() {
             multiFax = multiFax + '<span class="fax-txt">' + faxFormat + ' </span> <span class="fax-txt">; </span>';
             multiplFax = multiplFax + '<span class="fax-txt1">' + faxFormat + ' </span> <span class="fax-txt1">; </span> ';
         }
-
         $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(1000);
 
         setTimeout(function() {
@@ -295,22 +294,20 @@ $(document).ready(function() {
             $(".icon-rt .done-but, .fax-send-count").css("display", "none");
             $(".icon-rt .but-text").css("visibility", "visible");
             $(".Fax-content-confirm").css({ width: "696px", display: "block" });
-
-            $(".Top-shade").show();            
-            $(".Bottom-shade").show();            
-            $(".Fax-content-confirm .fax-check-child1").css("margin-top",  "0px");            
-            $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);            
-            $(".fax-animation-count, .fax-animation-dialing").html(multiplFax);            
-            if  ($('.Fax-content-confirm .fax-txt-head-bind > span').last().text().trim()  ===  ';')  {                
-                $('.Fax-content-confirm .fax-txt-head-bind > span').last().remove();            
-            }            
-            if  ($('.fax-animation-count > span').last().text().trim()  ===  ';')  {                
-                $('.fax-animation-count > span').last().remove();            
-            }            
-            if  ($('.fax-animation-dialing > span').last().text().trim()  ===  ';')  {                
-                $('.fax-animation-dialing > span').last().remove();            
+            $(".Top-shade").show();
+            $(".Bottom-shade").show();
+            $(".Fax-content-confirm .fax-check-child1").css("margin-top", "0px");
+            $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
+            $(".fax-animation-count, .fax-animation-dialing").html(multiplFax);
+            if ($('.Fax-content-confirm .fax-txt-head-bind > span').last().text().trim() === ';') {
+                $('.Fax-content-confirm .fax-txt-head-bind > span').last().remove();
             }
-
+            if ($('.fax-animation-count > span').last().text().trim() === ';') {
+                $('.fax-animation-count > span').last().remove();
+            }
+            if ($('.fax-animation-dialing > span').last().text().trim() === ';') {
+                $('.fax-animation-dialing > span').last().remove();
+            }
             setTimeout(function() {
                 historyActiveScreen("");
             }, 200);
