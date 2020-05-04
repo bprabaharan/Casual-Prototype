@@ -930,7 +930,8 @@ html {
     color: #ffffff;
     font-family: Arial;
     font-size: 46px;
-    padding: 5px 73px;
+    /* padding: 5px 73px; */
+    text-align: center;
     text-decoration: none;
     text-shadow: 0px 1px 0px #000000;
     font-family: "hp-simplified";
@@ -1011,7 +1012,7 @@ html {
 }
 
 .done-but-tick1 {
-    /* height: 50px; */
+    height: 90px;
     width: 90px;
     margin: 0px;
     float: right;

@@ -863,10 +863,22 @@ $(document).ready(function() {
     $('.done-but-tick1').mouseout(function() {
         $('.done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m.svg')");
     });
-    $('.done-but-tick1').mousedown(function() {
-        $('.done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m_hover.svg')");
+    $('.copy-button .done-but-tick1').mousedown(function() {
+        $('.copy-button .done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m_hover.svg')");
     });
     /**** End FAX Back Button Mouse Event */
+
+    /**** Bright tick Button Mouse Event */
+    $('.tick-btn').mouseup(function() {
+        $('.tick-btn').css('background-image', "url('./images/Icons_SVG/done_m.svg')");
+    });
+    $('.tick-btn').mouseout(function() {
+        $('.tick-btn').css('background-image', "url('./images/Icons_SVG/done_m.svg')");
+    });
+    $('.tick-btn').mousedown(function() {
+        $('.tick-btn').css('background-image', "url('./images/Icons_SVG/done_m_hover.svg')");
+    });
+    /**** Bright tick Button Mouse Event */
 
 
     /**** Copies tick Button Mouse Event */
