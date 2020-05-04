@@ -2330,18 +2330,17 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
         background: linear-gradient(90deg, rgba(8, 8, 8, 1) 0%, rgba(255, 255, 255, 1) 100%);
     }
     input[type='range']::-webkit-slider-thumb {
-        width: 90px;
-        margin-top: 0px;
-        ;
+        width: 85px;
+        margin-top: 2px;
         opacity: 1;
         border: 1px solid #f3f3f338;
         border-radius: 45px;
         -webkit-appearance: none;
-        height: 90px;
+        height: 85px;
         cursor: pointer;
         background: #fff;
         /*box-shadow: -450px 0 0 400px #f00;*/
-        box-shadow: -400px 1px 0px 350px rgba(255, 255, 255, 1);
+        box-shadow: -400px 1px 0px 350px rgba(255, 255, 255, 0);
         filter: brightness(1);
         /*background-image:url("./images/Icons_SVG/drag.png" );*/
     }
