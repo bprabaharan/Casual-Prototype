@@ -4,75 +4,54 @@ $(document).ready(function() {
     $('.marquee').marquee();
 
     function delayScanMode() {
-
         $(".option-landing-scanmode").hide();
         $(".option-landing").hide();
         $(".option-landing-sides").hide();
         $(".option-landing-color").hide();
         $(".option-landing-resize").hide();
         $(".option-landing-bright").hide();
-
-        //  $(".option-landing").removeClass('transitionLR');
         $(".option-landing").css({ "margin-left": "80px" });
 
         setTimeout(function() {
-            // $(".option-landing").show();
-            // $(".option-landing, .option-function").addClass('transitionLR-reload').show();
             $(".Top-shade").css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
             $(".option-landing, .option-content").addClass('transitionLR-reload').show();
             $(".option-landing").animate({ "margin-left": "0px" }, 300);
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
-
             setTimeout(function() {
-                // $(".option-function").addClass('transitionLR-reload').show();
                 $(".option-function").addClass('opacity-view').show();
-
             }, 200);
-            // $(".option-function").css({'opacity':'1','visibility': 'visible'});
         }, 300);
     }
 
-
-
+    /**** Option page Setbright Click event Starts here */
     $(".setBright").click(function(event) {
         history_details.pop();
-
-
         if ($("#brightCount").val() != "") {
-
-            // activateOptionLanding();
             setTimeout(function() {
                 activScreen_history = activScreen_history.slice(0, -1);
             }, 100);
-            // $(".option-landing").hide();
             $("#bright").find("span").text($("#brightCount").val());
             $(".option-landing .optionli").css("margin-top", "-360px");
             $(".hi-light-copy").css({ "background-color": "unset", "border": "4px solid rgb(255, 255, 255)" })
             $(".option-landing .option-content").css({ "margin-left": "0px" });
             setTimeout(function() {
                 $(".hi-light-copy").show();
-                // $(".option-landing-bright .option-function").hide();
                 setTimeout(function() {
-                    // $(".option-landing-bright").animate({ "margin-left": "2.162em" },
-                    //     600
-                    // );
                     historyActiveScreen();
                     $(".hi-light-copy").animate({ "width": "658px", "margin-left": "19px" }, 400);
-                    // $(".hi-light-copy").css({ "width":"658px", "margin-left": "19px", "background-color": "unset", "border": "4px solid rgb(255, 255, 255)"})
-                    // $(".option-landing .option-content").css({ "margin-left": "2.162em" });
-                    // $(".hi-light-copy").show();
                     setTimeout(delayScanMode, 300);
                 }, 300);
             }, 500);
         }
     });
+    /**** Option page Setbright Click event Ends here */
 
+    /**** Option page Checkbox Click event Starts here */
     $(".check-box-list li").click(function(event) {
         history_details.pop();
         $(".option-landing-scanmode ul").find('input[type=checkbox]:checked').removeAttr('checked');
         $(this).find('input[type=checkbox]').attr("checked", "checked");
         $(".check-box-list li input[type=checkbox]").each(function() {
-
             var $this = $(this);
             if ($this.is(':checked')) {
 
@@ -124,7 +103,6 @@ $(document).ready(function() {
                     setTimeout(function() {
                         activScreen_history = activScreen_history.slice(0, -1);
                     }, 100);
-                    console.log("checked Sided");
                     $("#sides").find("span").text($(this).val());
                     $(".option-landing .optionli").css("margin-top", "-90px");
                     $(".option-landing-sides").css({ opacity: "1" });
@@ -213,6 +191,7 @@ $(document).ready(function() {
             }
         });
     });
+    /**** Option page Checkbox Click event Ends here */
 
 });
 
@@ -248,7 +227,6 @@ $(document).ready(function() {
     $(".option-landing-color").hide();
     $(".option-landing-resize").hide();
     $(".option-landing-bright").hide();
-
     $(".done-but-round").hide();
     $(".show .show-line").hide();
     $(".fax-keyboard-section").hide();
@@ -258,11 +236,9 @@ $(document).ready(function() {
     $(".fax-keyboard-confirm-section").hide();
     $(".Send-to-contact").hide();
     $(".fax-animation").hide();
-
     $(".icon-cancel .Cancel-btn").css("opacity", "0");
 
-    /*Add Recipient click button event*/
-
+    /*Add Recipient click button event starts here*/
     $(".add-receipient").click(function() {
         history_details.push("showFaxaddreceipient()");
 
@@ -282,30 +258,22 @@ $(document).ready(function() {
             }, 100);
         }, 300);
     });
+    /*Add Recipient click button event ends here*/
 
     $("#backspace").click(function() {
         history_details.push("showFaxbackspace()");
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
-
         if (activScreen_history.indexOf(".Fax-content-confirm") === -1) {
             activScreen_history.push(".Fax-content-confirm");
         }
         $(".Fax-content-confirm ul li:first-child").css("height", "70px");
-        // $(".fax-keyboard-confirm-section").css('width','696px');
         var faxtxt = $(".display").val();
         var faxtext = $(".display").val();
         var multiFax = '';
         var multiplFax = '';
-
         $("#multiFax > span").each(function() {
-            // console.log($(this).text())
             multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
             multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
         });
-
         if ($("#display").val() != "") {
             var faxtxt = $("#display").val();
             if (faxtxt.charAt(0) === "+") {
@@ -317,7 +285,6 @@ $(document).ready(function() {
             multiplFax = multiplFax + '<span class="fax-txt1">' + faxFormat + ' </span> <span class="fax-txt1">; </span> ';
         }
 
-        console.log(multiFax);
         $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(1000);
 
         setTimeout(function() {
@@ -328,7 +295,6 @@ $(document).ready(function() {
             $(".icon-rt .done-but, .fax-send-count").css("display", "none");
             $(".icon-rt .but-text").css("visibility", "visible");
             $(".Fax-content-confirm").css({ width: "696px", display: "block" });
-            // $(".fax-keyboard-confirm-section").css('width','480px');
             $(".Top-shade").show();
             $(".Bottom-shade").show();
             $(".Fax-content-confirm .fax-check-child1").css("margin-top", "0px");
@@ -365,18 +331,12 @@ $(document).ready(function() {
         $(".Send-to-contact").css("display", "block").addClass("anim-appear");
         $(".Send-to-contact .done-but").hide();
         $(".Send-to-contact").css("width", "696px");
-        // $(".hi-light-copy").css('width','460px');
         $(".hi-light-copy").animate({ width: "395px" }, 300);
     });
+
     $(".set-tick").click(function() {
-        console.log('set_tick clicked');
         history_details.push("set_tick()");
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
         activScreen_history.push(".Fax-content-confirm");
-
         $(".hi-light-copy").animate({ width: "395px" }, 300);
         $(".scrollspy").css({ width: "437px" });
         $(".count-checkboxes-wrapper").css("opacity", "0");
@@ -396,6 +356,7 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 400);
     });
+
     $(".icon-rt .send-but").click(function() {
         $(".icon-rt, .hi-light-copy ").hide();
         $(".Top-shade").hide();
@@ -405,7 +366,7 @@ $(document).ready(function() {
         $(".fax-animation").show(500);
         $(".fax-animation").css("overflow", "inherit");
         $(".fax-keyboard-confirm-section").css("width", "696px");
-        //msgdisplay();
+
         function msgdisplay1() {
             $(".Dialing-txt").css({ display: "block", opacity: "1" });
         }
@@ -430,7 +391,6 @@ $(document).ready(function() {
         }
 
         function msgdisplay5() {
-            console.log("message 5");
             $(".Connecting-txt").css("display", "none");
             $(".Dialing-txt").css("display", "none");
             $(".Scanning").css("display", "none");
@@ -440,7 +400,6 @@ $(document).ready(function() {
 
 
         function msgdisplay6() {
-
             $(".Connecting-txt").css("display", "none");
             $(".Dialing-txt").css("display", "none");
             $(".Scanning").css("display", "none");
@@ -474,14 +433,13 @@ $(document).ready(function() {
     });
 
     function faxanimation() {
-        console.log("animation end");
         $(".fax-gif-anim").hide();
-        //$(".Print-content-main").css("display", "block");
         $(".Cancel-btn").css("opacity", "0");
         $(".fax-animation, .Print-content-copy").hide();
         location.reload();
 
     }
+
     $(".fax-keyboard-confirm-section .done-but").click(function() {
         $(".fax-keyboard-confirm-section .hi-light-copy").hide();
         $(".fax-keyboard-confirm-section .done-but").hide();
@@ -507,32 +465,17 @@ $(document).ready(function() {
 
     $(".send-contact").click(function() {
         history_details.push("send_contact()");
-        console.log("send_contact() clicked");
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-
         if (activScreen_history.indexOf(".Send-to-contact") === -1) {
             activScreen_history.push(".Send-to-contact");
         }
-
         if ($('#count-checked-checkboxess').is(':empty')) {
-            console.log("empty value");
             $("#count-checked-checkboxess").val("");
         }
-        //activScreen_history.push(".Send-to-contact");
-        // $(".Fax-Section").addClass("anim-disappear").hide(2000);
-        $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {
-            console.log("fax section hide")
-        }).hide(300);
+        $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {}).hide(300);
         $(".hi-light-copy").css("width", "545px");
-        //$(".Fax-Section").addClass("anim-disappear").hide(300);
         $(".Top-shade").css("width", "500px");
         setTimeout(function() {
             $(".Send-to-contact").addClass('anim-txt1').show(300);
-            // $('.Send-to-contact').animate({ left: '0px', opacity: '1' }, 300, function() {
-            //     // $('.Fax-Section').animate({ opacity: '0' }).hide();
-            // }).show(600);
             historyActiveScreen("");
             $(".count-checkboxes-wrapper").addClass('opac-view').show(300);
             $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(100);
@@ -541,8 +484,6 @@ $(document).ready(function() {
 
     $(".send-to-cont").click(function() {
         history_details.push("showFaxsendtocont()");
-        console.log("send to content to fax");
-        // activScreen_history.splice($.inArray(".Send-to-contact", activScreen_history), 1);
         activScreen_history.push(".Send-to-contact");
         $(".Fax-content-add-recipient").addClass("anim-disappear").animate({ left: '-80px' }, { opacity: '0' }).hide(100);
         $(".hi-light-copy").css("width", "545px");
@@ -560,7 +501,6 @@ $(document).ready(function() {
         var selText = $(this).text();
         $(".copy-num").css("margin-top", "-8px");
         $(this).addClass("active");
-        // $(this).parents('.example1').find('.copy-num').html('<li class="copy-num" style="margin-top: -10px;"># Copies'+ selText +'</li>');
         $(".example1").find(".copy-num").html('<span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/Mask Group 2.svg"><span class="copy-txt">Copies</span></span><span class="copy-right-side">' + selText + '</span>');
     });
 
@@ -579,23 +519,14 @@ $(document).ready(function() {
 
         }, 600);
     }
-
-
-
+    /*Option landing page list click button event Starts here*/
     $(".option-landing ul .option-scan").click(function(event) {
-        // console.log("option landing clicked");
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
-        console.log("option scan clicked");
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
         if (activScreen_history.indexOf(".option-landing-scanmode") === -1) {
             activScreen_history.push(".option-landing-scanmode");
         }
-
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
@@ -603,9 +534,7 @@ $(document).ready(function() {
             setTimeout(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
             }, 300);
-
         }, 600);
-
         $(".option-landing-scanmode .optionli-scan-child1").css("margin-top", "-100px");
         $(".option-landing-scanmode").css({ opacity: "0.3", position: "fixed" });
         setTimeout(function() {
@@ -641,15 +570,9 @@ $(document).ready(function() {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
-        console.log("option sides clicked", history_details);
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
-
         if (activScreen_history.indexOf(".option-landing-sides") === -1) {
             activScreen_history.push(".option-landing-sides");
         }
-
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
@@ -664,8 +587,6 @@ $(document).ready(function() {
         $(".option-landing-sides .option-function").css({ visibility: "hidden" });
         setTimeout(function() {
             $(".option-content").css({ "margin-left": "2.162em" });
-            // $(".option-function").css('opacity','0');
-            // $(".option-content").css({'margin-left':'20%'});
             $(".option-landing-sides").css({ "margin-left": "0px" });
         }, 900);
         setTimeout(function() {
@@ -696,13 +617,9 @@ $(document).ready(function() {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
-        console.log("option color clicked", history_details);
-
         if (activScreen_history.indexOf(".option-landing-color") === -1) {
             activScreen_history.push(".option-landing-color");
         }
-
-
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" },
@@ -713,7 +630,6 @@ $(document).ready(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
             }, 300);
         }, 600);
-
         $(".option-landing-color .optionli-scan-child1").css("margin-top", "-24px");
         $(".option-landing-color").css({ opacity: "1", position: "fixed" });
         setTimeout(function() {
@@ -746,15 +662,9 @@ $(document).ready(function() {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
-        console.log("option resize clicked", history_details);
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
-
         if (activScreen_history.indexOf(".option-landing-resize") === -1) {
             activScreen_history.push(".option-landing-resize");
         }
-
         $(".option-landing").css({ opacity: "1" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
@@ -763,7 +673,6 @@ $(document).ready(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
             }, 300);
         }, 600);
-
         $(".option-landing-resize .optionli-scan-child1").css(
             "margin-top",
             "-24px"
@@ -799,14 +708,9 @@ $(document).ready(function() {
         if (history_details.indexOf("setBright()") === -1) {
             history_details.push("setBright()");
         }
-        console.log("option bright clicked", history_details);
-
-
         if (activScreen_history.indexOf(".option-landing-bright") === -1) {
             activScreen_history.push(".option-landing-bright");
         }
-        // $(".Top-shade").hide();
-
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
@@ -828,14 +732,13 @@ $(document).ready(function() {
                 $(".Top-shade").css('background', 'unset');
                 $(".copy-drag-content").show();
                 $("#bright-icon").attr("src", "./images/Icons_SVG/base-01.svg");
-                // if (parseInt($("#brightCount").val()) === 0) {
-                //     $("#bright-icon").attr("src", "./images/Icons_SVG/lighter_m.svg");
-                // }
             }, 500);
             historyActiveScreen("");
         }, 600);
 
     });
+    /*Option landing page list click button event ends here*/
+
 
     $("#brightCount").change(function() {
         if (parseInt($("#brightCount").val()) < 10 && parseInt($("#brightCount").val()) > 0) {
@@ -845,23 +748,20 @@ $(document).ready(function() {
         } else if (parseInt($("#brightCount").val()) === 0) {
             $("#bright-icon-txt").css('opacity', 0.1);
         }
-
     });
 
-    //---- Ranjith end ------
+    //---- Ranjith end ------>
     $(".carousel-item.scan-icon").click(function() {
         $(".Landing-Page").hide(0);
         $(".Copy-Section").hide(50);
         $(".Scan-Section").show(10);
-        //$(".second-Row").addClass('secondrow-push');
     });
+
     /**** Copy Mouse Event */
     $('.copy-page').mouseup(function() {
-        // console.log("testing");
         $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_l.svg')");
     });
     $('.copy-page').mouseout(function() {
-        // console.log("testing");
         $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_l.svg')");
     });
     $('.copy-page').mousedown(function() {
@@ -871,11 +771,9 @@ $(document).ready(function() {
 
     /**** ID Mouse Event */
     $('.ID-Page').mouseup(function() {
-        // console.log("testing");
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_1.svg')");
     });
     $('.ID-Page').mouseout(function() {
-        // console.log("testing");
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_1.svg')");
     });
     $('.ID-Page').mousedown(function() {
@@ -948,7 +846,6 @@ $(document).ready(function() {
     /**** End FAX ADD Button Mouse Event */
 
     /**** FAX Back Button Mouse Event */
-    // $('.fax-back-key ').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
     $('.fax-back-key').mouseup(function() {
         $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
         $(".fax-back-key").css('background-color', '#555557');
@@ -963,7 +860,6 @@ $(document).ready(function() {
     });
     /**** End FAX Back Button Mouse Event */
 
-    // $('.fax-back-key ').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
     $('.done-but-tick1').mouseup(function() {
         $('.done-but-tick1').css('background-image', "url('./images/Icons_SVG/done_m.svg')");
     });
@@ -1005,14 +901,9 @@ $(document).ready(function() {
         $('.backbtn').css('background-color', "#555557")
         $('.backbtn').css('background-image', "url('./images/Icons_SVG/send_s.svg')");
     });
-    // $('.backbtn').mouseover(function() {
-    //     $('.backbtn').css('background-color', "#000")
-    //     $('.backbtn').css('background-image', "url('./images/Icons_SVG/send_s.svg')");
-    // });
     /**** End FAX Next Button Mouse Event */
 
     /**** FAX Add popup Mouse Event */
-
     $('.add_pop').mouseup(function() {
         $('.add_pop').css('background-image', "url('./images/Icons_SVG/add_m.svg')");
         $(".add_pop").css('background-color', '#fff');
@@ -1026,19 +917,22 @@ $(document).ready(function() {
         $('.add_pop').css('background-image', "url('./images/Icons_SVG/add_m_hover.svg')");
     });
     $('.number-new-num .add_pop').mouseover(function() {
-        console.log('hover is working');
         $('.number-new-num').css('background-color', "#ff0")
         $('.number-new-num .add_pop').css('background-image', "url('./images/Icons_SVG/add_m.svg')");
     });
     /**** End add_pop Button Mouse Event */
 
+    /**** Backspace key Button Mouse Event start here */
     $('.backspance-keyb').mouseout(function() {
         $('.backspance-keyb').css('background-image', "url('./images/Icons_SVG/backspace_m.svg') left center");
     })
     $('.backspance-keyb').mousedown(function() {
         $('.backspance-keyb').css('background-image', "url('./images/Icons_SVG/backspace_pressed_m.svg') left center");
     });
+    /**** Backspace key Button Mouse Event ends here */
 
+
+    /**** Fax keypad Number Mouse Event start here */
     $('.number').css({ backgroundcolor: "#333333", color: '#fff' });
     $('.number').mouseout(function() {
         $(this).css('background-color', "#333333");
@@ -1048,23 +942,15 @@ $(document).ready(function() {
     $('.number').mousedown(function() {
         $(this).css('background-color', "#fff");
         $(this).css('color', "#000");
-        // $('.fax-keys').css('color', "#000");
     });
+    /**** Fax keypad Number Mouse Event ends here */
 
+    /**** Landing page Copy page  Click event start here */
     $("#introduction .copy-page").click(function() {
-        // console.log("erwerwerwerwerwerwer", e);
-        console.log('.copy-page');
         history_details.push("showCopyLandingPage()");
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-
         if (activScreen_history.indexOf(".example1") === -1) {
             activScreen_history.push(".example1");
         }
-
-        // By defalult first li active. So swape down disable 
-
         if ($(this).hasClass("active")) {
             $(".scrollspy").css('width', '437px');
             $(".back-btn").css("opacity", "1");
@@ -1077,7 +963,6 @@ $(document).ready(function() {
             $(".indicators").animate({ zoom: ".5", opacity: ".2", left: "-250px" }).hide(100);
             $(".copy-page").animate({ opacity: "0", left: "-250px" }).hide(300);
             $(".Print-content-main").hide(300);
-            // $(".hi-light-copy").show();
             $(".Copy-Content .example1").css({ "margin-left": "2.162em" });
             $(".Copy-Content .example1").animate({ opacity: 1, left: "0px" }).hide(100);
             $(".copy-button .done-but").css({ width: "240px", height: "90px" });
@@ -1085,10 +970,8 @@ $(document).ready(function() {
                 $(".Landing-Page .Main-content").show(00);
                 $(".Copy-Content .example1").show(00);
                 $(".hi-light-copy").show(000);
-                // $(".Landing-Page .example1").css("visibility", "visible");
                 $(".icon-rt").css("display", "block");
                 $(".send-but").css("display", "none");
-                // $(".icon-rt .but-text").css("visibility", "visible");
             }, 400);
             setTimeout(function() {
                 $(".Copy-Content .example1").animate({ "margin-left": "0px" }, 200);
@@ -1099,9 +982,10 @@ $(document).ready(function() {
             }, 600);
         }
     });
+    /**** Landing page Copy page  Click event Ends here */
 
+    /**** Landing page Copy page Number Click event start here */
     $(".copy-num").click(function() {
-        console.log(".copy-num clicked");
         if (history_details.indexOf("showCopies1()") === -1) {
             history_details.push("showCopies1()");
         }
@@ -1110,38 +994,18 @@ $(document).ready(function() {
         }
         $('.swapMe-down .down1').css('pointer-events', 'none');
         $('.swapMe-up .up1').css('pointer-events', 'none');
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-
-        // By defalult first li active. So swape down disable 
-
-        /*$(".hi-light-copy").css({'width':'450px'},{'transition':' width 2s'});*/
         $(".hi-light-copy").animate({ width: "545px" }, 300);
-        // $(".hi-light-copy").addClass('move-me-3');
-        // $(".icon-round").css('transition','1s');
-        // $(".icon-round").show(1000);
         $(".scrollspy").css({ width: "525px" });
         $(".copy-button .done-but").animate({ width: "80px", height: "90px" }, 100);
-
-        // $(".copy-button .done-but").addClass("move-me-2");
         $(".copy-button .done-but").hide();
         $(".done-but-tick1").css('cursor', 'pointer');
         $(".Copy-Content .example1").addClass('anim-disappear').hide(500);
-        // $(".Copy-Content .example1").animate({ left: "-2.162em" }, 100);
         $(".Copy-Content .example1").animate({ opacity: "0" }).hide(100);
-        // $(".Copy-Content .example2").css('opacity','0');
-        // $(".Copy-Content .example2").animate({"opacity": "1"}).show(100);
-
         $(".copy-button .done-but-tick1").show(100);
         $(".copy-button .but-text").hide();
-        // $(".copy-button .done-but").hide();
         $(".options").hide();
         $(".no-row").hide();
         $(".example3").hide();
-        // $(".Copy-Content .example2").delay(150).animate({ opacity : 1, left : "0px" }, 1000).show();
-        // $(".Copy-Content .example2 .menu-num").delay(150).animate({ opacity : 1, left : "0px" }, 1000).show();
-        // $(".example2").delay(500).animate({ opacity: 1, left: "0px" }, 1000).show();
         $(".example2").delay(1500).css('opacity', '1').addClass('anim-appear').show();
         $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: 1, left: "0px" }, 1000).show();
         $(".example2 .menu-num").delay(150).animate({ opacity: 1, left: "0px" }, 1000).show();
@@ -1149,10 +1013,10 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 1050);
     });
+    /**** Landing page Copy page Number Click event Ends here */
 
+    /**** Landing page Copy page Number select Click event start here */
     $(".Print-content-copy .done-but-tick1").click(function() {
-        console.log("copy button click");
-        // $(".menu-num li").each        
         $(".example1 ul li:first-child").css("height", "84px");
         $('.swapMe-down .down1').removeAttr("style");
         $('.swapMe-up .up1').removeAttr("style");
@@ -1169,8 +1033,9 @@ $(document).ready(function() {
         }, 100);
 
     });
+    /**** Landing page Copy page Number select Click event Ends here */
 
-
+    /**** Landing page Copy page Number select Click event start here */
     function doneButTick1() {
         $(".hi-light-copy").animate({ width: "395px" }, 100);
         $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: 1, left: "2.162em" }, 1000).hide();
@@ -1189,17 +1054,14 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 700);
     }
+    /**** Landing page Copy page Number select Click event start here */
 
+    /**** Landing page FAX page Click event start here */
     $(".Fax-Page").click(function() {
 
         if (history_details.indexOf("showFaxLandingPage()") === -1) {
             history_details.push("showFaxLandingPage()");
         }
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
-
         if (activScreen_history.indexOf(".Fax-content") === -1) {
             activScreen_history.push(".Fax-content");
         }
@@ -1222,13 +1084,14 @@ $(document).ready(function() {
             }, 300);
         }
     });
+    /**** Landing page FAX page Click event ends here */
 
     function faxtxtlanding() {
-        // $(".Main-content .Fax-Section").show(1000);
         $(".Main-content .Fax-Section").css("display", "block").addClass("anim-txt");
         historyActiveScreen("");
     }
 
+    /**** Landing page FAX KEy Pad Click event start here */
     $(".fax-number").click(function() {
         history_details.push("showFirstLandingPage()");
         activScreen_history.push(".fax-keyboard-section");
@@ -1250,14 +1113,10 @@ $(document).ready(function() {
         $(".Bottom-shade").hide();
         $("#display").focus();
     }
+    /**** Landing page FAX KEy Pad Click event ends here */
 
+    /**** Second Landing page Option Click event starts here */
     $(".options").click(function() {
-        console.log("click options");
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'none');
-        // By defalult first li active. So swape down disable 
-
         history_details.push("showOption()");
 
         if (activScreen_history.indexOf(".option-landing") === -1) {
@@ -1276,7 +1135,6 @@ $(document).ready(function() {
     function hideexample1() {
         $(".example1").hide();
         $(".Print-content-copy .option-landing").show();
-
         $(".option-landing").removeClass('transitionLR-reload');
         $(".option-landing .option-content").removeClass('transitionLR-reload');
         $(".option-landing .option-content").addClass('anim-txt').show(300);
@@ -1284,14 +1142,14 @@ $(document).ready(function() {
         historyActiveScreen("");
         onScreenEntryOptions();
         $(".scrollspy").css({ width: "696px" });
-        // $(".Print-content-copy .option-landing .optionli").css("margin-top", "-5px");
     }
 
     function hidebut() {
         $(".icon-rt").hide(10);
     }
+    /**** Second Landing page Option Click event ends here */
 
-    /*Copy button click event*/
+    /**** Cancel copy page Click event Starts here */
     $(".Cancel-btn").css({ opacity: "0" });
     $(".copy-button .done-but").click(function() {
         $(".Print-content-copy").hide(10);
@@ -1320,42 +1178,9 @@ $(document).ready(function() {
         });
 
         setTimeout(explode, 14800);
-
-        //  $('.Copying-txt').fadeIn('slow', function(){
-        //       $('.Copying-txt').delay(5000).fadeOut();
-        //       setTimeout(printcopy, 5500);
-        //    });
-        //    function printcopy(){
-        //       $('.Printing-txt').fadeIn('slow', function(){
-        //          $('.Printing-txt').delay(4000).fadeOut();
-        //          setTimeout(completecopy, 4500);
-        //       });
-        //    }
-        //    function completecopy(){
-        //       $('.Complete-txt').fadeIn('slow', function(){
-        //          $('.Complete-txt').delay(4000).fadeOut();
-        //       });
-        //    }
-
-        //    $(".icon-cancel .Cancel-btn").css('opacity','1').click(function(){
-        //       console.log("cancel button click from animation page");
-        //       setTimeout(cancelcopying, 10);
-
-        //       // $('.Cancel-copy').fadeIn('slow', function(){
-        //       //    $('.Cancel-copy').delay(400).fadeOut();
-        //       //    setTimeout(cancelcopying, 500);
-        //       // });
-        //    });
     });
 
     function cancelcopying() {
-        // $(".Print-content-copy").show(10);
-        // $(".Dot-Section").hide();
-        // $(".icon-cancel .Cancel-btn").css('opacity','0.3');
-        // $(".icon-cancel .Cancel-btn").css('cursor','pointer');
-        // $(".Dot-Section .copy-gif-anim").hide(100);
-        // $(".Dot-Section .Cancel-copy").show(10);
-
         $(".Dot-Section .copy-gif-anim").hide();
         setTimeout(function() {
             $(".Cancel-copy").show();
@@ -1375,10 +1200,8 @@ $(document).ready(function() {
         $(".Dot-Section").hide();
         $(".icon-cancel .Cancel-btn").css("opacity", "0");
         $(".Print-content-copy").hide();
-        // $(".Print-content-main").css("display", "block");
-
     }
-
+    /**** Cancel copy page Click event ends here */
     $("#return").click(function() {
         window.history.back();
     });
@@ -1390,7 +1213,6 @@ $(document).ready(function() {
 
 
     $(".Send-checkbox-faxlist li").click(function(event) {
-
         if ($(this).find('input[type=checkbox]').prop("checked")) {
             $(this).find('input[type=checkbox]:checked').removeAttr('checked');
         } else {
@@ -1423,8 +1245,8 @@ $(document).ready(function() {
         });
 
     });
-    $(document).ready(function() {
 
+    $(document).ready(function() {
         $("#multiEmail").mouseover(function() {
             $(".display").addClass('transcrolltxt');
         });
@@ -1433,6 +1255,7 @@ $(document).ready(function() {
         });
     });
 
+    /**** Swape Click event Starts here */
     $(".swapMe-up .up1").click(function() {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
         $(".Print-content-copy .scrollspy " + activeScreen + " .copy-num").animate({ 'marginTop': "-=90px" });
@@ -1442,16 +1265,14 @@ $(document).ready(function() {
         $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "-=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "-=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
-
         $("" + activeScreen + " .optionli-scan-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "-=90px" });
-
         $("" + activeScreen + "  .Section-check-child1 ").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "-=90px" });
-
         $("" + activeScreen + " .fax-check-child0").animate({ 'marginTop': "-=90px" });
     });
+
     $(".swapMe-down .down1").click(function() {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
         $(".Print-content-copy .scrollspy " + activeScreen + " .no-first-row .num-first").animate({ 'marginTop': "+=90px" });
@@ -1460,14 +1281,11 @@ $(document).ready(function() {
         $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "+=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "+=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
-
         $("" + activeScreen + " .optionli-scan-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "+=90px" });
-
         $("" + activeScreen + " .Section-check-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "+=90px" });
-
         $("" + activeScreen + "  .fax-check-child0").animate({ 'marginTop': "+=90px" });
     });
     $(".swapMe-up .up2").click(function() {
@@ -1478,14 +1296,11 @@ $(document).ready(function() {
         $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "-=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "-=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
-
         $("" + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "-=90px" });
-
         $("" + activeScreen + " .Section-check-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "-=90px" });
-
         $("" + activeScreen + "  .fax-check-child0").animate({ 'marginTop': "-=90px" });
     });
     $(".swapMe-down .down2").click(function() {
@@ -1496,14 +1311,11 @@ $(document).ready(function() {
         $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "+=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "+=90px" });
         $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
-
         $("" + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "+=90px" });
-
         $("" + activeScreen + " .Section-check-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .fax-check-child1 ").animate({ 'marginTop': "+=90px" });
-
         $("" + activeScreen + " .fax-check-child0").animate({ 'marginTop': "+=90px" });
     });
 
@@ -1518,7 +1330,9 @@ $(document).ready(function() {
     $("span.down").click(function() {
         $(this).parent().insertAfter($(this).parent().next());
     });
+    /**** Swape Click event Ends here */
 
+    /**** Landing Page text event Starts here */
     $(".indicators .indicator-item").eq(0).text("Smart Tasks");
     $(".indicators .indicator-item").eq(1).text("Menu");
     $(".indicators .indicator-item").eq(2).text("Copy");
@@ -1526,7 +1340,7 @@ $(document).ready(function() {
     $(".indicators .indicator-item").eq(3).text("ID Copy");
     $(".indicators .indicator-item").eq(4).text("Scan");
     $(".indicators .indicator-item").eq(5).text("Fax");
-
+    /**** Landing Page text event Ends here */
 });
 
 $(function() {
@@ -1558,15 +1372,9 @@ $(".done-but").mouseleave(function() {
 });
 
 function load_faxpage() {
-    console.log('fax page load');
-    // document.addEventListener("DOMContentLoaded", function() {
-    //   var elems = document.querySelectorAll(".carousel");
     setTimeout(function() {
         var carousel_items = document.querySelectorAll(".carousel-item").length;
         var middle_slide = 5;
-        // var middle_slide = Math.round(carousel_items / 1);
-        //   var instances = M.Carousel.init(elems);
-
         window.next = function() {
             var el = document.querySelector(".carousel");
             var l = M.Carousel.getInstance(el);
@@ -1576,17 +1384,12 @@ function load_faxpage() {
         var instance = M.Carousel.getInstance(elem);
         instance.set(middle_slide);
     });
-    // });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    //   var elems = document.querySelectorAll(".carousel");
     setTimeout(function() {
         var carousel_items = document.querySelectorAll(".carousel-item").length;
-        console.log(Math.round(carousel_items / 5))
         var middle_slide = Math.round(carousel_items / 5);
-        //   var instances = M.Carousel.init(elems);
-
         window.next = function() {
             var el = document.querySelector(".carousel");
             var l = M.Carousel.getInstance(el);
@@ -1610,14 +1413,8 @@ $(".Fax-content ul li, .Fax-content-confirm ul li, .Fax-content-add-recipient ul
     $(this).css("cursor", "pointer");
     $(".hi-light-copy").css("border", "4px solid #ffffff");
 });
-$(document).on("click", "ul li:not(:last-child)", function(e) {
-    console.log('clicked');
-})
 
 $('.swapMe-up').click(function() {
-    // console.log(activScreen_history[activScreen_history.length - 1]);
-    // console.log($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').text()));
-    // console.log($(activScreen_history[activScreen_history.length - 1]).css('display'));
     if ($(activScreen_history[activScreen_history.length - 1]).css('display') == 'block' ||
         $(activScreen_history[activScreen_history.length - 1]).css('display') == 'flex') {
 
@@ -1625,19 +1422,14 @@ $('.swapMe-up').click(function() {
             $(activScreen_history[activScreen_history.length - 1] + ' ul li.active').next().addClass("active").prev().removeClass("active");
         }
         if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').next().text()) === "") {
-            //console.log('next'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text())+'next');
             $('.swapMe-up').css('pointer-events', 'none');
         }
         if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()) != "") {
-            // console.log('prev'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text())+'prev');
             $('.swapMe-down').css('pointer-events', 'auto');
         }
     }
 });
 $('.swapMe-down').click(function() {
-    // console.log(activScreen_history[activScreen_history.length-1]);
-    // console.log($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').text()));
-    // console.log($(activScreen_history[activScreen_history.length-1]).css('display'));
     if ($(activScreen_history[activScreen_history.length - 1]).css('display') == 'block' ||
         $(activScreen_history[activScreen_history.length - 1]).css('display') == 'flex') {
 
@@ -1645,11 +1437,9 @@ $('.swapMe-down').click(function() {
             $(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().addClass("active").next().removeClass("active");
         }
         if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()) === "") {
-            //console.log('prev'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').prev().text())+'prev');
             $('.swapMe-down').css('pointer-events', 'none');
         }
         if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').next().text()) != "") {
-            // console.log('next'+$.trim($(activScreen_history[activScreen_history.length-1]+' ul li.active').next().text())+'next');
             $('.swapMe-up').css('pointer-events', 'auto');
         }
     }
