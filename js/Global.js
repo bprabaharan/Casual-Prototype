@@ -285,9 +285,9 @@ $(document).ready(function() {
             multiplFax = multiplFax + '<span class="fax-txt1">' + faxFormat + ' </span> <span class="fax-txt1">; </span> ';
         }
         $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(1000);
+        $(".hi-light-copy").animate({ width: "395px", marginTop: "75px", opacity: "1" }).show();
 
         setTimeout(function() {
-            $(".hi-light-copy").animate({ width: "395px", marginTop: "75px", opacity: "1" }).show();
             $(".Fax-content-confirm").show(100).css("display", "flex").addClass("anim-appear");
             $(".scrollspy").css("width", "437px");
             $(".icon-rt").delay(100).css("display", "block");
@@ -961,7 +961,7 @@ $(document).ready(function() {
             activScreen_history.push(".example1");
         }
         if ($(this).hasClass("active")) {
-            $(".scrollspy").css('width', '437px');
+            $(".scrollspy").css('width', '432px');
             $(".back-btn").css("opacity", "1");
             $(".back-btn").css("cursor", "pointer");
             $(".Smarttask-Page").animate({ zoom: ".3", opacity: ".2" }).hide(100);
@@ -1104,11 +1104,17 @@ $(document).ready(function() {
     $(".fax-number").click(function() {
         history_details.push("showFirstLandingPage()");
         activScreen_history.push(".fax-keyboard-section");
+        $(".Fax-Section").removeClass('anim-reappear-left-right');
         $(".Fax-Section").addClass("anim-disappear");
-        $(".Fax-Section").hide(100);
         $(".scrollspy").css("width", "696px");
-        $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
-        setTimeout(faxkeyboard, 300);
+        setTimeout(function() {
+            $(".Top-shade").hide();
+            $(".Bottom-shade").hide();
+            $(".Fax-Section").hide();
+            $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
+        }, 1000);
+
+        setTimeout(faxkeyboard, 1500);
     });
 
     function faxkeyboard() {
@@ -1116,9 +1122,9 @@ $(document).ready(function() {
         $(".fax-keyboard-section").addClass("anim-appear-bot-top");
         $(".fax-keyboard-section").css({ opacity: "1", marginTop: "0px" }).show(100);
         $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
+
         $("#display").focus();
-        $(".Top-shade").hide();
-        $(".Bottom-shade").hide();
+
     }
     /**** Landing page FAX KEy Pad Click event ends here */
 

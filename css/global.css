@@ -1217,7 +1217,7 @@ html {
 
 .Bottom-shade {
     width: 696px;
-    height: 79px;
+    height: 82px;
     /* margin-top: -101px; */
     position: absolute;
     z-index: 0;
@@ -1304,8 +1304,9 @@ html {
 
 .swapMe-up {
     width: 700px;
-    height: 78px;
+    height: 80px;
     display: flex;
+    border: 1px solid transparent;
 }
 
 .swapMe-up .up1 {
@@ -1612,8 +1613,8 @@ input[type="checkbox"]:checked+label::before {
 
 @media screen and (min-width: 1366px) {
     .Copy-Content .example2 .copy-ul {
-        padding-top: 60px;
-        padding-left: 20px;
+        padding-top: 64px;
+        padding-left: 13px;
     }
     .Print-container {
         margin: 0 auto;

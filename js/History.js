@@ -13,7 +13,7 @@ $(".back-btn").click(function() {
 
 /**** Enable/Disable swapeMe-down/swapeMe-up Click event start here */
 function historyActiveScreen(back) {
- 
+
     if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()) === "") {
         $('.swapMe-down').css('pointer-events', 'none');
         console.log($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()));
@@ -75,9 +75,10 @@ function showFaxLandingPage() {
 }
 
 function showFirstLandingPage() {
+    $(".Fax-Section").removeClass("anim-disappear");
     $(".fax-keyboard-section").removeClass("transitionBU").animate({ marginTop: "250px", opacity: "0" }, 600).hide(600);
     $(".Fax-Section").removeClass("anim-txt");
-    $(".hi-light-copy").delay(100).animate({ marginTop: "70px", opacity: "1", width: "658px" }, 300).show(300);
+    $(".hi-light-copy").animate({ marginTop: "70px", opacity: "1", width: "658px" }).show(300);
     $(".scrollspy").css("width", "600px");
     $(".Top-shade,.Bottom-shade").show();
     $(".Fax-Section").delay(1000).removeClass("anim-disappear").addClass("anim-reappear-left-right").show(300);
