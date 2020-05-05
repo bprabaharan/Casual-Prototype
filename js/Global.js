@@ -1104,8 +1104,8 @@ $(document).ready(function() {
     $(".fax-number").click(function() {
         history_details.push("showFirstLandingPage()");
         activScreen_history.push(".fax-keyboard-section");
-        $(".Top-shade").hide();
-        $(".Bottom-shade").hide();
+        // $(".Top-shade").hide();
+        // $(".Bottom-shade").hide();
         $(".Fax-Section").addClass("anim-disappear");
         $(".Fax-Section").hide(100);
         $(".scrollspy").css("width", "696px");
@@ -1118,9 +1118,9 @@ $(document).ready(function() {
         $(".fax-keyboard-section").addClass("anim-appear-bot-top");
         $(".fax-keyboard-section").css({ opacity: "1", marginTop: "0px" }).show(100);
         $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
+        $("#display").focus();
         $(".Top-shade").hide();
         $(".Bottom-shade").hide();
-        $("#display").focus();
     }
     /**** Landing page FAX KEy Pad Click event ends here */
 
