@@ -1104,8 +1104,6 @@ $(document).ready(function() {
     $(".fax-number").click(function() {
         history_details.push("showFirstLandingPage()");
         activScreen_history.push(".fax-keyboard-section");
-        // $(".Top-shade").hide();
-        // $(".Bottom-shade").hide();
         $(".Fax-Section").addClass("anim-disappear");
         $(".Fax-Section").hide(100);
         $(".scrollspy").css("width", "696px");

@@ -1,6 +1,6 @@
 var history_details = [];
 var activScreen_history = [];
-
+/**** Common History Back Click event start here */
 $(".back-btn").click(function() {
     eval(history_details[history_details.length - 1]);
     activateOptionLanding();
@@ -8,9 +8,10 @@ $(".back-btn").click(function() {
         activScreen_history = activScreen_history.slice(0, -1);
         historyActiveScreen('back');
     }, 100);
-
 });
+/**** Common History Back Click event end here */
 
+/**** Enable/Disable swapeMe-down/swapeMe-up Click event start here */
 function historyActiveScreen(back) {
  
     if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').prev().text()) === "") {
@@ -57,11 +58,10 @@ function activateOptionLanding() {
             }
         });
     }
-
-
-
 }
+/**** Enable/Disable swapeMe-down/swapeMe-up Click event start here */
 
+/**** All the History/Back functions start Here  */
 function showCopyLandingPage() {
     history_details.pop();
     location.reload(false);
@@ -256,3 +256,4 @@ function delayOptions() {
         }, 200);
     }, 300);
 }
+/**** All the History/Back functions ends Here  */
