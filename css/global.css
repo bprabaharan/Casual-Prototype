@@ -183,14 +183,20 @@ html {
     }
 }
 
-@-webkit-keyframes floatText {
+.anim-txt-reverse {
+    animation: floatTextrev 0.6s ease-in;
+    visibility: visible;
+    white-space: nowrap;
+}
+
+@keyframes floatTextrev {
     from {
-        right: -80px;
-        opacity: 0;
+        right: 0px;
+        opacity: 1;
     }
     to {
-        right: 0%;
-        opacity: 1;
+        right: -80px;
+        opacity: 0;
     }
 }
 
@@ -1217,7 +1223,7 @@ html {
 
 .Bottom-shade {
     width: 696px;
-    height: 79px;
+    height: 82px;
     /* margin-top: -101px; */
     position: absolute;
     z-index: 0;
@@ -1304,8 +1310,9 @@ html {
 
 .swapMe-up {
     width: 700px;
-    height: 78px;
+    height: 80px;
     display: flex;
+    border: 1px solid transparent;
 }
 
 .swapMe-up .up1 {
@@ -1376,10 +1383,11 @@ input[type="checkbox"]+label {
 
 .Send-checkbox-faxlist input[type="checkbox"]+label {
     cursor: pointer;
-    height: 66px;
-    width: 66px;
+    height: 58px;
+    width: 58px;
     display: inline-block;
     padding: 0 0 0 0px;
+    margin-top: 5px;
     /* background-color: #FFFFFF; */
     background: url("../images/Icons_SVG/checkbox _unchecked_m.svg") left center no-repeat;
 }
@@ -1420,9 +1428,10 @@ input[type="checkbox"]+label {
 
 .Send-checkbox-faxlist input[type="checkbox"]:checked+label {
     background: #fff;
-    height: 66px;
-    width: 66px;
+    height: 58px;
+    width: 58px;
     display: inline-block;
+    margin-top: 5px;
     padding: 0 0 0 0px;
     background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat;
 }
@@ -1458,10 +1467,10 @@ input[type="checkbox"]:checked+label::before {
 
 .copy-icon,
 .option-icon {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     /* padding-top: 15px; */
-    margin-top: 2px;
+    margin-top: 3px;
 }
 
 .option-scan,
@@ -1612,8 +1621,8 @@ input[type="checkbox"]:checked+label::before {
 
 @media screen and (min-width: 1366px) {
     .Copy-Content .example2 .copy-ul {
-        padding-top: 60px;
-        padding-left: 20px;
+        padding-top: 64px;
+        padding-left: 13px;
     }
     .Print-container {
         margin: 0 auto;
@@ -1922,14 +1931,14 @@ button:focus {
 }
 
 .count-checkboxes-wrapper {
-    width: 200px;
+    /* width: 200px; */
     /* float: right; */
     text-align: right;
-    position: absolute;
+    /* position: absolute; */
     color: #fff;
     font-size: 36px;
     margin-top: 62px;
-    margin-left: 499px;
+    /* margin-left: 499px; */
 }
 
 #count-checked-checkboxess {
@@ -2011,12 +2020,22 @@ button:focus {
 }
 
 .fax-num {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
 }
 
 .onetoone {
-    height: 70px;
+    height: 48px;
+    width: 58px;
+    margin-top: 10px;
+}
+
+.onetoone11 {
+    height: 68px;
+    width: 98px;
+    margin-top: 0px;
+    margin-left: 9px;
 }
 
 .onetoone-span {
@@ -2290,8 +2309,9 @@ span.ei_invalid {
 
 .option-img,
 .option-img img {
-    width: 66px;
-    height: 66px;
+    width: 58px;
+    height: 58px;
+    margin-top: 2px;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]) {
@@ -2331,24 +2351,24 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
         background: linear-gradient(90deg, rgba(8, 8, 8, 1) 0%, rgba(255, 255, 255, 1) 100%);
     }
     input[type='range']::-webkit-slider-thumb {
-        width: 85px;
-        margin-top: 2px;
+        width: 90px;
+        margin-top: 1px;
         opacity: 1;
-        border: 1px solid #f3f3f338;
+        border: 1px solid #fff;
         border-radius: 45px;
         -webkit-appearance: none;
-        height: 85px;
+        height: 90px;
         cursor: pointer;
         background: #fff;
         /*box-shadow: -450px 0 0 400px #f00;*/
-        box-shadow: -400px 1px 0px 350px rgba(255, 255, 255, 0);
+        box-shadow: -380px 1px 0px 350px rgba(255, 255, 255, 0);
         filter: brightness(1);
         /*background-image:url("./images/Icons_SVG/drag.png" );*/
     }
     input[type='range']::-webkit-slider-thumb:hover {
-        border: 3px solid #fff;
+        border: 1px solid #fff;
         /* background-image:url("./images/Icons_SVG/drag.svg" ); */
-        background-image: url("../images/Icons_SVG/drag.svg");
+        /* background-image: url("../images/Icons_SVG/drag.svg"); */
     }
     input[type=range] {
         border: 1px solid #090909;
