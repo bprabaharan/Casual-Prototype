@@ -543,7 +543,7 @@ html {
 
 .Fax-Section ul {
     height: 206px;
-    overflow-y: auto;
+    overflow-y: hidden;
     float: left;
 }
 
@@ -561,14 +561,14 @@ html {
 
 .Fax-content-add-recipient {
     height: 240px;
-    overflow-y: auto;
+    overflow-y: hidden;
     width: 500px;
 }
 
 .Fax-content-confirm {
     text-align: center;
     height: 240px;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding-left: 5px;
     padding-left: 50px;
 }
@@ -576,7 +576,7 @@ html {
 .Send-to-contact .Send-checkbox-faxlist {
     text-align: center;
     height: 220px;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding-left: 5px;
     width: 580px;
 }
@@ -610,6 +610,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
+    overflow-y: hidden;
 }
 
 .Fax-content-confirm ul li {
@@ -647,7 +648,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 6px 60px;
+    padding: 8px 60px;
     width: 680px;
 }
 
@@ -704,7 +705,7 @@ html {
 
 .option1 {
     height: 240px;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .option1 .option-scan,
@@ -719,7 +720,7 @@ html {
 
 .optionli-land-child {
     height: 240px;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .optionli-land-child1,
@@ -1146,14 +1147,14 @@ html {
 .copy-color-1 {
     width: 332px;
     height: 233px;
-    overflow-y: auto;
+    overflow-y: hidden;
     margin-top: 20px;
 }
 
 .copy-color-2 {
     width: 224px;
     height: 233px;
-    overflow-y: auto;
+    overflow-y: hidden;
     color: #fff;
     font-size: 2.875rem;
     margin-top: 20px;
@@ -1163,7 +1164,7 @@ html {
 .copy-color-3 {
     width: 334px;
     height: 233px;
-    overflow-y: auto;
+    overflow-y: hidden;
     color: #fff;
     font-size: 2.875rem;
     margin-top: 20px;
