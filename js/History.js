@@ -86,19 +86,27 @@ function showFirstLandingPage() {
 }
 
 function send_contact() {
-    $(".Send-to-contact").removeClass("anim-disappear").hide(600);
-    $(".fax-keyboard-confirm-section .done-but").hide(600);
+    setTimeout(function() {
+        $(".Send-to-contact").addClass('anim-txt-reverse').hide(300);
+        // $('.Send-to-contact').animate({ left: '-80px', opacity: '0' }).hide();
+        $(".Send-to-contact").removeClass('anim-txt');
+    }, 600)
+
+    // $(".Send-to-contact").removeClass("anim-disappear").hide(300);
+    // $(".fax-keyboard-confirm-section .done-but").hide(00);
+    $(".count-checkboxes-wrapper").removeClass('opac-view').hide();
+
     history_details.pop();
     setTimeout(function() {
         $(".hi-light-copy").css("width", "658px");
         $('.Fax-Section').animate({ left: '0px', opacity: '1' }).show();
         $(".Top-shade").css("width", "600px");
-    }, 600);
+    }, 1000);
 }
 
 function set_tick() {
     $(".hi-light-copy").animate({ width: "545px" }, 300);
-    $(".scrollspy").css({ width: "500px" });
+    $(".scrollspy").css({ width: "580px" });
     $(".count-checkboxes-wrapper").css("opacity", "1");
     $(".Fax-content-confirm ul li:first-child").css("height", "70px");
     $(".Fax-content-confirm").addClass("anim-disappear");

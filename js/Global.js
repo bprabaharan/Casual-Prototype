@@ -1,18 +1,18 @@
 $(document).ready(function() {
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
-    
+
     $mq = $('.marquee').marquee();
-   
+
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
-            if(evnt.attributeName == "style") { // which attribute you want to watch for changes
-                if(evnt.newValue.search(/inline/i) == -1) {
-                    if($(".slidetext-content1").hasClass("active")){
+            if (evnt.attributeName == "style") { // which attribute you want to watch for changes
+                if (evnt.newValue.search(/inline/i) == -1) {
+                    if ($(".slidetext-content1").hasClass("active")) {
                         $mq.marquee('resume');
-                    }else{
-                        $mq.marquee('pause');  
+                    } else {
+                        $mq.marquee('pause');
                     }
                 }
             }
@@ -491,13 +491,14 @@ $(document).ready(function() {
         }
         $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {}).hide(300);
         $(".hi-light-copy").css("width", "545px");
-        $(".Top-shade").css("width", "500px");
+        $(".Top-shade").css("width", "600px");
         setTimeout(function() {
-            $(".Send-to-contact").addClass('anim-txt1').show(300);
+            $(".Send-to-contact").removeClass('anim-txt-reverse');
+            $(".Send-to-contact").addClass('anim-txt').show(0);
             historyActiveScreen("");
             $(".count-checkboxes-wrapper").addClass('opac-view').show(300);
             $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(100);
-        }, 1000);
+        }, 300);
     });
 
     $(".send-to-cont").click(function() {
@@ -784,10 +785,10 @@ $(document).ready(function() {
 
     /**** ID Mouse Event */
     $('.ID-Page').mouseup(function() {
-        $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_1.svg')");
+        $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_l.svg')");
     });
     $('.ID-Page').mouseout(function() {
-        $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_1.svg')");
+        $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_l.svg')");
     });
     $('.ID-Page').mousedown(function() {
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_pressed_l.svg')");
@@ -1152,7 +1153,7 @@ $(document).ready(function() {
             activScreen_history.push(".option-landing");
         }
 
-        $(".option-landing ul li:first-child").css("height", "78px");
+        $(".option-landing ul li:first-child").css("height", "75px");
         $(".done-but").hide();
         $(".example1").addClass("transitionLR");
 
