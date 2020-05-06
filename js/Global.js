@@ -3,7 +3,9 @@ $(document).ready(function() {
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
     
     $mq = $('.marquee').marquee();
-   
+    if($(".slidetext-content1").hasClass("active")){
+        $mq.marquee('resume');
+    }
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
@@ -361,6 +363,8 @@ $(document).ready(function() {
         $(".Fax-content-confirm ul li:first-child").css("height", "70px");
         $(".Fax-content-confirm").removeClass("anim-disappear");
         $(".Fax-content-add-recipient").removeClass("anim-disappear");
+        $(".Fax-content-confirm ul li").removeClass("active");
+        $(".Fax-content-confirm .fax-check-child1").addClass("active"); 
         $(".fax-txt-head-bind .fax-txt").hide();
         $(".Fax-content-confirm").css({ display: "block", width: "380px" }).addClass("anim-txt");
         $(".Fax-content-confirm").css("display", "block").addClass("anim-txt");
