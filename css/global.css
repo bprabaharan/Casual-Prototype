@@ -2207,12 +2207,28 @@ button:focus {
 
 
 /*--------------For multiEmail--------------*/
-
-#multiFax {
-    display: flex;
-    overflow-x: auto;
+.marqueeFax {
+    position: relative;
+    float: right;
+    overflow: hidden;
 }
+#multiFax {
+    display: inline-flex;
+    position: relative;
+   
+    float:left;
+    /* overflow-x: auto; */
+}
+#multiFax > span {
+    display: inline-block;
+    float:left;
+}
+.marqueeFax:hover  #multiFax{
+    animation: marqueemove 5s infinite;
+    animation-play-state: running;
+  }
 
+  
 div.ei,
 input.ei {
     min-height: 22px;

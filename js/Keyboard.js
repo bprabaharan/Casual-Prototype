@@ -124,6 +124,10 @@ function addNumbers() {
 }
 
 function myFunction(data) {
+        // $(":root").css("--foo",  $('#multiFax').width());
+        // console.log(".css method on “:root”      :", $(":root").css("--foo"));
+       
+
     console.log(data);
     $("#display").focus();
     $('#display').removeAttr('placeholder');
@@ -140,7 +144,11 @@ function myFunction(data) {
         }
 
     } else if (value === "addCont") {
+
+        // document.getElementById("multiFax").style.setProperty("--foo", $('#multiFax').width());
+       
         addMultiFax();
+       
         // if (history_details.indexOf("showFaxbackspace()") === -1) {
         //     history_details.push("showFaxbackspace()");
         // }
@@ -211,6 +219,9 @@ function addMultiFax() {
     if (faxtxt != '') {
         $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; <span>");
         $("#display").val('');
+        var pushLeft = $('#multiFax').width();
+     //set the style and append to head
+        $('<style>@keyframes marqueemove{from {left:0px;}to {left:-'+pushLeft+'px;}}</style>').appendTo('head');
     }
 
 }
