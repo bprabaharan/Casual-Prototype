@@ -576,7 +576,7 @@ html {
 .Send-to-contact .Send-checkbox-faxlist {
     text-align: center;
     height: 220px;
-    overflow-y: hidden;
+    overflow-y: scroll;
     padding-left: 5px;
     width: 580px;
 }
@@ -2208,6 +2208,11 @@ button:focus {
 
 /*--------------For multiEmail--------------*/
 
+#multiFax {
+    display: flex;
+    overflow-x: auto;
+}
+
 div.ei,
 input.ei {
     min-height: 22px;
@@ -2239,6 +2244,8 @@ span.ei_valid {
     font-size: 32px;
     border-radius: 44px;
     padding: 0 15px;
+    white-space: nowrap;
+    height: 50px;
 }
 
 span.ei_comma {

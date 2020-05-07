@@ -361,7 +361,7 @@ $(document).ready(function() {
         $(".Fax-content-confirm").removeClass("anim-disappear");
         $(".Fax-content-add-recipient").removeClass("anim-disappear");
         $(".Fax-content-confirm ul li").removeClass("active");
-        $(".Fax-content-confirm .fax-check-child1").addClass("active"); 
+        $(".Fax-content-confirm .fax-check-child1").addClass("active");
         $(".fax-txt-head-bind .fax-txt").hide();
         $(".Fax-content-confirm").css({ display: "block", width: "380px" }).addClass("anim-txt");
         $(".Fax-content-confirm").css("display", "block").addClass("anim-txt");
