@@ -569,7 +569,7 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 900);
         setTimeout(function() {
-            $(".option-content").animate({ "margin-left": "5px" }, 600);
+            $(".option-content").animate({ "margin-left": "1px" }, 600);
             $(".option-landing-scanmode .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-scanmode").css({ opacity: "1" });
@@ -615,7 +615,7 @@ $(document).ready(function() {
             $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
-            $(".option-content").animate({ "margin-left": "10px" }, 600);
+            $(".option-content").animate({ "margin-left": "1px" }, 600);
             $(".option-landing-sides .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-sides .option-function").css({
@@ -661,7 +661,7 @@ $(document).ready(function() {
             $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
-            $(".option-content").animate({ "margin-left": "10px" }, 600);
+            $(".option-content").animate({ "margin-left": "1px" }, 600);
             $(".option-landing-color .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-color").css({ opacity: "1" });
@@ -704,7 +704,7 @@ $(document).ready(function() {
             $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
-            $(".option-content").animate({ "margin-left": "10px" }, 600);
+            $(".option-content").animate({ "margin-left": "1px" }, 600);
             $(".option-landing-resize .option-content").addClass('anim-appear');
             setTimeout(function() {
                 $(".option-landing-resize").css({ opacity: "1" });

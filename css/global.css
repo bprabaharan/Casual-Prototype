@@ -51,6 +51,7 @@ button {
     height: 240px !important;
     -webkit-perspective: 696px !important;
     perspective: 696px !important;
+    box-shadow: inset 0px 0px 0px 18px #000;
 }
 
 #introduction {
@@ -268,19 +269,23 @@ html {
 
 @keyframes reload {
     from {
-        right: 30%;
+        right: 80px;
+        opacity: 0;
     }
     to {
-        right: 0%;
+        right: 0px;
+        opacity: 1;
     }
 }
 
 @-webkit-keyframes reload {
     from {
-        right: 30%;
+        right: 80px;
+        opacity: 0;
     }
     to {
-        right: 0%;
+        right: 0px;
+        opacity: 1;
     }
 }
 
@@ -290,7 +295,7 @@ html {
         opacity: 1;
     }
     to {
-        left: 0%;
+        right: 0px;
         opacity: 1;
     }
 }
@@ -525,7 +530,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 0px 50px;
+    padding: 0px 56px;
 }
 
 .Send-to-contact {
@@ -605,7 +610,14 @@ html {
 
 /* .fax-keyboard-confirm-section .Send-to-contact{width: 486px;} */
 
-.Fax-content-confirm ul li,
+.Fax-content-confirm ul li {
+    color: #fff;
+    font-size: 2.875rem;
+    height: 90px;
+    overflow-y: hidden;
+    padding-left: 14px;
+}
+
 .Fax-content-add-recipient ul li {
     color: #fff;
     font-size: 2.875rem;
@@ -656,7 +668,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 11px 45px;
+    padding: 11px 51px;
     width: 680px;
 }
 
@@ -664,7 +676,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 0px 40px;
+    padding: 0px 48px;
     width: 680px;
     overflow: hidden;
     white-space: nowrap;
@@ -682,7 +694,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 0px 40px;
+    padding: 0px 60px;
     width: 680px;
 }
 
@@ -690,7 +702,7 @@ html {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
-    padding: 0px 40px;
+    padding: 0px 48px;
     width: 680px;
 }
 
@@ -1747,6 +1759,7 @@ input[type="checkbox"]:checked+label::before {
 
 .fax-number {
     cursor: pointer;
+    padding-left: 9px;
 }
 
 .fax-back-key {
@@ -2320,6 +2333,7 @@ span.ei_invalid {
     width: 58px;
     height: 58px;
     margin-top: 2px;
+    margin-right: 9px;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]) {
