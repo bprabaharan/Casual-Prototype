@@ -641,7 +641,9 @@ html {
 .Send-to-contact ul li:first-child {
     height: 70px;
 }
-
+.Send-to-contact ul li:last-child {
+    height: 60px;
+}
 .Send-to-contact ul li {
     display: flex;
 }
@@ -2220,12 +2222,50 @@ button:focus {
 
 
 /*--------------For multiEmail--------------*/
-
-#multiFax {
-    display: flex;
-    overflow-x: auto;
+.marqueeFax {
+    position: relative;
+    float: right;
+    overflow: hidden;
 }
+#multiFax {
+    display: inline-flex;
+    position: relative;  
+    float:left;
+    animation: marqueeRevFax 5s infinite;
+    animation-play-state: paused;
+    /* overflow-x: auto; */
+}
+#multiFax > span {
+    display: inline-block;
+    float:left;
+}
+.marqueeFax:hover  #multiFax{
+    animation: marqueemoveFax 5s infinite;
+    animation-play-state: running;
+  }
 
+  .marqueeSend {
+    position: relative;
+    float: right;
+    overflow: hidden;
+}
+#multiSend {
+    display: inline-flex;
+    position: relative;  
+    float:left;
+    animation: marqueeRevSend 5s infinite;
+    animation-play-state: paused;
+    /* overflow-x: auto; */
+}
+#multiSend > span {
+    display: inline-block;
+    float:left;
+}
+.marqueeSend:hover  #multiSend{
+    animation: marqueemoveSend 5s infinite;
+    animation-play-state: running;
+  }
+  
 div.ei,
 input.ei {
     min-height: 22px;
