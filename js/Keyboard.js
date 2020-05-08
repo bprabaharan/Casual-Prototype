@@ -219,10 +219,10 @@ function addMultiFax() {
     if (faxtxt != '') {
         $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; <span>");
         $("#display").val('');
-        var pushLeft = $('#multiFax').width();
         //set the style and append to head
+        var pushLeft = $('#multiFax').width();
         $("#marquFaxStyle").remove();
-        $('<style id="marquFaxStyle">@keyframes marqueemove{from {left:0px;}to {left:-'+pushLeft+'px;}}</style>').appendTo('head');
+        $('<style id="marquFaxStyle">@keyframes marqueemoveFax{from {left:0px;}to {left:-'+pushLeft+'px;}} @keyframes marqueeRevFax{from {left:0px;} to{left:0px;}}</style>').appendTo('head');
     }
 
 }

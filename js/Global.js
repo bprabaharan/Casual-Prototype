@@ -1,7 +1,10 @@
 $(document).ready(function() {
+
+
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
 
+    /**** The Send to Recipients marquee pasue and running start */
     $mq = $('.marquee').marquee();
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
@@ -17,6 +20,7 @@ $(document).ready(function() {
             }
         }
     });
+    /**** The Send to Recipients marquee pasue and running end */
 
     function delayScanMode() {
         $(".option-landing-scanmode").hide();
@@ -326,7 +330,11 @@ $(document).ready(function() {
             setTimeout(function() {
                 historyActiveScreen("");
             }, 200);
+            var pushLeft = $('#multiSend').width();
+            $("#marquSendStyle").remove();
+            $('<style id="marquSendStyle">@keyframes marqueemoveSend{from {left:0px;}to {left:-'+pushLeft+'px;}}</style>').appendTo('head');
         }, 600);
+       
     });
 
     /*Send to contact click button event*/
@@ -374,6 +382,9 @@ $(document).ready(function() {
         setTimeout(function() {
             historyActiveScreen("");
         }, 400);
+        var pushLeft = $('#multiSend').width();
+            $("#marquSendStyle").remove();
+            $('<style id="marquSendStyle">@keyframes marqueemoveSend{from {left:0px;}to {left:-'+pushLeft+'px;}} @keyframes marqueeRevSend{from {left:0px;} to {left:0px;}}</style>').appendTo('head');
     });
 
     $(".icon-rt .send-but").click(function() {
