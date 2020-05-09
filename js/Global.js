@@ -1435,7 +1435,8 @@ function load_faxpage() {
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         var carousel_items = document.querySelectorAll(".carousel-item").length;
-        var middle_slide = Math.round(carousel_items / 5);
+        // var middle_slide = Math.round(carousel_items / 5);
+        var middle_slide = 5;
         window.next = function() {
             var el = document.querySelector(".carousel");
             var l = M.Carousel.getInstance(el);
