@@ -95,7 +95,7 @@ function send_contact() {
     // $(".Send-to-contact").removeClass("anim-disappear").hide(300);
     // $(".fax-keyboard-confirm-section .done-but").hide(00);
     $(".count-checkboxes-wrapper").removeClass('opac-view').hide();
-
+    $(".count-checkboxes-wrapper").css("opacity", "1");
     history_details.pop();
     setTimeout(function() {
         $(".hi-light-copy").css("width", "658px");
@@ -141,7 +141,7 @@ function showCopies1() {
 }
 
 function showFaxbackspace() {
-    $(".Side-shade").hide();
+    $(".Side-shade").hid();
     $(".Send-to-contact, .Fax-content-add-recipient").hide();
     $(".fax-keyboard-confirm-section .done-but").hide();
     $(".Top-shade").hide();
