@@ -1957,6 +1957,7 @@ button:focus {
     font-size: 36px;
     margin-top: 62px;
     /* margin-left: 499px; */
+    overflow: unset !important;
 }
 
 #count-checked-checkboxess {
