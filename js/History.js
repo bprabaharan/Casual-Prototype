@@ -141,6 +141,7 @@ function showCopies1() {
 }
 
 function showFaxbackspace() {
+    $(".Side-shade").hide();
     $(".Send-to-contact, .Fax-content-add-recipient").hide();
     $(".fax-keyboard-confirm-section .done-but").hide();
     $(".Top-shade").hide();
