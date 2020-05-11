@@ -1277,12 +1277,15 @@ $(document).ready(function() {
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
+            if (contactpersion === 1) {
+                $("#Recipient-count").text('Recipient');
+            } else { 
+                $("#Recipient-count").text('Recipients'); 
+            }
         } else {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
-            if (countCheckedCheckboxes === 1) {
-                $("#count-checked-checkboxes .Recipient-count").text('Recipient')
-            } else { $("#count-checked-checkboxes .Recipient-count").text('Recipients') }
+           
             var countCheckedCheckboxess = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
