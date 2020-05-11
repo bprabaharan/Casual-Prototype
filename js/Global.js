@@ -750,6 +750,7 @@ $(document).ready(function() {
             $(".option-landing .option-function").hide(200);
             setTimeout(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
+                $("#bright-icon-txt").css('opacity', 0.5);
             }, 300);
         }, 600);
 
