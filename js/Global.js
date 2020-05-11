@@ -1278,14 +1278,19 @@ $(document).ready(function() {
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             if (contactpersion === 1) {
-                $("#Recipient-count").text('Recipient');
+                 console.log($checkboxes.filter(":checked").val());
+                $("#count-checked-checkboxes").hide();
+                $("#Recipient-count").text($checkboxes.filter(":checked").val());
             } else { 
+                $("#count-checked-checkboxes").show();
                 $("#Recipient-count").text('Recipients'); 
             }
         } else {
             if (contactpersion === 1) {
-                $("#Recipient-count").text('Recipient');
+                $("#count-checked-checkboxes").hide();
+                $("#Recipient-count").text($checkboxes.filter(":checked").val());
             } else { 
+                $("#count-checked-checkboxes").show();
                 $("#Recipient-count").text('Recipients'); 
             }
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
