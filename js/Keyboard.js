@@ -30,10 +30,10 @@ $(function() {
     });
 
     $(document).on("click", "button.number", function() {
-        console.log($display.val());
-        if ($display.val() != 0) {
+        console.log($display.val().length);
+        if ($display.val() != 0 && $display.val().length < 13) {
             $display.val($display.val() + $(this).val());
-        } else {
+        } else if ($display.val() == 0){
             $display.val($(this).val());
         }
     });
