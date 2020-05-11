@@ -694,7 +694,7 @@ $(document).ready(function() {
         }
     });
     $(".option-landing-resize .optionli-resize-child li:firstchild").css('height', '65px');
-    $(".option-landing ul .option-resize").click(function() {
+    $(".option-landing ul .option-resize").click(function(event) {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
         }
