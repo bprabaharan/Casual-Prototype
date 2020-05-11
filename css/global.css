@@ -222,28 +222,28 @@ html {
 .transitionLR {
     transition: 1s;
     transform: translateX(-130%);
-    animation: floatText 0.3s ease-in-out;
+    animation: floatText 0.6s ease-in-out;
 }
 
 .optionLandingLR {
     transition-timing-function: ease-in;
     transition: 1s;
     transform: translateX(0%);
-    animation: optionLand 0.3s ease-in-out;
+    animation: optionLand 0.6s ease-in-out;
 }
 
 .transitionLR-holder {
     transition-timing-function: ease-in;
     transition: 1s;
     transform: translateX(-80%);
-    animation: floatText 0.3s ease-in-out;
+    animation: floatText 0.6s ease-in-out;
 }
 
 .copy-tranmission {
     transition-timing-function: ease-in;
     transition: 3s;
     transform: translateX(0%);
-    animation: copytrans 0.3s ease-in-out;
+    animation: copytrans 0.6s ease-in-out;
 }
 
 .trigger-label {
@@ -264,7 +264,7 @@ html {
 .transitionLR-reload {
     position: relative;
     white-space: nowrap;
-    animation: reload .3s ease-in;
+    animation: reload .6s ease-in;
 }
 
 @keyframes reload {

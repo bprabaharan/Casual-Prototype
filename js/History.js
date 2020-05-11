@@ -88,8 +88,8 @@ function showFirstLandingPage() {
 function send_contact() {
     $(".count-checkboxes-wrapper").removeClass('opac-view').hide();
     setTimeout(function() {
-        $(".Send-to-contact").removeClass('anim-txt').hide(300);
-        // $(".Send-to-contact").addClass('anim-txt-reverse').hide(100);
+        $(".Send-to-contact").removeClass('anim-txt').hide(100);
+        // $(".Send-to-contact").addClass('transitionLR-reload').hide(00);
         // $('.Send-to-contact').animate({ left: '-80px', opacity: '0' }).hide();
 
     }, 300)
