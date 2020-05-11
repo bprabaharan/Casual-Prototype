@@ -1283,6 +1283,11 @@ $(document).ready(function() {
                 $("#Recipient-count").text('Recipients'); 
             }
         } else {
+            if (contactpersion === 1) {
+                $("#Recipient-count").text('Recipient');
+            } else { 
+                $("#Recipient-count").text('Recipients'); 
+            }
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
            
