@@ -329,17 +329,33 @@ html {
 
 .transitionBU {
     position: absolute;
-    animation: shimmy 0.3s ease-in-out;
+    animation: shimmy 0.3s ease-in;
 }
 
 @keyframes shimmy {
     from {
-        bottom: 0%;
+        bottom: -80px;
         opacity: 0;
     }
     to {
-        bottom: 5%;
+        bottom: 0px;
         opacity: 1;
+    }
+}
+
+.transitionUB {
+    position: absolute;
+    animation: shimmyreve 0.3s ease-in;
+}
+
+@keyframes shimmyreve {
+    from {
+        bottom: 0px;
+        opacity: 1;
+    }
+    to {
+        bottom: -80px;
+        opacity: 0;
     }
 }
 
@@ -1887,20 +1903,19 @@ input[type="checkbox"]:checked+label::before {
 
 .anim-disappear-top-bot {
     animation-name: slidetoptobot;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    opacity: 0.3;
+    animation-fill-mode: reverse;
 }
 
 @keyframes slidetoptobot {
     from {
-        transform: translateY(0em);
+        bottom: 0px;
         opacity: 1;
     }
     to {
-        transform: translateY(2.162em);
+        bottom: -80px;
         opacity: 0;
     }
 }
