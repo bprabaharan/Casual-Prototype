@@ -1279,13 +1279,13 @@ $(document).ready(function() {
             $(".count-checked-checkboxes1").text(countCheckedCheckboxes);
             if (contactpersion === 1) {
                 $("#Recipient-count").text('Recipient');
-            } else { 
-                $("#Recipient-count").text('Recipients'); 
+            } else {
+                $("#Recipient-count").text('Recipients');
             }
         } else {
             var countCheckedCheckboxes = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxes").text(countCheckedCheckboxes);
-           
+
             var countCheckedCheckboxess = $checkboxes.filter(":checked").length;
             $("#count-checked-checkboxess").text(countCheckedCheckboxes);
             var countCheckedCheckboxes1 = $checkboxes.filter(":checked").length;
