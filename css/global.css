@@ -1051,12 +1051,13 @@ html {
 }
 
 .done-but-tick1 {
-    height: 90px;
-    width: 90px;
+    height: 95px;
+    width: 95px;
     margin: 0px;
     float: right;
     position: absolute;
     margin-left: 59px;
+    margin-top: -2px;
 }
 
 .done-but-tick img {

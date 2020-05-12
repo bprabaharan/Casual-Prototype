@@ -1154,14 +1154,14 @@ $(document).ready(function() {
             $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
         }, 300);
 
-        setTimeout(faxkeyboard, 1000);
+        setTimeout(faxkeyboard, 600);
     });
 
     function faxkeyboard() {
-        $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
-        $(".fax-keyboard-section").addClass("anim-appear-bot-top");
         $(".fax-keyboard-section").css({ opacity: "1", marginTop: "0px" }).show(100);
+        $(".fax-keyboard-section").addClass("anim-appear-bot-top");
         $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
+        $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
         $("#display").focus();
 
     }
