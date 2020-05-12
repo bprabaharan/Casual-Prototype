@@ -157,6 +157,7 @@ function showFaxbackspace() {
     $(".icon-rt .done-but, .fax-send-count").css("display", "block");
     $(".icon-rt .but-text").css("visibility", "hidden");
     $(".Fax-content-confirm").css({ width: "696px", display: "none" });
+    $(".scrollspy").css("width", "696px");
     history_details.pop();
 }
 
