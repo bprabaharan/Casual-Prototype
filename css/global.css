@@ -360,7 +360,7 @@ html {
 }
 
 .opacity-view {
-    animation: opaview 0.6s ease-in;
+    animation: opaview 0.9s ease-in;
 }
 
 @keyframes opaview {
