@@ -314,9 +314,9 @@ $(document).ready(function() {
         $(".hi-light-copy").animate({ width: "395px", marginTop: "75px", opacity: "1" }).show(300);
         setTimeout(function() {
             $(".Fax-content-confirm").css("display", "flex").addClass("opacity-view").show(100);
-            $(".scrollspy").css("width", "437px");
             $(".icon-rt").delay(100).css("display", "block");
             $(".icon-rt .done-but, .fax-send-count").css("display", "none");
+            $(".scrollspy").css("width", "437px");
             $(".icon-rt .but-text").css("visibility", "visible");
             $(".Fax-content-confirm").css({ width: "696px", display: "block" });
             $(".Top-shade").show();
