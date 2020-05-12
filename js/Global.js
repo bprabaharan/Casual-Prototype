@@ -384,7 +384,7 @@ $(document).ready(function() {
         $(".Send-to-contact").removeClass("anim-txt").addClass("anim-disappear").hide(300);
         $(".fax-send-count").css("display", "block");
         $(".Fax-content-confirm .fax-check-child1").css("margin-top", "0px");
-        $(".icon-rt .send-but, .icon-rt").css({ display: "block", width: "240px" });
+        $(".icon-rt .send-but, .icon-rt").css({ display: "block", width: "240px" }).addClass('opacity-view');
         $(".icon-rt .done-but").css("display", "none");
         $(".icon-rt .done-button").css("display", "none");
         setTimeout(function() {
@@ -594,7 +594,7 @@ $(document).ready(function() {
                 $(".option-landing-scanmode").css({ opacity: "1" });
             }, 600);
         }, 900);
-        if ($("#scan span").text() === "Document" ) {
+        if ($("#scan span").text() === "Document") {
             $(".optionli-scan-child1").css('margin-top', '-100px');
             $("#trigger-scan1").css("checkbox", "checked");
         } else if ($("#scan span").text() === "Photo") {
@@ -1047,7 +1047,7 @@ $(document).ready(function() {
         $(".done-but-tick1").css('cursor', 'pointer');
         $(".Copy-Content .example1").addClass('anim-disappear').hide(500);
         $(".Copy-Content .example1").animate({ opacity: "0" }).hide(100);
-        $(".copy-button .done-but-tick1").show(100);
+        $(".copy-button .done-but-tick1").addClass('opacity-view').show(100);
         $(".copy-button .but-text").hide();
         $(".options").hide();
         $(".no-row").hide();
@@ -1066,7 +1066,7 @@ $(document).ready(function() {
         $(".example1 ul li:first-child").css("height", "84px");
         $('.swapMe-down .down1').removeAttr("style");
         $('.swapMe-up .up1').removeAttr("style");
-        $('.done-but').show();
+        $('.done-but').addClass('opacity-view').show();
         var selectedCopiea = $('.menu-num li.active').text();
         $(".Copy-Content .example1").removeClass('anim-disappear').show(300);
         $(".example1").find(".copy-num").html('<span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/Mask Group 2.svg"><span class="copy-txt">Copies</span></span><span class="copy-right-side">' + selectedCopiea + '</span>');
