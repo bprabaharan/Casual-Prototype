@@ -594,13 +594,12 @@ $(document).ready(function() {
                 $(".option-landing-scanmode").css({ opacity: "1" });
             }, 600);
         }, 900);
-
-        if (event.target.textContent === "Document") {
+        if ($("#scan span").text() === "Document" ) {
             $(".optionli-scan-child1").css('margin-top', '-100px');
             $("#trigger-scan1").css("checkbox", "checked");
-        } else if (event.target.textContent === "Photo") {
+        } else if ($("#scan span").text() === "Photo") {
             $(".optionli-scan-child1").css("margin-top", "-190px");
-        } else if (event.target.textContent === "ID Card") {
+        } else if ($("#scan span").text() === "ID Card") {
             $(".optionli-scan-child1").css("margin-top", "-278px");
         }
     });
@@ -645,9 +644,9 @@ $(document).ready(function() {
             }, 600);
         }, 900);
 
-        if (event.target.textContent === "1 to 1-Sided") {
+        if ($("#sides span").text() === "1 to 1-Sided") {
             $(".optionli-land-child1").css("margin-top", "-21px");
-        } else if (event.target.textContent === "1 to 2-Sided") {
+        } else if ($("#sides span").text() === "1 to 2-Sided") {
             $(".optionli-land-child1").css("margin-top", "-109px");
         }
     });
@@ -688,11 +687,11 @@ $(document).ready(function() {
             }, 600);
         }, 900);
 
-        if (event.target.textContent === "Automatic") {
+        if ($("#color span").text() === "Automatic") {
             $(".optionli-color-child1").css("margin-top", "-24px");
-        } else if (event.target.textContent === "Color") {
+        } else if ($("#color span").text() === "Color") {
             $(".optionli-color-child1").css("margin-top", "-112px");
-        } else if (event.target.textContent === "Grayscale") {
+        } else if ($("#color span").text() === "Grayscale") {
             $(".optionli-color-child1").css("margin-top", "-200px");
         }
     });
@@ -731,11 +730,11 @@ $(document).ready(function() {
             }, 600);
         }, 900);
 
-        if (event.target.textContent === "None") {
+        if ($("#resize span").text() === "None") {
             $(".optionli-resize-child1").css("margin-top", "0px");
-        } else if (event.target.textContent === "Custom") {
+        } else if ($("#resize span").text() === "Custom") {
             $(".optionli-resize-child1").css("margin-top", "-90px");
-        } else if (event.target.textContent === "Fit to Page") {
+        } else if ($("#resize span").text() === "Fit to Page") {
             $(".optionli-resize-child1").css("margin-top", "-180px");
         }
     });
