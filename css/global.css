@@ -2073,16 +2073,16 @@ button:focus {
 }
 
 .onetoone {
-    height: 48px;
-    width: 58px;
+    height: auto;
+    width: 49px;
     margin-top: 10px;
 }
 
 .onetoone11 {
-    height: 68px;
-    width: 98px;
-    margin-top: 0px;
-    margin-left: 9px;
+    height: auto;
+    width: 94px;
+    margin-top: 10px;
+    margin-left: 14px;
 }
 
 .onetoone-span {
@@ -2566,3 +2566,7 @@ input[type=range]+.thumb.active .value {
     margin-left: -106px;
     z-index: 999;
 }
+.option-img1, .option-img11{
+    margin-right: 17px;
+}
+
