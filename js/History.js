@@ -126,11 +126,11 @@ function set_tick() {
 }
 
 function showCopies1() {
-    $(".hi-light-copy").animate({ width: "395px" }, 100);
+    $(".hi-light-copy").animate({ width: "420px" }, 100);
     $(".scrollspy").css({ width: "432px" });
     $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
     $(".example2 .menu-num").delay(150).animate({ opacity: '0' }, 1000).hide();
-    $(".copy-button .done-but").animate({ width: "240px", height: "90px" }, 100).show();
+    $(".copy-button .done-but").animate({ width: "210px", height: "90px" }, 100).show();
     $(".copy-button .but-text").show(100);
     $(".copy-button .done-but-tick1").hide(0);
     $(".options").show();
@@ -164,7 +164,7 @@ function showFaxbackspace() {
 
 function showFaxaddreceipient() {
     $(".send-but").show();
-    $(".hi-light-copy").animate({ width: "395px" }, 300);
+    $(".hi-light-copy").animate({ width: "420px" }, 300);
     $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
     $(".Fax-content-add-recipient")
         .css("display", "block")
@@ -208,7 +208,7 @@ function showOption() {
         $(".example1").css({ animation: "floatText .0s ease-in-out" });
         $(".example1").css({ "margin-left": "-2.162em" });
         $(".example1").css({ opacity: "0.3" });
-        $(".hi-light-copy").animate({ width: "395px" }, 200);
+        $(".hi-light-copy").animate({ width: "420px" }, 200);
         $(".scrollspy").animate({ width: "437px" }, 200);
         $(".done-but,.copy-button").show(300);
         $(".icon-rt .but-text").css("visibility", "hidden");
