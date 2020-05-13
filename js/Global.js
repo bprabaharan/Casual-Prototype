@@ -285,7 +285,7 @@ $(document).ready(function() {
             activScreen_history.push(".Fax-content-confirm");
         }
         $(".Side-shade").show();
-        $(".Fax-content-confirm ul li:first-child").css("height", "70px");
+        $(".Fax-content-confirm ul li:first-child").css("height", "68px");
         var faxtxt = $(".display").val();
         var faxtext = $(".display").val();
         var multiFax = '';
@@ -371,7 +371,7 @@ $(document).ready(function() {
         $(".hi-light-copy").animate({ width: "420px" }, 300);
         $(".scrollspy").css({ width: "437px" });
         $(".count-checkboxes-wrapper").css("opacity", "0");
-        $(".Fax-content-confirm ul li:first-child").css("height", "70px");
+        $(".Fax-content-confirm ul li:first-child").css("height", "68px");
         $(".Fax-content-confirm").removeClass("anim-disappear");
         $(".Fax-content-add-recipient").removeClass("anim-disappear");
         $(".Fax-content-confirm ul li").removeClass("active");
