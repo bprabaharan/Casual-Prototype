@@ -571,7 +571,7 @@ html {
     font-size: 2.875rem;
     font-family: "hp-simplified" !important;
     height: 90px;
-    padding: 0px 60px;
+    padding: 0px 57px;
     width: 690px;
 }
 
@@ -586,7 +586,7 @@ html {
 }
 
 .Fax-content-add-recipient ul li:first-child {
-    height: 70px;
+    height: 68px;
 }
 
 .Fax-content-add-recipient ul {
@@ -664,11 +664,15 @@ html {
 }
 
 .Fax-content ul li:first-child {
-    height: 68px;
+    height: 66px;
+}
+
+.Fax-content-confirm .slidetext li:first-child {
+    height: 66px;
 }
 
 .Send-to-contact ul li:first-child {
-    height: 68px;
+    height: 66px;
 }
 
 .Send-to-contact ul li:last-child {
@@ -737,6 +741,10 @@ html {
     height: 90px;
     padding: 0px 48px;
     width: 680px;
+}
+
+.option-landing-resize .optionli-resize-child li:first-child {
+    height: 65px;
 }
 
 .option1 li,
@@ -831,9 +839,9 @@ html {
     position: fixed;
     /* padding-top: 70px; */
     /* margin-top: 46px; */
-    margin: 73px 19px;
+    margin: 73px 15px;
     z-index: -1;
-    margin-left: 19px;
+    margin-left: 15px;
     height: 90px;
 }
 
@@ -1513,10 +1521,10 @@ input[type="checkbox"]:checked+label::before {
 
 .copy-icon,
 .option-icon {
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
     /* padding-top: 15px; */
-    margin-top: 3px;
+    margin-top: 10px;
 }
 
 .option-scan,
@@ -2561,7 +2569,7 @@ input[type=range]+.thumb.active .value {
     background: #000;
     /* border: 1px solid #fff; */
     height: 250px;
-    width: 123px;
+    width: 120px;
     margin-top: 0px;
     margin-left: -106px;
     z-index: 999;

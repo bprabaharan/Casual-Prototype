@@ -285,7 +285,6 @@ $(document).ready(function() {
             activScreen_history.push(".Fax-content-confirm");
         }
         $(".Side-shade").show();
-        $(".Fax-content-confirm ul li:first-child").css("height", "68px");
         var faxtxt = $(".display").val();
         var faxtext = $(".display").val();
         var multiFax = '';
@@ -312,6 +311,7 @@ $(document).ready(function() {
         //     // $(".fax-keyboard-section").addClass("anim-disappear-top-bot").hide(600);
         // }, 1000);
         $(".hi-light-copy").animate({ width: "420px", marginTop: "75px", opacity: "1" }).show(300);
+        $(".send-but").show(100);
         setTimeout(function() {
             $(".Fax-content-confirm").css("display", "flex").addClass("opacity-view").show(100);
             $(".icon-rt").delay(100).css("display", "block");
@@ -371,7 +371,6 @@ $(document).ready(function() {
         $(".hi-light-copy").animate({ width: "420px" }, 300);
         $(".scrollspy").css({ width: "437px" });
         $(".count-checkboxes-wrapper").css("opacity", "0");
-        $(".Fax-content-confirm ul li:first-child").css("height", "68px");
         $(".Fax-content-confirm").removeClass("anim-disappear");
         $(".Fax-content-add-recipient").removeClass("anim-disappear");
         $(".Fax-content-confirm ul li").removeClass("active");
@@ -695,7 +694,7 @@ $(document).ready(function() {
             $(".optionli-color-child1").css("margin-top", "-200px");
         }
     });
-    $(".option-landing-resize .optionli-resize-child li:firstchild").css('height', '65px');
+    // $(".option-landing-resize .optionli-resize-child li:firstchild").css('height', '65px');
     $(".option-landing ul .option-resize").click(function(event) {
         if (history_details.indexOf("delayScanMode()") === -1) {
             history_details.push("delayScanMode()");
@@ -1119,7 +1118,7 @@ $(document).ready(function() {
             $(".ID-Page").animate({ zoom: '.5' }, { opacity: '0' }).hide(300);
             setTimeout(function() {
                 $(".hi-light-copy").animate({ width: "666px" }, 500);
-                $(".hi-light-copy").css("margin-left", "19px");
+                // $(".hi-light-copy").css("margin-left", "15px");
                 $(".Landing-Page").show(10);
                 $(".example1").css("display", "none");
                 $(".Landing-Page .Main-content").show();

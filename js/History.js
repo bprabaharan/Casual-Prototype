@@ -111,7 +111,6 @@ function set_tick() {
     $(".hi-light-copy").animate({ width: "545px" }, 300);
     $(".scrollspy").css({ width: "580px" });
     $(".count-checkboxes-wrapper").css("opacity", "1");
-    $(".Fax-content-confirm ul li:first-child").css("height", "70px");
     $(".Fax-content-confirm").addClass("anim-disappear");
     $(".Fax-content-add-recipient").addClass("anim-disappear");
     $(".fax-txt-head-bind .fax-txt").show();
@@ -119,7 +118,7 @@ function set_tick() {
     $(".Send-to-contact").removeClass('anim-disappear').show(300);
     $(".Fax-content-confirm").hide();
     $(".fax-send-count").css("display", "none");
-    $(".icon-rt .send-but, .icon-rt").css({ display: "none", width: "240px" });
+    $(".icon-rt .send-but, .icon-rt").css({ display: "none", width: "210px" });
     $(".icon-rt .done-but").css("display", "none");
     $(".icon-rt .done-button").css("display", "none");
     history_details.pop();
