@@ -614,7 +614,7 @@ $(document).ready(function() {
         $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
-            $(".option-landing .option-function").hide(200);
+            $(".option-landing .option-function").hide();
             setTimeout(function() {
                 $(".option-landing").css({ "margin-left": "-82.162em" });
             }, 300);
@@ -663,7 +663,7 @@ $(document).ready(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" },
                 600
             );
-            $(".option-landing .option-function").hide(200);
+            $(".option-landing .option-function").hide();
             setTimeout(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
             }, 300);
@@ -706,7 +706,7 @@ $(document).ready(function() {
         $(".option-landing").css({ opacity: "1" });
         setTimeout(function() {
             $(".option-landing .option-content").animate({ "margin-left": "-2.162em" }, 600);
-            $(".option-landing .option-function").hide(200);
+            $(".option-landing .option-function").hide();
             setTimeout(function() {
                 $(".option-landing").css({ "margin-left": "-42.162em" });
             }, 300);
@@ -1154,14 +1154,14 @@ $(document).ready(function() {
             $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
         }, 300);
 
-        setTimeout(faxkeyboard, 600);
+        setTimeout(faxkeyboard, 1000);
     });
 
     function faxkeyboard() {
-        $(".fax-keyboard-section").css({ opacity: "1", marginTop: "0px" }).show(100);
-        $(".fax-keyboard-section").addClass("anim-appear-bot-top");
-        $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
         $(".hi-light-copy").animate({ marginTop: "-80px", opacity: "0" }).hide(50);
+        $(".fax-keyboard-section").addClass("anim-appear-bot-top");
+        $(".fax-keyboard-section").css({ opacity: "1", marginTop: "0px" }).show(100);
+        $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
         $("#display").focus();
 
     }
