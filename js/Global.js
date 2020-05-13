@@ -57,9 +57,11 @@ $(document).ready(function() {
                 $(".hi-light-copy").show();
                 setTimeout(function() {
                     historyActiveScreen();
-                    $(".hi-light-copy").animate({ "width": "666px", "margin-left": "19px" }, 400);
+                    $(".hi-light-copy").animate({ "width": "666px", "margin-left": "19px" }, 600);
+                    $(".option-landing-bright").css({ opacity: "0", position: "fixed" });
+                    $(".option-landing-bright").hide();
                     setTimeout(delayScanMode, 300);
-                }, 300);
+                }, 400);
             }, 500);
         }
     });
@@ -757,14 +759,16 @@ $(document).ready(function() {
 
 
         setTimeout(function() {
-            $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
-            $(".option-landing-bright").css({ "margin-left": "0px" });
-            $(".option-landing-bright").show();
+           
             $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc" })
             $(".hi-light-copy").animate({ width: "420px", marginLeft: "145px", }, 400);
+            
+            $(".Top-shade").css('background', 'unset');
             setTimeout(function() {
+                $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
+                $(".option-landing-bright").css({ "margin-left": "0px" });
+                $(".option-landing-bright").show();
                 $(".hi-light-copy").hide();
-                $(".Top-shade").css('background', 'unset');
                 $(".copy-drag-content").show();
                 $("#bright-icon").attr("src", "./images/Icons_SVG/base-01.svg");
             }, 500);

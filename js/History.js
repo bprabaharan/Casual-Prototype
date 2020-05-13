@@ -245,7 +245,6 @@ function delayScanMode() {
 
 function setBright() {
     history_details.pop();
-    $(".Top-shade").css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
     $(".option-landing .optionli").css("margin-top", "-360px");
     $(".hi-light-copy").css({ "background-color": "unset", "border": "4px solid rgb(255, 255, 255)" })
     $(".option-landing .option-content").css({ "margin-left": "0px" });
@@ -253,15 +252,16 @@ function setBright() {
         $(".hi-light-copy").show();
         setTimeout(function() {
             historyActiveScreen();
-            $(".hi-light-copy").animate({ "width": "658px", "margin-left": "19px" }, 400);
+            $(".hi-light-copy").animate({ "width": "658px", "margin-left": "19px" }, 600);
             setTimeout(delayOptions, 300);
-        }, 300);
+        }, 400);
     }, 500);
 }
 
 function delayOptions() {
     $(".option-landing-bright").hide();
     $(".option-landing").css({ "margin-left": "80px" });
+    $(".Top-shade").css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
     setTimeout(function() {
         $(".option-landing, .option-content").addClass('transitionLR-reload').show();
         $(".option-landing").animate({ "margin-left": "0px" }, 300);
