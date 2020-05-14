@@ -601,7 +601,7 @@ $(document).ready(function() {
         } else if ($("#scan span").text() === "Photo") {
             $(".optionli-scan-child1").css("margin-top", "-190px");
         } else if ($("#scan span").text() === "ID Card") {
-            $(".optionli-scan-child1").css("margin-top", "-278px");
+            $(".optionli-scan-child1").css("margin-top", "-280px");
         }
     });
 
@@ -689,11 +689,11 @@ $(document).ready(function() {
         }, 900);
 
         if ($("#color span").text() === "Automatic") {
-            $(".optionli-color-child1").css("margin-top", "-24px");
+            $(".optionli-color-child1").css("margin-top", "-22px");
         } else if ($("#color span").text() === "Color") {
             $(".optionli-color-child1").css("margin-top", "-112px");
         } else if ($("#color span").text() === "Grayscale") {
-            $(".optionli-color-child1").css("margin-top", "-200px");
+            $(".optionli-color-child1").css("margin-top", "-202px");
         }
     });
     // $(".option-landing-resize .optionli-resize-child li:firstchild").css('height', '65px');
