@@ -220,9 +220,10 @@ function addMultiFax() {
         $("#multiFax").append("<span class='ei_box ei_valid'>" + faxFormat + "</span><span class='ei_comma'> ; <span>");
         $("#display").val('');
         //set the style and append to head
-        var pushLeft = $('#multiFax').width();
+        
+        var pushLeftFax = $('#multiFax').width();
         $("#marquFaxStyle").remove();
-        $('<style id="marquFaxStyle">@keyframes marqueemoveFax{from {left:0px;}to {left:-'+pushLeft+'px;}} @keyframes marqueeRevFax{from {left:0px;} to{left:0px;}}</style>').appendTo('head');
+        $('<style id="marquFaxStyle"> @keyframes marqueeRevFax{from {left:0px;} to{left:-'+pushLeftFax+'px}}</style>').appendTo('head');
     }
 
 }

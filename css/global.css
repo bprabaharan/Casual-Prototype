@@ -2281,7 +2281,7 @@ button:focus {
     position: relative;
     float: left;
     animation: marqueeRevFax 5s infinite;
-    animation-play-state: paused;
+    animation-play-state: running;
     /* overflow-x: auto; */
 }
 
@@ -2291,8 +2291,8 @@ button:focus {
 }
 
 .marqueeFax:hover #multiFax {
-    animation: marqueemoveFax 5s infinite;
-    animation-play-state: running;
+    /* animation: marqueemoveFax 5s infinite; */
+    animation-play-state: paused;
 }
 
 .marqueeSend {
@@ -2306,7 +2306,7 @@ button:focus {
     position: relative;
     float: left;
     animation: marqueeRevSend 5s infinite;
-    animation-play-state: paused;
+    animation-play-state: running;
     /* overflow-x: auto; */
 }
 
@@ -2316,8 +2316,8 @@ button:focus {
 }
 
 .marqueeSend:hover #multiSend {
-    animation: marqueemoveSend 5s infinite;
-    animation-play-state: running;
+    /* animation: marqueemoveSend 5s infinite; */
+    animation-play-state: paused;
 }
 
 div.ei,
