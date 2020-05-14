@@ -338,9 +338,9 @@ $(document).ready(function() {
             setTimeout(function() {
                 historyActiveScreen("");
             }, 200);
-            var pushLeft = $('#multiSend').width();
+            var pushLeftSend = $('#multiSend').width();
             $("#marquSendStyle").remove();
-            $('<style id="marquSendStyle">@keyframes marqueemoveSend{from {left:0px;}to {left:-' + pushLeft + 'px;}}</style>').appendTo('head');
+            $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
         }, 1000);
 
     });
