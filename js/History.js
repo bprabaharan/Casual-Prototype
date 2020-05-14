@@ -127,6 +127,7 @@ function set_tick() {
 
 function showCopies1() {
     $(".hi-light-copy").animate({ width: "420px" }, 100);
+    $(".copy-right-side").css('margin-left', '230px');
     $(".scrollspy").css({ width: "432px" });
     $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
     $(".example2 .menu-num").delay(150).animate({ opacity: '0' }, 1000).hide();
