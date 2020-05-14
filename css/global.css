@@ -2075,9 +2075,18 @@ button:focus {
 }
 
 .fax-num {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
+    width: 48px;
+    height: 48px;
+    margin-top: 14px;
+}
+
+.fax-send-icon {
+    width: 64px;
+    height: 53px;
+    /* padding-top: 15px; */
+    margin-top: 8px;
+    margin-left: -8px;
+    border: 1px solid red;
 }
 
 .onetoone {
@@ -2574,7 +2583,8 @@ input[type=range]+.thumb.active .value {
     margin-left: -106px;
     z-index: 999;
 }
-.option-img1, .option-img11{
+
+.option-img1,
+.option-img11 {
     margin-right: 17px;
 }
-

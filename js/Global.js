@@ -511,13 +511,14 @@ $(document).ready(function() {
             $("#count-checked-checkboxess").val("");
         }
         $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {}).hide(300);
-        $(".hi-light-copy").css("width", "545px");
+        $(".hi-light-copy").css("width", "552px");
         $(".Top-shade").css("width", "600px");
         setTimeout(function() {
             $(".Send-to-contact").removeClass('anim-txt-reverse');
             $(".Send-to-contact").addClass('anim-txt').show(0);
+            $(".count-checkboxes-wrapper").addClass('opac-view').show(300);
             historyActiveScreen("");
-            $(".count-checkboxes-wrapper").addClass('opac-view').show(100);
+
             $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(100);
         }, 300);
     });
@@ -526,10 +527,10 @@ $(document).ready(function() {
         history_details.push("showFaxsendtocont()");
         activScreen_history.push(".Send-to-contact");
         $(".Fax-content-add-recipient").addClass("anim-disappear").animate({ left: '-80px' }, { opacity: '0' }).hide(100);
-        $(".hi-light-copy").css("width", "545px");
+        $(".hi-light-copy").css("width", "552px");
         $(".Fax-Section").addClass("anim-disappear").hide(300);
         $(".Top-shade").css("width", "500px");
-        $(".Send-to-contact").removeClass("anim-disappear").show(600);
+        $(".Send-to-contact").removeClass("anim-disappear").addClass('anim-txt').show(600);
         $(".count-checkboxes-wrapper").css("opacity", "1");
         $(".fax-keyboard-confirm-section .done-but").show();
         setTimeout(function() {
@@ -759,10 +760,10 @@ $(document).ready(function() {
 
 
         setTimeout(function() {
-           
+
             $(".hi-light-copy").css({ "background-color": "#ccc", "border": "1px solid #ccc" })
             $(".hi-light-copy").animate({ width: "420px", marginLeft: "145px", }, 400);
-            
+
             $(".Top-shade").css('background', 'unset');
             setTimeout(function() {
                 $(".option-landing-bright").css({ opacity: "1", position: "fixed" });
@@ -1043,7 +1044,7 @@ $(document).ready(function() {
         }
         $('.swapMe-down .down1').css('pointer-events', 'none');
         $('.swapMe-up .up1').css('pointer-events', 'none');
-        $(".hi-light-copy").animate({ width: "545px" }, 300);
+        $(".hi-light-copy").animate({ width: "552px" }, 300);
         $(".scrollspy").css({ width: "525px" });
         $(".copy-button .done-but").animate({ width: "80px", height: "90px" }, 100);
         $(".copy-button .done-but").hide();

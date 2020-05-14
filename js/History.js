@@ -75,6 +75,7 @@ function showFaxLandingPage() {
 }
 
 function showFirstLandingPage() {
+    $("#myModal").hide();
     $(".Fax-Section").removeClass("anim-disappear");
     $(".fax-keyboard-section").removeClass("transitionBU").animate({ marginTop: "250px", opacity: "0" }, 600).hide(600);
     $(".Fax-Section").removeClass("anim-txt");
@@ -108,7 +109,7 @@ function send_contact() {
 }
 
 function set_tick() {
-    $(".hi-light-copy").animate({ width: "545px" }, 300);
+    $(".hi-light-copy").animate({ width: "552px" }, 300);
     $(".scrollspy").css({ width: "580px" });
     $(".count-checkboxes-wrapper").css("opacity", "1");
     $(".Fax-content-confirm").addClass("anim-disappear");
