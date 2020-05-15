@@ -151,6 +151,8 @@ function showFaxbackspace() {
     $(".fax-keyboard-confirm-section .done-but").hide();
     $(".Top-shade").hide();
     $(".Bottom-shade").hide();
+    $(".Fax-content-confirm li").removeClass("active");
+    $(".Fax-content-confirm .fax-check-child1").addClass("active");
     $(".fax-keyboard-section").addClass("transitionBU").removeClass("anim-disappear-top-bot").removeClass('transitionUB');
     $(".fax-keyboard-section").animate({ marginTop: "0px", opacity: "1", width: '696px' }, 400).show(300);
     $(".Fax-content-confirm").hide(100);
