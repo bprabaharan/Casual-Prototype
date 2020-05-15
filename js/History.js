@@ -199,6 +199,7 @@ function showFaxsendtocont() {
 }
 
 function showOption() {
+    $(".copy-right-side").css('margin-left', '230px');
     $(".option-content, .option-function").css({ opacity: "1" });
     $(".option-landing .option-content").animate({ "margin-left": "2.162em" }, 300);
     $(".option-landing .option-function").hide(200);
