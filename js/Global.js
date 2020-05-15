@@ -341,6 +341,7 @@ $(document).ready(function() {
             var pushLeftSend = $('#multiSend').width();
             $("#marquSendStyle").remove();
             $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
+            $("#multiSend").css("animation-play-state","running");
         }, 1000);
 
     });
@@ -394,6 +395,7 @@ $(document).ready(function() {
         var pushLeftSend = $('#multiSend').width();
             $("#marquSendStyle").remove();
             $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
+            $("#multiSend").css("animation-play-state","running");
     });
 
     $(".icon-rt .send-but").click(function() {
