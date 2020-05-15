@@ -391,9 +391,9 @@ $(document).ready(function() {
         setTimeout(function() {
             historyActiveScreen("");
         }, 400);
-        var pushLeft = $('#multiSend').width();
-        $("#marquSendStyle").remove();
-        $('<style id="marquSendStyle">@keyframes marqueemoveSend{from {left:0px;}to {left:-' + pushLeft + 'px;}} @keyframes marqueeRevSend{from {left:0px;} to {left:0px;}}</style>').appendTo('head');
+        var pushLeftSend = $('#multiSend').width();
+            $("#marquSendStyle").remove();
+            $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
     });
 
     $(".icon-rt .send-but").click(function() {
@@ -1492,6 +1492,7 @@ $(".Fax-content ul li, .Fax-content-confirm ul li, .Fax-content-add-recipient ul
 });
 
 $('.swapMe-up').click(function() {
+   
     if ($(activScreen_history[activScreen_history.length - 1]).css('display') == 'block' ||
         $(activScreen_history[activScreen_history.length - 1]).css('display') == 'flex') {
 
@@ -1505,8 +1506,14 @@ $('.swapMe-up').click(function() {
             $('.swapMe-down').css('pointer-events', 'auto');
         }
     }
+    if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
+        $("#multiSend").css("animation-play-state","running");
+    } else {
+        $("#multiSend").css("animation-play-state","paused");
+    }
 });
 $('.swapMe-down').click(function() {
+    
     if ($(activScreen_history[activScreen_history.length - 1]).css('display') == 'block' ||
         $(activScreen_history[activScreen_history.length - 1]).css('display') == 'flex') {
 
@@ -1519,5 +1526,10 @@ $('.swapMe-down').click(function() {
         if ($.trim($(activScreen_history[activScreen_history.length - 1] + ' ul li.active').next().text()) != "") {
             $('.swapMe-up').css('pointer-events', 'auto');
         }
+    }
+    if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
+        $("#multiSend").css("animation-play-state","running");
+    } else {
+        $("#multiSend").css("animation-play-state","paused");
     }
 });
