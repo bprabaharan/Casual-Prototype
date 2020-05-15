@@ -31,7 +31,7 @@ $(function() {
 
     $(document).on("click", "button.number", function() {
         console.log($display.val().length);
-        if ($display.val() != 0 && $display.val().length < 13) {
+        if ($display.val() != 0 && $display.val().length < 12) {
             $display.val($display.val() + $(this).val());
         } else if ($display.val() == 0){
             $display.val($(this).val());

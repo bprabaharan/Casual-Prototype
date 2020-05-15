@@ -2280,7 +2280,8 @@ button:focus {
     display: inline-flex;
     position: relative;
     float: left;
-    animation: marqueeRevFax 5s infinite;
+    animation: marqueeRevFax 9s infinite;
+    animation-delay: 2s;
     animation-play-state: running;
     /* overflow-x: auto; */
 }
@@ -2305,7 +2306,8 @@ button:focus {
     display: inline-flex;
     position: relative;
     float: left;
-    animation: marqueeRevSend 5s infinite;
+    animation: marqueeRevSend 9s infinite;
+    animation-delay: 2s;
     animation-play-state: running;
     /* overflow-x: auto; */
 }
