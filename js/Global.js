@@ -778,6 +778,9 @@ $(document).ready(function() {
                 $(".hi-light-copy").hide();
                 $(".copy-drag-content").show();
                 $("#bright-icon").attr("src", "./images/Icons_SVG/base-01.svg");
+                $(".thumb").css({'height': '30px','width': '30px', 'top': '-30px', 'margin-left': '-7px', 'left': '160px'})
+                $(".thumb .value").text($("#brightCount").val());
+                $(".thumb").addClass("active");
             }, 500);
             historyActiveScreen("");
         }, 600);
