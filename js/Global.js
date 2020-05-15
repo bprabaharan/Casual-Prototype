@@ -289,6 +289,7 @@ $(document).ready(function() {
         $(".Side-shade").show();
         var faxtxt = $(".display").val();
         var faxtext = $(".display").val();
+
         var multiFax = '';
         var multiplFax = '';
         $("#multiFax > span").each(function() {
@@ -341,7 +342,7 @@ $(document).ready(function() {
             var pushLeftSend = $('#multiSend').width();
             $("#marquSendStyle").remove();
             $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
-            $("#multiSend").css("animation-play-state","running");
+            $("#multiSend").css("animation-play-state", "running");
         }, 1000);
 
     });
@@ -393,9 +394,9 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 400);
         var pushLeftSend = $('#multiSend').width();
-            $("#marquSendStyle").remove();
-            $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
-            $("#multiSend").css("animation-play-state","running");
+        $("#marquSendStyle").remove();
+        $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
+        $("#multiSend").css("animation-play-state", "running");
     });
 
     $(".icon-rt .send-but").click(function() {
@@ -779,9 +780,9 @@ $(document).ready(function() {
                 $(".copy-drag-content").show();
                 $("#bright-icon").attr("src", "./images/Icons_SVG/base-01.svg");
                 if (!$(".thumb").hasClass("active")) {
-                $(".thumb").css({'height': '30px','width': '30px', 'top': '-30px', 'margin-left': '-7px', 'left': '160px'})
-                $(".thumb .value").text($("#brightCount").val());
-                $(".thumb").addClass("active");
+                    $(".thumb").css({ 'height': '30px', 'width': '30px', 'top': '-30px', 'margin-left': '-7px', 'left': '160px' })
+                    $(".thumb .value").text($("#brightCount").val());
+                    $(".thumb").addClass("active");
                 }
 
             }, 500);
@@ -1500,7 +1501,7 @@ $(".Fax-content ul li, .Fax-content-confirm ul li, .Fax-content-add-recipient ul
 });
 
 $('.swapMe-up').click(function() {
-   
+
     if ($(activScreen_history[activScreen_history.length - 1]).css('display') == 'block' ||
         $(activScreen_history[activScreen_history.length - 1]).css('display') == 'flex') {
 
@@ -1515,13 +1516,13 @@ $('.swapMe-up').click(function() {
         }
     }
     if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
-        $("#multiSend").css("animation-play-state","running");
+        $("#multiSend").css("animation-play-state", "running");
     } else {
-        $("#multiSend").css("animation-play-state","paused");
+        $("#multiSend").css("animation-play-state", "paused");
     }
 });
 $('.swapMe-down').click(function() {
-    
+
     if ($(activScreen_history[activScreen_history.length - 1]).css('display') == 'block' ||
         $(activScreen_history[activScreen_history.length - 1]).css('display') == 'flex') {
 
@@ -1536,8 +1537,8 @@ $('.swapMe-down').click(function() {
         }
     }
     if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
-        $("#multiSend").css("animation-play-state","running");
+        $("#multiSend").css("animation-play-state", "running");
     } else {
-        $("#multiSend").css("animation-play-state","paused");
+        $("#multiSend").css("animation-play-state", "paused");
     }
 });
