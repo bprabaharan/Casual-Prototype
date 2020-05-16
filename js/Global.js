@@ -540,6 +540,7 @@ $(document).ready(function() {
         }, 300);
         $(".count-checkboxes-wrapper").css("opacity", "1").addClass('opacity-view');
         $(".fax-keyboard-confirm-section .done-but").show();
+        $(".count-checkboxes-wrapper").show(300);
         setTimeout(function() {
             historyActiveScreen("");
         }, 100);

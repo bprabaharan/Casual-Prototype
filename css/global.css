@@ -656,7 +656,7 @@ html {
 
 .Fax-content-confirm ul li {
     display: flex;
-    width: 305px;
+    width: 312px;
 }
 
 .Fax-content ul li {
@@ -672,7 +672,7 @@ html {
 }
 
 .Send-to-contact ul li:first-child {
-    height: 67px;
+    height: 68px;
 }
 
 .Send-to-contact ul li:last-child {
