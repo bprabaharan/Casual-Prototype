@@ -266,9 +266,9 @@ $(document).ready(function() {
         if (activScreen_history.indexOf(".Fax-content-add-recipient") === -1) {
             activScreen_history.push(".Fax-content-add-recipient");
         }
-        $(".send-but").hide(100);
+        $(".send-but").hide(0);
         $(".scrollspy").css("width", "600px");
-        $(".hi-light-copy").animate({ width: "696px" }, 300);
+        $(".hi-light-copy").animate({ width: "696px" }, 600);
         $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
         $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");

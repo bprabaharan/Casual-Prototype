@@ -170,7 +170,7 @@ function showFaxbackspace() {
 }
 
 function showFaxaddreceipient() {
-    $(".send-but").show();
+    $(".send-but").addClass('opacity-view').show(100);
     $(".hi-light-copy").animate({ width: "420px" }, 300);
     $(".scrollspy").css("width", "440px");
     $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
