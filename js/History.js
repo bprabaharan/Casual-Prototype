@@ -79,9 +79,13 @@ function showFirstLandingPage() {
     $(".Fax-Section").removeClass("anim-disappear");
     $(".fax-keyboard-section").removeClass("transitionBU").animate({ marginTop: "250px", opacity: "0" }, 600).hide(600);
     $(".Fax-Section").removeClass("anim-txt");
-    $(".hi-light-copy").animate({ marginTop: "70px", opacity: "1", width: "658px" }).show(300);
+
+    // $(".hi-light-copy").animate({ position: 'relative', top: "150px", opacity: '1', display: 'block' }).show(300);
+    // $(".hi-light-copy").animate({ marginTop: "70px", opacity: "1" }).show(100);
+    $(".hi-light-copy").addClass('anim-show-top-bot').animate({ marginTop: '70px', opacity: '1', display: 'block', width: '595px' }).show(100);
+
     $(".scrollspy").css("width", "600px");
-    $(".Top-shade,.Bottom-shade").show();
+    $(".Top-shade,.Bottom-shade").show(300);
     $(".Fax-Section").delay(1000).removeClass("anim-disappear").addClass("anim-reappear-left-right").show(300);
     history_details.pop();
 }

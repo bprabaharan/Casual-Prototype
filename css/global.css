@@ -656,7 +656,7 @@ html {
 
 .Fax-content-confirm ul li {
     display: flex;
-    width: 310px;
+    width: 305px;
 }
 
 .Fax-content ul li {
@@ -1940,6 +1940,50 @@ input[type="checkbox"]:checked+label::before {
         opacity: 0;
     }
 }
+
+
+/*Animation Bottom to Top hide*/
+
+.anim-hide-bot-top {
+    animation-name: animbottotop;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animbottotop {
+    from {
+        transform: translateY(30px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.anim-show-top-bot {
+    animation-name: animtoptobot;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: reverse;
+}
+
+@keyframes animtoptobot {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+}
+
+
+/*Animation Bottom To top end here*/
 
 .anim-reappear-left-right {
     animation-name: slidelefttorgt;
