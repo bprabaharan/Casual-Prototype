@@ -1,25 +1,27 @@
 $(document).ready(function() {
-    $("#multiFax, #multiSend").draggable({axis: "x", containment: '.overflow', scroll: false});
+
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
 
     /**** The Send to Recipients marquee pasue and running start */
-    // $mq = $('.marquee').marquee();
-    // $(".fax-check-child1").attrchange({
-    //     trackValues: true, // set to true so that the event object is updated with old & new values
-    //     callback: function(evnt) {
-    //         if (evnt.attributeName == "style") { // which attribute you want to watch for changes
-    //             if (evnt.newValue.search(/inline/i) == -1) {
-    //                 if ($(".slidetext-content1").hasClass("active")) {
-    //                     $mq.marquee('resume');
-    //                 } else {
-    //                     $mq.marquee('pause');
-    //                 }
-    //             }
-    //         }
-    //     }
-    // });
+    $mq = $('.marquee').marquee();
+    $(".fax-check-child1").attrchange({
+        trackValues: true, // set to true so that the event object is updated with old & new values
+        callback: function(evnt) {
+            if (evnt.attributeName == "style") { // which attribute you want to watch for changes
+                if (evnt.newValue.search(/inline/i) == -1) {
+                    if ($(".slidetext-content1").hasClass("active")) {
+                        $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
+                        $(".fax-check-child1 .marquee_content").addClass('anim-start');
+                    } else {
+                        $(".fax-check-child1 .marquee_content").removeClass('anim-start');
+                        $(".fax-check-child1 .marquee_content").addClass('anim-stop');
+                    }
+                }
+            }
+        }
+    });
     /**** The Send to Recipients marquee pasue and running end */
 
     function delayScanMode() {
@@ -38,7 +40,7 @@ $(document).ready(function() {
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
             setTimeout(function() {
                 $(".option-function").addClass('opacity-view').show();
-            }, 500);
+            }, 200);
         }, 300);
     }
 
