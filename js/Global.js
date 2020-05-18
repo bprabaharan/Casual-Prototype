@@ -38,7 +38,7 @@ $(document).ready(function() {
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
             setTimeout(function() {
                 $(".option-function").addClass('opacity-view').show();
-            }, 200);
+            }, 500);
         }, 300);
     }
 
