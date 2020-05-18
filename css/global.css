@@ -1582,7 +1582,7 @@ input[type="checkbox"]:checked+label::before {
 
 @media screen and (min-width: 768px) {
     .Copy-Content .example2 .copy-ul {
-        padding-top: 70px;
+        padding-top: 62px;
         padding-left: 20px;
     }
     .Print-container {
