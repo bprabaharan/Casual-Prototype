@@ -171,6 +171,7 @@ function showFaxbackspace() {
 }
 
 function showFaxaddreceipient() {
+    $(".icon-rt").css("display", "block");
     $(".send-but").addClass('opacity-view').show(100);
     $(".hi-light-copy").animate({ width: "395px" }, 300);
     $(".scrollspy").css("width", "410px");

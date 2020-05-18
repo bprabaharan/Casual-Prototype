@@ -263,13 +263,15 @@ $(document).ready(function() {
     $(".add-receipient").click(function() {
         history_details.push("showFaxaddreceipient()");
 
-        if (activScreen_history.indexOf(".Fax-content-add-recipient") === -1) {
+        // if (activScreen_history.indexOf(".Fax-content-add-recipient") === -1) {
             activScreen_history.push(".Fax-content-add-recipient");
-        }
+        // }
         $(".send-but").hide(0);
         $(".scrollspy").css("width", "600px");
         $(".hi-light-copy").animate({ width: "696px" }, 600);
         $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
+        $(".Fax-content-add-recipient ul li").removeClass("active");
+        $(".Fax-content-add-recipient .fax-check-child0").addClass("active");
         $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
