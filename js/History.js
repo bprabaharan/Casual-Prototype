@@ -68,7 +68,7 @@ function showCopyLandingPage() {
 }
 
 function showFaxLandingPage() {
-    $(".Fax-Section").hide(100);
+    $(".Fax-Section").hide(10);
     $(".hi-light-copy").animate({ marginTop: "72px", opacity: "0" }, 100).hide();
     $(".back-btn").css("opacity", "0");
     location.reload();
@@ -106,7 +106,8 @@ function send_contact() {
     // $(".count-checkboxes-wrapper").css("opacity", "1");
     history_details.pop();
     setTimeout(function() {
-        $(".hi-light-copy").css("width", "658px");
+        // $(".hi-light-copy").css("width", "658px");
+        $(".hi-light-copy").animate({ width: '658px' });
         $('.Fax-Section').animate({ left: '0px', opacity: '1' }).show();
         $(".Top-shade").css("width", "600px");
     }, 1000);
@@ -130,12 +131,12 @@ function set_tick() {
 }
 
 function showCopies1() {
-    $(".hi-light-copy").animate({ width: "420px" }, 100);
-    $(".copy-right-side").css('margin-left', '230px');
-    $(".scrollspy").css({ width: "432px" });
+    $(".hi-light-copy").animate({ width: "395px" }, 100);
+    $(".copy-right-side").css('margin-left', '210px');
+    $(".scrollspy").css({ width: "410px" });
     $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
     $(".example2 .menu-num").delay(150).animate({ opacity: '0' }, 1000).hide();
-    $(".copy-button .done-but").animate({ width: "210px", height: "90px" }, 100).show();
+    $(".copy-button .done-but").animate({ width: "240px", height: "90px" }, 100).show();
     $(".copy-button .but-text").show(100);
     $(".copy-button .done-but-tick1").hide(0);
     $(".options").show();
@@ -171,8 +172,8 @@ function showFaxbackspace() {
 
 function showFaxaddreceipient() {
     $(".send-but").addClass('opacity-view').show(100);
-    $(".hi-light-copy").animate({ width: "420px" }, 300);
-    $(".scrollspy").css("width", "440px");
+    $(".hi-light-copy").animate({ width: "395px" }, 300);
+    $(".scrollspy").css("width", "410px");
     $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
     $(".Fax-content-add-recipient")
         .css("display", "block")

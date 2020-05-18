@@ -319,7 +319,7 @@ $(document).ready(function() {
             $(".Fax-content-confirm").css("display", "flex").show();
             $(".icon-rt").delay(100).css("display", "block");
             $(".icon-rt .done-but, .fax-send-count").css("display", "none");
-            $(".scrollspy").css("width", "420px").show(600);
+            $(".scrollspy").css("width", "410px").show(600);
             $(".icon-rt .but-text").css("visibility", "visible");
             $(".Fax-content-confirm").css({ width: "696px", display: "block" });
             $(".Top-shade").show();
@@ -373,7 +373,7 @@ $(document).ready(function() {
         history_details.push("set_tick()");
         activScreen_history.push(".Fax-content-confirm");
         $(".hi-light-copy").animate({ width: "395px" }, 300);
-        $(".scrollspy").css({ width: "420px" });
+        $(".scrollspy").css({ width: "410px" });
         $(".count-checkboxes-wrapper").css("opacity", "0");
         $(".Fax-content-confirm").removeClass("anim-disappear");
         $(".Fax-content-add-recipient").removeClass("anim-disappear");
@@ -514,7 +514,8 @@ $(document).ready(function() {
             $("#count-checked-checkboxess").val("");
         }
         $('.Fax-Section').animate({ left: '-80px', opacity: '0' }, 300, function() {}).hide(300);
-        $(".hi-light-copy").css("width", "545px");
+        // $(".hi-light-copy").css("width", "545px");
+        $(".hi-light-copy").animate({ width: '545px' });
         $(".Top-shade").css("width", "600px");
         setTimeout(function() {
             $(".Send-to-contact").removeClass('anim-txt-reverse');
@@ -522,8 +523,8 @@ $(document).ready(function() {
             $(".count-checkboxes-wrapper").addClass('opac-view').show(300);
             historyActiveScreen("");
 
-            $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(100);
-        }, 300);
+            $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(300);
+        }, 100);
     });
 
     $(".send-to-cont").click(function() {
@@ -1016,16 +1017,16 @@ $(document).ready(function() {
             activScreen_history.push(".example1");
         }
         if ($(this).hasClass("active")) {
-            $(".scrollspy").css('width', '417px');
+            $(".scrollspy").css('width', '410px');
             $(".back-btn").css("opacity", "1");
             $(".back-btn").css("cursor", "pointer");
-            $(".Smarttask-Page").animate({ zoom: ".3", opacity: ".2" }).hide(100);
-            $(".Menu-Page").animate({ zoom: ".3", opacity: ".2" }).hide(100);
-            $(".ID-Page").animate({ zoom: ".3", opacity: ".2" }).hide(100);
-            $(".Scan-Page").animate({ zoom: ".3", opacity: ".2" }).hide(100);
+            $(".Smarttask-Page").animate({ zoom: ".3", opacity: ".1" }).hide(100);
+            $(".Menu-Page").animate({ zoom: ".3", opacity: ".1" }).hide(100);
+            $(".ID-Page").animate({ zoom: ".3", opacity: ".1" }).hide(100);
+            $(".Scan-Page").animate({ zoom: ".3", opacity: ".1" }).hide(100);
             $(".indicators").removeClass("active");
-            $(".indicators").animate({ zoom: ".5", opacity: ".2", left: "-250px" }).hide(100);
-            $(".copy-page").animate({ opacity: "0", left: "-250px" }).hide(300);
+            $(".indicators").animate({ zoom: ".5", opacity: ".1", left: "-250px" }).hide(100);
+            $(".copy-page").animate({ opacity: "0", left: "-250px" }).hide(100);
             $(".Print-content-main").hide(300);
             $(".Copy-Content .example1").css({ "margin-left": "2.162em" });
             $(".Copy-Content .example1").animate({ opacity: 1, left: "0px" }).hide(100);
@@ -1063,7 +1064,7 @@ $(document).ready(function() {
         $(".copy-button .done-but").animate({ width: "80px", height: "90px" }, 100);
         $(".copy-button .done-but").hide();
         $(".done-but-tick1").css('cursor', 'pointer');
-        $(".Copy-Content .example1").addClass('anim-disappear').hide(500);
+        $(".Copy-Content .example1").addClass('anim-disappear').hide(300);
         $(".Copy-Content .example1").animate({ opacity: "0" }).hide(100);
         $(".copy-button .done-but-tick1").addClass('opacity-view').show(100);
         $(".copy-button .but-text").hide();
@@ -1090,7 +1091,7 @@ $(document).ready(function() {
         $(".example1").find(".copy-num").html('<span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/Mask Group 2.svg"><span class="copy-txt">Copies</span></span><span class="copy-right-side">' + selectedCopiea + '</span>');
         doneButTick1();
         $("#Landing-copy-page").css({ left: "0px" });
-        $(".scrollspy").css({ width: "437px" });
+        $(".scrollspy").css({ width: "410px" });
         history_details.pop();
         setTimeout(function() {
             activScreen_history = activScreen_history.slice(0, -1);
@@ -1136,22 +1137,23 @@ $(document).ready(function() {
             $(".Scan-Page").animate({ zoom: '.5' }, { opacity: '0' }).hide(300);
             $(".ID-Page").animate({ zoom: '.5' }, { opacity: '0' }).hide(300);
             setTimeout(function() {
-                $(".hi-light-copy").animate({ width: "658px" }, 500);
+                $(".hi-light-copy").animate({ width: "658px" }, 600);
                 // $(".hi-light-copy").css("margin-left", "15px");
+                $(".Main-content .Fax-Section").css("display", "block").addClass("anim-txt");
                 $(".Landing-Page").show(10);
                 $(".example1").css("display", "none");
                 $(".Landing-Page .Main-content").show();
                 $(".Main-content .Print-content-copy").show();
                 $(".Landing-Page .Print-content-main").hide();
-                $(".Print-content-copy").show();
-                setTimeout(faxtxtlanding, 500);
+                // $(".Print-content-copy").show();
+                setTimeout(faxtxtlanding, 100);
             }, 300);
         }
     });
     /**** Landing page FAX page Click event ends here */
 
     function faxtxtlanding() {
-        $(".Main-content .Fax-Section").css("display", "block").addClass("anim-txt");
+        // $(".Main-content .Fax-Section").css("display", "block").addClass("anim-txt");
         historyActiveScreen("");
     }
 
