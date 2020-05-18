@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $("#multiFax, #multiSend").draggable({axis: "x", containment: '.overflow', scroll: false});
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
@@ -38,7 +38,7 @@ $(document).ready(function() {
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
             setTimeout(function() {
                 $(".option-function").addClass('opacity-view').show();
-            }, 200);
+            }, 500);
         }, 300);
     }
 
