@@ -644,7 +644,6 @@ html {
     font-size: 2.875rem;
     height: 90px;
     overflow-y: hidden;
-    padding-left: 14px;
 }
 
 .Fax-content-add-recipient ul li {
@@ -656,7 +655,7 @@ html {
 
 .Fax-content-confirm ul li {
     display: flex;
-    width: 312px;
+    width: 320px;
 }
 
 .Fax-content ul li {
@@ -826,7 +825,7 @@ html {
 }
 
 .copy-right-side {
-    margin-left: 210px;
+    margin-left: 195px;
     margin-top: -2px;
 }
 
@@ -1437,11 +1436,10 @@ input[type="checkbox"]+label {
 
 .Send-checkbox-faxlist input[type="checkbox"]+label {
     cursor: pointer;
-    height: 58px;
-    width: 58px;
+    height: 68px;
+    width: 68px;
     display: inline-block;
     padding: 0 0 0 0px;
-    margin-top: 5px;
     /* background-color: #FFFFFF; */
     background: url("../images/Icons_SVG/checkbox _unchecked_m.svg") left center no-repeat;
 }
@@ -1473,8 +1471,8 @@ input[type="checkbox"]+label {
 
 .Send-checkbox-faxlist input[type="checkbox"]+label::before {
     cursor: pointer;
-    height: 56px;
-    width: 56px;
+    height: 68px;
+    width: 68px;
     display: inline-block;
     padding: 0 0 0 0px;
     background: url("../images/Icons_SVG/checkmark_s.svg") left center no-repeat;
@@ -1482,10 +1480,9 @@ input[type="checkbox"]+label {
 
 .Send-checkbox-faxlist input[type="checkbox"]:checked+label {
     background: #fff;
-    height: 58px;
-    width: 58px;
+    height: 68px;
+    width: 68px;
     display: inline-block;
-    margin-top: 5px;
     padding: 0 0 0 0px;
     background: url("../images/Icons_SVG/checkbox _checked_m.svg") left center no-repeat;
 }
@@ -1521,10 +1518,10 @@ input[type="checkbox"]:checked+label::before {
 
 .copy-icon,
 .option-icon {
-    width: 48px;
-    height: 48px;
+    width: 68px;
+    height: 68px;
     /* padding-top: 15px; */
-    margin-top: 12px;
+    margin-top: -1px;
 }
 
 .option-scan,
@@ -2119,35 +2116,34 @@ button:focus {
 }
 
 .fax-num {
-    width: 48px;
-    height: 48px;
-    margin-top: 14px;
+    width: 68px;
+    height: 68px;
+    margin-top: 0px;
 }
 
 .fax-send-icon {
-    width: 64px;
-    height: 53px;
-    /* padding-top: 15px; */
-    margin-top: 8px;
-    margin-left: -8px;
+    width: 68px;
+    height: 68px;
+}
+
+.sp1 {
+    padding-left: 8px;
 }
 
 .onetoone {
-    height: auto;
-    width: 49px;
-    margin-top: 10px;
+    height: 68px;
+    width: 68px;
+    margin-top: 0px;
 }
 
 .onetoone11 {
-    height: auto;
-    width: 94px;
-    margin-top: 10px;
-    margin-left: 14px;
+    height: 68px;
+    /* width: 94px; */
 }
 
 .onetoone-span {
     /* position: absolute; */
-    margin-left: 17px;
+    margin-left: 8px;
 }
 
 .dummy-icon {
@@ -2425,7 +2421,7 @@ span.ei_invalid {
 .copy-txt {
     font-size: 46px;
     margin-top: -2px;
-    margin-left: 17px;
+    margin-left: 8px;
     font-size: 46px;
     position: absolute;
 }
@@ -2631,5 +2627,5 @@ input[type=range]+.thumb.active .value {
 
 .option-img1,
 .option-img11 {
-    margin-right: 17px;
+    margin-right: 8px;
 }

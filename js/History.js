@@ -132,7 +132,7 @@ function set_tick() {
 
 function showCopies1() {
     $(".hi-light-copy").animate({ width: "395px" }, 100);
-    $(".copy-right-side").css('margin-left', '210px');
+    $(".copy-right-side").css('margin-left', '195px');
     $(".scrollspy").css({ width: "410px" });
     $(".example2 .copy-ul .copy-num1").delay(150).animate({ opacity: '0', right: "-2.162em" }, 1000).hide();
     $(".example2 .menu-num").delay(150).animate({ opacity: '0' }, 1000).hide();
@@ -205,7 +205,7 @@ function showFaxsendtocont() {
 }
 
 function showOption() {
-    $(".copy-right-side").css('margin-left', '230px');
+    $(".copy-right-side").css('margin-left', '210px');
     $(".option-content, .option-function").css({ opacity: "1" });
     $(".option-landing .option-content").animate({ "margin-left": "2.162em" }, 300);
     $(".option-landing .option-function").hide(200);
