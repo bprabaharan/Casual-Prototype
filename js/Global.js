@@ -275,7 +275,7 @@ $(document).ready(function() {
         $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
-            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).addClass("anim-txt").show(300);
+            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).addClass("anim-txt").show(200);
             setTimeout(function() {
                 historyActiveScreen("");
             }, 100);
