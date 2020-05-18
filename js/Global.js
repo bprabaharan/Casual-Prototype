@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $("#multiFax, #multiSend").draggable({axis: "x", containment: '.overflow', scroll: false});
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
@@ -318,7 +318,7 @@ $(document).ready(function() {
         $(".hi-light-copy").animate({ width: "395px", marginTop: "75px", opacity: "1" }).show(100);
         $(".send-but").show(50);
         setTimeout(function() {
-            $(".Fax-content-confirm").css("display", "flex").show();
+            $(".Fax-content-confirm").css("display", "flex").addClass("anim-appear");
             $(".icon-rt").delay(100).css("display", "block");
             $(".icon-rt .done-but, .fax-send-count").css("display", "none");
             $(".scrollspy").css("width", "410px").show(600);
