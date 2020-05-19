@@ -87,6 +87,7 @@ function showFirstLandingPage() {
     $(".scrollspy").css("width", "600px");
     $(".Top-shade,.Bottom-shade").show(300);
     $(".Fax-Section").delay(1000).removeClass("anim-disappear").addClass("anim-reappear-left-right").show(300);
+    $("#multiFax").css({"left":"0px"});
     history_details.pop();
 }
 

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#multiFax, #multiSend").draggable({axis: "x", containment: '.overflow', scroll: false});
+    $("#multiFax").draggable({axis: "x", containment: '.overflow', scroll: false});
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
@@ -341,10 +341,11 @@ $(document).ready(function() {
             setTimeout(function() {
                 historyActiveScreen("");
             }, 200);
-            var pushLeftSend = $('#multiSend').width();
-            $("#marquSendStyle").remove();
-            $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
-            $("#multiSend").css("animation-play-state", "running");
+            // var pushLeftSend = $('#multiSend').width();
+            // $("#marquSendStyle").remove();
+            // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
+            // $("#multiSend").css("animation-play-state", "running");
+            $("#multiFax").css({"left":"0px"});
         }, 1000);
 
     });
@@ -395,10 +396,10 @@ $(document).ready(function() {
         setTimeout(function() {
             historyActiveScreen("");
         }, 400);
-        var pushLeftSend = $('#multiSend').width();
-        $("#marquSendStyle").remove();
-        $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
-        $("#multiSend").css("animation-play-state", "running");
+        
+        // $("#marquSendStyle").remove();
+        // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-px;}}</style>').appendTo('head');
+        // $("#multiSend").css("animation-play-state", "running");
     });
 
     $(".icon-rt .send-but").click(function() {
@@ -1523,11 +1524,11 @@ $('.swapMe-up').click(function() {
             $('.swapMe-down').css('pointer-events', 'auto');
         }
     }
-    if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
-        $("#multiSend").css("animation-play-state", "running");
-    } else {
-        $("#multiSend").css("animation-play-state", "paused");
-    }
+    // if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
+    //     $("#multiSend").css("animation-play-state", "running");
+    // } else {
+    //     $("#multiSend").css("animation-play-state", "paused");
+    // }
 });
 $('.swapMe-down').click(function() {
 
@@ -1544,9 +1545,9 @@ $('.swapMe-down').click(function() {
             $('.swapMe-up').css('pointer-events', 'auto');
         }
     }
-    if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
-        $("#multiSend").css("animation-play-state", "running");
-    } else {
-        $("#multiSend").css("animation-play-state", "paused");
-    }
+    // if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
+    //     $("#multiSend").css("animation-play-state", "running");
+    // } else {
+    //     $("#multiSend").css("animation-play-state", "paused");
+    // }
 });
