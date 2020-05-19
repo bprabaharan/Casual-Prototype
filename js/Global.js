@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#multiFax").draggable({axis: "x", containment: '.overflow', scroll: false});
+    $("#multiFax").draggable({ axis: "x", containment: '.overflow', scroll: false });
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
-            let marquee=document.getElementById('multiSendMarq');
+            let marquee = document.getElementById('multiSendMarq');
             if (evnt.attributeName == "style") { // which attribute you want to watch for changes
                 if (evnt.newValue.search(/inline/i) == -1) {
                     if ($(".slidetext-content1").hasClass("active")) {
@@ -280,7 +280,7 @@ $(document).ready(function() {
         $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
-            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).addClass("anim-txt").show(200);
+            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).removeClass('anim-reappear-left-right').addClass("anim-txt").show(200);
             setTimeout(function() {
                 historyActiveScreen("");
             }, 100);
@@ -323,7 +323,7 @@ $(document).ready(function() {
         //     $(".fax-keyboard-section").removeClass("transitionBU").removeClass('anim-appear-bot-top').hide();
         //     // $(".fax-keyboard-section").addClass("anim-disappear-top-bot").hide(600);
         // }, 1000);
-        $(".hi-light-copy").animate({ width: "395px", marginTop: "74px", opacity: "1" }).addClass("anim-appear-top-bot").show(0);
+        $(".hi-light-copy").animate({ width: "395px", marginTop: "74px", opacity: "1" }).addClass("anim-show-top-bot").show(00);
         $(".send-but").show(100);
         setTimeout(function() {
             $(".Fax-content-confirm").css("display", "flex").show(600);
@@ -353,7 +353,7 @@ $(document).ready(function() {
             // $("#marquSendStyle").remove();
             // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
             // $("#multiSend").css("animation-play-state", "running");
-            $("#multiFax").css({"left":"0px"});
+            $("#multiFax").css({ "left": "0px" });
         }, 1000);
         let marquee=document.getElementById('multiSendMarq');
         setTimeout("document.getElementById('multiSendMarq').style.display = 'inline';", 400);
