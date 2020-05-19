@@ -5,7 +5,7 @@ $(document).ready(function() {
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
 
     /**** The Send to Recipients marquee pasue and running start */
-    $mq = $('.marquee').marquee();
+    // $mq = $('.marquee').marquee();
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
