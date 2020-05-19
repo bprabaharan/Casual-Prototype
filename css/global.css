@@ -2337,6 +2337,7 @@ button:focus {
 }
 
 .marqueeSend {
+    min-width: 310px;
     position: relative;
     float: right;
     overflow: hidden;

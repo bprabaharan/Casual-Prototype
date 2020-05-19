@@ -128,6 +128,8 @@ function set_tick() {
     $(".icon-rt .send-but, .icon-rt").css({ display: "none", width: "210px" });
     $(".icon-rt .done-but").css("display", "none");
     $(".icon-rt .done-button").css("display", "none");
+    // let marquee=document.getElementById('multiSendMarq');
+    // marquee.stop();
     history_details.pop();
 }
 
@@ -168,6 +170,8 @@ function showFaxbackspace() {
     $(".icon-rt .but-text").css("visibility", "hidden");
     $(".Fax-content-confirm").css({ width: "696px", display: "none" });
     $(".scrollspy").css("width", "696px");
+    // let marquee=document.getElementById('multiSendMarq');
+    // marquee.stop();
     history_details.pop();
 }
 
