@@ -9,14 +9,17 @@ $(document).ready(function() {
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
+            let marquee=document.getElementById('multiSendMarq');
             if (evnt.attributeName == "style") { // which attribute you want to watch for changes
                 if (evnt.newValue.search(/inline/i) == -1) {
                     if ($(".slidetext-content1").hasClass("active")) {
-                        $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
-                        $(".fax-check-child1 .marquee_content").addClass('anim-start');
+                        // $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
+                        // $(".fax-check-child1 .marquee_content").addClass('anim-start');
+                        marquee.start();
                     } else {
-                        $(".fax-check-child1 .marquee_content").removeClass('anim-start');
-                        $(".fax-check-child1 .marquee_content").addClass('anim-stop');
+                        // $(".fax-check-child1 .marquee_content").removeClass('anim-start');
+                        // $(".fax-check-child1 .marquee_content").addClass('anim-stop');
+                        marquee.stop();
                     }
                 }
             }
