@@ -1,22 +1,25 @@
 $(document).ready(function() {
-
+    $("#multiFax").draggable({ axis: "x", containment: '.overflow', scroll: false });
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
     $(".Dialing-txt,.Connecting-txt,.Scanning,.Faxing-page,.Fax-sent, .Faxing-pagenext").css("display", "none");
 
     /**** The Send to Recipients marquee pasue and running start */
-    $mq = $('.marquee').marquee();
+    // $mq = $('.marquee').marquee();
     $(".fax-check-child1").attrchange({
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
+            let marquee = document.getElementById('multiSendMarq');
             if (evnt.attributeName == "style") { // which attribute you want to watch for changes
                 if (evnt.newValue.search(/inline/i) == -1) {
                     if ($(".slidetext-content1").hasClass("active")) {
-                        $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
-                        $(".fax-check-child1 .marquee_content").delay(1000).addClass('anim-start');
+                        // $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
+                        // $(".fax-check-child1 .marquee_content").addClass('anim-start');
+                        marquee.start();
                     } else {
-                        $(".fax-check-child1 .marquee_content").removeClass('anim-start');
-                        $(".fax-check-child1 .marquee_content").addClass('anim-stop');
+                        // $(".fax-check-child1 .marquee_content").removeClass('anim-start');
+                        // $(".fax-check-child1 .marquee_content").addClass('anim-stop');
+                        marquee.stop();
                     }
                 }
             }
@@ -343,10 +346,11 @@ $(document).ready(function() {
             setTimeout(function() {
                 historyActiveScreen("");
             }, 200);
-            var pushLeftSend = $('#multiSend').width();
-            $("#marquSendStyle").remove();
-            $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
-            $("#multiSend").css("animation-play-state", "running");
+            // var pushLeftSend = $('#multiSend').width();
+            // $("#marquSendStyle").remove();
+            // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
+            // $("#multiSend").css("animation-play-state", "running");
+            $("#multiFax").css({ "left": "0px" });
         }, 1000);
 
     });
@@ -397,10 +401,10 @@ $(document).ready(function() {
         setTimeout(function() {
             historyActiveScreen("");
         }, 400);
-        var pushLeftSend = $('#multiSend').width();
-        $("#marquSendStyle").remove();
-        $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
-        $("#multiSend").css("animation-play-state", "running");
+
+        // $("#marquSendStyle").remove();
+        // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-px;}}</style>').appendTo('head');
+        // $("#multiSend").css("animation-play-state", "running");
     });
 
     $(".icon-rt .send-but").click(function() {
@@ -1525,11 +1529,11 @@ $('.swapMe-up').click(function() {
             $('.swapMe-down').css('pointer-events', 'auto');
         }
     }
-    if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
-        $("#multiSend").css("animation-play-state", "running");
-    } else {
-        $("#multiSend").css("animation-play-state", "paused");
-    }
+    // if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
+    //     $("#multiSend").css("animation-play-state", "running");
+    // } else {
+    //     $("#multiSend").css("animation-play-state", "paused");
+    // }
 });
 $('.swapMe-down').click(function() {
 
@@ -1546,9 +1550,9 @@ $('.swapMe-down').click(function() {
             $('.swapMe-up').css('pointer-events', 'auto');
         }
     }
-    if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
-        $("#multiSend").css("animation-play-state", "running");
-    } else {
-        $("#multiSend").css("animation-play-state", "paused");
-    }
+    // if ($(".Fax-content-confirm .fax-check-child1").hasClass("active")) {
+    //     $("#multiSend").css("animation-play-state", "running");
+    // } else {
+    //     $("#multiSend").css("animation-play-state", "paused");
+    // }
 });

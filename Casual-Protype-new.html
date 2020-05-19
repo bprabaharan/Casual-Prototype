@@ -567,16 +567,19 @@
                             <ul class="slidetext">
                                 <li>&nbsp;</li>
                                 <li class="fax-check-child1 slidetext-content1 active">
-                                    <!-- <div class="marqueeSend"> -->
-                                    <div class="marquee">
-                                        <div id="multiSend2" class="marquee_content">
-                                            <div class="fax-content2">
-                                                <span class="fax-confirm-txt">Send to&nbsp;</span>
+                                    <div class="marqueeSend">
+                                        <marquee id="multiSendMarq" onmouseover="stop()" onmouseout="start()">
+                                            <div id="multiSend">
+
+                                                <div class="fax-content2">
+                                                    <span class="fax-confirm-txt">Send to&nbsp;</span>
+                                                </div>
+                                                <div class="fax-txt-head-bind"></div>
+                                                <span class="fax-send-count"><span id="count-checked-checkboxes">0</span>
+                                                <span id="Recipient-count"></span></span>
+
                                             </div>
-                                            <div class="fax-txt-head-bind"></div>
-                                            <span class="fax-send-count"><span id="count-checked-checkboxes">0</span>
-                                            <span id="Recipient-count"></span></span>
-                                        </div>
+                                        </marquee>
                                     </div>
                                 </li>
                                 <li class="fax-check-child">
@@ -785,7 +788,7 @@
 
 
     <script src="./js/materialize.js"></script>
-    <script src="./js/jquery.marquee.js"></script>
+    <!-- <script src="./js/jquery.marquee.js"></script> -->
     <script src="./js/init.js"></script>
     <script src="./js/History.js"></script>
     <script src="./js/Global.js"></script>

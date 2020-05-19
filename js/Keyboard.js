@@ -221,9 +221,9 @@ function addMultiFax() {
         $("#display").val('');
         //set the style and append to head
         
-        var pushLeftFax = $('#multiFax').width();
-        $("#marquFaxStyle").remove();
-        $('<style id="marquFaxStyle"> @keyframes marqueeRevFax{from {left:0px;} to{left:-'+pushLeftFax+'px}}</style>').appendTo('head');
+        // var pushLeftFax = $('#multiFax').width();
+        // $("#marquFaxStyle").remove();
+        // $('<style id="marquFaxStyle"> @keyframes marqueeRevFax{from {left:0px;} to{left:-'+pushLeftFax+'px}}</style>').appendTo('head');
     }
 
 }

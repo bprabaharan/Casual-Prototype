@@ -2333,7 +2333,7 @@ button:focus {
 
 .marqueeFax:hover #multiFax {
     /* animation: marqueemoveFax 5s infinite; */
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 
 .marqueeSend {
@@ -2346,6 +2346,7 @@ button:focus {
     display: inline-flex;
     position: relative;
     float: left;
+    /* margin-left: 310px; */
     /* animation: marqueeRevSend 9s infinite;
     animation-delay: 2s;
     animation-play-state: running; */
@@ -2359,7 +2360,7 @@ button:focus {
 
 .marqueeSend:hover #multiSend {
     /* animation: marqueemoveSend 5s infinite; */
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 
 div.ei,
