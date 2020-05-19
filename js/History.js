@@ -171,18 +171,17 @@ function showFaxbackspace() {
 }
 
 function showFaxaddreceipient() {
-    $(".icon-rt").css("display", "block");
-    $(".send-but").addClass('opacity-view').show(100);
+    setTimeout(function() {
+        $(".icon-rt").css("display", "block");
+        $(".send-but").addClass('opacity-view').show(100);
+    }, 300);
     $(".hi-light-copy").animate({ width: "395px" }, 300);
     $(".scrollspy").css("width", "410px");
     $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
-    $(".Fax-content-add-recipient")
-        .css("display", "block")
-        .addClass("anim-txt")
-        .hide(100);
+    $(".Fax-content-add-recipient").css("display", "block").addClass("anim-txt").hide(100);
     setTimeout(function() {
         $(".Fax-content-confirm").css("width", "460px;").removeClass("anim-disappear").show(100);
-    }, 0);
+    }, 100);
     history_details.pop();
 }
 

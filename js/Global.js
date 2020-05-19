@@ -13,7 +13,7 @@ $(document).ready(function() {
                 if (evnt.newValue.search(/inline/i) == -1) {
                     if ($(".slidetext-content1").hasClass("active")) {
                         $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
-                        $(".fax-check-child1 .marquee_content").addClass('anim-start');
+                        $(".fax-check-child1 .marquee_content").delay(1000).addClass('anim-start');
                     } else {
                         $(".fax-check-child1 .marquee_content").removeClass('anim-start');
                         $(".fax-check-child1 .marquee_content").addClass('anim-stop');
@@ -40,7 +40,7 @@ $(document).ready(function() {
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
             setTimeout(function() {
                 $(".option-function").addClass('opacity-view').show();
-            }, 200);
+            }, 500);
         }, 300);
     }
 
@@ -277,7 +277,7 @@ $(document).ready(function() {
         $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
-            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).addClass("anim-txt").show(200);
+            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).removeClass('anim-reappear-left-right').addClass("anim-txt").show(200);
             setTimeout(function() {
                 historyActiveScreen("");
             }, 100);
@@ -317,7 +317,7 @@ $(document).ready(function() {
         //     $(".fax-keyboard-section").removeClass("transitionBU").removeClass('anim-appear-bot-top').hide();
         //     // $(".fax-keyboard-section").addClass("anim-disappear-top-bot").hide(600);
         // }, 1000);
-        $(".hi-light-copy").animate({ width: "395px", marginTop: "74px", opacity: "1" }).addClass("anim-appear-top-bot").show(0);
+        $(".hi-light-copy").animate({ width: "395px", marginTop: "74px", opacity: "1" }).addClass("anim-show-top-bot").show(00);
         $(".send-but").show(100);
         setTimeout(function() {
             $(".Fax-content-confirm").css("display", "flex").show(600);
