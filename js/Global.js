@@ -369,7 +369,7 @@ $(document).ready(function() {
                 setTimeout(function() {
                 document.getElementById('multiSendMarq').style.display = 'block';
             }, 1000);   
-        }, 3200);
+        }, 1300);
         
 
     });
@@ -430,7 +430,7 @@ $(document).ready(function() {
                 setTimeout(function() {
                 document.getElementById('multiSendMarq').style.display = 'block';
             }, 1000);   
-        }, 3200);
+        }, 1300);
         // $("#marquSendStyle").remove();
         // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-px;}}</style>').appendTo('head');
         // $("#multiSend").css("animation-play-state", "running");
@@ -1345,6 +1345,9 @@ $(document).ready(function() {
                 console.log($checkboxes.filter(":checked").val());
                 $("#count-checked-checkboxes").hide();
                 $("#Recipient-count").text($checkboxes.filter(":checked").val());
+            } else if (contactpersion === 0)  {
+                $("#count-checked-checkboxes").show();
+                $("#Recipient-count").text('');
             } else {
                 $("#count-checked-checkboxes").show();
                 $("#Recipient-count").text('Recipients');
@@ -1353,6 +1356,9 @@ $(document).ready(function() {
             if (contactpersion === 1) {
                 $("#count-checked-checkboxes").hide();
                 $("#Recipient-count").text($checkboxes.filter(":checked").val());
+            } else if (contactpersion === 0)  {
+                $("#count-checked-checkboxes").show();
+                $("#Recipient-count").text('');
             } else {
                 $("#count-checked-checkboxes").show();
                 $("#Recipient-count").text('Recipients');
