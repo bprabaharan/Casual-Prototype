@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    let marquee=document.getElementById('multiSendMarq');
+        marquee.stop();
     $("#multiFax").draggable({ axis: "x", containment: '.overflow', scroll: false });
 
     $(".Copying-txt, .Printing-txt, .Complete-txt, .cancel-fax").css("display", "none");
@@ -10,11 +12,13 @@ $(document).ready(function() {
         trackValues: true, // set to true so that the event object is updated with old & new values
         callback: function(evnt) {
             let marquee = document.getElementById('multiSendMarq');
+            marquee.stop();
             if (evnt.attributeName == "style") { // which attribute you want to watch for changes
                 if (evnt.newValue.search(/inline/i) == -1) {
                     if ($(".slidetext-content1").hasClass("active")) {
                         // $(".fax-check-child1 .marquee_content").removeClass('anim-stop');
                         // $(".fax-check-child1 .marquee_content").addClass('anim-start');
+                        marquee.stop();
                         marquee.start();
                     } else {
                         // $(".fax-check-child1 .marquee_content").removeClass('anim-start');
@@ -285,11 +289,14 @@ $(document).ready(function() {
                 historyActiveScreen("");
             }, 100);
         }, 300);
+        let marquee=document.getElementById('multiSendMarq');
+        marquee.stop();
     });
     /*Add Recipient click button event ends here*/
 
     $("#backspace").click(function() {
-        
+        let marquee=document.getElementById('multiSendMarq');
+        marquee.stop();
         history_details.push("showFaxbackspace()");
         if (activScreen_history.indexOf(".Fax-content-confirm") === -1) {
             activScreen_history.push(".Fax-content-confirm");
@@ -352,14 +359,16 @@ $(document).ready(function() {
             // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-' + pushLeftSend + 'px;}}</style>').appendTo('head');
             // $("#multiSend").css("animation-play-state", "running");
             $("#multiFax").css({ "left": "0px" });
+            setTimeout("document.getElementById('multiSendMarq').style.display = 'inline';", 400);
         }, 1000);
-        let marquee=document.getElementById('multiSendMarq');
-        setTimeout("document.getElementById('multiSendMarq').style.display = 'inline';", 400);
+        
+       
             setTimeout(function() {  
-            //     marquee.start();
-            //     setTimeout(function() {
-            //     document.getElementById('multiSendMarq').style.display = 'block';
-            // }, 1000);   
+                marquee.stop();
+                marquee.start();
+                setTimeout(function() {
+                document.getElementById('multiSendMarq').style.display = 'block';
+            }, 1000);   
         }, 3200);
         
 
@@ -413,8 +422,10 @@ $(document).ready(function() {
             historyActiveScreen("");
         }, 400);
         let marquee=document.getElementById('multiSendMarq');
+        marquee.stop();
         setTimeout("document.getElementById('multiSendMarq').style.display = 'inline';", 400);
             setTimeout(function() {  
+                marquee.stop();
                 marquee.start();
                 setTimeout(function() {
                 document.getElementById('multiSendMarq').style.display = 'block';
@@ -1212,6 +1223,8 @@ $(document).ready(function() {
         $(".fax-keyboard-section").css({ opacity: "1", marginTop: "0px" }).show(100);
         $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
         $("#display").focus();
+        let marquee=document.getElementById('multiSendMarq');
+        marquee.stop();
 
     }
     /**** Landing page FAX KEy Pad Click event ends here */
