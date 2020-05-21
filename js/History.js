@@ -189,7 +189,10 @@ function showFaxaddreceipient() {
     }, 100);
     let marquee=document.getElementById('multiSendMarq');
     marquee.stop();
+    
+    if($(".fax-check-child1").hasClass("active")) {
     marquee.start();
+    }
     history_details.pop();
 }
 

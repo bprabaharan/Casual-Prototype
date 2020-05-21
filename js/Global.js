@@ -364,9 +364,9 @@ $(document).ready(function() {
         
        
             setTimeout(function() {  
-                marquee.stop();
-                marquee.start();
                 setTimeout(function() {
+                    marquee.stop();
+                    marquee.start();
                 document.getElementById('multiSendMarq').style.display = 'block';
             }, 1000);   
         }, 1300);
