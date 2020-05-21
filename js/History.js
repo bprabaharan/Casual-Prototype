@@ -193,7 +193,7 @@ function showFaxaddreceipient() {
     }, 100);
     let marquee = document.getElementById('multiSendMarq');
     marquee.stop();
-    
+    $(".fax-send-count").css("display", "block");
     if($(".fax-check-child1").hasClass("active")) {
     marquee.start();
     }
