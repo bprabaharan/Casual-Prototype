@@ -281,7 +281,7 @@ $(document).ready(function() {
         $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
         $(".Fax-content-add-recipient ul li").removeClass("active");
         $(".Fax-content-add-recipient .fax-check-child0").addClass("active");
-        $(".Fax-content-confirm").css("width", "696px;").addClass("anim-disappear").hide(600);
+        $(".Fax-content-confirm").css("width", "696px;").removeClass("anim-txt").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
             $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).removeClass('anim-reappear-left-right').addClass("anim-txt").show(200);
@@ -1198,7 +1198,7 @@ $(document).ready(function() {
     $(".fax-number").click(function() {
         history_details.push("showFirstLandingPage()");
         activScreen_history.push(".fax-keyboard-section");
-
+        $(".Fax-content-confirm").removeClass('anim-disappear');
         $(".Fax-Section").removeClass('anim-reappear-left-right');
         $(".Fax-Section").addClass("anim-disappear");
         $(".scrollspy").css("width", "696px");

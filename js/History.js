@@ -118,7 +118,7 @@ function set_tick() {
     $(".hi-light-copy").animate({ width: "552px" }, 300);
     $(".scrollspy").css({ width: "580px" });
     $(".count-checkboxes-wrapper").css("opacity", "1");
-    $(".Fax-content-confirm").addClass("anim-disappear");
+    $(".Fax-content-confirm").addClass("anim-disappear").removeClass("anim-txt");
     $(".Fax-content-add-recipient").addClass("anim-disappear");
     $(".fax-txt-head-bind .fax-txt").show();
     $(".Fax-content-confirm").hide();
@@ -187,6 +187,9 @@ function showFaxaddreceipient() {
     setTimeout(function() {
         $(".Fax-content-confirm").css("width", "460px;").removeClass("anim-disappear").show(100);
     }, 100);
+    let marquee=document.getElementById('multiSendMarq');
+    marquee.stop();
+    marquee.start();
     history_details.pop();
 }
 
