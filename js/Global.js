@@ -277,6 +277,7 @@ $(document).ready(function() {
         // }
         $(".send-but").hide(0);
         $(".scrollspy").css("width", "600px");
+        $(".Fax-content-add-recipient").removeClass('anim-reappear-left-right');
         $(".hi-light-copy").animate({ width: "696px" }, 600);
         $(".Fax-content-add-recipient .fax-check-child0").css("margin-top", "0px");
         $(".Fax-content-add-recipient ul li").removeClass("active");
@@ -284,7 +285,7 @@ $(document).ready(function() {
         $(".Fax-content-confirm").css("width", "696px;").removeClass("anim-txt").addClass("anim-disappear").hide(600);
         $(".Fax-content-confirm").css("width", "696px");
         setTimeout(function() {
-            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).removeClass('anim-reappear-left-right').addClass("anim-txt").show(200);
+            $(".Fax-content-add-recipient").css({ display: "block", left: '0' }).addClass("anim-txt").show(200);
             setTimeout(function() {
                 historyActiveScreen("");
             }, 100);
