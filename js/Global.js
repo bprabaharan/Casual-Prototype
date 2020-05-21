@@ -289,7 +289,7 @@ $(document).ready(function() {
     /*Add Recipient click button event ends here*/
 
     $("#backspace").click(function() {
-        
+
         history_details.push("showFaxbackspace()");
         if (activScreen_history.indexOf(".Fax-content-confirm") === -1) {
             activScreen_history.push(".Fax-content-confirm");
@@ -353,15 +353,15 @@ $(document).ready(function() {
             // $("#multiSend").css("animation-play-state", "running");
             $("#multiFax").css({ "left": "0px" });
         }, 1000);
-        let marquee=document.getElementById('multiSendMarq');
+        let marquee = document.getElementById('multiSendMarq');
         setTimeout("document.getElementById('multiSendMarq').style.display = 'inline';", 400);
-            setTimeout(function() {  
-            //     marquee.start();
-            //     setTimeout(function() {
-            //     document.getElementById('multiSendMarq').style.display = 'block';
-            // }, 1000);   
+        setTimeout(function() {
+            marquee.start();
+            setTimeout(function() {
+                document.getElementById('multiSendMarq').style.display = 'block';
+            }, 1000);
         }, 3200);
-        
+
 
     });
 
@@ -388,7 +388,7 @@ $(document).ready(function() {
     });
 
     $(".set-tick").click(function() {
-        
+
         history_details.push("set_tick()");
         activScreen_history.push(".Fax-content-confirm");
         $(".hi-light-copy").animate({ width: "395px" }, 300);
@@ -400,7 +400,7 @@ $(document).ready(function() {
         $(".Fax-content-confirm .fax-check-child1").addClass("active");
         $(".fax-txt-head-bind .fax-txt").hide();
         setTimeout(function() {
-            $(".Fax-content-confirm").css({ display: "block", width: "370px" }).addClass("anim-txt");
+            $(".Fax-content-confirm").css({ display: "block", width: "380px" }).addClass("anim-txt");
         }, 600)
         $(".Fax-content-confirm").css("display", "block").addClass("anim-txt");
         $(".Send-to-contact").removeClass("anim-txt").addClass("anim-disappear").hide(300);
@@ -412,13 +412,13 @@ $(document).ready(function() {
         setTimeout(function() {
             historyActiveScreen("");
         }, 400);
-        let marquee=document.getElementById('multiSendMarq');
+        let marquee = document.getElementById('multiSendMarq');
         setTimeout("document.getElementById('multiSendMarq').style.display = 'inline';", 400);
-            setTimeout(function() {  
-                marquee.start();
-                setTimeout(function() {
+        setTimeout(function() {
+            marquee.start();
+            setTimeout(function() {
                 document.getElementById('multiSendMarq').style.display = 'block';
-            }, 1000);   
+            }, 1000);
         }, 3200);
         // $("#marquSendStyle").remove();
         // $('<style id="marquSendStyle">@keyframes marqueeRevSend{from {left:0px;}to {left:-px;}}</style>').appendTo('head');
