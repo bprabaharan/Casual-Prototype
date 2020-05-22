@@ -83,7 +83,7 @@ function showFirstLandingPage() {
 
     // $(".hi-light-copy").animate({ position: 'relative', top: "150px", opacity: '1', display: 'block' }).show(300);
     // $(".hi-light-copy").animate({ marginTop: "70px", opacity: "1" }).show(100);
-    $(".hi-light-copy").addClass('anim-show-top-bot').animate({ marginTop: '70px', opacity: '1', display: 'block', width: '595px' }).show(100);
+    $(".hi-light-copy").addClass('anim-show-top-bot').animate({ marginTop: '70px', opacity: '1', display: 'block', width: '658px' }).show(100);
 
     $(".scrollspy").css("width", "600px");
     $(".Top-shade,.Bottom-shade").show(300);
@@ -129,7 +129,7 @@ function set_tick() {
     $(".Send-to-contact").removeClass('anim-disappear').show(300);
     $(".Fax-content-confirm").hide();
     $(".fax-send-count").css("display", "none");
-    $(".icon-rt .send-but, .icon-rt").css({ display: "none", width: "210px" });
+    $(".icon-rt .send-but, .icon-rt").css({ display: "none", width: "240px" });
     $(".icon-rt .done-but").css("display", "none");
     $(".icon-rt .done-button").css("display", "none");
     // let marquee=document.getElementById('multiSendMarq');
@@ -194,8 +194,8 @@ function showFaxaddreceipient() {
     let marquee = document.getElementById('multiSendMarq');
     marquee.stop();
     $(".fax-send-count").css("display", "block");
-    if($(".fax-check-child1").hasClass("active")) {
-    marquee.start();
+    if ($(".fax-check-child1").hasClass("active")) {
+        marquee.start();
     }
     history_details.pop();
 }
