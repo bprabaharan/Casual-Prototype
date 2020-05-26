@@ -219,7 +219,7 @@ function showFaxsendtocont() {
 }
 
 function showOption() {
-    $(".copy-right-side").css('margin-left', '210px');
+    $(".copy-right-side").css('margin-left', '195px');
     $(".option-content, .option-function").css({ opacity: "1" });
     $(".option-landing .option-content").animate({ "margin-left": "2.162em" }, 300);
     $(".option-landing .option-function").hide(200);
@@ -233,8 +233,8 @@ function showOption() {
         $(".example1").css({ animation: "floatText .0s ease-in-out" });
         $(".example1").css({ "margin-left": "-2.162em" });
         $(".example1").css({ opacity: "0.3" });
-        $(".hi-light-copy").animate({ width: "420px" }, 200);
-        $(".scrollspy").animate({ width: "437px" }, 200);
+        $(".hi-light-copy").animate({ width: "395px" }, 200);
+        $(".scrollspy").animate({ width: "410px" }, 200);
         $(".done-but,.copy-button").show(300);
         $(".icon-rt .but-text").css("visibility", "hidden");
         $(".copy-num").css({ "margin-top": "-90px" });
