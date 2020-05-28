@@ -767,6 +767,7 @@ $(document).ready(function() {
     });
 
     $(".option-landing ul .option-bright").click(function() {
+        console.log("tst")
         if (history_details.indexOf("setBright()") === -1) {
             history_details.push("setBright()");
         }
