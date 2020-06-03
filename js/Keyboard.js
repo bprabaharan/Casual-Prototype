@@ -30,7 +30,6 @@ $(function() {
     });
 
     $(document).on("click", "button.number", function() {
-        console.log($display.val().length);
         if ($display.val() != 0 && $display.val().length < 12) {
             $display.val($display.val() + $(this).val());
         } else if ($display.val() == 0){
@@ -55,7 +54,6 @@ $(function() {
 });
 
 function alphabetsKey(data) {
-    console.log(data);
     $.each(data, function(index, value) {
         var i = index + 1;
         $('#key' + i).val(value);
@@ -89,7 +87,6 @@ window.onclick = function(event) {
 
 function chooseLetters(data) {
     $('.alphabat-num').css({ 'visibility': 'hidden' });
-    console.log(data);
     if ($.isArray(data)) {
         var letters = data;
     } else {
@@ -105,7 +102,6 @@ function chooseLetters(data) {
         });
         modal.style.display = "block";
     } else {
-        console.log(value);
         myFunction(data);
     }
 }
@@ -115,7 +111,6 @@ function addNumbers() {
 
     $.each(faxAddNumbers, function(index, data) {
         var i = index + 1;
-        console.log(data)
         $('#showLetter' + i).css({ 'visibility': 'visible' });
         $('#chooseLetter' + i).val(data.name);
         $('#chooseLetter' + i).html(data.img);
@@ -124,68 +119,20 @@ function addNumbers() {
 }
 
 function myFunction(data) {
-        // $(":root").css("--foo",  $('#multiFax').width());
-        // console.log(".css method on “:root”      :", $(":root").css("--foo"));
-       
-
-    console.log(data);
     $("#display").focus();
     $('#display').removeAttr('placeholder');
-    // $("#display").attr("placeholder", "+");
-    // $("#display").val("+");
     modal.style.display = "none";
     var $display = $('#display');
     $display.val();
     var value = $(data).attr('value');
     if (value === "addNum") {
-        // addMultiFax();
         if($("#display").val() === ""){
             $("#display").val("+")
         }
 
     } else if (value === "addCont") {
 
-        // document.getElementById("multiFax").style.setProperty("--foo", $('#multiFax').width());
-       
         addMultiFax();
-       
-        // if (history_details.indexOf("showFaxbackspace()") === -1) {
-        //     history_details.push("showFaxbackspace()");
-        // }
-
-        // $('.swapMe-up').css('pointer-events', 'auto');
-        // $('.swapMe-down').css('pointer-events', 'auto');
-        // By defalult first li active. So swape down disable 
-
-        // if (activScreen_history.indexOf(".Send-to-contact") === -1) {
-        //     activScreen_history.push(".Send-to-contact");
-        // }
-        // if ($display.val() === '') {
-
-        //     var faxtxt = $(".display").val();
-        //     var faxtext = $(".display").val();
-        //     var multiFax = '';
-        //     var multiplFax = '';
-        //     $("#multiFax > span").each(function() {
-        //         // console.log($(this).text())
-        //         multiFax = multiFax + '<span class="fax-txt">' + $(this).text() + ' </span> ';
-        //         multiplFax = multiplFax + '<span class="fax-txt1">' + $(this).text() + ' </span> ';
-        //     });
-        //     $(".Fax-content-confirm .fax-txt-head-bind").html(multiFax);
-        //     $(".fax-animation-count").html(multiplFax);
-        // }
-        // // $(".Fax-content-add-recipient").addClass("anim-disappear").hide();
-        // $(".fax-keyboard-section").removeClass("transitionBU").addClass("anim-disappear-top-bot").hide(300);
-        // $(".Top-shade").show();
-        // $(".Bottom-shade").show();
-        // $(".hi-light-copy").animate({ width: "545px", marginTop: "75px", opacity: "1" }).show();
-        // $(".Fax-Section").addClass("anim-disappear").hide(300);
-        // $(".Top-shade").css("width", "500px");
-        // $(".Send-to-contact").show();
-        // $(".fax-keyboard-confirm-section .done-but").show();
-        // setTimeout(function() {
-        //     historyActiveScreen("");
-        // }, 200);
 
     } else if ($display.val() != 0) {
         $display.val($display.val() + value);
@@ -221,9 +168,6 @@ function addMultiFax() {
         $("#display").val('');
         //set the style and append to head
         
-        // var pushLeftFax = $('#multiFax').width();
-        // $("#marquFaxStyle").remove();
-        // $('<style id="marquFaxStyle"> @keyframes marqueeRevFax{from {left:0px;} to{left:-'+pushLeftFax+'px}}</style>').appendTo('head');
     }
 
 }
