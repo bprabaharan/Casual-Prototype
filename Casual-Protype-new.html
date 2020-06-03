@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <!-- <script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script> -->
+    <script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script> -->
     <!-- <script src="./js/jquery-3.4.1.slim.min.js"></script>-->
     <script src="./js/jquery-ui.min.js"></script>
@@ -63,7 +63,7 @@
                         <span class="down2"></span>
                     </div>
                 </div>
-                <div class="Print-content Dot-Section" style="text-align: center; vertical-align: middle;padding-top: 0%;">
+                <div class="Print-content Dot-Section">
                     <img class="copy-gif-anim" src="./images/Gif-images/copy_animation.gif">
                     <div class="show">
                         <rec class="copying-txt">Copying...</rec>
@@ -71,15 +71,15 @@
                         <rec class="copying-txt">Complete!</rec>
                         <p class="show-line"></p>
                     </div>
-                    <p class="Cancel-copy" style="margin-top: 80px;">Cancelling Copy...</p>
+                    <p class="Cancel-copy">Cancelling Copy...</p>
                 </div>
-                <div class="Print-content-copy Copy-Content" style="display: flex;">
+                <div class="Print-content-copy Copy-Content dis-flex">
                     <div class="hi-light-copy"></div>
                     <div class="scrollspy dis-flex">
                         <div class="example1" id="Landing-copy-page" style="width: 440px;">
                             <ul style="padding-left: 15px;">
                                 <li style="height: 84px;">&nbsp;</li>
-                                <li class="copy-num active" style="display: flex;">
+                                <li class="copy-num active dis-flex">
                                     <span class="copy-left-side"><img class="copy-icon" src="./images/Icons_SVG/Mask Group 2.svg">
                                         <span class="copy-txt">Copies</span>
                                     </span>
@@ -91,13 +91,13 @@
                                 <li>&nbsp;</li>
                             </ul>
                         </div>
-                        <div class="example2" style="display: flex;">
+                        <div class="example2 dis-flex">
                             <div>
                                 <ul class="copy-ul">
                                     <li class="copy-num1" style="margin-top: 2px;">&nbsp;&nbsp;&nbsp;&nbsp; Copies </li>
                                 </ul>
                             </div>
-                            <div class="menu-num" style="display: flex; padding-left: 260px; ">
+                            <div class="menu-num dis-flex" style=" padding-left: 260px; ">
                                 <ul class="no-second-row">
                                     <li>&nbsp;</li>
                                     <li class="num-second active" style="margin-top: -8px;"><span>0</span>&nbsp;<span>1</span></li>
@@ -204,7 +204,7 @@
                             </div>
                         </div>
 
-                        <div class="example3" style="display: flex;margin-top: -15px;">
+                        <div class="example3 dis-flex" style="margin-top: -15px;">
                             <div>
                                 <ul class="copy-color-1">
                                     <li>&nbsp;</li>
@@ -217,7 +217,7 @@
                                     <li>&nbsp;</li>
                                 </ul>
                             </div>
-                            <div style="display: flex; padding-left: 50px; width: 300px;">
+                            <div class="dis-flex" style="padding-left: 50px; width: 300px;">
                                 <ul class="copy-color-2">
                                     <li>&nbsp;</li>
                                     <li class="copy-color-2-1" style="margin-top: -10px;">B/W </li>
@@ -228,7 +228,7 @@
                             </div>
                         </div>
 
-                        <div class="example4" style="display: flex;margin-top: -15px;">
+                        <div class="example4 dis-flex" style="margin-top: -15px;">
                             <div>
                                 <ul class="copy-color-3">
                                     <li>&nbsp;</li>
@@ -245,7 +245,7 @@
                             </div>
                         </div>
 
-                        <div class="option-landing" style="display: flex;margin-top: -15px;">
+                        <div class="option-landing dis-flex" style="margin-top: -15px;">
                             <div>
                                 <ul class="option1">
                                     <li>&nbsp;</li>
@@ -278,7 +278,7 @@
                             <div>
                                 <ul class="optionli-scan-child check-box-list">
                                     <li>&nbsp;</li>
-                                    <li class="optionli-scan-child1 active" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-scan-child1 active dis-flex cur-point">
                                         <div class="option-content">
                                             <div class="option-img1"><img class="onetoone" src="./images/Icons_SVG/document_m.svg" /></div>
                                             Document</div>
@@ -287,7 +287,7 @@
                                             <label for="trigger-scan1" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-scan-child2" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-scan-child2 dis-flex cur-point">
                                         <div class="option-content">
                                             <div class="option-img1"><img class="onetoone" src="./images/Icons_SVG/photo_m.svg" /></div>Photo</div>
                                         <div class="option-content2  option-function">
@@ -295,7 +295,7 @@
                                             <label for="trigger-scan2" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-scan-child2" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-scan-child2 cur-point dis-flex">
                                         <div class="option-content">
                                             <div class="option-img1"> <img class="onetoone" src="./images/Icons_SVG/id_m.svg"></div>ID Card</div>
                                         <div class="option-content2  option-function">
@@ -310,11 +310,11 @@
                             </div>
                         </div>
 
-                        <div class="option-landing-sides" style="display: flex;">
+                        <div class="option-landing-sides dis-flex">
                             <div>
                                 <ul class="optionli-land-child check-box-list1">
                                     <li>&nbsp;</li>
-                                    <li class="optionli-land-child1 active" style="cursor: pointer;">
+                                    <li class="optionli-land-child1 active cur-point">
                                         <div class="option-content"><img class="onetoone11" src="./images/Icons_SVG/1-1.svg">
                                             <span class="onetoone-span">1:1 Sided</span></div>
                                         <div class="option-content2  option-function">
@@ -322,7 +322,7 @@
                                             <label for="trigger-Slide1" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-land-child2" style="cursor: pointer;">
+                                    <li class="optionli-land-child2 cur-point">
                                         <div class="option-content"><img class="onetoone11" src="./images/Icons_SVG/1-2.svg">
                                             <span class="onetoone-span">1:2 Sided</span>
                                         </div>
@@ -338,11 +338,11 @@
                             </div>
                         </div>
 
-                        <div class="option-landing-color" style="display: flex;">
+                        <div class="option-landing-color dis-flex">
                             <div>
                                 <ul class="optionli-color-child check-box-list2">
                                     <li>&nbsp;</li>
-                                    <li class="optionli-color-child1 active" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-color-child1 active dis-flex cur-point">
                                         <div class="option-content">
                                             Automatic</div>
                                         <div class="option-content2  option-function">
@@ -350,7 +350,7 @@
                                             <label for="trigger-color1" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-color-child2" style="cursor: pointer;">
+                                    <li class="optionli-color-child2 cur-point">
                                         <div class="option-content">
                                             Color</div>
                                         <div class="option-content2  option-function">
@@ -358,7 +358,7 @@
                                             <label for="trigger-color2" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-color-child2" style="cursor: pointer;">
+                                    <li class="optionli-color-child2 cur-point">
                                         <div class="option-content">
                                             Grayscale</div>
                                         <div class="option-content2  option-function">
@@ -373,11 +373,11 @@
                             </div>
                         </div>
 
-                        <div class="option-landing-resize" style="display: flex;">
+                        <div class="option-landing-resize dis-flex">
                             <div>
                                 <ul class="optionli-resize-child check-box-list3">
                                     <li style="height: 67px;">&nbsp;</li>
-                                    <li class="optionli-resize-child1 active" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-resize-child1 active cur-point dis-flex">
                                         <div class="option-content">
                                             <div class="option-img1"><img class="onetoone" src="./images/Icons_SVG/none_m.svg"></div>
                                             None</div>
@@ -386,7 +386,7 @@
                                             <label for="trigger-resize1" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-resize-child2" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-resize-child2 cur-point dis-flex">
                                         <div class="option-content">
                                             <div class="option-img1"><img class="onetoone" src="./images/Icons_SVG/custom_m.svg"></div>
                                             Custom</div>
@@ -395,7 +395,7 @@
                                             <label for="trigger-resize2" class="trigger-label"></label>
                                         </div>
                                     </li>
-                                    <li class="optionli-resize-child2" style="display: flex;cursor: pointer;">
+                                    <li class="optionli-resize-child2 cur-point dis-flex">
                                         <div class="option-content">
                                             <div class="option-img11">
                                                 <img class="onetoone11" src="./images/Icons_SVG/1-1.svg">&nbsp;
@@ -413,7 +413,7 @@
                             </div>
                         </div>
 
-                        <div class="option-landing-bright" style="display: flex;">
+                        <div class="option-landing-bright dis-flex">
                             <div>
                                 <div class="copy-drag-content">
                                     <img class="bright-icon" id="bright-icon" src="">
@@ -424,7 +424,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="option-landing-firstpage" style="display: flex;margin-top: 67px;">
+                        <div class="option-landing-firstpage dis-flex" style="margin-top: 67px;">
                             <div>
                                 <ul class="option-landing-second">
                                     <li>&nbsp;</li>
@@ -446,27 +446,27 @@
                             </div>
                         </div>
                         <!--Fax Section starts here-->
-                        <div class="Fax-Section Copy-Content" id="fax-landing-page" style="display: flex; overflow: auto;">
+                        <div class="Fax-Section Copy-Content dis-flex" id="fax-landing-page" style="overflow: auto;">
                             <div class="Fax-content">
                                 <ul class="">
                                     <li class="firstli">&nbsp;</li>
-                                    <li class="Section-check-child1 active" style="display: flex;">
+                                    <li class="Section-check-child1 active dis-flex">
                                         <div class="fax-content2">
                                             <img class="copy-icon" src="./images/Icons_SVG/individual_m.svg">
                                         </div>
-                                        <div class="fax-txt-head send-contact"><span style="padding-left: 8px;">Send to Contacts</span></div>
+                                        <div class="fax-txt-head send-contact"><span class="pad-lf-8">Send to Contacts</span></div>
                                     </li>
                                     <li class="Section-check-child">
                                         <div class="fax-content2">
                                             <img class="fax-num" src="./images/Icons_SVG/faxnumber_m.svg">
                                         </div>
-                                        <div class="fax-txt-head fax-number"><span style="padding-left: 8px;">Enter FAX Number</span></div>
+                                        <div class="fax-txt-head fax-number"><span class="pad-lf-8">Enter FAX Number</span></div>
                                     </li>
-                                    <li class="Section-check-child">
+                                    <li class="Section-check-child receivedfax">
                                         <div class="fax-content2">
                                             <img class="fax-send-icon" src="./images/Icons_SVG/faxes_m.svg">
                                         </div>
-                                        <div class="fax-txt-head"><span style="padding-left: 8px;">Received FAX</span></div>
+                                        <div class="fax-txt-head"><span class="pad-lf-8">Received FAX</span></div>
                                     </li>
                                     <li class="empty">
                                         &nbsp;
@@ -475,6 +475,79 @@
                             </div>
                         </div>
                         <!--Fax Section Ends here-->
+
+                        <!--Received Fax Section starts here-->
+                        <div class="Received-Fax-Section" style="height: 240px;">
+                            <div class="Received-Fax-content">
+                                <ul>
+                                    <li></li>
+                                    <li class="rec-fax-section1 active dis-flex">
+                                        <div class="fax-content2">
+                                            <img class="copy-icon" src="./images/Icons_SVG/individual_m.svg">
+                                        </div>
+                                        <div class="stored-fax"><span class="pad-lt-8">Received FAX</span></div>
+                                    </li>
+                                    <li class="rec-fax-section dis-flex">
+                                        <div class="fax-content2">
+                                            <img class="copy-icon" src="./images/Icons_SVG/document_l.svg">
+                                        </div>
+                                        <div class="receivedfaxhistory"><span class="pad-lt-8">History</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Received Fax Section Ends here-->
+
+                        <!--Received Stored Fax Section -->
+                        <div class="Received_stored_fax dis-flex" style="height: 240px;">
+                            <div class="dis-flex">
+                                <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
+                                    <li class="empty">&nbsp;</li>
+                                    <li class="Send-check-child1 active dis-flex">
+                                        <div class="set-content2">
+                                            <input id="send-check1" name="set-input" class="faxcheckbox" type="checkbox" value="TChalla">
+                                            <label for="send-check1" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">TChalla</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check2" name="set-input" class="faxcheckbox" type="checkbox" value="Clark Kent">
+                                            <label for="send-check2" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Clark Kent</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check4" name="set-input" class="faxcheckbox" type="checkbox" value="Tony Stark">
+                                            <label for="send-check4" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Tony Stark</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check5" name="set-input" class="faxcheckbox" type="checkbox" value="Bruce Banner">
+                                            <label for="send-check5" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Bruce Banner</span></div>
+                                    </li>
+                                    <li class="Send-check-child">
+                                        <div class="set-content2">
+                                            <input id="send-check6" name="set-input" class="faxcheckbox" type="checkbox" value="Steve Rogers">
+                                            <label for="send-check6" class=""></label>
+                                        </div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Steve Rogers</span></div>
+                                    </li>
+                                    <li>
+                                        &nbsp;
+                                    </li>
+                                </ul>
+                                <div class="receive-fax-icon">
+                                    <img class="Print-receive-fax" src="./images/Icons_SVG/print_button_m.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <!--Received Stored Fax Section -->
 
                         <!--Fax Keyboard Starts here-->
                         <div class="fax-keyboard-section" id="fax-keyboard-section">
@@ -500,7 +573,7 @@
                                                 <button href="&#9003" type="button" class="clear" id="clear_btn" value="&#9003">&#9003</button>
                                             </div> -->
                                         </div>
-                                        <div class="keys" style="width:690px; height:200px; float:left;">
+                                        <div class="keys">
                                             <button href="#" type="button" class="number" id="one" value="1"><span class="fax-key">1</span></button>
                                             <button href="#" type="button" class="number" id="two" value="2"><span class="fax-key">2</span><span class="fax-keys">ABC</span></button>
                                             <button href="#" type="button" class="number" id="three" value="3"><span class="fax-key">3</span><span class="fax-keys">DEF</span></button>
@@ -566,31 +639,31 @@
                         <div class="Fax-content-confirm">
                             <ul class="slidetext">
                                 <li>&nbsp;</li>
-                                <li class="fax-check-child1 slidetext-content1 active">	
-                                    <div class="marqueeSend">	
-                                        <marquee id="multiSendMarq" style="display: none;" onmouseover="stop()" onmouseout="start()">	
-                                            <div id="multiSend">	
-                                                <div class="fax-content2">	
-                                                    <span class="fax-confirm-txt">Send to&nbsp;</span>	
-                                                </div>	
-                                                <div class="fax-txt-head-bind"></div>	
-                                                <span class="fax-send-count"><span id="count-checked-checkboxes">0</span>	
-                                                <span id="Recipient-count"></span></span>	
-                                            </div>	
-                                        </marquee>	
-                                    </div>	
+                                <li class="fax-check-child1 slidetext-content1 active">
+                                    <div class="marqueeSend">
+                                        <marquee id="multiSendMarq" style="display: none;" onmouseover="stop()" onmouseout="start()">
+                                            <div id="multiSend">
+                                                <div class="fax-content2">
+                                                    <span class="fax-confirm-txt">Send to&nbsp;</span>
+                                                </div>
+                                                <div class="fax-txt-head-bind"></div>
+                                                <span class="fax-send-count"><span id="count-checked-checkboxes">0</span>
+                                                <span id="Recipient-count"></span></span>
+                                            </div>
+                                        </marquee>
+                                    </div>
                                 </li>
                                 <li class="fax-check-child">
                                     <div class="fax-content2">
                                         <img class="copy-icon" src="./images/Icons_SVG/add_contact_s.svg">
                                     </div>
-                                    <div class="fax-txt-head add-receipient"><span style="padding-left: 8px;">Add Recipient</span></div>
+                                    <div class="fax-txt-head add-receipient"><span class="pad-lf-8">Add Recipient</span></div>
                                 </li>
                                 <li class="fax-check-child">
                                     <div class="fax-content2">
                                         <img class="copy-icon" src="./images/Icons_SVG/options_m.svg">
                                     </div>
-                                    <div class="fax-txt-head"><span style="padding-left: 8px;">Options</span></div>
+                                    <div class="fax-txt-head"><span class="pad-lf-8">Options</span></div>
                                 </li>
                                 <li class="empty">
                                     &nbsp;
@@ -603,7 +676,7 @@
                                 <li>&nbsp;</li>
                                 <li class="fax-check-child0 active">
                                     <img class="copy-icon" src="./images/Icons_SVG/individual_m.svg">
-                                    <div class="fax-content2" style="padding-left: 8px;">
+                                    <div class="fax-content2 pad-lf-8">
                                         <span class="send-to-cont">Send to Contacts</span>
                                     </div>
                                 </li>
@@ -611,53 +684,51 @@
                                     <div class="fax-content2">
                                         <img class="copy-icon" src="./images/Icons_SVG/faxnumber_m.svg">
                                     </div>
-                                    <div class="fax-txt-head fax-number1"><span style="padding-left: 8px;">Enter FAX Number</span></div>
+                                    <div class="fax-txt-head fax-number1"><span class="pad-lf-8">Enter FAX Number</span></div>
                                 </li>
                                 <li>&nbsp;</li>
                             </ul>
-
                         </div>
 
-                        <div class="Send-to-contact Copy-Content" style="display: flex; position: absolute;">
-                            <div class="" style="display: flex;">
+                        <div class="Send-to-contact Copy-Content dis-flex pos-abs">
+                            <div class="dis-flex">
                                 <ul class="Send-checkbox-faxlist col" id="Fax-input-but">
                                     <li class="empty">&nbsp;</li>
-                                    <li class="Send-check-child1 active" style="display: flex;">
+                                    <li class="Send-check-child1 active dis-flex">
                                         <div class="set-content2">
                                             <input id="send-check1" name="set-input" class="faxcheckbox" type="checkbox" value="TChalla">
                                             <label for="send-check1" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 8px;">TChalla</span></div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">TChalla</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check2" name="set-input" class="faxcheckbox" type="checkbox" value="Clark Kent">
                                             <label for="send-check2" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 8px;">Clark Kent</span></div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Clark Kent</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check4" name="set-input" class="faxcheckbox" type="checkbox" value="Tony Stark">
                                             <label for="send-check4" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 8px;">Tony Stark</span></div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Tony Stark</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check5" name="set-input" class="faxcheckbox" type="checkbox" value="Bruce Banner">
                                             <label for="send-check5" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 8px;">Bruce Banner</span></div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Bruce Banner</span></div>
                                     </li>
                                     <li class="Send-check-child">
                                         <div class="set-content2">
                                             <input id="send-check6" name="set-input" class="faxcheckbox" type="checkbox" value="Steve Rogers">
                                             <label for="send-check6" class=""></label>
                                         </div>
-                                        <div class="set-txt-head"><span style="padding-left: 8px;">Steve Rogers</span></div>
+                                        <div class="set-txt-head"><span class="pad-lf-8">Steve Rogers</span></div>
                                     </li>
-
                                     <li>
                                         &nbsp;
                                     </li>
@@ -721,7 +792,7 @@
         <!--Landing Section Ends here-->
 
         <!-- Copy animation loading Setion-->
-        <div class="row Dot-Section1 dis-flex">
+        <!-- <div class="row Dot-Section1 dis-flex">
             <div class="icon-lt">
                 <a class="carousel-item" href="#">
                     <img class="back-btn" src="./images/Icons_SVG/back_btn_u35.png">
@@ -748,7 +819,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <script>
         document.onreadystatechange = function() {

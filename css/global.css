@@ -417,6 +417,7 @@ html {
     padding-right: 0px;
     opacity: 0;
     position: absolute;
+    width: 440px;
 }
 
 .example2 {
@@ -430,6 +431,8 @@ html {
     left: 0;
     padding-right: 0px;
     opacity: 0;
+    display: flex;
+    padding-left: 260px;
 }
 
 
@@ -555,24 +558,58 @@ html {
 }
 
 .example4 ul li,
-.Send-to-contact ul li {
+.Send-to-contact ul li,
+.Received_stored_fax ul li {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
     padding: 0px 56px;
 }
 
+.Received_stored_fax ul li:first-child {
+    height: 68px;
+}
+
+.Received_stored_fax ul li {
+    display: flex;
+}
+
+.Received_stored_fax ul {
+    width: 578px;
+}
+
+.receive-fax-icon {
+    padding-top: 65px;
+    width: 108px;
+    cursor: pointer;
+}
+
+.pad-lf-8 {
+    padding-left: 8px;
+}
+
 .Send-to-contact {
     overflow: auto;
 }
 
-.Fax-Section ul li {
+.Fax-Section ul li,
+.Received-Fax-Section ul li {
     color: #fff;
     font-size: 2.875rem;
     font-family: "hp-simplified" !important;
     height: 90px;
     padding: 0px 57px;
     width: 690px;
+}
+
+.Received-Fax-Section {
+    display: flex;
+    overflow: auto;
+}
+
+.receive-fax-icon {
+    position: fixed;
+    left: 580px;
 }
 
 .Fax-Section ul {
@@ -612,17 +649,13 @@ html {
     height: 220px;
     overflow-y: scroll;
     padding-left: 5px;
-    width: 580px;
+    width: 575px;
 }
 
 .fax-keyboard-section {
     width: 696px;
+    margin-left: 15px;
     /* margin-top: 40px; */
-}
-
-.keyboard {
-    width: 690px;
-    /* margin-left: 19px; */
 }
 
 
@@ -2058,6 +2091,7 @@ button:focus {
     text-align: right;
     margin-top: -5px;
     cursor: pointer;
+    margin-left: -5px;
 }
 
 .row {
@@ -2072,6 +2106,12 @@ button:focus {
     box-sizing: border-box;
     padding: 0 0.75rem;
     min-height: 1px;
+}
+
+.fax-animation-content {
+    text-align: center;
+    vertical-align: middle;
+    display: grid;
 }
 
 .fax-animation-content,
@@ -2705,3 +2745,100 @@ input[type=range]+.thumb.active .value {
         transform: translateX(-66.6%);
     }
 }
+
+.cur-point {
+    cursor: pointer;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.keys {
+    width: 690px;
+    height: 200px;
+    float: left;
+}
+
+.Cancel-copy {
+    margin-top: 80px;
+}
+
+
+/**After code cleanup */
+
+
+/* 
+.dis_none {
+    display: none;
+}
+
+.pos_abs {
+    position: absolute;
+}
+
+.pad_lt_8 {
+    padding-left: 8px;
+}
+
+.opa_0 {
+    opacity: 0;
+}
+
+.cancel_icon_container {
+    opacity: 0;
+    padding-left: 44px;
+}
+
+.visible_hid {
+    visibility: hidden;
+}
+
+.Dot_Section_container {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3%;
+}
+
+.Dot_Section_container-new {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0%;
+}
+
+.dis-cur {
+    display: flex;
+    cursor: pointer;
+}
+
+.option_container {
+    display: flex;
+    margin-top: -15px;
+}
+
+.clear_both {
+    clear: both;
+}
+
+.keyboard_cont {
+    width: 690px;
+    padding-bottom: 3px;
+    float: left;
+    height: 55px;
+}
+
+.keyboard_input {
+    width: 40%;
+    float: left;
+    color: #fff
+}
+
+.key_container {
+    width: 690px;
+    height: 200px;
+    float: left;
+}
+
+.copy-num1 {
+    margin-top: 2px;
+} */
