@@ -219,36 +219,38 @@ $(document).ready(function() {
     /**** Option page Checkbox Click event Ends here */
 
 });
-    var $example1 = $(".example1");
-    var $example2 = $(".example2");
-    var $example3 = $(".example3");
-    var $faxSection = $(".Fax-Section");
-    var $optionLandingScanmode = $(".option-landing-scanmode");
-    var $optionLandingSides =  $(".option-landing-sides");
-    var $optionLandingColor = $(".option-landing-color");
-    var $optionLandingResize = $(".option-landing-resize");
-    var $optionLandingBright = $(".option-landing-bright");
-    var $faxKeyboardSection = $(".fax-keyboard-section");
-    var $faxContentConfirm = $(".Fax-content-confirm");
-    var $faxContentAddRecipient = $(".Fax-content-add-recipient");
-    var $faxKeyboardConfirmSection = $(".fax-keyboard-confirm-section");
-    var $sendToContact = $(".Send-to-contact");
-    var $faxAnimation = $(".fax-animation");
-    var $hiLightCopy = $(".hi-light-copy");
-    var $scrollspy = $(".scrollspy");
-    var $topShade = $(".Top-shade");
-    var $bottomShade = $(".Bottom-shade");
-    var $cancelBtn = $(".Cancel-btn");
-    var $backBtn = $(".back-btn");
+var $example1 = $(".example1");
+var $example2 = $(".example2");
+var $example3 = $(".example3");
+var $faxSection = $(".Fax-Section");
+var $optionLandingScanmode = $(".option-landing-scanmode");
+var $optionLandingSides = $(".option-landing-sides");
+var $optionLandingColor = $(".option-landing-color");
+var $optionLandingResize = $(".option-landing-resize");
+var $optionLandingBright = $(".option-landing-bright");
+var $faxKeyboardSection = $(".fax-keyboard-section");
+var $faxContentConfirm = $(".Fax-content-confirm");
+var $faxContentAddRecipient = $(".Fax-content-add-recipient");
+var $faxKeyboardConfirmSection = $(".fax-keyboard-confirm-section");
+var $sendToContact = $(".Send-to-contact");
+var $faxAnimation = $(".fax-animation");
+var $hiLightCopy = $(".hi-light-copy");
+var $scrollspy = $(".scrollspy");
+var $topShade = $(".Top-shade");
+var $bottomShade = $(".Bottom-shade");
+var $cancelBtn = $(".Cancel-btn");
+var $backBtn = $(".back-btn");
 
 $(document).ready(function() {
+    $(".Received-Fax-Section").hide();
+    $(".Received_stored_fax").hide();
     $(".icon-round").hide();
     $(".second-Row").hide();
     $(".third-Row").hide();
     $(".copy-frame").hide();
     $(".Copy-Section").hide();
     $(".Scan-Section").hide();
-    $(".icon-rt ").hide(); 
+    $(".icon-rt ").hide();
     $(".example4").hide();
     $(".Dot-Section1").hide();
     $(".Dot-Section").hide();
@@ -264,7 +266,7 @@ $(document).ready(function() {
     $(".option-landing").css("display", "none");
     $(".option-landing-firstpage").hide();
     $(".optionli-child2").hide();
-    $(".optionli-child3").hide();   
+    $(".optionli-child3").hide();
     $(".done-but-round").hide();
     $(".show .show-line").hide();
     $(".Settings-Section ").hide();
@@ -333,8 +335,8 @@ $(document).ready(function() {
             multiFax = multiFax + '<span class="fax-txt">' + faxFormat + ' </span> <span class="fax-txt">; </span>';
             multiplFax = multiplFax + '<span class="fax-txt1">' + faxFormat + ' </span> <span class="fax-txt1">; </span> ';
         }
-       $faxKeyboardSection.removeClass("transitionBU").animate({ marginTop: "250px", opacity: "0", width: '696px' }, 300).hide(300);
-        
+        $faxKeyboardSection.removeClass("transitionBU").animate({ marginTop: "250px", opacity: "0", width: '696px' }, 300).hide(300);
+
         $hiLightCopy.animate({ width: "395px", marginTop: "74px", opacity: "1" }).addClass("anim-show-top-bot").show(00);
         $(".send-but").show(100);
         setTimeout(function() {
@@ -849,7 +851,7 @@ $(document).ready(function() {
     $('.copy-page').on('mouseup mouseout', function() {
         $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_l.svg')");
     });
-    
+
     $('.copy-page').mousedown(function() {
         $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
     });
@@ -859,16 +861,16 @@ $(document).ready(function() {
     $('.ID-Page').on('mouseup mouseout', function() {
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_l.svg')");
     });
-   
+
     $('.ID-Page').mousedown(function() {
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_pressed_l.svg')");
     });
     /**** End ID Mouse Event */
 
     /**** Smarttask-Page Mouse Event */
-  
+
     $('.Smarttask-Page').on('mouseup mousedown mouseout', function() {
-        $('.Smarttask-Page').css('background-image', "url('./images/Icons_SVG/smarttask_l.svg')");   
+        $('.Smarttask-Page').css('background-image', "url('./images/Icons_SVG/smarttask_l.svg')");
     });
     /**** End Smarttask-Page Mouse Event */
 
@@ -876,7 +878,7 @@ $(document).ready(function() {
     $('.Menu-Page').on('mouseup mouseout', function() {
         $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_l.svg')");
     });
-    
+
     $('.Menu-Page').mousedown(function() {
         $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_pressed_l.svg')");
     });
@@ -886,7 +888,7 @@ $(document).ready(function() {
     $('.Scan-Page').on('mouseup mouseout', function() {
         $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_l.svg')");
     });
-    
+
     $('.Scan-Page').mousedown(function() {
         $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_pressed_l.svg')");
     });
@@ -896,7 +898,7 @@ $(document).ready(function() {
     $('.Fax-Page').on('mouseup mouseout', function() {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_l.svg')");
     });
-    
+
     $('.Fax-Page').mousedown(function() {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_pressed_l.svg')");
     });
@@ -908,7 +910,7 @@ $(document).ready(function() {
         $(".fax-add-key").css('background-color', '#555557');
         $('.fax-add-key').css('background-image', "url('./images/Icons_SVG/add_m.svg')");
     });
-   
+
     $('.fax-add-key').mousedown(function() {
         $('.fax-add-key').css('background-color', "#fff")
         $('.fax-add-key').css('background-image', "url('./images/Icons_SVG/add_s_hover.svg')");
@@ -920,7 +922,7 @@ $(document).ready(function() {
         $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
         $(".fax-back-key").css('background-color', '#555557');
     });
-   
+
     $('.fax-back-key').mousedown(function() {
         $('.fax-back-key').css('background-color', "#fff")
         $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s_hover.svg')");
@@ -930,7 +932,7 @@ $(document).ready(function() {
     $('.done-but-tick1').on('mouseup mouseout', function() {
         $('.done-but-tick1').attr('src', "./images/Icons_SVG/done_m.svg");
     });
-   
+
     $('.copy-button .done-but-tick1').mousedown(function() {
         $('.copy-button .done-but-tick1').attr('src', "./images/Icons_SVG/done_m_hover.svg");
     });
@@ -940,7 +942,7 @@ $(document).ready(function() {
     $('.tick-btn').on('mouseup mouseout', function() {
         $('.tick-btn').attr('src', "./images/Icons_SVG/done_m.svg");
     });
-  
+
     $('.tick-btn').mousedown(function() {
         $('.tick-btn').attr('src', "./images/Icons_SVG/done_m_hover.svg");
     });
@@ -952,7 +954,7 @@ $(document).ready(function() {
         $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s.svg')");
         $(".fax-back-key").css('background-color', '#555557');
     });
-   
+
     $('.fax-back-key').mousedown(function() {
         $('.fax-back-key').css('background-color', "#fff")
         $('.fax-back-key').css('background-image', "url('./images/Icons_SVG/backspace_s_hover.svg')");
@@ -1176,8 +1178,8 @@ $(document).ready(function() {
 
     function faxkeyboard() {
         $hiLightCopy.animate({ marginTop: "-80px", opacity: "0" }).hide(50);
-       $faxKeyboardSection.addClass("anim-appear-bot-top");
-       $faxKeyboardSection.css({ opacity: "1", marginTop: "0px" }).show(100);
+        $faxKeyboardSection.addClass("anim-appear-bot-top");
+        $faxKeyboardSection.css({ opacity: "1", marginTop: "0px" }).show(100);
         $(".fax-keyboard-confirm-section .Fax-content-add-recipient").hide();
         $("#display").focus();
         let marquee = document.getElementById('multiSendMarq');
@@ -1529,5 +1531,5 @@ $('.swapMe-down').click(function() {
             $('.swapMe-up').css('pointer-events', 'auto');
         }
     }
- 
+
 });
