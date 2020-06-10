@@ -155,6 +155,7 @@ html {
     visibility: hidden;
     position: relative;
     white-space: nowrap;
+    vertical-align: middle;
     /* animation: floatText .3s ease-in-out; */
 }
 
@@ -420,6 +421,14 @@ html {
     width: 440px;
 }
 
+.example1 ul {
+    padding-left: 15px;
+}
+
+.example1 ul li:first-child {
+    height: 84px;
+}
+
 .example2 {
     /* left: 2.162em; */
     padding-right: 0px;
@@ -578,6 +587,10 @@ html {
     width: 578px;
 }
 
+.Received_stored_fax {
+    height: 240px;
+}
+
 .receive-fax-icon {
     padding-top: 65px;
     width: 108px;
@@ -605,6 +618,7 @@ html {
 .Received-Fax-Section {
     display: flex;
     overflow: auto;
+    height: 240px;
 }
 
 .receive-fax-icon {
@@ -723,6 +737,7 @@ html {
 
 .option-landing {
     width: 696px;
+    margin-top: -15px;
 }
 
 .option-landing ul li {
@@ -741,6 +756,10 @@ html {
     width: 680px;
 }
 
+.option-landing-scanmode {
+    margin-top: 68px;
+}
+
 .option-landing-sides ul li {
     color: #fff;
     font-size: 2.875rem;
@@ -757,6 +776,10 @@ html {
     height: 90px;
     padding: 0px 40px;
     width: 680px;
+}
+
+.option-landing-firstpage {
+    margin-top: 67px;
 }
 
 .option-landing-color ul li {
@@ -2765,10 +2788,8 @@ input[type=range]+.thumb.active .value {
 }
 
 
-/**After code cleanup */
+/* After code cleanup */
 
-
-/* 
 .dis_none {
     display: none;
 }
@@ -2788,6 +2809,20 @@ input[type=range]+.thumb.active .value {
 .cancel_icon_container {
     opacity: 0;
     padding-left: 44px;
+}
+
+.option-landing-doc {
+    margin-top: -1%;
+}
+
+.doc-selection {
+    padding-left: 50px;
+    width: 300px;
+}
+
+.copy-button {
+    padding-top: 73px;
+    padding-left: 23px;
 }
 
 .visible_hid {
@@ -2841,4 +2876,32 @@ input[type=range]+.thumb.active .value {
 
 .copy-num1 {
     margin-top: 2px;
-} */
+}
+
+.num-second {
+    margin-top: -8px;
+}
+
+.example3 {
+    margin-top: -15px;
+}
+
+.copy-color-1-1 {
+    margin-top: -10px;
+}
+
+.mar-top-10 {
+    margin-top: -10px;
+}
+
+.example4 {
+    margin-top: -15px;
+}
+
+.optionli-resize-child ul li:first-child {
+    height: 67px;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
