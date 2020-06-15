@@ -1848,7 +1848,7 @@ input[type="checkbox"]:checked+label::before {
     background: #000;
     font-family: "hp-simplified";
     color: white;
-    width: 100%;
+    width: 40%;
 }
 
 .fax-number {
@@ -2429,7 +2429,7 @@ button:focus {
 
 div.ei,
 input.ei {
-    min-height: 22px;
+    min-height: 12px;
     /*max-height: 37px;*/
     color: #fff;
     /* padding: 5px; */
