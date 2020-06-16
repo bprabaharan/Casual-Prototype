@@ -606,6 +606,7 @@ html {
 }
 
 .Fax-Section ul li,
+.Menu-Section ul li,
 .Received-Fax-Section ul li {
     color: #fff;
     font-size: 2.875rem;
@@ -626,7 +627,8 @@ html {
     left: 580px;
 }
 
-.Fax-Section ul {
+.Fax-Section ul,
+.Menu-Section ul {
     height: 206px;
     overflow-y: hidden;
     float: left;
@@ -705,11 +707,13 @@ html {
     width: 320px;
 }
 
-.Fax-content ul li {
+.Fax-content ul li,
+.Menu-content ul li {
     display: flex;
 }
 
-.Fax-content ul li:first-child {
+.Fax-content ul li:first-child,
+.Menu-content ul li:first-child {
     height: 66px;
 }
 

@@ -71,7 +71,12 @@ function showFaxLandingPage() {
     $(".back-btn").css("opacity", "0");
     location.reload();
 }
-
+function showMenuLandingPage() {
+    $(".Menu-Section").hide(10);
+    $(".hi-light-copy").animate({ marginTop: "72px", opacity: "0" }, 100).hide();
+    $(".back-btn").css("opacity", "0");
+    location.reload();
+}
 function showFirstLandingPage() {
     $("#myModal").hide();
     $(".Side-shade").show();

@@ -223,6 +223,7 @@ var $example1 = $(".example1");
 var $example2 = $(".example2");
 var $example3 = $(".example3");
 var $faxSection = $(".Fax-Section");
+var $menuSection = $(".Menu-Section");
 var $optionLandingScanmode = $(".option-landing-scanmode");
 var $optionLandingSides = $(".option-landing-sides");
 var $optionLandingColor = $(".option-landing-color");
@@ -283,6 +284,7 @@ $(document).ready(function() {
     $example3.hide();
     $example2.hide();
     $faxSection.hide();
+    $menuSection.hide();
     $faxKeyboardSection.hide();
     $faxContentConfirm.hide();
     /*Add Recipient click button event starts here*/
@@ -1123,7 +1125,38 @@ $(document).ready(function() {
         }, 700);
     }
     /**** Landing page Copy page Number select Click event start here */
+    /**** Landing page Menu page Click event start here */
+    $(".Menu-Page").click(function() {
 
+        if (history_details.indexOf("showMenuLandingPage()") === -1) {
+            history_details.push("showMenuLandingPage()");
+        }
+        if (activScreen_history.indexOf(".Menu-content") === -1) {
+            activScreen_history.push(".Menu-content");
+        }
+        $(".carousel-item .back-btn").css("cursor", "pointer");
+        if ($(this).hasClass("active")) {
+            $backBtn.css("opacity", "1");
+            $(".Menu-Page").animate({ left: '-180px' }, { opacity: '0' }).hide(300);
+            $(".Smarttask-Page").animate({ zoom: '.5' }, { opacity: '0' }).hide(300);
+            $(".copy-page").animate({ zoom: '.5' }, { opacity: '0' }).hide(300);
+            setTimeout(function() {
+                $hiLightCopy.animate({ width: "658px" }, 600);
+                $(".Main-content .Menu-Section").css("display", "block").addClass("anim-txt");
+                $(".Landing-Page").show(10);
+                $example1.css("display", "none");
+                $(".Landing-Page .Main-content").show();
+                $(".Main-content .Print-content-copy").show();
+                $(".Landing-Page .Print-content-main").hide();
+                setTimeout(menutxtlanding, 100);
+            }, 300);
+        }
+    });
+    /**** Landing page Menu page Click event ends here */
+
+    function menutxtlanding() {
+        historyActiveScreen("");
+    }
     /**** Landing page FAX page Click event start here */
     $(".Fax-Page").click(function() {
 
@@ -1419,8 +1452,8 @@ $(document).ready(function() {
     /**** Swape Click event Ends here */
 
     /**** Landing Page text event Starts here */
-    $(".indicators .indicator-item").eq(0).text("Smart Tasks");
-    $(".indicators .indicator-item").eq(1).text("Menu");
+    $(".indicators .indicator-item").eq(1).text("Smart Tasks");
+    $(".indicators .indicator-item").eq(0).text("Menu");
     $(".indicators .indicator-item").eq(2).text("Copy");
     $(".indicators .indicator-item").css("width", "250px");
     $(".indicators .indicator-item").eq(3).text("ID Copy");
@@ -1483,7 +1516,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         var elem = document.querySelector(".carousel");
         var instance = M.Carousel.getInstance(elem);
-        instance.set(middle_slide);
+        instance.set(0);
     }, 1000);
 });
 
