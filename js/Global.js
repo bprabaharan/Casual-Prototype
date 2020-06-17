@@ -224,6 +224,7 @@ var $example2 = $(".example2");
 var $example3 = $(".example3");
 var $faxSection = $(".Fax-Section");
 var $menuSection = $(".Menu-Section");
+var $SettingsSection = $(".Settings-Section");
 var $optionLandingScanmode = $(".option-landing-scanmode");
 var $optionLandingSides = $(".option-landing-sides");
 var $optionLandingColor = $(".option-landing-color");
@@ -285,6 +286,7 @@ $(document).ready(function() {
     $example2.hide();
     $faxSection.hide();
     $menuSection.hide();
+    $SettingsSection.hide();
     $faxKeyboardSection.hide();
     $faxContentConfirm.hide();
     /*Add Recipient click button event starts here*/
@@ -1125,6 +1127,7 @@ $(document).ready(function() {
         }, 700);
     }
     /**** Landing page Copy page Number select Click event start here */
+
     /**** Landing page Menu page Click event start here */
     $(".Menu-Page").click(function() {
 
@@ -1253,6 +1256,18 @@ $(document).ready(function() {
         $(".icon-rt").hide(10);
     }
     /**** Second Landing page Option Click event ends here */
+
+    $(".settings").click(function() {
+        if (history_details.indexOf("settings_page()") === -1) {
+            history_details.push("settings_page()");
+        }
+        if (activScreen_history.indexOf(".Settings-Section") === -1) {
+            activScreen_history.push(".Settings-Section");
+        }
+        $(".Settings-Section").addClass('anim-txt').show(00).css('opacity', '1');
+        // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+        $(".Menu-Section").removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
+    });
 
     /**** Cancel copy page Click event Starts here */
     $(".Cancel-btn").css({ opacity: "0" });

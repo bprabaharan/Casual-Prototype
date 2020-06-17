@@ -607,6 +607,7 @@ html {
 
 .Fax-Section ul li,
 .Menu-Section ul li,
+.Settings-Section ul li,
 .Received-Fax-Section ul li {
     color: #fff;
     font-size: 2.875rem;
@@ -628,7 +629,8 @@ html {
 }
 
 .Fax-Section ul,
-.Menu-Section ul {
+.Menu-Section ul,
+.Settings-Section ul {
     height: 206px;
     overflow-y: hidden;
     float: left;
@@ -2908,4 +2910,15 @@ input[type=range]+.thumb.active .value {
 
 .overflow-auto {
     overflow: auto;
+}
+
+.Settings-Section img,
+.Menu-Section img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.Settings-Section ul li:first-child {
+    height: 70px;
 }

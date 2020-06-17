@@ -71,12 +71,21 @@ function showFaxLandingPage() {
     $(".back-btn").css("opacity", "0");
     location.reload();
 }
+
 function showMenuLandingPage() {
     $(".Menu-Section").hide(10);
     $(".hi-light-copy").animate({ marginTop: "72px", opacity: "0" }, 100).hide();
     $(".back-btn").css("opacity", "0");
     location.reload();
 }
+
+function settings_page() {
+    $(".Settings-Section").addClass('anim-appear').hide(100);
+    // $(".Menu-Section").addClass('anim-txt').show(100).animate({ left: '0px' });
+    $(".Menu-Section").addClass('transitionLR-reload').removeClass('anim-re-left-right').show(100);
+
+}
+
 function showFirstLandingPage() {
     $("#myModal").hide();
     $(".Side-shade").show();
