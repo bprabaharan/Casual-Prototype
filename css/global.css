@@ -2922,3 +2922,9 @@ input[type=range]+.thumb.active .value {
 .Settings-Section ul li:first-child {
     height: 70px;
 }
+
+.Settings-content ul li,
+.Menu-Section ul li {
+    display: flex;
+    cursor: pointer;
+}
