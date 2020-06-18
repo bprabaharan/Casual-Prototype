@@ -83,7 +83,14 @@ function settings_page() {
     $(".Settings-Section").addClass('anim-appear').hide(100);
     // $(".Menu-Section").addClass('anim-txt').show(100).animate({ left: '0px' });
     $(".Menu-Section").addClass('transitionLR-reload').removeClass('anim-re-left-right').show(100);
+    history_details.pop();
+}
 
+function settings_network_page() {
+    $(".Settings-network-Section").addClass('anim-appear').hide(100);
+    // $(".Menu-Section").addClass('anim-txt').show(100).animate({ left: '0px' });
+    $(".Settings-Section").addClass('transitionLR-reload').removeClass('anim-re-left-right').show(100);
+    history_details.pop();
 }
 
 function showFirstLandingPage() {

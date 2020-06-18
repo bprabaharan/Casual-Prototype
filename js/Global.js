@@ -225,6 +225,7 @@ var $example3 = $(".example3");
 var $faxSection = $(".Fax-Section");
 var $menuSection = $(".Menu-Section");
 var $SettingsSection = $(".Settings-Section");
+var $SettingsNetworkSection = $(".Settings-network-Section");
 var $optionLandingScanmode = $(".option-landing-scanmode");
 var $optionLandingSides = $(".option-landing-sides");
 var $optionLandingColor = $(".option-landing-color");
@@ -287,6 +288,7 @@ $(document).ready(function() {
     $faxSection.hide();
     $menuSection.hide();
     $SettingsSection.hide();
+    $SettingsNetworkSection.hide();
     $faxKeyboardSection.hide();
     $faxContentConfirm.hide();
     /*Add Recipient click button event starts here*/
@@ -1155,11 +1157,38 @@ $(document).ready(function() {
             }, 300);
         }
     });
-    /**** Landing page Menu page Click event ends here */
-
+    
     function menutxtlanding() {
         historyActiveScreen("");
     }
+
+    /**** Landing page Menu page Click event ends here */
+    
+    $(".menu-settings").click(function() {
+        if (history_details.indexOf("settings_page()") === -1) {
+            history_details.push("settings_page()");
+        }
+        if (activScreen_history.indexOf(".Settings-Section") === -1) {
+            activScreen_history.push(".Settings-Section");
+        }
+        $SettingsSection.addClass('anim-txt').show(00).css('opacity', '1');
+        // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+        $(".Menu-Section").removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
+        historyActiveScreen();
+    });
+
+    $(".menu-settings-network").click(function() {
+        if (history_details.indexOf("settings_network_page()") === -1) {
+            history_details.push("settings_network_page()");
+        }
+        if (activScreen_history.indexOf(".Settings-network-Section") === -1) {
+            activScreen_history.push(".Settings-network-Section");
+        }
+        $SettingsNetworkSection.addClass('anim-txt').show(00).css('opacity', '1');
+        // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+        $SettingsSection.removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
+        historyActiveScreen();
+    });
     /**** Landing page FAX page Click event start here */
     $(".Fax-Page").click(function() {
 
@@ -1256,18 +1285,6 @@ $(document).ready(function() {
         $(".icon-rt").hide(10);
     }
     /**** Second Landing page Option Click event ends here */
-
-    $(".settings").click(function() {
-        if (history_details.indexOf("settings_page()") === -1) {
-            history_details.push("settings_page()");
-        }
-        if (activScreen_history.indexOf(".Settings-Section") === -1) {
-            activScreen_history.push(".Settings-Section");
-        }
-        $(".Settings-Section").addClass('anim-txt').show(00).css('opacity', '1');
-        // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
-        $(".Menu-Section").removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
-    });
 
     /**** Cancel copy page Click event Starts here */
     $(".Cancel-btn").css({ opacity: "0" });
