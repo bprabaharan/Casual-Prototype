@@ -223,9 +223,11 @@ var $example1 = $(".example1");
 var $example2 = $(".example2");
 var $example3 = $(".example3");
 var $faxSection = $(".Fax-Section");
+var $settingwifisection = $(".Settings-wifi-Section");
 var $menuSection = $(".Menu-Section");
 var $SettingsSection = $(".Settings-Section");
 var $SettingsNetworkSection = $(".Settings-network-Section");
+var $SettingswificonfirmSection = $(".Settings-wifi-confirm-Section");
 var $optionLandingScanmode = $(".option-landing-scanmode");
 var $optionLandingSides = $(".option-landing-sides");
 var $optionLandingColor = $(".option-landing-color");
@@ -277,6 +279,7 @@ $(document).ready(function() {
     $faxContentAddRecipient.hide();
     $faxKeyboardConfirmSection.hide();
     $sendToContact.hide();
+    $settingwifisection.hide();
     $faxAnimation.hide();
     $optionLandingScanmode.hide();
     $optionLandingSides.hide();
@@ -289,6 +292,7 @@ $(document).ready(function() {
     $menuSection.hide();
     $SettingsSection.hide();
     $SettingsNetworkSection.hide();
+    $SettingswificonfirmSection.hide();
     $faxKeyboardSection.hide();
     $faxContentConfirm.hide();
     /*Add Recipient click button event starts here*/
@@ -1157,13 +1161,13 @@ $(document).ready(function() {
             }, 300);
         }
     });
-    
+
     function menutxtlanding() {
         historyActiveScreen("");
     }
 
     /**** Landing page Menu page Click event ends here */
-    
+
     $(".menu-settings").click(function() {
         if (history_details.indexOf("settings_page()") === -1) {
             history_details.push("settings_page()");
@@ -1189,6 +1193,36 @@ $(document).ready(function() {
         $SettingsSection.removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
         historyActiveScreen();
     });
+
+    $(".wifiDirect").click(function() {
+        if (history_details.indexOf("Settings_wifi_page()") === -1) {
+            history_details.push("Settings_wifi_page()");
+        }
+        if (activScreen_history.indexOf(".Settings-wifi-Section") === -1) {
+            activScreen_history.push(".Settings-wifi-Section");
+        }
+        $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
+        // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+        $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
+        $("#wifislider").css({ position: 'fixed', opacity: '1', right: '60px' });
+
+        historyActiveScreen();
+    });
+
+    $('input[name="wifiselect"]').click(function() {
+        $settingwifisection.addClass('anim-txt').show(00).css('opacity', '0');
+        $(".Settings-wifi-Section").hide();
+        $(".hi-light-copy").hide();
+        $(".Settings-wifi-confirm-Section").css('display', 'block');
+        setTimeout(function() {
+            $(".Settings-wifi-confirm-Section").css('display', 'none');
+            $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
+            $(".Settings-wifi-Section").show();
+            $(".hi-light-copy").show();
+        }, 1000);
+
+    });
+
     /**** Landing page FAX page Click event start here */
     $(".Fax-Page").click(function() {
 

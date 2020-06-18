@@ -93,6 +93,13 @@ function settings_network_page() {
     history_details.pop();
 }
 
+function Settings_wifi_page() {
+    $settingwifisection.addClass('anim-appear').hide(100);
+    $("#wifislider").css({ position: 'fixed', opacity: '0', right: '60px' });
+    $(".Settings-network-Section").addClass('transitionLR-reload').removeClass('anim-disappear').show(100);
+    history_details.pop();
+}
+
 function showFirstLandingPage() {
     $("#myModal").hide();
     $(".Side-shade").show();
