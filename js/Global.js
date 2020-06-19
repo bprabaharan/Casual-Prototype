@@ -1204,7 +1204,7 @@ $(document).ready(function() {
         $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
         // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
         $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
-        $("#wifislider").css({ position: 'fixed', opacity: '1', right: '60px' });
+        $("#wifislider").css({ opacity: '1', right: '60px' });
 
         historyActiveScreen();
     });
@@ -1220,7 +1220,6 @@ $(document).ready(function() {
             $(".Settings-wifi-Section").show();
             $(".hi-light-copy").show();
         }, 1000);
-
     });
 
     /**** Landing page FAX page Click event start here */
