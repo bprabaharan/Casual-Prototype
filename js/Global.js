@@ -1175,6 +1175,7 @@ $(document).ready(function() {
         if (activScreen_history.indexOf(".Settings-Section") === -1) {
             activScreen_history.push(".Settings-Section");
         }
+        $(".Settings-Section .Section-check-child1").addClass("active").css("margin-top","0px");
         $SettingsSection.addClass('anim-txt').show(00).css('opacity', '1');
         // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
         $(".Menu-Section").removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
@@ -1188,6 +1189,7 @@ $(document).ready(function() {
         if (activScreen_history.indexOf(".Settings-network-Section") === -1) {
             activScreen_history.push(".Settings-network-Section");
         }
+        $(".Settings-network-Section .Section-check-child1").addClass("active").css("margin-top","0px");
         $SettingsNetworkSection.addClass('anim-txt').show(00).css('opacity', '1');
         // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
         $SettingsSection.removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
