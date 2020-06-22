@@ -150,6 +150,13 @@ html {
     opacity: 0;
 }
 
+.anim-right-left-hide {
+    transition: 0.6s;
+    transition-timing-function: ease-out;
+    transform: translatex(-80px);
+    opacity: 0;
+}
+
 .example1,
 .but-text {
     visibility: hidden;
@@ -224,6 +231,13 @@ html {
     transition: 1s;
     transform: translateX(-130%);
     animation: floatText 0.6s ease-in-out;
+}
+
+.transitionLeft_right_hide {
+    transition: 1s;
+    transform: translateX(0%);
+    animation: floatText 0.6s ease-out;
+    opacity: 0;
 }
 
 .optionLandingLR {

@@ -1195,7 +1195,7 @@ $(document).ready(function() {
     });
 
     $(".wifiDirect").click(function() {
-        $(".Settings-wifi-content .Section-check-child1").addClass("active").css("margin-top","0px");
+        $(".Settings-wifi-content .Section-check-child1").addClass("active").css("margin-top", "0px");
         if (history_details.indexOf("Settings_wifi_page()") === -1) {
             history_details.push("Settings_wifi_page()");
         }
@@ -1206,7 +1206,7 @@ $(document).ready(function() {
         // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
         $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
         $("#wifislider").css({ opacity: '1', right: '60px' });
-       
+
         historyActiveScreen();
     });
 
