@@ -18,6 +18,15 @@
     <title>Casual UI Protype</title>
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <script>
+        $(document).ready(function() {
+            // $('#buttons').hello();
+            // $('.nav-icons').imageload()
+            $(".Notification-with-icon").notificationwithouticons();
+            $(".processing_screen").processingscreen();
+        });
+    </script>
+
 </head>
 
 <body class="js-focus-visible" style="visibility: hidden;">
@@ -448,25 +457,25 @@
                             </div>
                         </div>
                         <!--Menu Section starts here-->
-                        <div class="Menu-Section Copy-Content dis-flex overflow-auto" >
+                        <div class="Menu-Section Copy-Content dis-flex overflow-auto">
                             <div class="Menu-content" id="menu-landing-page">
-                                
+
                             </div>
                         </div>
                         <!--MEnu Section Ends here-->
 
                         <!--Menu Section starts here-->
-                        <div class="Settings-Section Copy-Content dis-flex overflow-auto" >
+                        <div class="Settings-Section Copy-Content dis-flex overflow-auto">
                             <div class="Settings-content" id="menu-setting-page">
-                                
+
                             </div>
                         </div>
                         <!--MEnu Section Ends here-->
 
                         <!--settings-network  starts here-->
-                        <div class="Settings-network-Section Copy-Content dis-flex overflow-auto" >
+                        <div class="Settings-network-Section Copy-Content dis-flex overflow-auto">
                             <div class="Settings-network-content" id="menu-setting-network-page">
-                                
+
                             </div>
                         </div>
                         <!--settings-network Section Ends here-->
@@ -488,7 +497,7 @@
                                         </div>
                                     </li>
                                     <li class="child">
-                                        <div class="menu-txt-head"><span class="pad-lf-8">View Details</span></div>
+                                        <div class="menu-txt-head viewdetails"><span class="pad-lf-8">View Details</span></div>
                                     </li>
                                     <li class="child">
                                         <div class="menu-txt-head"><span class="pad-lf-8">Connection Method</div>
@@ -510,6 +519,23 @@
                                 </div>
                             </div>
                             <!--settings-wifi-confirm  starts here-->
+
+                            <!--Notification-with-icon starts here-->
+                            <div class="Notification-with-icon Copy-Content dis-flex overflow-auto">
+                                <div id="Notification-with-icon">
+
+                                </div>
+                            </div>
+                            <!--Notification-with-icon  starts here-->
+
+                            <!--processing screen starts here-->
+                            <div class="processing_screen Copy-Content dis-flex overflow-auto">
+                                <div id="processing_screen">
+
+                                </div>
+                            </div>
+                            <!--processing screen  starts here-->
+
 
                             <!--Fax Section starts here-->
                             <div class="Fax-Section Copy-Content dis-flex overflow-auto" id="fax-landing-page">
@@ -876,17 +902,71 @@
                     $(".slidetext-content").removeClass('transcrolltxt').animate({});
                 });
 
-                  
-            let data = [{label:"Info", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"},
-            {label:"Status", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"},
-            {label:"Supplies", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"},
-            {label:"Settings", liclass:"menu-settings",imgclass:"",url:"./images/Icons_SVG/u17.png"},
-            {label:"Tools", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"},
-            {label:"Help", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"}
-                        ];
-            $('#menu-landing-page').listWithIcon(data);
-            $('#menu-setting-page').listWithoutIcon([{label:"General", class:""} , {label:"Network", class:"menu-settings-network"} , {label:"Web Services", class:""} , {label:"Printer update", class:""}]);
-            $('#menu-setting-network-page').listWithoutIcon([{label:"Wi-Fi", class:""} ,{label:"Ethernet", class:""} ,{label:"Wi-Fi Direct", class:"wifiDirect"} ,{label:"Bluetooth Low Energy", class:""} ,{label:"Reset  Network Settings", class:""} ,{label:"Print Network Configuration", class:""} ]);
+
+                let data = [{
+                    label: "Info",
+                    liclass: "",
+                    imgclass: "",
+                    url: "./images/Icons_SVG/u17.png"
+                }, {
+                    label: "Status",
+                    liclass: "",
+                    imgclass: "",
+                    url: "./images/Icons_SVG/u17.png"
+                }, {
+                    label: "Supplies",
+                    liclass: "",
+                    imgclass: "",
+                    url: "./images/Icons_SVG/u17.png"
+                }, {
+                    label: "Settings",
+                    liclass: "menu-settings",
+                    imgclass: "",
+                    url: "./images/Icons_SVG/u17.png"
+                }, {
+                    label: "Tools",
+                    liclass: "",
+                    imgclass: "",
+                    url: "./images/Icons_SVG/u17.png"
+                }, {
+                    label: "Help",
+                    liclass: "",
+                    imgclass: "",
+                    url: "./images/Icons_SVG/u17.png"
+                }];
+                $('#menu-landing-page').listWithIcon(data);
+                $('#menu-setting-page').listWithoutIcon([{
+                    label: "General",
+                    class: ""
+                }, {
+                    label: "Network",
+                    class: "menu-settings-network"
+                }, {
+                    label: "Web Services",
+                    class: ""
+                }, {
+                    label: "Printer update",
+                    class: ""
+                }]);
+                $('#menu-setting-network-page').listWithoutIcon([{
+                    label: "Wi-Fi",
+                    class: ""
+                }, {
+                    label: "Ethernet",
+                    class: ""
+                }, {
+                    label: "Wi-Fi Direct",
+                    class: "wifiDirect"
+                }, {
+                    label: "Bluetooth Low Energy",
+                    class: ""
+                }, {
+                    label: "Reset  Network Settings",
+                    class: ""
+                }, {
+                    label: "Print Network Configuration",
+                    class: ""
+                }]);
             });
         </script>
         <script src="./js/attribute-chaange.js"></script>
@@ -894,6 +974,7 @@
 
         <script src="./js/materialize.js"></script>
         <!-- <script src="./js/jquery.marquee.js"></script> -->
+        <script src="./components/notification_with_icon.js"></script>
         <script src="./js/init.js"></script>
         <script src="./js/History.js"></script>
         <script src="./js/Global.js"></script>

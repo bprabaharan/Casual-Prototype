@@ -220,6 +220,8 @@ $(document).ready(function() {
 
 });
 var $example1 = $(".example1");
+var $Notificationwithicon = $(".Notification-with-icon");
+var $processingscreen = $(".processing_screen");
 var $example2 = $(".example2");
 var $example3 = $(".example3");
 var $faxSection = $(".Fax-Section");
@@ -277,6 +279,8 @@ $(document).ready(function() {
     $(".Settings-Section ").hide();
     $(".icon-cancel .Cancel-btn").css("opacity", "0");
     $faxContentAddRecipient.hide();
+    $processingscreen.hide();
+    $Notificationwithicon.hide();
     $faxKeyboardConfirmSection.hide();
     $sendToContact.hide();
     $settingwifisection.hide();
@@ -317,6 +321,37 @@ $(document).ready(function() {
         marquee.stop();
     });
     /*Add Recipient click button event ends here*/
+    $(".viewdetails").click(function() {
+        $(".Settings-wifi-Section").hide();
+        $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
+        $(".Notification-with-icon").show();
+    });
+    $(".notification_img_print").click(function() {
+        $(".Notification-with-icon").hide();
+        $(".processing_screen").show();
+        setTimeout(() => {
+            var index = 0;
+            var total = $("wifiprocess").size() - 1;
+            setInterval(function() {
+                var wifiprocess = $("wifiprocess:eq(" + index + ")");
+                $("p.processtext").html(wifiprocess.text()).fadeIn("slow");
+                if (index == total) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+            }, 3000);
+            backtowifiscreen();
+        }, 3000);
+    });
+
+    function backtowifiscreen() {
+        $(".Notification-with-icon").show();
+        $(".processing_screen").hide();
+    }
+    $(".notification_img_setting").click(function() {
+
+    });
 
     $("#backspace").click(function() {
         let marquee = document.getElementById('multiSendMarq');
@@ -1175,7 +1210,7 @@ $(document).ready(function() {
         if (activScreen_history.indexOf(".Settings-Section") === -1) {
             activScreen_history.push(".Settings-Section");
         }
-        $(".Settings-Section .child1").addClass("active").css("margin-top","0px");
+        $(".Settings-Section .child1").addClass("active").css("margin-top", "0px");
         $SettingsSection.addClass('anim-txt').show(00).css('opacity', '1');
         // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
         $(".Menu-Section").removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
@@ -1189,7 +1224,7 @@ $(document).ready(function() {
         if (activScreen_history.indexOf(".Settings-network-Section") === -1) {
             activScreen_history.push(".Settings-network-Section");
         }
-        $(".Settings-network-Section .child1").addClass("active").css("margin-top","0px");
+        $(".Settings-network-Section .child1").addClass("active").css("margin-top", "0px");
         $SettingsNetworkSection.addClass('anim-txt').show(00).css('opacity', '1');
         // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
         $SettingsSection.removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
@@ -1392,6 +1427,11 @@ $(document).ready(function() {
         $(".example4").show();
     });
 
+    // $(".viewdetails").click(function() {
+    //     $(".Settings-wifi-Section").hide();
+    //     $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
+    //     $(".Notification-with-icon").show();
+    // });
 
     $(".Send-checkbox-faxlist li").click(function(event) {
         if ($(this).find('input[type=checkbox]').prop("checked")) {
