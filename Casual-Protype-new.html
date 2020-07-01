@@ -14,6 +14,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script> -->
     <!-- <script src="./js/jquery-3.4.1.slim.min.js"></script>-->
     <script src="./components/list-with_or_out-icon.js"></script>
+    
     <script src="./js/jquery-ui.min.js"></script>
     <title>Casual UI Protype</title>
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -884,6 +885,20 @@
 
         </div>
         <script>
+            var menu_landing_page;
+            var menu_setting_page;
+            var menu_setting_network_page;
+
+            function menuLandingPage(data){
+                menu_landing_page = data;
+            }
+            function menuSettingPage(data){
+                menu_setting_page = data;
+            }
+            function menuSettingNetworkPage(data){
+                menu_setting_network_page = data;
+            }
+
             document.onreadystatechange = function() {
                 if (document.readyState !== "complete") {
                     document.querySelector("body").style.visibility = "hidden";
@@ -902,6 +917,7 @@
                     $(".slidetext-content").removeClass('transcrolltxt').animate({});
                 });
 
+<<<<<<< HEAD
 
                 let data = [{
                     label: "Info",
@@ -967,11 +983,16 @@
                     label: "Print Network Configuration",
                     class: ""
                 }]);
+=======
+            $('#menu-landing-page').listWithIcon(menu_landing_page);
+            $('#menu-setting-page').listWithoutIcon(menu_setting_page);
+            $('#menu-setting-network-page').listWithoutIcon(menu_setting_network_page);
+>>>>>>> 3020def4030d912f23546bd4059b44bd1d2b3598
             });
         </script>
         <script src="./js/attribute-chaange.js"></script>
 
-
+        <script src="./components/list-with_or_out-icon.jsonp"></script>
         <script src="./js/materialize.js"></script>
         <!-- <script src="./js/jquery.marquee.js"></script> -->
         <script src="./components/notification_with_icon.js"></script>
