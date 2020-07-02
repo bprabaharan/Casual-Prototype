@@ -33,6 +33,7 @@ $(document).ready(function() {
         $(".option-landing-color").hide();
         $(".option-landing-resize").hide();
         $(".option-landing-bright").hide();
+        $(".Wifi-Connection-Method").hide();
         $(".option-landing").css({ "margin-left": "80px" });
 
         setTimeout(function() {
@@ -216,6 +217,44 @@ $(document).ready(function() {
             }
         });
     });
+    $(".check-box-list-wifiConnectMethod li").click(function(event) {
+        history_details.pop();
+        $(".Wifi-Connection-content ul").find('input[type=checkbox]:checked').removeAttr('checked');
+        $(this).find('input[type=checkbox]').attr("checked", "checked");
+        $(".check-box-list-wifiConnectMethod li input[type=checkbox]").each(function() {
+
+            var $this = $(this);
+            if ($this.is(':checked')) {
+                if (
+                    $(this).val() === "Automatic" ||
+                    $(this).val() === "Manual" 
+                ) {
+                    activateOptionLanding();
+                    setTimeout(function() {
+                        activScreen_history = activScreen_history.slice(0, -1);
+                    }, 100);
+                    $("#conn_method").find("span").text($(this).val());
+                    $(".option-landing .optionli").css("margin-top", "-180px");
+                    $(".Wifi-Connection-content").css({ opacity: "1" });
+                    $(".Wifi-Connection-Method").hide(100);
+                    setTimeout(function() {
+                        $(".Wifi-Connection-content .option-function").hide();
+                        setTimeout(function() {
+                            $(".Wifi-Connection-content .option-content").animate({ "margin-left": "2.162em" },
+                                600
+                            );
+                            historyActiveScreen();
+                            $(".Settings-wifi-Section").css("margin-left", "0px");
+                            $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
+                            // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+                            // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
+                            $("#wifislider").css({ opacity: '1', right: '60px' });
+                        }, 300);
+                    }, 500);
+                }
+            }
+        });
+    });
     /**** Option page Checkbox Click event Ends here */
 
 });
@@ -278,6 +317,7 @@ $(document).ready(function() {
     $(".show .show-line").hide();
     $(".Settings-Section ").hide();
     $(".icon-cancel .Cancel-btn").css("opacity", "0");
+    $(".Wifi-Connection-Method").hide();
     $faxContentAddRecipient.hide();
     $processingscreen.hide();
     $Notificationwithicon.hide();
@@ -1254,42 +1294,40 @@ $(document).ready(function() {
         if (activScreen_history.indexOf(".Wifi-Connection-Method") === -1) {
             activScreen_history.push(".Wifi-Connection-Method");
         }
-        $(".option-landing").css({ opacity: "0.3" });
+        // $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
-            $(".option-landing .option-content").animate({ "margin-left": "-2.162em" },
+            $(".Settings-wifi-Section").animate({ "margin-left": "-2.162em" },
                 600
             );
-            $(".option-landing .option-function").hide();
-            setTimeout(function() {
-                $(".option-landing").css({ "margin-left": "-42.162em" });
-            }, 300);
+            $(".Settings-wifi-Section").hide(500);
+            // setTimeout(function() {
+            //     $(".option-landing").css({ "margin-left": "-42.162em" });
+            // }, 300);
         }, 600);
-        $(".option-landing-color .optionli-scan-child1").css("margin-top", "-24px");
-        $optionLandingColor.css({ opacity: "1", position: "fixed" });
+        $(".Wifi-Connection-Method .child1").css("margin-top", "-24px");
+        $(".Wifi-Connection-Method").css({ opacity: "1", position: "fixed" });
         setTimeout(function() {
-            $(".option-content").css({ "margin-left": "2.162em" });
-            $optionLandingColor.css({ "margin-left": "0px" });
+            $(".Wifi-Connection-Method .option-content").css({ "margin-left": "2.162em" });
+            $(".Wifi-Connection-Method").css({ "margin-left": "0px" });
         }, 900);
         setTimeout(function() {
-            $optionLandingColor.show();
-            $(".option-function").css({ opacity: "1", visibility: "visible" });
+            $(".Wifi-Connection-Method").show();
+            $(".Wifi-Connection-Method .option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function() {
-            $(".option-content").animate({ "margin-left": "1px" }, 600);
-            $(".option-landing-color .option-content").addClass('anim-appear');
+            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "1px" }, 600);
+            $(".Wifi-Connection-Method .option-content").addClass('anim-appear');
             setTimeout(function() {
-                $optionLandingColor.css({ opacity: "1" });
+                $(".Wifi-Connection-Method").css({ opacity: "1" });
                 historyActiveScreen("");
             }, 600);
         }, 900);
 
-        if ($("#color span").text() === "Automatic") {
-            $(".optionli-color-child1").css("margin-top", "-22px");
-        } else if ($("#color span").text() === "Color") {
-            $(".optionli-color-child1").css("margin-top", "-112px");
-        } else if ($("#color span").text() === "Grayscale") {
-            $(".optionli-color-child1").css("margin-top", "-202px");
-        }
+        // if ($("#color span").text() === "Automatic") {
+        //     $(".optionli-color-child1").css("margin-top", "-22px");
+        // } else if ($("#color span").text() === "Manual") {
+        //     $(".optionli-color-child1").css("margin-top", "-112px");
+        // } 
     });
 
     $('input[name="wifiselect"]').click(function() {

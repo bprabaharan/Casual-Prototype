@@ -501,7 +501,8 @@
                                         <div class="menu-txt-head viewdetails"><span class="pad-lf-8">View Details</span></div>
                                     </li>
                                     <li class="child WifiConnectMethod">
-                                        <div class="menu-txt-head"><span class="pad-lf-8">Connection Method</div>
+                                        <div >Connection Method</div>
+                                        <div style="width: 100%;" class="option-function" id="conn_method"><span style="float:right;">Automatic</span></div>
                                     </li>
                                     <li class="empty">
                                         &nbsp;
@@ -928,7 +929,7 @@
             $('#menu-landing-page').listWithIcon(menu_landing_page);
             $('#menu-setting-page').listWithoutIcon(menu_setting_page);
             $('#menu-setting-network-page').listWithoutIcon(menu_setting_network_page);
-            $('#wifi-connect-method').radioListWithOutIcon(wifi_connect_method);
+            $('#wifi-connect-method').radioListWithOutIcon(wifi_connect_method, 'wifiConnectMethod');
             });
         </script>
         <script src="./js/attribute-chaange.js"></script>

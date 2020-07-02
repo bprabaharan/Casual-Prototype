@@ -883,7 +883,7 @@ html {
     margin-top: 67px;
 }
 
-.option-landing-color ul li {
+.option-landing-color ul li, .Wifi-Connection-Method ul li {
     color: #fff;
     font-size: 2.875rem;
     height: 90px;
@@ -1663,7 +1663,8 @@ input[type="checkbox"]:checked+label {
 .optionli-scan-child input[type="checkbox"]:checked+label,
 .option-landing-sides input[type="checkbox"]:checked+label,
 .option-landing-color input[type="checkbox"]:checked+label,
-.option-landing-resize input[type="checkbox"]:checked+label {
+.option-landing-resize input[type="checkbox"]:checked+label,
+.Wifi-Connection-Method input[type="checkbox"]:checked+label{
     background: #ccc;
     height: 56px;
     width: 56px;
