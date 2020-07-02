@@ -14,11 +14,20 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script> -->
     <!-- <script src="./js/jquery-3.4.1.slim.min.js"></script>-->
     <script src="./components/list-with_or_out-icon.js"></script>
-    
+
     <script src="./js/jquery-ui.min.js"></script>
     <title>Casual UI Protype</title>
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <script>
+        $(document).ready(function() {
+            // $('#buttons').hello();
+            // $('.nav-icons').imageload()
+            $(".Notification-with-icon").notificationwithouticons();
+            $(".processing_screen").processingscreen();
+        });
+    </script>
+
 </head>
 
 <body class="js-focus-visible" style="visibility: hidden;">
@@ -449,25 +458,25 @@
                             </div>
                         </div>
                         <!--Menu Section starts here-->
-                        <div class="Menu-Section Copy-Content dis-flex overflow-auto" >
+                        <div class="Menu-Section Copy-Content dis-flex overflow-auto">
                             <div class="Menu-content" id="menu-landing-page">
-                                
+
                             </div>
                         </div>
                         <!--MEnu Section Ends here-->
 
                         <!--Menu Section starts here-->
-                        <div class="Settings-Section Copy-Content dis-flex overflow-auto" >
+                        <div class="Settings-Section Copy-Content dis-flex overflow-auto">
                             <div class="Settings-content" id="menu-setting-page">
-                                
+
                             </div>
                         </div>
                         <!--MEnu Section Ends here-->
 
                         <!--settings-network  starts here-->
-                        <div class="Settings-network-Section Copy-Content dis-flex overflow-auto" >
+                        <div class="Settings-network-Section Copy-Content dis-flex overflow-auto">
                             <div class="Settings-network-content" id="menu-setting-network-page">
-                                
+
                             </div>
                         </div>
                         <!--settings-network Section Ends here-->
@@ -489,7 +498,7 @@
                                         </div>
                                     </li>
                                     <li class="child">
-                                        <div class="menu-txt-head"><span class="pad-lf-8">View Details</span></div>
+                                        <div class="menu-txt-head viewdetails"><span class="pad-lf-8">View Details</span></div>
                                     </li>
                                     <li class="child WifiConnectMethod">
                                         <div class="menu-txt-head"><span class="pad-lf-8">Connection Method</div>
@@ -513,6 +522,23 @@
                                 </div>
                             </div>
                             <!--settings-wifi-confirm  starts here-->
+
+                            <!--Notification-with-icon starts here-->
+                            <div class="Notification-with-icon Copy-Content dis-flex overflow-auto">
+                                <div id="Notification-with-icon">
+
+                                </div>
+                            </div>
+                            <!--Notification-with-icon  starts here-->
+
+                            <!--processing screen starts here-->
+                            <div class="processing_screen Copy-Content dis-flex overflow-auto">
+                                <div id="processing_screen">
+
+                                </div>
+                            </div>
+                            <!--processing screen  starts here-->
+
 
                             <!--Fax Section starts here-->
                             <div class="Fax-Section Copy-Content dis-flex overflow-auto" id="fax-landing-page">
@@ -866,13 +892,15 @@
             var menu_setting_network_page;
             var wifi_connect_method;
 
-            function menuLandingPage(data){
+            function menuLandingPage(data) {
                 menu_landing_page = data;
             }
-            function menuSettingPage(data){
+
+            function menuSettingPage(data) {
                 menu_setting_page = data;
             }
-            function menuSettingNetworkPage(data){
+
+            function menuSettingNetworkPage(data) {
                 menu_setting_network_page = data;
             }
             function wifiConnectMethod(data){
@@ -908,6 +936,7 @@
         <script src="./components/list-with_or_out-icon.jsonp"></script>
         <script src="./js/materialize.js"></script>
         <!-- <script src="./js/jquery.marquee.js"></script> -->
+        <script src="./components/notification_with_icon.js"></script>
         <script src="./js/init.js"></script>
         <script src="./js/History.js"></script>
         <script src="./js/Global.js"></script>

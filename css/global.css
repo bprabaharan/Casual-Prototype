@@ -39,6 +39,11 @@ button {
 .Print-content .Dot-Section {
     width: 696px;
     margin: 0 auto;
+    text-align: center;
+}
+
+wifiprocess {
+    display: none;
 }
 
 .Print-content {
@@ -617,6 +622,74 @@ html {
 
 .Send-to-contact {
     overflow: auto;
+}
+
+.Notification-with-icon img {
+    width: 100px;
+}
+
+.notification_content_left {
+    width: 696px;
+    float: left;
+}
+
+.notification_content_left span {
+    padding: 0;
+    padding-left: 20px;
+    width: 550px;
+    float: left;
+    color: #fff;
+    font-size: 2.875rem;
+    font-family: "hp-simplified" !important;
+    height: 240px;
+    overflow-y: auto;
+    text-align: left;
+    /* border-right: 2px solid #fff; */
+}
+
+.verticalline {
+    border-right: 2px solid #fff;
+    height: 90px;
+    float: left;
+    margin-top: 50px;
+}
+
+.notification_img_print,
+.notification_img_setting {
+    cursor: pointer;
+}
+
+.process_img {
+    width: 100px;
+}
+
+#processing_screen {
+    width: 696px;
+}
+
+.processcontainer {
+    text-align: center;
+}
+
+.process_content {
+    float: left;
+    color: #fff;
+    font-size: 2.875rem;
+    font-family: "hp-simplified" !important;
+    text-align: center;
+    width: 696px;
+}
+
+.notificationimgcontainer {
+    height: 190px;
+    /* width: 100px; */
+    float: right;
+    display: grid;
+}
+
+.menu-content2 img {
+    width: 50px;
+    padding-top: 11px;
 }
 
 .Fax-Section ul li,
@@ -1423,11 +1496,16 @@ html {
 .Copying-txt,
 .Printing-txt,
 .Complete-txt,
+.processtext,
 .show .show-line {
     color: white;
     font-family: "hp-simplified";
     font-size: 46px;
     text-align: center;
+}
+
+.processtext {
+    margin-top: 20px;
 }
 
 .Dialing-txt,
@@ -1703,6 +1781,7 @@ input[type="checkbox"]:checked+label::before {
         margin-left: 6rem;
         margin-right: 6rem;
         width: 696px !important;
+        text-align: center;
     }
     /* .Print-content-main {
         padding-top: 2%;
@@ -2453,11 +2532,6 @@ button:focus {
     float: left;
 }
 
-.marqueeSend:hover #multiSend {
-    /* animation: marqueemoveSend 5s infinite; */
-    /* animation-play-state: paused; */
-}
-
 div.ei,
 input.ei {
     min-height: 12px;
@@ -2936,6 +3010,7 @@ input[type=range]+.thumb.active .value {
 .overflow-auto {
     overflow: auto;
 }
+
 
 /* .Settings-Section img,
 .Menu-Section img {
