@@ -491,7 +491,7 @@
                                     <li class="child">
                                         <div class="menu-txt-head"><span class="pad-lf-8">View Details</span></div>
                                     </li>
-                                    <li class="child">
+                                    <li class="child WifiConnectMethod">
                                         <div class="menu-txt-head"><span class="pad-lf-8">Connection Method</div>
                                     </li>
                                     <li class="empty">
@@ -501,7 +501,9 @@
                             </div>
                         </div>
                         <!--settings-network Section Ends here-->
-
+                        <div class="Wifi-Connection-Method  Copy-Content dis-flex overflow-auto">
+                            <div class="Wifi-Connection-content" id="wifi-connect-method"></div>
+                        </div>
                         <!--settings-wifi-confirm  starts here-->
                         <div class="Settings-wifi-confirm-Section Copy-Content dis-flex overflow-auto" id="menu-setting-network-page">
                             <div class="Settings-wifi-confirm-content">
@@ -862,6 +864,7 @@
             var menu_landing_page;
             var menu_setting_page;
             var menu_setting_network_page;
+            var wifi_connect_method;
 
             function menuLandingPage(data){
                 menu_landing_page = data;
@@ -871,6 +874,9 @@
             }
             function menuSettingNetworkPage(data){
                 menu_setting_network_page = data;
+            }
+            function wifiConnectMethod(data){
+                wifi_connect_method = data;
             }
 
             document.onreadystatechange = function() {
@@ -894,6 +900,7 @@
             $('#menu-landing-page').listWithIcon(menu_landing_page);
             $('#menu-setting-page').listWithoutIcon(menu_setting_page);
             $('#menu-setting-network-page').listWithoutIcon(menu_setting_network_page);
+            $('#wifi-connect-method').radioListWithOutIcon(wifi_connect_method);
             });
         </script>
         <script src="./js/attribute-chaange.js"></script>

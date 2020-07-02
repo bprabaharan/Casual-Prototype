@@ -43,5 +43,29 @@
         return this.append('' + listArrayFirst + '' + listArraySecond +''+ listArray +''+ listArrayLast);
         
     };
+
+    $.fn.radioListWithOutIcon = function( options ) {
+ 
+        // Default options
+        var settings = $.extend([{}], options );
+ 
+        // Apply options
+        let listArrayFirst = '<ul  class="optionli-color-child check-box-list2"><li>&nbsp;</li>';
+        let listArraySecond = '<li class="child1 cur-point active dis-flex ">';
+        listArraySecond+'<div class=option-content">'+settings[0].label+'</div>';
+        listArraySecond+'<div class="option-content2  option-function"><input id="trigger-color1" class="checkbox" type="checkbox" value="'+settings[0].value+'" checked="checked"><label for="trigger-color1" class="trigger-label"></label></div></li>';
+        let listArrayLast = ' <li>&nbsp;</li></ul>';
+        let listArray = '';
+        $.each(settings, function(key, item) 
+        {
+            if(key != 0)
+            listArray = listArray + '<li class="child cur-point">';
+            listArray = listArray+'<div class="option-content">'+item.label+'</div>';
+            listArray = listArray+'<div class="option-content2  option-function"><input id="trigger-color'+ key+1 +'" class="checkbox" type="checkbox" value="'+item.value+'" checked="checked"><label for="trigger-color'+ key+1 +'" class="trigger-label"></label></div></li>';
+        });
+
+        return this.append('' + listArrayFirst + '' + listArraySecond +''+ listArray +''+ listArrayLast);
+        
+    };
  
 }( jQuery ));
