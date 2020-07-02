@@ -350,6 +350,9 @@ $(document).ready(function() {
         $(".processing_screen").hide();
     }
     $(".notification_img_setting").click(function() {
+        $(".Notification-with-icon").hide();
+        $(".Settings-wifi-Section").show();
+        $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
 
     });
 
