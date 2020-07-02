@@ -1250,6 +1250,51 @@ $(document).ready(function() {
         historyActiveScreen();
     });
 
+    $('.WifiConnectMethod').click(function() {
+        if (history_details.indexOf("delayScanMode()") === -1) {
+            history_details.push("delayScanMode()");
+        }
+        if (activScreen_history.indexOf(".Wifi-Connection-Method") === -1) {
+            activScreen_history.push(".Wifi-Connection-Method");
+        }
+        $(".option-landing").css({ opacity: "0.3" });
+        setTimeout(function() {
+            $(".option-landing .option-content").animate({ "margin-left": "-2.162em" },
+                600
+            );
+            $(".option-landing .option-function").hide();
+            setTimeout(function() {
+                $(".option-landing").css({ "margin-left": "-42.162em" });
+            }, 300);
+        }, 600);
+        $(".option-landing-color .optionli-scan-child1").css("margin-top", "-24px");
+        $optionLandingColor.css({ opacity: "1", position: "fixed" });
+        setTimeout(function() {
+            $(".option-content").css({ "margin-left": "2.162em" });
+            $optionLandingColor.css({ "margin-left": "0px" });
+        }, 900);
+        setTimeout(function() {
+            $optionLandingColor.show();
+            $(".option-function").css({ opacity: "1", visibility: "visible" });
+        }, 900);
+        setTimeout(function() {
+            $(".option-content").animate({ "margin-left": "1px" }, 600);
+            $(".option-landing-color .option-content").addClass('anim-appear');
+            setTimeout(function() {
+                $optionLandingColor.css({ opacity: "1" });
+                historyActiveScreen("");
+            }, 600);
+        }, 900);
+
+        if ($("#color span").text() === "Automatic") {
+            $(".optionli-color-child1").css("margin-top", "-22px");
+        } else if ($("#color span").text() === "Color") {
+            $(".optionli-color-child1").css("margin-top", "-112px");
+        } else if ($("#color span").text() === "Grayscale") {
+            $(".optionli-color-child1").css("margin-top", "-202px");
+        }
+    });
+
     $('input[name="wifiselect"]').click(function() {
         let wifi_select = '';
         if ($("#wifiselect").prop("checked")) {
