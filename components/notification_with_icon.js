@@ -44,6 +44,21 @@
             $('#' + f.id + '').append("<div class=" + f.aclass + "><span>" + f.content + "</span><div class='verticalline'></div><div class='notificationimgcontainer'> <img class='notification_img_print'  src=" + f.url1 + "><img class='notification_img_setting' src=" + f.url2 + "></div>");
         });
     };
+    $.fn.notificationwithbuttons = function(options) {
+        var data = {
+            "items": [{
+                "iclass": "notification_content",
+                "aclass": "notification_content_left",
+                "content": "Status: On\n Wi-Fi Direct Name: SSID\n Wi-Fi Direct Password: Value\n Devices Connected: 4",
+                "url1": "./images/Icons_SVG/print_l.svg",
+                "url2": "./images/Icons_SVG/settings_l.svg",
+                "id": "Notification-with-button"
+            }]
+        };
+        $.each(data.items, function(i, f) {
+            $('#' + f.id + '').append("<div class=" + f.aclass + "><span>" + f.content + "</span><div class='verticalline'></div><div class='notificationimgcontainer'> <img class='notification_img_print'  src=" + f.url1 + "><img class='notification_img_setting' src=" + f.url2 + "></div>");
+        });
+    };
 
     $.fn.processingscreen = function(options) {
         var data = {
