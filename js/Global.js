@@ -1297,37 +1297,38 @@ $(document).ready(function() {
         // $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function() {
             $(".Settings-wifi-Section").animate({ "margin-left": "-2.162em" },
-                600
+                400
             );
-            $(".Settings-wifi-Section").hide(500);
+            $(".Settings-wifi-Section").hide(300);
             // setTimeout(function() {
             //     $(".option-landing").css({ "margin-left": "-42.162em" });
             // }, 300);
-        }, 600);
+        }, 400);
         $(".Wifi-Connection-Method .child1").css("margin-top", "-24px");
         $(".Wifi-Connection-Method").css({ opacity: "1", position: "fixed" });
         setTimeout(function() {
             $(".Wifi-Connection-Method .option-content").css({ "margin-left": "2.162em" });
             $(".Wifi-Connection-Method").css({ "margin-left": "0px" });
-        }, 900);
+        }, 600);
         setTimeout(function() {
             $(".Wifi-Connection-Method").show();
             $(".Wifi-Connection-Method .option-function").css({ opacity: "1", visibility: "visible" });
-        }, 900);
+        }, 1000);
         setTimeout(function() {
-            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "1px" }, 600);
+            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "1px" }, 400);
             $(".Wifi-Connection-Method .option-content").addClass('anim-appear');
+            $(".Wifi-Connection-Method .option-function").show();
             setTimeout(function() {
                 $(".Wifi-Connection-Method").css({ opacity: "1" });
                 historyActiveScreen("");
-            }, 600);
-        }, 900);
+            }, 400);
+        }, 600);
 
-        // if ($("#color span").text() === "Automatic") {
-        //     $(".optionli-color-child1").css("margin-top", "-22px");
-        // } else if ($("#color span").text() === "Manual") {
-        //     $(".optionli-color-child1").css("margin-top", "-112px");
-        // } 
+        if ($("#conn_method span").text() === "Automatic") {
+            $(".Wifi-Connection-Method .child1").css("margin-top", "-22px");
+        } else if ($("#conn_method span").text() === "Manual") {
+            $(".Wifi-Connection-Method .child1").css("margin-top", "-112px");
+        } 
     });
 
     $('input[name="wifiselect"]').click(function() {
