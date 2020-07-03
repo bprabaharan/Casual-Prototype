@@ -363,6 +363,13 @@ $(document).ready(function () {
     });
     /*Add Recipient click button event ends here*/
     $(".viewdetails").click(function () {
+        if (history_details.indexOf("viewdetailsMode()") === -1) {
+            history_details.push("viewdetailsMode()");
+        }
+        if (activScreen_history.indexOf(".option-landing-color") === -1) {
+            activScreen_history.push(".option-landing-color");
+        }
+
         $(".Settings-wifi-Section").hide();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
         $(".Notification-with-icon").show();
@@ -1340,6 +1347,12 @@ $(document).ready(function () {
     });
 
     $('input[name="wifiselect"]').click(function () {
+        if (history_details.indexOf("sliderMode()") === -1) {
+            history_details.push("sliderMode()");
+        }
+        if (activScreen_history.indexOf(".Notification-with-button") === -1) {
+            activScreen_history.push(".Notification-with-button");
+        }
         // let wifi_select = '';
         // if ($("#wifiselect").prop("checked")) {
         //     wifi_select = 'ON'
