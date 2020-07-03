@@ -5,6 +5,6 @@ menuLandingPage([{label:"Info", liclass:"",imgclass:"",url:"./images/Icons_SVG/u
             {label:"Tools", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"},
             {label:"Help", liclass:"",imgclass:"",url:"./images/Icons_SVG/u17.png"}
                         ]);
-menuSettingPage([{label:"General", class:""} , {label:"Network", class:"menu-settings-network"} , {label:"Web Services", class:""} , {label:"Printer update", class:""}]);
+menuSettingPage([{label:"General", class:""},{label:"General testing", class:""} , {label:"Network", class:"menu-settings-network"} , {label:"Web Services", class:""} , {label:"Printer update", class:""}]);
 menuSettingNetworkPage([{label:"Wi-Fi", class:""} ,{label:"Ethernet", class:""} ,{label:"Wi-Fi Direct", class:"wifiDirect"} ,{label:"Bluetooth Low Energy", class:""} ,{label:"Reset  Network Settings", class:""} ,{label:"Print Network Configuration", class:""} ]);
 wifiConnectMethod([{label:"Automatic", value:"Automatic"} ,{label:"Manual", value:"Manual"}]);
