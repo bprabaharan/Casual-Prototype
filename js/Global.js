@@ -236,19 +236,23 @@ $(document).ready(function () {
                     $("#conn_method").find("span").text($(this).val());
                     $(".option-landing .optionli").css("margin-top", "-180px");
                     $(".Wifi-Connection-content").css({ opacity: "1" });
-                    $(".Wifi-Connection-Method").hide(100);
+
                     setTimeout(function () {
-                        $(".Wifi-Connection-content .option-function").hide();
+                        $(".Wifi-Connection-Method .option-function").hide();
+                        $(".help_icon_container").css({ opacity: "0" });
                         setTimeout(function () {
-                            $(".Wifi-Connection-content .option-content").animate({ "margin-left": "2.162em" },
-                                600
+                            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "2.162em" },
+                                300
                             );
+                            $(".Wifi-Connection-Method").hide(400);
                             historyActiveScreen();
-                            $(".Settings-wifi-Section").css("margin-left", "0px");
-                            $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
-                            // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
-                            // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
-                            $("#wifislider").css({ opacity: '1', right: '60px' });
+                            setTimeout(function () {
+                                $(".Settings-wifi-Section").css("margin-left", "0px");
+                                $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
+                                // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+                                // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
+                                $("#wifislider").css({ opacity: '1', right: '60px' });
+                            }, 200);
                         }, 300);
                     }, 500);
                 }
@@ -366,8 +370,8 @@ $(document).ready(function () {
         if (history_details.indexOf("viewdetailsMode()") === -1) {
             history_details.push("viewdetailsMode()");
         }
-        if (activScreen_history.indexOf(".option-landing-color") === -1) {
-            activScreen_history.push(".option-landing-color");
+        if (activScreen_history.indexOf(".Settings-wifi-Section") === -1) {
+            activScreen_history.push(".Settings-wifi-Section");
         }
 
         $(".Settings-wifi-Section").hide();
@@ -376,8 +380,6 @@ $(document).ready(function () {
     });
     $(".notification_img_print").click(function () {
         $(".Notification-with-icon").hide();
-        // $(".back-btn").css('background', 'red');
-        $('.back-btn').attr('disabled', 'disabled');
         $(".processing_screen").show();
         setTimeout(() => {
             var index = 0;
@@ -409,6 +411,8 @@ $(document).ready(function () {
         $(".Notification-with-button").hide();
         $(".Settings-wifi-Section").css('opacity', '1').show();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+        history_details.pop();
+        activScreen_history.pop();
     });
 
 
@@ -1315,37 +1319,40 @@ $(document).ready(function () {
         // $(".option-landing").css({ opacity: "0.3" });
         setTimeout(function () {
             $(".Settings-wifi-Section").animate({ "margin-left": "-2.162em" },
-                600
+                400
             );
-            $(".Settings-wifi-Section").hide(500);
+
+            $(".Settings-wifi-Section").hide(300);
             // setTimeout(function() {
             //     $(".option-landing").css({ "margin-left": "-42.162em" });
             // }, 300);
-        }, 600);
+        }, 400);
         $(".Wifi-Connection-Method .child1").css("margin-top", "-24px");
         $(".Wifi-Connection-Method").css({ opacity: "1", position: "fixed" });
         setTimeout(function () {
             $(".Wifi-Connection-Method .option-content").css({ "margin-left": "2.162em" });
             $(".Wifi-Connection-Method").css({ "margin-left": "0px" });
-        }, 900);
+        }, 600);
         setTimeout(function () {
             $(".Wifi-Connection-Method").show();
             $(".Wifi-Connection-Method .option-function").css({ opacity: "1", visibility: "visible" });
-        }, 900);
+        }, 1000);
         setTimeout(function () {
-            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "1px" }, 600);
+            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "1px" }, 400);
             $(".Wifi-Connection-Method .option-content").addClass('anim-appear');
+            $(".Wifi-Connection-Method .option-function").show();
             setTimeout(function () {
                 $(".Wifi-Connection-Method").css({ opacity: "1" });
+                $(".help_icon_container").css({ opacity: "1" });
                 historyActiveScreen("");
-            }, 600);
-        }, 900);
+            }, 400);
+        }, 600);
 
-        // if ($("#color span").text() === "Automatic") {
-        //     $(".optionli-color-child1").css("margin-top", "-22px");
-        // } else if ($("#color span").text() === "Manual") {
-        //     $(".optionli-color-child1").css("margin-top", "-112px");
-        // } 
+        if ($("#conn_method span").text() === "Automatic") {
+            $(".Wifi-Connection-Method .child1").css("margin-top", "-22px");
+        } else if ($("#conn_method span").text() === "Manual") {
+            $(".Wifi-Connection-Method .child1").css("margin-top", "-112px");
+        }
     });
 
     $('input[name="wifiselect"]').click(function () {
