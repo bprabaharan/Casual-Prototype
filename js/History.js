@@ -135,6 +135,18 @@ function sliderMode() {
     $(".hi-light-copy").show();
     $(".Top-shade, .Bottom-shade").show();
 }
+function viewdetailsMode() {
+    $(".Notification-with-icon").hide();
+    $(".Settings-wifi-Section").show();
+    $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+    $(".Notification-with-icon").hide();
+}
+// function notificationprint() {
+//     $(".Notification-with-icon").hide();
+//     $(".processing_screen").show();
+//     $(".notification_content").hide();
+//     $(".Settings-wifi-Section").show();
+// }
 function set_tick() {
     $(".hi-light-copy").animate({ width: "552px" }, 300);
     $(".scrollspy").css({ width: "580px" });
