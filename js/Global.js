@@ -366,8 +366,8 @@ $(document).ready(function () {
         if (history_details.indexOf("viewdetailsMode()") === -1) {
             history_details.push("viewdetailsMode()");
         }
-        if (activScreen_history.indexOf(".Settings-wifi-content") === -1) {
-            activScreen_history.push(".Settings-wifi-content");
+        if (activScreen_history.indexOf(".option-landing-color") === -1) {
+            activScreen_history.push(".option-landing-color");
         }
 
         $(".Settings-wifi-Section").hide();
@@ -375,12 +375,6 @@ $(document).ready(function () {
         $(".Notification-with-icon").show();
     });
     $(".notification_img_print").click(function () {
-        // if (history_details.indexOf("notificationprint()") === -1) {
-        //     history_details.push("notificationprint()");
-        // }
-        // if (activScreen_history.indexOf(".Notification-with-icon") === -1) {
-        //     activScreen_history.push(".Notification-with-icon");
-        // }
         $(".Notification-with-icon").hide();
         $(".processing_screen").show();
         setTimeout(() => {
