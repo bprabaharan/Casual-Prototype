@@ -376,6 +376,8 @@ $(document).ready(function () {
     });
     $(".notification_img_print").click(function () {
         $(".Notification-with-icon").hide();
+        // $(".back-btn").css('background', 'red');
+        $('.back-btn').attr('disabled', 'disabled');
         $(".processing_screen").show();
         setTimeout(() => {
             var index = 0;
