@@ -59,6 +59,8 @@
         });
     };
 
+
+
     $.fn.processingscreen = function (options) {
         var data = {
             "items": [{
@@ -71,7 +73,22 @@
             }]
         };
         $.each(data.items, function (i, f) {
-            $('#' + f.id + '').append("<div class='processcontainer'> <img class='process_img' src=" + f.url1 + "></div><div class=" + f.aclass + "><div class='show'><wifiprocess class='copying-txt'>" + f.content1 + "</wifiprocess> <wifiprocess class='copying-txt'>" + f.content2 + "</wifiprocess><p class='processtext'></p></div>");
+            $('#' + f.id + '').append("<div class='processcontainer'> <img class='process_img' src=" + f.url1 + "></div><div class=" + f.aclass + "><div class='show'><input type='text' id='printprocesstext'></div>");
+        });
+    };
+    $.fn.notificationwith_buttons = function (options) {
+        var data = {
+            "items": [{
+                "iclass": "processing_screen",
+                "aclass": "process_content",
+                "content1": "Printing",
+                "content2": "Printing complete!",
+                "url1": "./images/Icons_SVG/u17.png",
+                "id": "Print_btn_processing_screen"
+            }]
+        };
+        $.each(data.items, function (i, f) {
+            $('#' + f.id + '').append("<div class='processcontainer'> <img class='process_img' src=" + f.url1 + "></div><div class=" + f.aclass + "><div class='show'><input type='text' id='processtext'></div>");
         });
     };
 

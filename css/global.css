@@ -1713,6 +1713,7 @@ input[type="checkbox"]:checked+label::before {
     /* padding-top: 15px; */
     margin-top: -1px;
 }
+.options{float: left;}
 
 .option-scan,
 .option-sides,
@@ -3161,3 +3162,11 @@ input:checked+.slider-2-sided:before {
     color:#000;
 }
 .notification_content{width: 500px;line-height: 2; }
+#processtext, #printprocesstext{
+    font-size: 46px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    border-bottom: none;
+    height: 60px;
+}

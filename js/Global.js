@@ -292,6 +292,7 @@ var $cancelBtn = $(".Cancel-btn");
 var $backBtn = $(".back-btn");
 
 $(document).ready(function () {
+    $(".Print_btn_processing_screen").hide();
     $(".Received-Fax-Section").hide();
     $(".Notification-with-button").hide();
     $(".Received_stored_fax").hide();
@@ -378,23 +379,63 @@ $(document).ready(function () {
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
         $(".Notification-with-icon").show();
     });
+    $(".notification_yes_but").click(function () {
+        $(".Notification-with-button").hide();
+        $(".Print_btn_processing_screen").show();
+        $(".copying-txt,.copying-txt1").hide();
+
+        var printvalue = document.getElementById("processtext");
+
+        setTimeout(greet, 1000);
+        function greet() {
+            printvalue.value = "Printing"
+            setTimeout(greet1, 2000);
+        }
+        function greet1() {
+            printvalue.value = "Printing Complete..."
+            setTimeout(greet2, 4000);
+        }
+        function greet2() {
+            hideloadingtext();
+        }
+    });
+    function hideloadingtext() {
+        $(".copying-txt1").hide();
+        $(".Notification-with-button").show();
+        $(".Print_btn_processing_screen").hide();
+
+    }
     $(".notification_img_print").click(function () {
         $(".Notification-with-icon").hide();
         $(".processing_screen").show();
-        setTimeout(() => {
-            var index = 0;
-            var total = $("wifiprocess").size() - 1;
-            setInterval(function () {
-                var wifiprocess = $("wifiprocess:eq(" + index + ")");
-                $("p.processtext").html(wifiprocess.text()).fadeIn("slow");
-                if (index == total) {
-                    index = 0;
-                } else {
-                    index++;
-                }
-            }, 1000);
+        var printvalue = document.getElementById("printprocesstext");
+
+        setTimeout(greet, 1000);
+        function greet() {
+            printvalue.value = "Printing"
+            setTimeout(greet1, 2000);
+        }
+        function greet1() {
+            printvalue.value = "Printing Complete!"
+            setTimeout(greet2, 4000);
+        }
+        function greet2() {
             backtowifiscreen();
-        }, 3000);
+        }
+        // setTimeout(() => {
+        //     var index = 0;
+        //     var total = $("wifiprocess").size() - 1;
+        //     setInterval(function () {
+        //         var wifiprocess = $("wifiprocess:eq(" + index + ")");
+        //         $("p.processtext").html(wifiprocess.text()).fadeIn("slow");
+        //         if (index == total) {
+        //             index = 0;
+        //         } else {
+        //             index++;
+        //         }
+        //     }, 1000);
+        //     backtowifiscreen();
+        // }, 3000);
     });
 
     function backtowifiscreen() {
@@ -405,6 +446,8 @@ $(document).ready(function () {
         $(".Notification-with-icon").hide();
         $(".Settings-wifi-Section").show();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+        history_details.pop();
+        activScreen_history.pop();
     });
 
     $(".notification_no_but").click(function () {
