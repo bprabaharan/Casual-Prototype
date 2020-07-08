@@ -394,6 +394,7 @@ $(document).ready(function () {
         if (activScreen_history.indexOf(".Settings-wifi-Section") === -1) {
             activScreen_history.push(".Settings-wifi-Section");
         }
+        activeScreen_help = 'viewDetailsHelp';
 
         $(".Settings-wifi-Section").hide();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
@@ -437,10 +438,15 @@ $(document).ready(function () {
         activScreen_history.pop();
     }
     $(".Help-btn").click(function () {
-        $(".back-btn").addClass("disabledbutton");
+        if(activeScreen_help == 'viewDetailsHelp'){
+            $(".back-btn").addClass("disabledbutton");
         $(".Print_nottificationmethod_screen").show();
         $(".Wifi-Connection-Method").hide();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
+        }else if(activeScreen_help == 'copy_help'){
+            
+        }
+        
 
         // var printvalue = document.getElementById("notificationmethod");
 
