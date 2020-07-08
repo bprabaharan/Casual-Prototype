@@ -247,30 +247,30 @@ $(document).ready(function () {
                             $(".Wifi-Connection-Method").hide(00);
                             $(".hi-light-copy").hide();
                             $(".Top-shade, .Bottom-shade").hide();
-                             $(".back-btn").addClass("disabledbutton");
+                            $(".back-btn").addClass("disabledbutton");
                             historyActiveScreen();
-                            
+
                             $(".processing_screen").show();
                             var printvalue = document.getElementById("printprocesstext");
                             document.getElementById("printprocesstext").value = '';
                             setTimeout(greet1, 1000);
-                           
+
                             function greet1() {
-                                printvalue.value = 'Changing to ' +  $this.val() + '';
+                                printvalue.value = 'Changing to ' + $this.val() + '';
                                 setTimeout(greet2, 4000);
                             }
                             function greet2() {
-                               setTimeout(function () {
-                                $(".processing_screen").hide();
-                                $(".Settings-wifi-Section").css("margin-left", "0px");
-                                $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
-                                // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
-                                // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
-                                $("#wifislider").css({ opacity: '1', right: '60px' });
-                                $(".hi-light-copy").show();
-                                $(".Top-shade, .Bottom-shade").show();
-                                $(".back-btn").removeClass("disabledbutton");
-                            }, 200);
+                                setTimeout(function () {
+                                    $(".processing_screen").hide();
+                                    $(".Settings-wifi-Section").css("margin-left", "0px");
+                                    $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
+                                    // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+                                    // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
+                                    $("#wifislider").css({ opacity: '1', right: '60px' });
+                                    $(".hi-light-copy").show();
+                                    $(".Top-shade, .Bottom-shade").show();
+                                    $(".back-btn").removeClass("disabledbutton");
+                                }, 200);
                             }
                         }, 300);
                     }, 500);
@@ -313,6 +313,7 @@ var $backBtn = $(".back-btn");
 $(document).ready(function () {
     $(".Print_btn_processing_screen").hide();
     $(".Print_nottificationmethod_screen").hide();
+    $(".Print_nottificationviewdetailhelp").hide();
     $(".Received-Fax-Section").hide();
     $(".Notification-with-button").hide();
     $(".Received_stored_fax").hide();
@@ -398,6 +399,8 @@ $(document).ready(function () {
         $(".Settings-wifi-Section").hide();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
         $(".Notification-with-icon").show();
+        $(".help_icon_container").css('opacity', '1').show();
+        $(".help_icon_container img").addClass('viewdetailshelp').removeClass('Help-btn');
     });
     $(".notification_yes_but").click(function () {
         document.getElementById("processtext").value = '';
@@ -411,12 +414,12 @@ $(document).ready(function () {
         $(".copying-txt,.copying-txt1").hide();
         setTimeout(function () {
             var printvalue = document.getElementById("processtext");
-            printvalue.value = "Wi-Fi Direct is turning "+status;
+            printvalue.value = "Wi-Fi Direct is turning " + status;
             setTimeout(greet1, 2000);
         }, 1000)
-       
+
     }
-    
+
     function greet1() {
         // printvalue.value = "Printing completed successfully."
         setTimeout(greet2, 1000);
@@ -441,25 +444,21 @@ $(document).ready(function () {
         $(".Print_nottificationmethod_screen").show();
         $(".Wifi-Connection-Method").hide();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
-
-        // var printvalue = document.getElementById("notificationmethod");
-
-        // setTimeout(greet2, 1000);
-
-
-        // function greet2() {
-        //     connectionmethod();
-        // }
         history_details.pop();
         activScreen_history.pop();
+    });
+    $(".carousel-item .viewdetailshelp").click(function () {
+        $(".Notification-with-icon").hide();
+        // Notification-with-icon
+        $(".Print_nottificationviewdetailhelp").show();
     });
     function connectionmethod() {
         $(".Print_nottificationmethod_screen").hide();
         $(".Wifi-Connection-Method").show();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
     }
-   
-     
+
+
     $(".helpcheck_icon").click(function () {
         $(".back-btn").removeClass("disabledbutton");
         $(".Print_nottificationmethod_screen").hide();
@@ -1480,14 +1479,14 @@ $(document).ready(function () {
             // $(".Settings-wifi-Section").css('opacity', '1').show();
             // $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
             $("#wifiselect").removeAttr('checked');
-             $settingwifisection.addClass('anim-txt').show(00).css('opacity', '0');
+            $settingwifisection.addClass('anim-txt').show(00).css('opacity', '0');
             $(".Settings-wifi-Section").hide();
             $(".hi-light-copy").hide();
             $(".Top-shade, .Bottom-shade").hide();
             document.getElementById("processtext").value = '';
             printProcessing("OFF");
         }
-        
+
     });
 
     /**** Landing page FAX page Click event start here */
