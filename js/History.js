@@ -100,6 +100,8 @@ function Settings_wifi_page() {
     history_details.pop();
 }
 
+
+
 function showFirstLandingPage() {
     $("#myModal").hide();
     $(".Side-shade").show();
@@ -139,6 +141,28 @@ function viewdetailsMode() {
     $(".Notification-with-icon").hide();
     $(".Settings-wifi-Section").show();
     $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+    history_details.pop();
+}
+
+function connectionMethod() {
+    setTimeout(function () {
+        $(".Wifi-Connection-Method .option-function").hide();
+        $(".help_icon_container").css({ opacity: "0" });
+        setTimeout(function () {
+            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "2.162em" },
+                300
+            );
+            $(".Wifi-Connection-Method").hide(400);
+            historyActiveScreen();
+            setTimeout(function () {
+                $(".Settings-wifi-Section").css("margin-left", "0px");
+                $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
+                // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+                // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
+                $("#wifislider").css({ opacity: '1', right: '60px' });
+            }, 200);
+        }, 300);
+    }, 500);
     history_details.pop();
 }
 // function notificationprint() {
