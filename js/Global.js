@@ -241,18 +241,37 @@ $(document).ready(function () {
                         $(".Wifi-Connection-Method .option-function").hide();
                         $(".help_icon_container").css({ opacity: "0" });
                         setTimeout(function () {
-                            $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "2.162em" },
-                                300
-                            );
-                            $(".Wifi-Connection-Method").hide(400);
+                            // $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "2.162em" },
+                            //     300
+                            // );
+                            $(".Wifi-Connection-Method").hide(00);
+                            $(".hi-light-copy").hide();
+                            $(".Top-shade, .Bottom-shade").hide();
+                             $(".back-btn").addClass("disabledbutton");
                             historyActiveScreen();
-                            setTimeout(function () {
+                            
+                            $(".processing_screen").show();
+                            var printvalue = document.getElementById("printprocesstext");
+                            document.getElementById("printprocesstext").value = '';
+                            setTimeout(greet1, 1000);
+                           
+                            function greet1() {
+                                printvalue.value = 'Changing to ' +  $this.val() + '';
+                                setTimeout(greet2, 4000);
+                            }
+                            function greet2() {
+                               setTimeout(function () {
+                                $(".processing_screen").hide();
                                 $(".Settings-wifi-Section").css("margin-left", "0px");
                                 $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
                                 // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
                                 // $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
                                 $("#wifislider").css({ opacity: '1', right: '60px' });
+                                $(".hi-light-copy").show();
+                                $(".Top-shade, .Bottom-shade").show();
+                                $(".back-btn").removeClass("disabledbutton");
                             }, 200);
+                            }
                         }, 300);
                     }, 500);
                 }
@@ -439,6 +458,8 @@ $(document).ready(function () {
         $(".Wifi-Connection-Method").show();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
     }
+   
+     
     $(".helpcheck_icon").click(function () {
         $(".back-btn").removeClass("disabledbutton");
         $(".Print_nottificationmethod_screen").hide();
