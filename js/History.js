@@ -276,6 +276,7 @@ function showOption() {
 }
 
 function delayScanMode() {
+    $(".Settings-wifi-Section").show(300);
     $(".option-landing-scanmode").hide();
     $(".option-landing").hide();
     $(".option-landing-sides").hide();

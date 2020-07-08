@@ -3162,11 +3162,34 @@ input:checked+.slider-2-sided:before {
     color:#000;
 }
 .notification_content{width: 500px;line-height: 2; }
-#processtext, #printprocesstext{
+#processtext, #printprocesstext, #notificationmethod{
     font-size: 46px;
     width: 100%;
     color: #fff;
+    font-family: "hp-simplified" !important;
     text-align: center;
     border-bottom: none;
     height: 60px;
+}
+#conn_method{padding-right: 10px;}
+.helpsection{height: 30px; height: 30px;}
+.helpsec_content{font-size: 48px; font-weight: bold;margin-left: 10px;}
+.help_process_content{
+    float: left;
+    color: #fff;
+    font-size: 2.875rem;
+    font-family: "hp-simplified" !important;
+    text-align: left;
+    width: 550px;
+    overflow: auto;
+    height: 240px;
+    padding-left: 20px;
+}
+.helpcheck_icon{
+    width: 80px;
+    margin-left: 30px;
+}
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
 }

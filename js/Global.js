@@ -293,6 +293,7 @@ var $backBtn = $(".back-btn");
 
 $(document).ready(function () {
     $(".Print_btn_processing_screen").hide();
+    $(".Print_nottificationmethod_screen").hide();
     $(".Received-Fax-Section").hide();
     $(".Notification-with-button").hide();
     $(".Received_stored_fax").hide();
@@ -381,6 +382,7 @@ $(document).ready(function () {
     });
     $(".notification_yes_but").click(function () {
         $(".Notification-with-button").hide();
+        $(".back-btn").addClass("disabledbutton");
         $(".Print_btn_processing_screen").show();
         $(".copying-txt,.copying-txt1").hide();
 
@@ -388,23 +390,51 @@ $(document).ready(function () {
 
         setTimeout(greet, 1000);
         function greet() {
-            printvalue.value = "Printing"
+            printvalue.value = "Wi-Fi Direct is turning ON"
             setTimeout(greet1, 2000);
         }
         function greet1() {
-            printvalue.value = "Printing Complete..."
-            setTimeout(greet2, 4000);
+            // printvalue.value = "Printing completed successfully."
+            setTimeout(greet2, 1000);
         }
         function greet2() {
             hideloadingtext();
         }
     });
     function hideloadingtext() {
+        $(".back-btn").removeClass("disabledbutton");
         $(".copying-txt1").hide();
         $(".Notification-with-button").show();
         $(".Print_btn_processing_screen").hide();
 
     }
+    $(".Help-btn").click(function () {
+        $(".Print_nottificationmethod_screen").show();
+        $(".Wifi-Connection-Method").hide();
+        $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
+
+        // var printvalue = document.getElementById("notificationmethod");
+
+        // setTimeout(greet2, 1000);
+
+
+        // function greet2() {
+        //     connectionmethod();
+        // }
+        history_details.pop();
+        activScreen_history.pop();
+    });
+    function connectionmethod() {
+        $(".Print_nottificationmethod_screen").hide();
+        $(".Wifi-Connection-Method").show();
+        $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+    }
+    $(".helpcheck_icon").click(function () {
+        $(".Print_nottificationmethod_screen").hide();
+        $(".Settings-wifi-Section").animate({ "margin-left": ".1em" }, 600).show();
+        $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+        $(".help_icon_container").css('opacity', '0');
+    });
     $(".notification_img_print").click(function () {
         $(".Notification-with-icon").hide();
         $(".processing_screen").show();
@@ -416,7 +446,7 @@ $(document).ready(function () {
             setTimeout(greet1, 2000);
         }
         function greet1() {
-            printvalue.value = "Printing Complete!"
+            printvalue.value = "Printing completed successfully."
             setTimeout(greet2, 4000);
         }
         function greet2() {
