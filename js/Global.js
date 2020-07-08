@@ -409,6 +409,7 @@ $(document).ready(function () {
 
     }
     $(".Help-btn").click(function () {
+        $(".back-btn").addClass("disabledbutton");
         $(".Print_nottificationmethod_screen").show();
         $(".Wifi-Connection-Method").hide();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
@@ -430,12 +431,14 @@ $(document).ready(function () {
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
     }
     $(".helpcheck_icon").click(function () {
+        $(".back-btn").removeClass("disabledbutton");
         $(".Print_nottificationmethod_screen").hide();
         $(".Settings-wifi-Section").animate({ "margin-left": ".1em" }, 600).show();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
         $(".help_icon_container").css('opacity', '0');
     });
     $(".notification_img_print").click(function () {
+        $(".back-btn").addClass("disabledbutton");
         $(".Notification-with-icon").hide();
         $(".processing_screen").show();
         var printvalue = document.getElementById("printprocesstext");
@@ -469,6 +472,7 @@ $(document).ready(function () {
     });
 
     function backtowifiscreen() {
+        $(".back-btn").removeClass("disabledbutton");
         $(".Notification-with-icon").show();
         $(".processing_screen").hide();
     }
