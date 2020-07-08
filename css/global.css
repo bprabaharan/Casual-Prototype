@@ -1808,7 +1808,7 @@ input[type="checkbox"]:checked+label::before {
         margin-left: 6rem;
         margin-right: 6rem;
         width: 696px !important;
-        text-align: center;
+        /* text-align: center; */
     }
     /* .Print-content-main {
         padding-top: 2%;

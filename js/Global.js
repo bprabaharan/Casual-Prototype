@@ -480,8 +480,8 @@ $(document).ready(function () {
         $(".Notification-with-icon").hide();
         $(".Settings-wifi-Section").show();
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
-        history_details.pop();
-        activScreen_history.pop();
+        // history_details.pop();
+        // activScreen_history.pop();
     });
 
     $(".notification_no_but").click(function () {
