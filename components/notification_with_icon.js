@@ -66,7 +66,7 @@
             "items": [{
                 "iclass": "processing_screen",
                 "aclass": "process_content",
-                "content1": "Printing",
+                "content1": "Printing...",
                 "content2": "Printing complete!",
                 "url1": "./images/Icons_SVG/u17.png",
                 "id": "processing_screen"

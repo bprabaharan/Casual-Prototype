@@ -439,13 +439,15 @@ $(document).ready(function () {
     });
     $(".notification_img_print").click(function () {
         $(".back-btn").addClass("disabledbutton");
+        $(".back-btn").css('opacity', '0');
+        $(".cancel_icon_container,.Cancel-btn").css('opacity', '1');
         $(".Notification-with-icon").hide();
         $(".processing_screen").show();
         var printvalue = document.getElementById("printprocesstext");
 
         setTimeout(greet, 1000);
         function greet() {
-            printvalue.value = "Printing"
+            printvalue.value = "Printing ..."
             setTimeout(greet1, 2000);
         }
         function greet1() {
@@ -455,26 +457,15 @@ $(document).ready(function () {
         function greet2() {
             backtowifiscreen();
         }
-        // setTimeout(() => {
-        //     var index = 0;
-        //     var total = $("wifiprocess").size() - 1;
-        //     setInterval(function () {
-        //         var wifiprocess = $("wifiprocess:eq(" + index + ")");
-        //         $("p.processtext").html(wifiprocess.text()).fadeIn("slow");
-        //         if (index == total) {
-        //             index = 0;
-        //         } else {
-        //             index++;
-        //         }
-        //     }, 1000);
-        //     backtowifiscreen();
-        // }, 3000);
     });
 
     function backtowifiscreen() {
+        $(".back-btn").css('opacity', '1');
         $(".back-btn").removeClass("disabledbutton");
-        $(".Notification-with-icon").show();
+        $(".Notification-with-icon").hide();
         $(".processing_screen").hide();
+        $(".Settings-wifi-Section").show();
+        $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
     }
     $(".notification_img_setting").click(function () {
         $(".Notification-with-icon").hide();
