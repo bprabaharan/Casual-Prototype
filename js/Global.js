@@ -1314,8 +1314,8 @@ $(document).ready(function () {
         if (history_details.indexOf("showMenuLandingPage()") === -1) {
             history_details.push("showMenuLandingPage()");
         }
-        if (activScreen_history.indexOf(".Menu-content") === -1) {
-            activScreen_history.push(".Menu-content");
+        if (activScreen_history.indexOf(".Menu-Section") === -1) {
+            activScreen_history.push(".Menu-Section");
         }
         $(".carousel-item .back-btn").css("cursor", "pointer");
         if ($(this).hasClass("active")) {
@@ -1387,8 +1387,8 @@ $(document).ready(function () {
     });
 
     $('.WifiConnectMethod').click(function () {
-        if (history_details.indexOf("delayScanMode()") === -1) {
-            history_details.push("delayScanMode()");
+        if (history_details.indexOf("connectionMethod()") === -1) {
+            history_details.push("connectionMethod()");
         }
         if (activScreen_history.indexOf(".Wifi-Connection-Method") === -1) {
             activScreen_history.push(".Wifi-Connection-Method");
