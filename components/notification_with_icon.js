@@ -93,19 +93,11 @@
     };
 
     $.fn.notificationconnection_method = function (options) {
-        var data = {
-            "items": [{
-                "iclass": "help_processing_screen",
-                "aclass": "help_process_content",
-                "content": "You can control how people connect to the printer using Wi-Fi Direct: • Automatic: Allows any mobile device to connect to the printer.• Manual: Either prompts for a button to be pressed on the printer control panel or displays an 8-digit PIN that must be entered on the mobile device. This option is more secure than the Automatic option.",
-                "content1": "Connection Method Help<br>",
-                "url1": "./images/Icons_SVG/u17.png",
-                "url": "./images/Icons_SVG/done_m.svg",
-                "id": "Print_nottificationmethod_screen"
-            }]
-        };
-        $.each(data.items, function (i, f) {
-            $('#' + f.id + '').append("<div class=" + f.aclass + "><img class='helpsection' src=" + f.url1 + "><span class='helpsec_content'>" + f.content1 + "</span><span class='notification_content'>" + f.content + "</span></div><div class='notificationimgcontainer'> <img class='helpcheck_icon' src=" + f.url + "></img></div>");
+        
+        var settings = $.extend([{}], options );
+        $.each(settings, function (i, f) {
+            $('#' + f.id + '').empty();
+            $('#' + f.id + '').append("<div class=" + f.aclass + "><img class='helpsection' src=" + f.url1 + "><span class='helpsec_content'>" + f.content1 + "</span><span class='notification_content'>" + f.content + "</span></div><div class='notificationimgcontainer'> <img class='helpcheck_icon' onclick='helpcheck_icon()' src=" + f.url + "></img></div>");
         });
     };
 

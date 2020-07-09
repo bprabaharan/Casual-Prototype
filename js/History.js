@@ -142,6 +142,7 @@ function viewdetailsMode() {
     $(".Notification-with-icon").hide();
     $(".Settings-wifi-Section").show();
     $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+    $(".help_icon_container").css('opacity', '0');
     history_details.pop();
 }
 
