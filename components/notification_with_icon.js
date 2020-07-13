@@ -93,30 +93,15 @@
     };
 
     $.fn.notificationconnection_method = function (options) {
-        
-        var settings = $.extend([{}], options );
+
+        var settings = $.extend([{}], options);
         $.each(settings, function (i, f) {
             $('#' + f.id + '').empty();
             $('#' + f.id + '').append("<div class=" + f.aclass + "><img class='helpsection' src=" + f.url1 + "><span class='helpsec_content'>" + f.content1 + "</span><span class='notification_content'>" + f.content + "</span></div><div class='notificationimgcontainer'> <img class='helpcheck_icon' onclick='helpcheck_icon()' src=" + f.url + "></img></div>");
         });
     };
 
-    $.fn.notificationviewdetails_help = function (options) {
-        var data = {
-            "items": [{
-                "iclass": "help_processing_screen",
-                "aclass": "help_process_content",
-                "content": "With Wi-Fi Direct, you can print wirelessly from any wireless-capable device (such as a computer, smartphone, or tablet) by connecting directly to the printer. No connection to an existing wireless network required!∙ Wi-Fi-Direct Certified devices: Allow certified devices to automatically connect to the printer or require these devices to be confirmed before they can connect.∙ Non-certified devices: Allow non-certified devices to connect to the printer's Wi-Fi Direct name as you would usually connect to a wireless network. When prompted, supply the printer's Wi-Fi Direct WPA2 password (provided on the 'Wi-Fi Direct Details' screen).Note: If you turn off Wi-Fi Direct, you can still connect the printer to a wireless network.",
-                "content1": "Wi-Fi Direct Help<br>",
-                "url1": "./images/Icons_SVG/u17.png",
-                "url": "./images/Icons_SVG/done_m.svg",
-                "id": "Print_nottificationviewdetailhelp"
-            }]
-        };
-        $.each(data.items, function (i, f) {
-            $('#' + f.id + '').append("<div class=" + f.aclass + "><img class='helpsection' src=" + f.url1 + "><span class='helpsec_content'>" + f.content1 + "</span><span class='notification_content'>" + f.content + "</span></div><div class='notificationimgcontainer'> <img class='helpcheck_icon' src=" + f.url + "></img></div>");
-        });
-    };
+
 
 
 

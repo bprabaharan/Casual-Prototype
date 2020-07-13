@@ -1,5 +1,6 @@
 var history_details = [];
 var activScreen_history = [];
+var activeScreen_help = '';
 /**** Common History Back Click event start here */
 $(".back-btn").click(function () {
     eval(history_details[history_details.length - 1]);
