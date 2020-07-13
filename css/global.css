@@ -645,9 +645,8 @@ html {
 }
 
 .notification_content_left span {
-    padding: 0;
-    padding-left: 20px;
-    line-height: 2;
+    border: 20px solid #000;
+    line-height: 1.6;
     width: 530px;
     float: left;
     color: #fff;
@@ -1160,7 +1159,7 @@ html {
 
 .Help-btn,
 .Cancel-btn {
-    cursor: default;
+    cursor: pointer;
 }
 
 .done-but {
@@ -3161,7 +3160,7 @@ input:checked+.slider-2-sided:before {
     background-color: #fff;
     color:#000;
 }
-.notification_content{width: 500px;line-height: 2; }
+.notification_content{width: 500px;line-height: 1.6; }
 #processtext, #printprocesstext, #notificationmethod{
     font-size: 46px;
     width: 100%;
@@ -3173,10 +3172,11 @@ input:checked+.slider-2-sided:before {
 }
 #conn_method{padding-right: 10px;}
 .helpsection{height: 30px; height: 30px;}
-.helpsec_content{font-size: 48px; font-weight: bold;margin-left: 10px;}
+.helpsec_content{font-size: 48px; font-weight: bold;margin-left: 10px;line-height: 1.6;}
 .help_process_content{
     float: left;
     color: #fff;
+    border: 20px solid #000;
     font-size: 2.875rem;
     font-family: "hp-simplified" !important;
     text-align: left;
