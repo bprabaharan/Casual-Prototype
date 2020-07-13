@@ -417,7 +417,7 @@ $(document).ready(function () {
             var printvalue = document.getElementById("processtext");
             printvalue.value = "Wi-Fi Direct is turning " + status;
             setTimeout(greet1, 2000);
-        }, 1000)
+        }, 5000)
 
     }
 
@@ -469,14 +469,17 @@ $(document).ready(function () {
         $(".help_icon_container").css('opacity', '0');
         $(".Help_nottificationmethod_screen").hide();
         if (activeScreen_help == 'viewDetailsHelp') {
+
             $(".Help_nottificationmethod_screen").notificationconnection_method(help_notifications.viewDetailsHelp);
             $(".back-btn").addClass("disabledbutton");
+            $(".back-btn").css('opacity', '.1');
             $(".Help_nottificationmethod_screen").show();
             $(activScreen_history[activScreen_history.length - 1]).hide();
             $(".hi-light-copy").hide();
         } else if (activeScreen_help == 'connectionMethodHelp') {
             $(".Help_nottificationmethod_screen").notificationconnection_method(help_notifications.connectionMethodHelp);
             $(".back-btn").addClass("disabledbutton");
+            $(".back-btn").css('opacity', '.1');
             $(".Help_nottificationmethod_screen").show();
             $(activScreen_history[activScreen_history.length - 1]).hide();
             $(".hi-light-copy").hide();
@@ -1967,6 +1970,7 @@ $('.swapMe-down').click(function () {
 function helpcheck_icon() {
     // $("#helpcheck_icon").click(function () {
     $(".back-btn").removeClass("disabledbutton");
+    $(".back-btn").css('opacity', '1');;
     $(".Help_nottificationmethod_screen").hide();
     $(activScreen_history[activScreen_history.length - 1]).animate({ "margin-left": ".1em" }, 600).show();
     if (activeScreen_help == 'connectionMethodHelp') {

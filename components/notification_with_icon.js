@@ -55,7 +55,7 @@
             }]
         };
         $.each(data.items, function (i, f) {
-            $('#' + f.id + '').append("<div class=" + f.aclass + "><span class='notification_content'>" + f.content + "</span></div><div class='notificationimgcontainer'> <button class='notification_yes_but'>YES</button><button class='notification_no_but'>NO</button></div>");
+            $('#' + f.id + '').append("<div class=" + f.aclass + "><span class='notification_content'>" + f.content + "</span></div><div class='notificationimgcontainer'> <button class='notification_yes_but'>Yes</button><button class='notification_no_but'>No</button></div>");
         });
     };
 
@@ -83,7 +83,7 @@
                 "aclass": "process_content",
                 "content1": "Printing",
                 "content2": "Printing complete!",
-                "url1": "./images/Icons_SVG/u17.png",
+                "url1": "./images/Gif-images/connectivity_wifi_animation.gif",
                 "id": "Print_btn_processing_screen"
             }]
         };
