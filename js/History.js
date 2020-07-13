@@ -133,12 +133,16 @@ function send_contact() {
     history_details.pop();
 }
 function sliderMode() {
+    $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
+        $(".down2").show();
     $(".Notification-with-button").hide();
     $(".Settings-wifi-Section").css('opacity', '1').show();
     $(".hi-light-copy").show();
     $(".Top-shade, .Bottom-shade").show();
 }
 function viewdetailsMode() {
+    $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
+    $(".down2").show();
     $(".Notification-with-icon").hide();
     $(".Settings-wifi-Section").show();
     $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
