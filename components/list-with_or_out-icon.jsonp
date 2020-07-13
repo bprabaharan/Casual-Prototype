@@ -20,7 +20,7 @@ helpNotification({viewDetailsHelp : [{
             connectionMethodHelp : [{
                 "iclass": "help_processing_screen",
                 "aclass": "help_process_content",
-                "content": "You can control how people connect to the printer using Wi-Fi Direct: • Automatic: Allows any mobile device to connect to the printer.• Manual: Either prompts for a button to be pressed on the printer control panel or displays an 8-digit PIN that must be entered on the mobile device. This option is more secure than the Automatic option.",
+                "content": "You can control how people connect to the printer using Wi-Fi Direct:<br>• Automatic: Allows any mobile device to connect to the printer.<br>• Manual: Either prompts for a button to be pressed on the printer control panel or displays an 8-digit PIN that must be entered on the mobile device. This option is more secure than the Automatic option.",
                 "content1": "Connection Method Help<br>",
                 "url1": "./images/Icons_SVG/u17.png",
                 "url": "./images/Icons_SVG/done_m.svg",
