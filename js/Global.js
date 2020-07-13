@@ -553,6 +553,9 @@ $(document).ready(function () {
         $(".processing_screen").hide();
     }
     $(".notification_img_setting").click(function () {
+        $(".Settings-wifi-Section ul li").removeClass("active");
+        $(".Settings-wifi-Section .child1").addClass("active");
+        $(".Settings-wifi-Section .child1").css("margin-top", "0px");
         $(".Notification-with-icon").hide();
         $(".help_icon_container").css('opacity', '0');
         $(".Settings-wifi-Section").show();
