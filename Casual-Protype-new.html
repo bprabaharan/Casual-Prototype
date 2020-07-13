@@ -993,6 +993,7 @@
         var menu_setting_page;
         var menu_setting_network_page;
         var wifi_connect_method;
+        var help_notifications;
 
         function menuLandingPage(data) {
             menu_landing_page = data;
@@ -1007,6 +1008,9 @@
         }
         function wifiConnectMethod(data) {
             wifi_connect_method = data;
+        }
+        function helpNotification(data) {
+            help_notifications = data;
         }
 
         document.onreadystatechange = function () {
