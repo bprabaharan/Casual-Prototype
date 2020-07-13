@@ -468,29 +468,13 @@ $(document).ready(function () {
         $(".help_icon_container").css('opacity', '0');
         $(".Help_nottificationmethod_screen").hide();
         if(activeScreen_help == 'viewDetailsHelp'){
-            $(".Help_nottificationmethod_screen").notificationconnection_method([{
-                "iclass": "help_processing_screen",
-                "aclass": "help_process_content",
-                "content": "With Wi-Fi Direct, you can print wirelessly from any wireless-capable device (such as a computer, smartphone, or tablet) by connecting directly to the printer. No connection to an existing wireless network required!",
-                "content1": "Wi-Fi Direct Help<br>",
-                "url1": "./images/Icons_SVG/u17.png",
-                "url": "./images/Icons_SVG/done_m.svg",
-                "id": "Help_nottificationmethod_screen"
-            }]);
+            $(".Help_nottificationmethod_screen").notificationconnection_method(help_notifications.viewDetailsHelp);
             $(".back-btn").addClass("disabledbutton");
             $(".Help_nottificationmethod_screen").show();
             $(activScreen_history[activScreen_history.length - 1]).hide();
             $(".hi-light-copy").hide();
         } else if(activeScreen_help == 'connectionMethodHelp') {
-            $(".Help_nottificationmethod_screen").notificationconnection_method([{
-                "iclass": "help_processing_screen",
-                "aclass": "help_process_content",
-                "content": "You can control how people connect to the printer using Wi-Fi Direct: • Automatic: Allows any mobile device to connect to the printer.• Manual: Either prompts for a button to be pressed on the printer control panel or displays an 8-digit PIN that must be entered on the mobile device. This option is more secure than the Automatic option.",
-                "content1": "Connection Method Help<br>",
-                "url1": "./images/Icons_SVG/u17.png",
-                "url": "./images/Icons_SVG/done_m.svg",
-                "id": "Help_nottificationmethod_screen"
-            }]);
+            $(".Help_nottificationmethod_screen").notificationconnection_method(help_notifications.connectionMethodHelp);
             $(".back-btn").addClass("disabledbutton");
             $(".Help_nottificationmethod_screen").show();
             $(activScreen_history[activScreen_history.length - 1]).hide();
