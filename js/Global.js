@@ -561,6 +561,8 @@ $(document).ready(function () {
     });
 
     $(".notification_no_but").click(function () {
+        $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
+        $(".down2").show();
         document.getElementById("processtext").value = '';
         $("#wifiselect").removeAttr('checked');
         printProcessing("OFF");

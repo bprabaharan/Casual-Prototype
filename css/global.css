@@ -646,7 +646,7 @@ html {
 
 .notification_content_left span {
     border: 20px solid #000;
-    line-height: 1.6;
+    line-height: 1.2;
     width: 530px;
     float: left;
     color: #fff;
@@ -3172,7 +3172,7 @@ input:checked+.slider-2-sided:before {
 }
 #conn_method{padding-right: 10px;}
 .helpsection{height: 30px; height: 30px;}
-.helpsec_content{font-size: 48px; font-weight: bold;margin-left: 10px;line-height: 1.6;}
+.helpsec_content{font-size: 42px; font-weight: bold;margin-left: 10px;line-height: 1.6;}
 .help_process_content{
     float: left;
     color: #fff;
@@ -3193,3 +3193,4 @@ input:checked+.slider-2-sided:before {
     pointer-events: none;
     opacity: 0.4;
 }
+.helpcheck_icon{cursor: pointer;}
