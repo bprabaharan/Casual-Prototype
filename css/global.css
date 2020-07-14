@@ -52,7 +52,7 @@ wifiprocess {
     width: 696px !important;
 }
 
-.Print-content-copy {
+.Print-content-container {
     height: 240px !important;
     -webkit-perspective: 696px !important;
     perspective: 696px !important;
@@ -1809,11 +1809,11 @@ input[type="checkbox"]:checked+label::before {
         width: 696px !important;
         /* text-align: center; */
     }
-    /* .Print-content-main {
+    /* .Print-content-landing {
         padding-top: 2%;
     } */
     .Print-content,
-    .Print-content-main {
+    .Print-content-landing {
         height: 15rem !important;
         -webkit-perspective: 40rem !important;
         perspective: 40rem !important;

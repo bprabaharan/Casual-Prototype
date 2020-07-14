@@ -772,7 +772,7 @@ $(document).ready(function () {
             $(".fax-animation .show").hide();
             $(".fax-animation-content .cancel-fax").css("display", "block").show(2000);
             setTimeout(function () {
-                $(".Print-content-main").css("display", "block");
+                $(".Print-content-landing").css("display", "block");
             }, 4000);
             setTimeout(function () {
                 $(".Main-content").hide();
@@ -787,7 +787,7 @@ $(document).ready(function () {
     function faxanimation() {
         $(".fax-gif-anim").hide();
         $cancelBtn.css("opacity", "0");
-        $(".fax-animation, .Print-content-copy").hide();
+        $(".fax-animation, .Print-content-container").hide();
         location.reload();
 
     }
@@ -1299,7 +1299,7 @@ $(document).ready(function () {
             $(".indicators").removeClass("active");
             $(".indicators").animate({ zoom: ".5", opacity: ".1", left: "-250px" }).hide(100);
             $(".copy-page").animate({ opacity: "0", left: "-250px" }).hide(100);
-            $(".Print-content-main").hide(300);
+            $(".Print-content-landing").hide(300);
             $(".Copy-Content .example1").css({ "margin-left": "2.162em" });
             $(".Copy-Content .example1").animate({ opacity: 1, left: "0px" }).hide(100);
             $(".copy-button .done-but").css({ width: "240px", height: "90px" });
@@ -1353,7 +1353,7 @@ $(document).ready(function () {
     /**** Landing page Copy page Number Click event Ends here */
 
     /**** Landing page Copy page Number select Click event start here */
-    $(".Print-content-copy .done-but-tick1").click(function () {
+    $(".Print-content-container .done-but-tick1").click(function () {
 
         $('.swapMe-down .down1').removeAttr("style");
         $('.swapMe-up .up1').removeAttr("style");
@@ -1384,8 +1384,8 @@ $(document).ready(function () {
         $(".options").show();
         $(".copy-button .done-but").removeClass("move-me-2");
         $(".copy-button").show(10);
-        $(".Print-content-copy .example2").hide(100);
-        $(".Print-content-copy .example1").show(300);
+        $(".Print-content-container .example2").hide(100);
+        $(".Print-content-container .example1").show(300);
         $(".Copy-Content .example1").animate({ opacity: "1" }).show(600);
         setTimeout(function () {
             historyActiveScreen("");
@@ -1413,8 +1413,8 @@ $(document).ready(function () {
                 $(".Landing-Page").show(10);
                 $example1.css("display", "none");
                 $(".Landing-Page .Main-content").show();
-                $(".Main-content .Print-content-copy").show();
-                $(".Landing-Page .Print-content-main").hide();
+                $(".Main-content .Print-content-container").show();
+                $(".Landing-Page .Print-content-landing").hide();
                 setTimeout(menutxtlanding, 100);
             }, 300);
         }
@@ -1573,8 +1573,8 @@ $(document).ready(function () {
                 $(".Landing-Page").show(10);
                 $example1.css("display", "none");
                 $(".Landing-Page .Main-content").show();
-                $(".Main-content .Print-content-copy").show();
-                $(".Landing-Page .Print-content-main").hide();
+                $(".Main-content .Print-content-container").show();
+                $(".Landing-Page .Print-content-landing").hide();
                 setTimeout(faxtxtlanding, 100);
             }, 300);
         }
@@ -1634,7 +1634,7 @@ $(document).ready(function () {
 
     function hideexample1() {
         $example1.hide();
-        $(".Print-content-copy .option-landing").show();
+        $(".Print-content-container .option-landing").show();
         $(".option-landing").removeClass('transitionLR-reload');
         $(".option-landing .option-content").removeClass('transitionLR-reload');
         $(".option-landing .option-content").addClass('anim-txt').show(300);
@@ -1652,7 +1652,7 @@ $(document).ready(function () {
     /**** Cancel copy page Click event Starts here */
     $(".Cancel-btn").css({ opacity: "0" });
     $(".copy-button .done-but").click(function () {
-        $(".Print-content-copy").hide(10);
+        $(".Print-content-container").hide(10);
         $topShade.hide(10);
         $bottomShade.hide(10);
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
@@ -1700,7 +1700,7 @@ $(document).ready(function () {
         $bottomShade.hide();
         $(".Dot-Section").hide();
         $(".icon-cancel .Cancel-btn").css("opacity", "0");
-        $(".Print-content-copy").hide();
+        $(".Print-content-container").hide();
     }
     /**** Cancel copy page Click event ends here */
     $("#return").click(function () {
@@ -1777,13 +1777,13 @@ $(document).ready(function () {
     /**** Swape Click event Starts here */
     $(".swapMe-up .up1").click(function () {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
-        $(".Print-content-copy .scrollspy " + activeScreen + " .copy-num").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .no-first-row .num-first").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy .example3 .copy-color-1 .copy-color-1-1").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .copy-num").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .no-first-row .num-first").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy .example3 .copy-color-1 .copy-color-1-1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .optionli-scan-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "-=90px" });
@@ -1795,12 +1795,12 @@ $(document).ready(function () {
 
     $(".swapMe-down .down1").click(function () {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
-        $(".Print-content-copy .scrollspy " + activeScreen + " .no-first-row .num-first").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy .example3 .copy-color-1 .copy-color-1-1").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .no-first-row .num-first").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy .example3 .copy-color-1 .copy-color-1-1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .optionli-scan-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "+=90px" });
@@ -1811,12 +1811,12 @@ $(document).ready(function () {
     });
     $(".swapMe-up .up2").click(function () {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
-        $(".Print-content-copy .scrollspy " + activeScreen + " .no-second-row .num-second").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy .example3 .copy-color-2 .copy-color-2-1").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "-=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .no-second-row .num-second").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy .example3 .copy-color-2 .copy-color-2-1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "-=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "-=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "-=90px" });
@@ -1827,12 +1827,12 @@ $(document).ready(function () {
     });
     $(".swapMe-down .down2").click(function () {
         var activeScreen = activScreen_history[activScreen_history.length - 1];
-        $(".Print-content-copy .scrollspy " + activeScreen + " .no-second-row .num-second").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy .example3 .copy-color-2 .copy-color-2-1").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "+=90px" });
-        $(".Print-content-copy .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .no-second-row .num-second").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy .example3 .copy-color-2 .copy-color-2-1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy .example4 .copy-color-3 .copy-color-3-1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .option1 .optionli").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-color-child .optionli-color-child1").animate({ 'marginTop': "+=90px" });
+        $(".Print-content-container .scrollspy " + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .optionli-resize-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .optionli-land-child .optionli-land-child1").animate({ 'marginTop': "+=90px" });
         $("" + activeScreen + " .Send-check-child1 ").animate({ 'marginTop': "+=90px" });
@@ -1843,7 +1843,7 @@ $(document).ready(function () {
     });
 
     $(".swapMe-down").click(function () {
-        $(".Print-content-copy .scrollspy .copy-num").animate({ marginTop: "+=90px" });
+        $(".Print-content-container .scrollspy .copy-num").animate({ marginTop: "+=90px" });
     });
 
     $("span.up").click(function () {
