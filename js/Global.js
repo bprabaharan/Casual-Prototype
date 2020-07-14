@@ -436,6 +436,7 @@ $(document).ready(function () {
         $(".Print_btn_processing_screen").hide();
         $(".Notification-with-button").hide();
         $(".Settings-wifi-Section").css('opacity', '1').show();
+        $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
         history_details.pop();
         activScreen_history.pop();
