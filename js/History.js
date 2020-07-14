@@ -206,8 +206,8 @@ function showCopies1() {
     $(".options").show();
     $(".copy-button .done-but").removeClass("move-me-2");
     $(".copy-button").show(10);
-    $(".Print-content-copy .example2").hide(100);
-    $(".Print-content-copy .example1").removeClass('anim-disappear').show(300);
+    $(".Print-content-container .example2").hide(100);
+    $(".Print-content-container .example1").removeClass('anim-disappear').show(300);
     $(".Copy-Content .example1")
         .animate({ opacity: "1", left: '0.3em' })
         .show(600);
