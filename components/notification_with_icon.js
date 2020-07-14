@@ -68,7 +68,7 @@
                 "aclass": "process_content",
                 "content1": "Printing",
                 "content2": "Printing complete!",
-                "url1": "./images/Icons_SVG/u17.png",
+                "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif",
                 "id": "processing_screen"
             }]
         };

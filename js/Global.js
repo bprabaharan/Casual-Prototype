@@ -517,11 +517,11 @@ $(document).ready(function () {
         setTimeout(greet, 100);
         function greet() {
             printvalue.value = "Printing"
-            greet11 = setTimeout(greet1, 2000);
+            greet11 = setTimeout(greet1, 8000);
         }
         function greet1() {
             printvalue.value = "Printing completed successfully."
-            greet22 = setTimeout(greet2, 4000);
+            greet22 = setTimeout(greet2, 5500);
         }
         function greet2() {
             backtowifiscreen();
