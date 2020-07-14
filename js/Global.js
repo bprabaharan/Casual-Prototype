@@ -1523,11 +1523,23 @@ $(document).ready(function () {
         $(".down2").hide();
         if ($("#wifiselect").prop("checked")) {
             // wifi_select = 'ON'
-            $(".Notification-with-button").show(300);
+
+
+
             // $("#wifiDirectStatus").text(wifi_select);
-            $settingwifisection.addClass('anim-txt').show(400).css('opacity', '0');
-            $(".Settings-wifi-Section").hide();
-            $(".hi-light-copy").hide();
+            // $settingwifisection.addClass('anim-txt').show(400).css('opacity', '0');
+
+
+            $(".menu-txt-head").addClass('transitionLR').css('opacity', '0')
+            setTimeout(function () {
+                $("#wifislider").addClass('opacity-view-rev').css('opacity', '0')
+            }, 500);
+            setTimeout(function () {
+                $(".hi-light-copy").css('opacity', '0');
+                $(".Settings-wifi-Section").hide();
+                $(".Notification-with-button").show(300);
+            }, 1000);
+            //$(".Settings-wifi-Section").addClass('anim-disappear').removeClass('anim-txt').hide(2000);
             // $(".Top-shade, .Bottom-shade").hide();
             // $(".Settings-wifi-confirm-Section").css('display', 'block');
             // setTimeout(function () {
