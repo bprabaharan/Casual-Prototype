@@ -433,7 +433,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $(".menu-txt-head").css('opacity', '1');
-            $("#wifislider").addClass('opacity-view-rev').css('opacity', '1');
+            $("#wifislider").addClass('opacity-view').css('opacity', '1');
         }, 300);
         // setTimeout(function () {
         //     $(".hi-light-copy").css('opacity', '0');
@@ -1537,12 +1537,12 @@ $(document).ready(function () {
         $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '550px');
         $(".down2").hide();
         if ($("#wifiselect").prop("checked")) {
-            
+
 
             $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
             setTimeout(function () {
                 $(".menu-txt-head").css('opacity', '0');
-                $("#wifislider").addClass('opacity-view-rev').css('opacity', '0');
+                $("#wifislider").removeClass('opacity-view-rev').css('opacity', '0');
             }, 300);
             setTimeout(function () {
                 $(".hi-light-copy").css('opacity', '0');
