@@ -1535,6 +1535,7 @@ $(document).ready(function () {
         }
         $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '550px');
         $(".down2").hide();
+        
         if ($("#wifiselect").prop("checked")) {
 
 
@@ -1547,9 +1548,10 @@ $(document).ready(function () {
                 $(".hi-light-copy").css('opacity', '0');
                 $(".Settings-wifi-Section").hide().removeClass("anim-txt");
                 $(".Notification-with-button").show(200);
-                $(".notification_content_left").css('opacity', '0');
+                $(".notification_content_left, .notificationimgcontainer").css('opacity', '0');
                 setTimeout(function () {
-                    $(".notification_content_left").addClass("anim-appear no-txt-wrap").css('opacity', '1');
+                    $(".notification_content_left").addClass("anim-appear6s no-txt-wrap").css('opacity', '1');
+                    $(".notificationimgcontainer").css('opacity', '1');
                 }, 300);
             }, 600);
             
