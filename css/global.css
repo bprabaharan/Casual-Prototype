@@ -3193,5 +3193,11 @@ input:checked+.slider-2-sided:before {
     pointer-events: none;
     opacity: 0.4;
 }
+.txt-wrap {
+    white-space: nowrap;
+}
+.no-txt-wrap {
+    white-space: unset;
+}
 .helpcheck_icon{cursor: pointer;}
 .Help_nottificationmethod_screen{line-height: 1.2;}

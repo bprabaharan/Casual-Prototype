@@ -430,14 +430,30 @@ $(document).ready(function () {
     }
 
     function hidePrintProcessing() {
+
+        setTimeout(function () {
+            $(".menu-txt-head").css('opacity', '1');
+            $("#wifislider").addClass('opacity-view-rev').css('opacity', '1');
+        }, 300);
+        // setTimeout(function () {
+        //     $(".hi-light-copy").css('opacity', '0');
+        //     $(".Settings-wifi-Section").hide().removeClass("anim-txt");
+        //     $(".Notification-with-button").show(200);
+        //     setTimeout(function () {
+        //         $(".notification_content_left").addClass("anim-txt no-txt-wrap");
+        //     }, 300);
+        // }, 600);
+        setTimeout(function () {
+            $(".menu-txt-head").animate({ "margin-left": "0px" }, 300);
+        }, 400);
         $(".back-btn").removeClass("disabledbutton");
         $(".copying-txt1").hide();
-        // $(".Notification-with-button").show();
         $(".Print_btn_processing_screen").hide();
         $(".Notification-with-button").hide();
         $(".Settings-wifi-Section").css('opacity', '1').show();
         $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
+        $(".hi-light-copy").css('opacity', '1');
         history_details.pop();
         activScreen_history.pop();
     }
@@ -1518,27 +1534,24 @@ $(document).ready(function () {
         if (activScreen_history.indexOf(".Notification-with-button") === -1) {
             activScreen_history.push(".Notification-with-button");
         }
-        // let wifi_select = '';
         $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '550px');
         $(".down2").hide();
         if ($("#wifiselect").prop("checked")) {
-            // wifi_select = 'ON'
+            
 
-
-
-            // $("#wifiDirectStatus").text(wifi_select);
-            // $settingwifisection.addClass('anim-txt').show(400).css('opacity', '0');
-
-
-            $(".menu-txt-head").addClass('transitionLR').css('opacity', '0')
+            $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
             setTimeout(function () {
-                $("#wifislider").addClass('opacity-view-rev').css('opacity', '0')
-            }, 500);
+                $(".menu-txt-head").css('opacity', '0');
+                $("#wifislider").addClass('opacity-view-rev').css('opacity', '0');
+            }, 300);
             setTimeout(function () {
                 $(".hi-light-copy").css('opacity', '0');
-                $(".Settings-wifi-Section").hide();
-                $(".Notification-with-button").show(300);
-            }, 1000);
+                $(".Settings-wifi-Section").hide().removeClass("anim-txt");
+                $(".Notification-with-button").show(200);
+                setTimeout(function () {
+                    $(".notification_content_left").addClass("anim-txt no-txt-wrap");
+                }, 300);
+            }, 600);
             //$(".Settings-wifi-Section").addClass('anim-disappear').removeClass('anim-txt').hide(2000);
             // $(".Top-shade, .Bottom-shade").hide();
             // $(".Settings-wifi-confirm-Section").css('display', 'block');
