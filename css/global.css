@@ -645,9 +645,12 @@ html {
 }
 
 .notification_content_left span {
-    border: 20px solid #000;
+    /* border: 20px solid #000; */
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     line-height: 1.6;
-    width: 560px;
+    width: 540px;
     float: left;
     color: #fff;
     font-size: 2.875rem;

@@ -41,7 +41,7 @@
             }]
         };
         $.each(data.items, function (i, f) {
-            $('#' + f.id + '').append("<div class=" + f.aclass + "><span>" + f.content + "</span><div class='notificationbuttoncontainer'> <img class='notification_img_print'  src=" + f.url1 + "><img class='notification_img_setting' src=" + f.url2 + "></div>");
+            $('#' + f.id + '').append("<div class=" + f.aclass + "><span class='viewdetails-content'>" + f.content + "</span><div class='notificationbuttoncontainer'> <img class='notification_img_print'  src=" + f.url1 + "><img class='notification_img_setting' src=" + f.url2 + "></div>");
         });
     };
 
@@ -63,13 +63,13 @@
 
     $.fn.processingscreen = function (options) {
         var data = [{
-                "iclass": "processing_screen",
-                "aclass": "process_content",
-                "content1": "Printing",
-                "content2": "Printing completed successfully.",
-                "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif",
-                "id": "processing_screen"
-            }];
+            "iclass": "processing_screen",
+            "aclass": "process_content",
+            "content1": "Printing",
+            "content2": "Printing completed successfully.",
+            "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif",
+            "id": "processing_screen"
+        }];
         var settings = $.extend(data, options);
         $.each(settings, function (i, f) {
             $('#' + f.id + '').empty();
