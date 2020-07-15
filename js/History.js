@@ -134,19 +134,19 @@ function send_contact() {
 }
 function sliderMode() {
     $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
-        $(".down2").show();
+    $(".down2").show();
     $(".Notification-with-button").hide();
-   
+
     $(".hi-light-copy").css('opacity', '1');
-    $(".menu-txt-head").css({"margin-left": "2.162em"});
+    $(".menu-txt-head").css({ "margin-left": "2.162em" });
     $(".Settings-wifi-Section").show();
     // $("#wifislider").css('opacity', '1').show(300);
     setTimeout(function () {
-        
-        $(".menu-txt-head").css({"opacity":"1"});
+
+        $(".menu-txt-head").css({ "opacity": "1" });
         $("#wifislider").css('opacity', '1');
-    $(".menu-txt-head").animate({ "margin-left": "0" }, 300);
-        
+        $(".menu-txt-head").animate({ "margin-left": "0" }, 300);
+
     }, 300);
     $(".hi-light-copy").show();
     $(".Top-shade, .Bottom-shade").show();

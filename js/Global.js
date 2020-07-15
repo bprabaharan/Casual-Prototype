@@ -544,6 +544,7 @@ $(document).ready(function () {
             greet11 = setTimeout(greet1, 8000);
         }
         function greet1() {
+            $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'none' });
             printvalue.value = "Printing completed successfully."
             greet22 = setTimeout(greet2, 5500);
         }

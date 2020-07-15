@@ -34,7 +34,7 @@
             "items": [{
                 "iclass": "notification_content",
                 "aclass": "notification_content_left",
-                "content": "Status: On </br> Wi-Fi Direct Name: SSID</br> Wi-Fi Direct Password: Value</br> Devices Connected: 4",
+                "content": "Status: On </br>Wi-Fi Direct Name: xyzxyz</br>Wi-Fi Direct Password: ******</br> Devices Connected: 4",
                 "url1": "./images/Icons_SVG/print_l.svg",
                 "url2": "./images/Icons_SVG/settings_l.svg",
                 "id": "Notification-with-icon"
@@ -50,7 +50,7 @@
             "items": [{
                 "iclass": "notification_content",
                 "aclass": "notification_content_left",
-                "content": "The printer includes an automatic Wireless Setup Mode that makes it easy to connect the printer to a wireless network that has a router. However, turning on Wi-Fi Direct will turn off this Wireless Setup Mode. Do you still want to turn on Wi- Fi Direct ? ",
+                "content": "The printer includes an automatic Wireless Setup Mode that makes it easy to connect the printer to a wireless network that has a router. However, turning on Wi-Fi Direct will turn off this Wireless Setup Mode. Do you still want to turn on </br>Wi-Fi Direct ? ",
                 "id": "Notification-with-button"
             }]
         };
