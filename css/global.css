@@ -3058,7 +3058,9 @@ input[type=range]+.thumb.active .value {
     height: 68px;
 }
 .Settings-wifi-Section ul li:first-child{height: 67px;}
-.WifiConnectMethod{margin-left: 10px;}
+.WifiConnectMethod{
+    /* margin-left: 10px; */
+}
 .Settings-wifi-confirm-Section ul li {
     margin-top: 70px;
 }
