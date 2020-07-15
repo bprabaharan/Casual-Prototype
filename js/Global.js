@@ -1542,14 +1542,15 @@ $(document).ready(function () {
             $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
             setTimeout(function () {
                 $(".menu-txt-head").css('opacity', '0');
-                $("#wifislider").removeClass('opacity-view-rev').css('opacity', '0');
+                $("#wifislider").removeClass('opacity-view').css('opacity', '0');
             }, 300);
             setTimeout(function () {
                 $(".hi-light-copy").css('opacity', '0');
                 $(".Settings-wifi-Section").hide().removeClass("anim-txt");
                 $(".Notification-with-button").show(200);
+                $(".notification_content_left").css('opacity', '0');
                 setTimeout(function () {
-                    $(".notification_content_left").addClass("anim-txt no-txt-wrap");
+                    $(".notification_content_left").addClass("anim-appear no-txt-wrap").css('opacity', '1');
                 }, 300);
             }, 600);
             //$(".Settings-wifi-Section").addClass('anim-disappear').removeClass('anim-txt').hide(2000);
