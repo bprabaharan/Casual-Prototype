@@ -647,7 +647,7 @@ html {
 .notification_content_left span {
     border: 20px solid #000;
     line-height: 1.6;
-    width: 530px;
+    width: 560px;
     float: left;
     color: #fff;
     font-size: 2.875rem;
@@ -1277,7 +1277,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: 2px;
 }
 
 ::-webkit-scrollbar-button {
@@ -1285,7 +1285,7 @@ html {
 }
 
 ::-webkit-scrollbar-track-piece {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(154, 154, 154, 0.9);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -3187,7 +3187,7 @@ input:checked+.slider-2-sided:before {
     font-size: 2.875rem;
     font-family: "hp-simplified" !important;
     text-align: left;
-    width: 550px;
+    width: 560px;
     overflow: auto;
     height: 240px;
     padding-left: 20px;

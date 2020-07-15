@@ -34,7 +34,7 @@
             "items": [{
                 "iclass": "notification_content",
                 "aclass": "notification_content_left",
-                "content": "Status: On\n Wi-Fi Direct Name: SSID\n Wi-Fi Direct Password: Value\n Devices Connected: 4",
+                "content": "Status: On </br> Wi-Fi Direct Name: SSID</br> Wi-Fi Direct Password: Value</br> Devices Connected: 4",
                 "url1": "./images/Icons_SVG/print_l.svg",
                 "url2": "./images/Icons_SVG/settings_l.svg",
                 "id": "Notification-with-icon"
