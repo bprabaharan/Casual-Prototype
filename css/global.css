@@ -3194,10 +3194,11 @@ input:checked+.slider-2-sided:before {
     opacity: 0.4;
 }
 .txt-wrap {
-    white-space: nowrap;
+    white-space: break-spaces;
 }
 .no-txt-wrap {
     white-space: unset;
 }
+.breake-word{ white-space: break-spaces;}
 .helpcheck_icon{cursor: pointer;}
 .Help_nottificationmethod_screen{line-height: 1.2;}

@@ -1552,9 +1552,9 @@ $(document).ready(function () {
                     $(".notification_content_left").addClass("anim-appear no-txt-wrap").css('opacity', '1');
                 }, 300);
             }, 600);
-            
+
         } else {
-            
+
             $("#wifiselect").removeAttr('checked');
             $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
             setTimeout(function () {
