@@ -698,7 +698,6 @@ html {
     display: grid;
     align-content: space-around;margin-top: 5%;
     overflow: hidden;
-    opacity: 0;
 }
 .notificationbuttoncontainer{
     height: 190px;
@@ -2036,7 +2035,6 @@ input[type="checkbox"]:checked+label::before {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
 .anim-appear6s {
     animation-name: slide;
     animation-duration: 0.6s;
@@ -3203,11 +3201,11 @@ input:checked+.slider-2-sided:before {
     opacity: 0.4;
 }
 .txt-wrap {
-    white-space: break-spaces;
+    white-space: nowrap;
 }
 .no-txt-wrap {
     white-space: unset;
 }
-.breake-word{ white-space: break-spaces;}
+.breake-word{white-space: break-spaces;}
 .helpcheck_icon{cursor: pointer;}
 .Help_nottificationmethod_screen{line-height: 1.2;}
