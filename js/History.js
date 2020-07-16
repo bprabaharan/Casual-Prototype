@@ -89,6 +89,7 @@ function settings_page() {
 
 function settings_network_page() {
     $(".Settings-network-Section").addClass('anim-appear').hide(100);
+    $(".Settings-Section").removeClass("anim-appear");
     // $(".Menu-Section").addClass('anim-txt').show(100).animate({ left: '0px' });
     $(".Settings-Section").addClass('transitionLR-reload').removeClass('anim-re-left-right').show(100);
     history_details.pop();
@@ -97,6 +98,7 @@ function settings_network_page() {
 function Settings_wifi_page() {
     $settingwifisection.addClass('anim-appear').hide(100);
     $("#wifislider").css({ opacity: '0', right: '60px' });
+    $(".Settings-network-Section").removeClass("anim-appear");
     $(".Settings-network-Section").addClass('transitionLR-reload').removeClass('anim-disappear').show(100);
     history_details.pop();
 }
