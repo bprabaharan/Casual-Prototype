@@ -463,13 +463,13 @@ $(document).ready(function () {
             var printvalue = document.getElementById("processtext");
             printvalue.value = "Wi-Fi Direct is turning " + status;
             setTimeout(greet1, 2000);
-        }, 5000)
+        }, 2000)
 
     }
 
     function greet1() {
         // printvalue.value = "Printing completed successfully."
-        setTimeout(greet2, 1000);
+        setTimeout(greet2, 4000);
     }
     function greet2() {
         hidePrintProcessing();
@@ -793,6 +793,7 @@ $(document).ready(function () {
         $bottomShade.hide();
         $backBtn.css("opacity", "0");
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
+        $(".cancel_icon_container").css('opacity', '1');
         $faxAnimation.show(500);
         $faxAnimation.css("overflow", "inherit");
         $faxKeyboardConfirmSection.css("width", "696px");
@@ -847,6 +848,7 @@ $(document).ready(function () {
         $faxContentConfirm.hide();
         $(".icon-cancel .Cancel-btn").click(function () {
             $cancelBtn.css("opacity", "0");
+            $(".cancel_icon_container").css('opacity', '0');
             $(".fax-gif-anim").hide();
             $(".fax-animation .show").hide();
             $(".fax-animation-content .cancel-fax").css("display", "block").show(2000);
@@ -1547,7 +1549,6 @@ $(document).ready(function () {
         $(".Settings-wifi-Section .menu-txt-head").css({ "margin-left": "2.162em" });
         $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
         $settingwifisection.removeClass('anim-appear');
-
         $settingwifisection.show(300).css('opacity', '1');
         setTimeout(function () { $("#wifislider").show(); }, 300);
         $(".menu-txt-head").animate({ "margin-left": "0" }, 600);
@@ -1757,6 +1758,7 @@ $(document).ready(function () {
         $topShade.hide(10);
         $bottomShade.hide(10);
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
+        $(".cancel_icon_container").css('opacity', '1');
         $backBtn.css("opacity", "0");
         $(".Dot-Section").show();
         $(".show .show-line").hide();
@@ -1783,6 +1785,7 @@ $(document).ready(function () {
 
     function cancelcopying() {
         $(".Dot-Section .show").hide(00);
+        $(".cancel_icon_container").css('opacity', '0');
         $(".Dot-Section .copy-gif-anim").hide(00);
         setTimeout(function () {
             $(".Cancel-copy").show();
