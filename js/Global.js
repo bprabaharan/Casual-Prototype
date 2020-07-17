@@ -848,7 +848,7 @@ $(document).ready(function () {
         $faxContentConfirm.hide();
         $(".icon-cancel .Cancel-btn").click(function () {
             $cancelBtn.css("opacity", "0");
-            $(".cancel_icon_container").css('opacity', '0');
+            $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
             $(".fax-gif-anim").hide();
             $(".fax-animation .show").hide();
             $(".fax-animation-content .cancel-fax").css("display", "block").show(2000);
@@ -868,6 +868,7 @@ $(document).ready(function () {
     function faxanimation() {
         $(".fax-gif-anim").hide();
         $cancelBtn.css("opacity", "0");
+        $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
         $(".fax-animation, .Print-content-container").hide();
         location.reload();
 
@@ -1758,7 +1759,7 @@ $(document).ready(function () {
         $topShade.hide(10);
         $bottomShade.hide(10);
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
-        $(".cancel_icon_container").css('opacity', '1');
+        $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' });
         $backBtn.css("opacity", "0");
         $(".Dot-Section").show();
         $(".show .show-line").hide();
@@ -1791,6 +1792,7 @@ $(document).ready(function () {
             $(".Cancel-copy").show();
         }, 600);
         $cancelBtn.css({ opacity: "0" });
+        $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
         setTimeout(nextscreen, 2000);
     }
 
