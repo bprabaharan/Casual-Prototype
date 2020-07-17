@@ -255,6 +255,7 @@ $(document).ready(function () {
                             $(".hi-light-copy").hide();
                             $(".Top-shade, .Bottom-shade").hide();
                             $(".back-btn").addClass("disabledbutton");
+                            $(".back-btn").css('opacity', '0');
                             historyActiveScreen();
 
                             $(".processing_screen").show();
@@ -272,6 +273,7 @@ $(document).ready(function () {
                                 setTimeout(function () {
                                     $(".processing_screen").hide();
                                     $settingwifisection.show(00).css('opacity', '1');
+                                    $(".back-btn").css('opacity', '1');
                                     $(".Settings-wifi-Section").animate({ "margin-left": "0px" }, 300);
                                     // $(".Settings-wifi-Section").css("margin-left", "0px");
                                     // $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
@@ -431,21 +433,25 @@ $(document).ready(function () {
         }, 300);
     });
     $(".notification_yes_but").click(function () {
+        $(".back-btn").css('opacity', '0');
         document.getElementById("processtext").value = '';
-        printProcessing("On");
+        printProcessing("on");
     });
     $(".notification_no_but").click(function () {
         // $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
         // $(".down2").show();
+        $(".back-btn").css('opacity', '0');
         document.getElementById("processtext").value = '';
         // $("#wifiselect").removeAttr('checked');
-        printProcessing("Off");
+        printProcessing("off");
     });
 
     function printProcessing(status) {
         $(".Notification-with-button").hide();
         $(".back-btn").addClass("disabledbutton");
-        $(".Print_btn_processing_screen").show();
+        setTimeout(function () {
+            $(".Print_btn_processing_screen").show();
+        }, 300);
         $(".copying-txt,.copying-txt1").hide();
         $(".Top-shade, .Bottom-shade").hide();
         setTimeout(function () {
@@ -469,6 +475,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $(".menu-txt-head").css('opacity', '1');
             $("#wifislider").addClass('opacity-view').css('opacity', '1');
+            $(".back-btn").show();
+            $backBtn.css("opacity", "1");
         }, 300);
         // setTimeout(function () {
         //     $(".hi-light-copy").css('opacity', '0');
@@ -1614,6 +1622,7 @@ $(document).ready(function () {
 
             $("#wifiselect").removeAttr('checked');
             $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
+            $backBtn.css("opacity", "0");
             setTimeout(function () {
                 $(".menu-txt-head").css('opacity', '0');
                 $("#wifislider").removeClass('opacity-view').css('opacity', '0');
@@ -1632,7 +1641,7 @@ $(document).ready(function () {
             // $(".hi-light-copy").hide();
             // $(".Top-shade, .Bottom-shade").hide();
             document.getElementById("processtext").value = '';
-            printProcessing("Off");
+            printProcessing("off");
         }
 
     });
