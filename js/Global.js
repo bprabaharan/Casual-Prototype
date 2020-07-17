@@ -41,9 +41,9 @@ $(document).ready(function () {
         setTimeout(function () {
             let cscreen = activScreen_history[activScreen_history.length - 1];
             $topShade.css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
-            $("" + cscreen + " .option-landing, " + cscreen + " .option-content").addClass('transitionLR-reload').show();
-            $("" + cscreen + " .option-landing").animate({ "margin-left": "0px" }, 300);
-            $("" + cscreen + " .option-landing").css({ opacity: "1", visibility: "visible" });
+            $(".option-landing, .option-content").addClass('transitionLR-reload').show();
+            $(".option-landing").animate({ "margin-left": "0px" }, 300);
+            $(".option-landing").css({ opacity: "1", visibility: "visible" });
             setTimeout(function () {
                 $("" + cscreen + " .option-function").addClass('opacity-view').show();
             }, 500);
@@ -784,6 +784,7 @@ $(document).ready(function () {
         $topShade.hide();
         $bottomShade.hide();
         $backBtn.css("opacity", "0");
+        $(".cancel_icon_container").css({ opacity: "1"});
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
         $faxAnimation.show(500);
         $faxAnimation.css("overflow", "inherit");
@@ -1540,7 +1541,7 @@ $(document).ready(function () {
         $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
         $settingwifisection.removeClass('anim-appear');
 
-        $settingwifisection.show(300).css('opacity', '1');
+        $settingwifisection.css('opacity', '1').show(300);
         setTimeout(function () { $("#wifislider").show(); }, 300);
         $(".menu-txt-head").animate({ "margin-left": "0" }, 600);
 
@@ -1747,6 +1748,7 @@ $(document).ready(function () {
         $(".Print-content-container").hide(10);
         $topShade.hide(10);
         $bottomShade.hide(10);
+        $(".cancel_icon_container").css({ opacity: "1"});
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
         $backBtn.css("opacity", "0");
         $(".Dot-Section").show();
