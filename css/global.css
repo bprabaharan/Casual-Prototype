@@ -674,7 +674,7 @@ html {
 }
 
 .process_img {
-    width: 100px;
+    width: 70px;
 }
 
 #processing_screen {
@@ -1064,7 +1064,7 @@ html {
 .icon-help,
 .icon-cancel {
     text-align: center;
-    padding-top: 3.35rem !important;
+    padding-top: 3.1rem !important;
 }
 
 .icon-help img,
@@ -2423,7 +2423,7 @@ button:focus {
     height: 100%;
     max-height: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.6);
 }

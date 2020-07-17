@@ -258,6 +258,7 @@ $(document).ready(function () {
                             $(".hi-light-copy").hide();
                             $(".Top-shade, .Bottom-shade").hide();
                             $(".back-btn").addClass("disabledbutton");
+                            $(".back-btn").css('opacity', '0');
                             historyActiveScreen();
 
                             $(".processing_screen").show();
@@ -275,6 +276,7 @@ $(document).ready(function () {
                                 setTimeout(function () {
                                     $(".processing_screen").hide();
                                     $settingwifisection.show(00).css('opacity', '1');
+                                    $(".back-btn").css('opacity', '1');
                                     $(".Settings-wifi-Section").animate({ "margin-left": "0px" }, 300);
                                     // $(".Settings-wifi-Section").css("margin-left", "0px");
                                     // $settingwifisection.addClass('anim-txt').show(00).css('opacity', '1');
@@ -436,34 +438,38 @@ $(document).ready(function () {
         }, 300);
     });
     $(".notification_yes_but").click(function () {
+        $(".back-btn").css('opacity', '0');
         document.getElementById("processtext").value = '';
-        printProcessing("On");
+        printProcessing("on");
     });
     $(".notification_no_but").click(function () {
         // $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
         // $(".down2").show();
+        $(".back-btn").css('opacity', '0');
         document.getElementById("processtext").value = '';
         // $("#wifiselect").removeAttr('checked');
-        printProcessing("Off");
+        printProcessing("off");
     });
 
     function printProcessing(status) {
         $(".Notification-with-button").hide();
         $(".back-btn").addClass("disabledbutton");
-        $(".Print_btn_processing_screen").show();
+        setTimeout(function () {
+            $(".Print_btn_processing_screen").show();
+        }, 300);
         $(".copying-txt,.copying-txt1").hide();
         $(".Top-shade, .Bottom-shade").hide();
         setTimeout(function () {
             var printvalue = document.getElementById("processtext");
             printvalue.value = "Wi-Fi Direct is turning " + status;
             setTimeout(greet1, 2000);
-        }, 5000)
+        }, 2000)
 
     }
 
     function greet1() {
         // printvalue.value = "Printing completed successfully."
-        setTimeout(greet2, 1000);
+        setTimeout(greet2, 4000);
     }
     function greet2() {
         hidePrintProcessing();
@@ -474,6 +480,8 @@ $(document).ready(function () {
         setTimeout(function () {
             $(".menu-txt-head").css('opacity', '1');
             $("#wifislider").addClass('opacity-view').css('opacity', '1');
+            $(".back-btn").show();
+            $backBtn.css("opacity", "1");
         }, 300);
         // setTimeout(function () {
         //     $(".hi-light-copy").css('opacity', '0');
@@ -786,6 +794,7 @@ $(document).ready(function () {
         $backBtn.css("opacity", "0");
         $(".cancel_icon_container").css({ opacity: "1"});
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
+        $(".cancel_icon_container").css('opacity', '1');
         $faxAnimation.show(500);
         $faxAnimation.css("overflow", "inherit");
         $faxKeyboardConfirmSection.css("width", "696px");
@@ -840,6 +849,7 @@ $(document).ready(function () {
         $faxContentConfirm.hide();
         $(".icon-cancel .Cancel-btn").click(function () {
             $cancelBtn.css("opacity", "0");
+            $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
             $(".fax-gif-anim").hide();
             $(".fax-animation .show").hide();
             $(".fax-animation-content .cancel-fax").css("display", "block").show(2000);
@@ -859,6 +869,7 @@ $(document).ready(function () {
     function faxanimation() {
         $(".fax-gif-anim").hide();
         $cancelBtn.css("opacity", "0");
+        $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
         $(".fax-animation, .Print-content-container").hide();
         location.reload();
 
@@ -1622,6 +1633,7 @@ $(document).ready(function () {
 
             $("#wifiselect").removeAttr('checked');
             $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
+            $backBtn.css("opacity", "0");
             setTimeout(function () {
                 $(".menu-txt-head").css('opacity', '0');
                 $("#wifislider").removeClass('opacity-view').css('opacity', '0');
@@ -1640,7 +1652,7 @@ $(document).ready(function () {
             // $(".hi-light-copy").hide();
             // $(".Top-shade, .Bottom-shade").hide();
             document.getElementById("processtext").value = '';
-            printProcessing("Off");
+            printProcessing("off");
         }
 
     });
@@ -1750,6 +1762,7 @@ $(document).ready(function () {
         $bottomShade.hide(10);
         $(".cancel_icon_container").css({ opacity: "1"});
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
+        $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' });
         $backBtn.css("opacity", "0");
         $(".Dot-Section").show();
         $(".show .show-line").hide();
@@ -1776,11 +1789,13 @@ $(document).ready(function () {
 
     function cancelcopying() {
         $(".Dot-Section .show").hide(00);
+        $(".cancel_icon_container").css('opacity', '0');
         $(".Dot-Section .copy-gif-anim").hide(00);
         setTimeout(function () {
             $(".Cancel-copy").show();
         }, 600);
         $cancelBtn.css({ opacity: "0" });
+        $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
         setTimeout(nextscreen, 2000);
     }
 
