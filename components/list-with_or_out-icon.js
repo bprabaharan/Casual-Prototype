@@ -52,7 +52,7 @@
         // Apply options
         
         let listArrayFirst = '<ul  class="optionli-color-child check-box-list-'+listName+'"><li>&nbsp;</li>';
-        let listArraySecond = '<li class="child1 cur-point active dis-flex "><div class="option-content">'+settings[0].label+'</div><div class="option-content2  option-function"><input id="trigger-color1" class="checkbox" type="checkbox" value="'+settings[0].value+'" checked="checked"><label for="trigger-color1" class="trigger-label"></label></div></li>';
+        let listArraySecond = '<li class="child1 cur-point active dis-flex "><div class="option-content">'+settings[0].label+'</div><div class="option-content2  option-function"><input id="trigger-color2" class="checkbox" type="checkbox" value="'+settings[0].value+'" checked="checked"><label for="trigger-color2" class="trigger-label"></label></div></li>';
         let listArrayLast = ' <li>&nbsp;</li></ul>';
         let listArray = '';
         $.each(settings, function(key, item) 

@@ -344,19 +344,23 @@ function showOption() {
     history_details.pop();
 }
 
-function delayScanMode() {
-    $(".Settings-wifi-Section").show(300);
+function delayScanMode2() {
+    // $(".Settings-wifi-Section").show(300);
     $(".option-landing-scanmode").hide();
     $(".option-landing").hide();
     $(".option-landing-sides").hide();
     $(".option-landing-color").hide();
     $(".option-landing-resize").hide();
     $(".option-landing").css({ "margin-left": "80px" });
+    $(".Settings-network-Section").hide();
+    $(".Settings-wifi-Section").hide();
+
+    let cscreen = activScreen_history[activScreen_history.length - 2];
     setTimeout(function () {
         $(".option-landing").show();
         $(".option-landing").animate({ "margin-left": "0px" }, 600);
         setTimeout(function () {
-            $(".option-function").show();
+            $("" + cscreen + " ul li .option-function").show();
             $(".option-landing").css({ opacity: "1", visibility: "visible" });
         }, 600);
     }, 600);

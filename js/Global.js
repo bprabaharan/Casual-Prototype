@@ -35,14 +35,17 @@ $(document).ready(function () {
         $(".option-landing-bright").hide();
         $(".Wifi-Connection-Method").hide();
         $(".option-landing").css({ "margin-left": "80px" });
+        $(".Settings-network-Section").hide();
+        $(".Settings-wifi-Section").hide();
 
         setTimeout(function () {
+            let cscreen = activScreen_history[activScreen_history.length - 1];
             $topShade.css("background", "linear-gradient( to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.05) 95%, rgba(0, 0, 0, 0) 100%)");
-            $(".option-landing, .option-content").addClass('transitionLR-reload').show();
-            $(".option-landing").animate({ "margin-left": "0px" }, 300);
-            $(".option-landing").css({ opacity: "1", visibility: "visible" });
+            $("" + cscreen + " .option-landing, " + cscreen + " .option-content").addClass('transitionLR-reload').show();
+            $("" + cscreen + " .option-landing").animate({ "margin-left": "0px" }, 300);
+            $("" + cscreen + " .option-landing").css({ opacity: "1", visibility: "visible" });
             setTimeout(function () {
-                $(".option-function").addClass('opacity-view').show();
+                $("" + cscreen + " .option-function").addClass('opacity-view').show();
             }, 500);
         }, 300);
     }
@@ -358,6 +361,8 @@ $(document).ready(function () {
     $(".Settings-Section ").hide();
     $(".icon-cancel .Cancel-btn").css("opacity", "0");
     $(".Wifi-Connection-Method").hide();
+    $(".Settings-network-Section").hide();
+    $(".Settings-wifi-Section").hide();
     $faxContentAddRecipient.hide();
     $processingscreen.hide();
     $Notificationwithicon.hide();
@@ -944,8 +949,8 @@ $(document).ready(function () {
     }
     /*Option landing page list click button event Starts here*/
     $(".option-landing ul .option-scan").click(function (event) {
-        if (history_details.indexOf("delayScanMode()") === -1) {
-            history_details.push("delayScanMode()");
+        if (history_details.indexOf("delayScanMode2()") === -1) {
+            history_details.push("delayScanMode2()");
         }
         if (activScreen_history.indexOf(".option-landing-scanmode") === -1) {
             activScreen_history.push(".option-landing-scanmode");
@@ -989,8 +994,8 @@ $(document).ready(function () {
     });
 
     $(".option-landing ul .option-sides").click(function (event) {
-        if (history_details.indexOf("delayScanMode()") === -1) {
-            history_details.push("delayScanMode()");
+        if (history_details.indexOf("delayScanMode2()") === -1) {
+            history_details.push("delayScanMode2()");
         }
         if (activScreen_history.indexOf(".option-landing-sides") === -1) {
             activScreen_history.push(".option-landing-sides");
@@ -1036,8 +1041,8 @@ $(document).ready(function () {
     });
 
     $(".option-landing ul .option-color").click(function (event) {
-        if (history_details.indexOf("delayScanMode()") === -1) {
-            history_details.push("delayScanMode()");
+        if (history_details.indexOf("delayScanMode2()") === -1) {
+            history_details.push("delayScanMode2()");
         }
         if (activScreen_history.indexOf(".option-landing-color") === -1) {
             activScreen_history.push(".option-landing-color");
@@ -1081,8 +1086,8 @@ $(document).ready(function () {
     });
 
     $(".option-landing ul .option-resize").click(function (event) {
-        if (history_details.indexOf("delayScanMode()") === -1) {
-            history_details.push("delayScanMode()");
+        if (history_details.indexOf("delayScanMode2()") === -1) {
+            history_details.push("delayScanMode2()");
         }
         if (activScreen_history.indexOf(".option-landing-resize") === -1) {
             activScreen_history.push(".option-landing-resize");
@@ -1350,7 +1355,9 @@ $(document).ready(function () {
 
     /**** Landing page Copy page  Click event start here */
     $("#introduction .copy-page").click(function () {
-        history_details.push("showCopyLandingPage()");
+        if (history_details.indexOf("showCopyLandingPage()") === -1) {
+            history_details.push("showCopyLandingPage()");
+        }
         if (activScreen_history.indexOf(".example1") === -1) {
             activScreen_history.push(".example1");
         }
