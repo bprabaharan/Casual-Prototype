@@ -264,7 +264,7 @@ $(document).ready(function () {
                             $(".processing_screen").show();
                             var printvalue = document.getElementById("printprocesstext");
                             document.getElementById("printprocesstext").value = '';
-                            setTimeout(greet1, 1000);
+                            setTimeout(greet1, 100);
 
                             function greet1() {
                                 printvalue.value = 'Changing to ' + $this.val() + '';
@@ -434,7 +434,7 @@ $(document).ready(function () {
 
                 $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '550px');
                 $(".down2").hide();
-                $(".help_icon_container").css({opacity: '1', cursor: 'pointer'}).removeClass("disabledbutton");
+                $(".help_icon_container").css({ opacity: '1', cursor: 'pointer' }).removeClass("disabledbutton");
             }, 300);
         }, 300);
     });
@@ -470,7 +470,7 @@ $(document).ready(function () {
 
     function greet1() {
         // printvalue.value = "Printing completed successfully."
-        setTimeout(greet2, 4000);
+        setTimeout(greet2, 5000);
     }
     function greet2() {
         hidePrintProcessing();
@@ -629,8 +629,8 @@ $(document).ready(function () {
     function backtowifiscreen() {
         $(".back-btn").removeClass("disabledbutton");
         $(".Bottom-shade, .Top-shade").show();
-        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0'}).addClass("disabledbutton");;
-        $(".help_icon_container, .back-btn").css({opacity: '1', cursor: 'pointer'}).removeClass("disabledbutton");
+        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0' }).addClass("disabledbutton");;
+        $(".help_icon_container, .back-btn").css({ opacity: '1', cursor: 'pointer' }).removeClass("disabledbutton");
         $(".Notification-with-icon").show();
         $(".processing_screen").hide();
         // $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'pointer' });
@@ -1556,7 +1556,7 @@ $(document).ready(function () {
         }
         $("#wifislider").css('opacity', '1').hide();
         $(".Settings-wifi-Section .menu-txt-head").css({ "margin-left": "2.162em" });
-        $(".Settings-network-Section").addClass('anim-disappear').hide(100).removeClass('anim-txt');
+        $(".Settings-network-Section").addClass('anim-disappear').hide().removeClass('anim-txt');
         $settingwifisection.removeClass('anim-appear');
 
         $settingwifisection.css('opacity', '1').show(300);
@@ -1595,7 +1595,7 @@ $(document).ready(function () {
             $(".Wifi-Connection-Method .option-function").show();
             setTimeout(function () {
                 $(".Wifi-Connection-Method").css({ opacity: "1" });
-                $(".help_icon_container").css({opacity: '1', cursor: 'pointer'}).removeClass("disabledbutton");
+                $(".help_icon_container").css({ opacity: '1', cursor: 'pointer' }).removeClass("disabledbutton");
                 historyActiveScreen("");
             }, 300);
         }, 400);
@@ -1761,7 +1761,7 @@ $(document).ready(function () {
     /**** Second Landing page Option Click event ends here */
 
     /**** Cancel copy page Click event Starts here */
-    $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0'}).addClass("disabledbutton");;
+    $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0' }).addClass("disabledbutton");;
     $(".copy-button .done-but").click(function () {
         $(".Print-content-container").hide(10);
         $topShade.hide(10);
@@ -1814,7 +1814,7 @@ $(document).ready(function () {
         location.reload();
         $bottomShade.hide();
         $(".Dot-Section").hide();
-        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0'}).addClass("disabledbutton");
+        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0' }).addClass("disabledbutton");
         $(".Print-content-container").hide();
     }
     /**** Cancel copy page Click event ends here */
@@ -2091,6 +2091,6 @@ function helpcheck_icon() {
         $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
     }
 
-    $(".help_icon_container").css({opacity: '1', cursor: 'pointer'}).removeClass("disabledbutton");
+    $(".help_icon_container").css({ opacity: '1', cursor: 'pointer' }).removeClass("disabledbutton");
     // });
 }
