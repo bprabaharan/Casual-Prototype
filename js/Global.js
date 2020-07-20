@@ -387,6 +387,14 @@ $(document).ready(function () {
     $faxKeyboardSection.hide();
     $faxContentConfirm.hide();
     /*Add Recipient click button event starts here*/
+
+    $(".Wifi-Connection-Method ul li, .Settings-wifi-Section ul li, .Settings-network-Section ul li, .Settings-Section ul li, .Menu-Section ul li").mouseover(function () {
+        $hiLightCopy.css("border", "8px solid #FFFFFF");
+    });
+    $(".Wifi-Connection-Method ul li, .Settings-wifi-Section ul li, .Settings-network-Section ul li, .Settings-Section ul li, .Menu-Section ul li").mouseleave(function () {
+        $hiLightCopy.css("border", "4px solid #FFFFFF");
+    });
+
     $(".add-receipient").click(function () {
         history_details.push("showFaxaddreceipient()");
         activScreen_history.push(".Fax-content-add-recipient");
@@ -799,9 +807,8 @@ $(document).ready(function () {
         $topShade.hide();
         $bottomShade.hide();
         $backBtn.css("opacity", "0");
-        $(".cancel_icon_container").css({ opacity: "1" });
+        $(".cancel_icon_container").css({ opacity: "1" }).removeClass("disabledbutton");
         $cancelBtn.css({ opacity: "1", cursor: "pointer" }).removeClass("disabledbutton");
-        $(".cancel_icon_container").css('opacity', '1');
         $faxAnimation.show(500);
         $faxAnimation.css("overflow", "inherit");
         $faxKeyboardConfirmSection.css("width", "696px");
@@ -1766,9 +1773,8 @@ $(document).ready(function () {
         $(".Print-content-container").hide(10);
         $topShade.hide(10);
         $bottomShade.hide(10);
-        $(".cancel_icon_container").css({ opacity: "1" });
         $cancelBtn.css({ opacity: "1", cursor: "pointer" }).removeClass("disabledbutton");
-        $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' });
+        $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' }).removeClass("disabledbutton");
         $backBtn.css("opacity", "0");
         $(".Dot-Section").show();
         $(".show .show-line").hide();
@@ -2038,14 +2044,19 @@ $(".Fax-content ul li:hover").click(function () {
     $(".hi-light-copy hover").css("border", "8px solid #ffffff");
 });
 
+
 $(".Fax-content ul li, .Fax-content-confirm ul li, .Fax-content-add-recipient ul li, .Send-to-contact ul li").mouseover(function () {
     $(this).css("cursor", "pointer");
     $hiLightCopy.css("border", "8px solid #ffffff");
+
 });
 $(".Fax-content ul li, .Fax-content-confirm ul li, .Fax-content-add-recipient ul li, .Send-to-contact ul li").mouseout(function () {
     $(this).css("cursor", "pointer");
     $hiLightCopy.css("border", "4px solid #ffffff");
 });
+
+
+
 
 $('.swapMe-up').click(function () {
 
