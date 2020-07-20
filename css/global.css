@@ -1111,7 +1111,7 @@ html {
     width: 144px !important;
     height: 144px !important;
     float: left;
-    cursor: default;
+    cursor: pointer;
 }
 
 .Dot-Section .back-btn,
