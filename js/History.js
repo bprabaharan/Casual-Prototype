@@ -178,14 +178,14 @@ function viewdetailsMode() {
         // $("#wifislider").css({ opacity: '1', right: '60px' });
     }, 300);
     $(".Bottom-shade, .Top-shade, .hi-light-copy").show();
-    $(".help_icon_container").css('opacity', '0');
+    $(".help_icon_container").css('opacity', '0').addClass("disabledbutton");
     history_details.pop();
 }
 
 function connectionMethod() {
     setTimeout(function () {
         $(".Wifi-Connection-Method .option-function").hide();
-        $(".help_icon_container").css({ opacity: "0" });
+        $(".help_icon_container").css({ opacity: "0" }).addClass("disabledbutton");
         setTimeout(function () {
             $(".Wifi-Connection-Method .option-content").animate({ "margin-left": "2.162em" },
                 300
