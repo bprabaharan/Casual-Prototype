@@ -799,9 +799,8 @@ $(document).ready(function () {
         $topShade.hide();
         $bottomShade.hide();
         $backBtn.css("opacity", "0");
-        $(".cancel_icon_container").css({ opacity: "1" });
+        $(".cancel_icon_container").css({ opacity: "1" }).removeClass("disabledbutton");
         $cancelBtn.css({ opacity: "1", cursor: "pointer" }).removeClass("disabledbutton");
-        $(".cancel_icon_container").css('opacity', '1');
         $faxAnimation.show(500);
         $faxAnimation.css("overflow", "inherit");
         $faxKeyboardConfirmSection.css("width", "696px");
@@ -1766,9 +1765,8 @@ $(document).ready(function () {
         $(".Print-content-container").hide(10);
         $topShade.hide(10);
         $bottomShade.hide(10);
-        $(".cancel_icon_container").css({ opacity: "1" });
         $cancelBtn.css({ opacity: "1", cursor: "pointer" }).removeClass("disabledbutton");
-        $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' });
+        $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' }).removeClass("disabledbutton");
         $backBtn.css("opacity", "0");
         $(".Dot-Section").show();
         $(".show .show-line").hide();
