@@ -1111,6 +1111,7 @@ html {
     width: 144px !important;
     height: 144px !important;
     float: left;
+    cursor: default;
 }
 
 .Dot-Section .back-btn,
@@ -3204,7 +3205,7 @@ input:checked+.slider-2-sided:before {
 }
 .disabledbutton {
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0;
 }
 .txt-wrap {
     white-space: nowrap;

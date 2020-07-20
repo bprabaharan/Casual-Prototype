@@ -431,7 +431,7 @@ $(document).ready(function () {
                 $(".Notification-with-icon").show();
                 $(".notificationbuttoncontainer").css('opacity', '1');
                 $(".viewdetails-content").addClass('anim-appear');
-                
+
                 $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '550px');
                 $(".down2").hide();
                 $(".help_icon_container").css('opacity', '1');
@@ -464,7 +464,7 @@ $(document).ready(function () {
             var printvalue = document.getElementById("processtext");
             printvalue.value = "Wi-Fi Direct is turning " + status;
             setTimeout(greet1, 2000);
-        }, 2000)
+        }, 1000)
 
     }
 
@@ -513,14 +513,16 @@ $(document).ready(function () {
         clearTimeout(greet22);
         if (activScreen_history[activScreen_history.length - 2] == '.Settings-wifi-Section') {
 
-            $(".cancel_icon_container, .Cancel-btn").css('opacity', '0');
+            $(".cancel_icon_container, .Cancel-btn").css({
+                opacity: '0', cursor: 'default'
+            });
             $(".processing_screen").show();
             document.getElementById("printprocesstext").value = '';
             var printvalue = document.getElementById("printprocesstext");
 
             setTimeout(greet, 100);
             function greet() {
-                printvalue.value = "Canceling"
+                printvalue.value = "Cancelling"
                 setTimeout(greet2, 2000);
             }
 
@@ -575,7 +577,9 @@ $(document).ready(function () {
         $(".back-btn").addClass("disabledbutton");
         $(".Notification-with-icon").hide();
         $(".help_icon_container, .back-btn").css('opacity', '0');
-        $(".cancel_icon_container, .Cancel-btn").css('opacity', '1');
+        $(".cancel_icon_container, .Cancel-btn").css({
+            opacity: '1', cursor: 'pointer'
+        });;
         $(".processing_screen").show();
 
         $(".processing_screen").processingscreen([{
@@ -595,7 +599,7 @@ $(document).ready(function () {
             greet11 = setTimeout(greet1, 8000);
         }
         function greet1() {
-            $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'none' });
+            $(".cancel_icon_container, .Cancel-btn").addClass('disabledbutton').css({ opacity: '0', cursor: 'default' });
             printvalue.value = "Printing completed successfully."
             greet22 = setTimeout(greet2, 5500);
         }
@@ -623,11 +627,11 @@ $(document).ready(function () {
     function backtowifiscreen() {
         $(".back-btn").removeClass("disabledbutton");
         $(".Bottom-shade, .Top-shade").show();
-        $(".cancel_icon_container, .Cancel-btn").css('opacity', '0');
+        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'default' });
         $(".help_icon_container, .back-btn").css('opacity', '1');
         $(".Notification-with-icon").show();
         $(".processing_screen").hide();
-        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'pointer' });
+        // $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'pointer' });
     }
     $(".notification_img_setting").click(function () {
         $(".Settings-wifi-Section ul li").removeClass("active");
@@ -793,7 +797,7 @@ $(document).ready(function () {
         $topShade.hide();
         $bottomShade.hide();
         $backBtn.css("opacity", "0");
-        $(".cancel_icon_container").css({ opacity: "1"});
+        $(".cancel_icon_container").css({ opacity: "1" });
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
         $(".cancel_icon_container").css('opacity', '1');
         $faxAnimation.show(500);
@@ -1620,7 +1624,7 @@ $(document).ready(function () {
                 $("#wifislider").removeClass('opacity-view').css('opacity', '0');
             }, 300);
             setTimeout(function () {
-                $(".hi-light-copy").css('opacity', '0');
+                $(".hi-light-copy").animate({ opacity: '0' });
                 $(".Settings-wifi-Section").hide().removeClass("anim-txt");
                 $(".Notification-with-button").show(200);
                 $("" + cscreen + " .notification_content_left, .notificationimgcontainer").css('opacity', '0');
@@ -1631,7 +1635,6 @@ $(document).ready(function () {
             }, 600);
 
         } else {
-
             $("#wifiselect").removeAttr('checked');
             $(".menu-txt-head").animate({ "margin-left": "-2.162em" }, 300);
             $backBtn.css("opacity", "0");
@@ -1640,14 +1643,14 @@ $(document).ready(function () {
                 $("#wifislider").removeClass('opacity-view').css('opacity', '0');
             }, 300);
             setTimeout(function () {
-                $(".hi-light-copy").css('opacity', '0');
+                $(".hi-light-copy").animate({ opacity: '0' });
                 $(".Settings-wifi-Section").hide().removeClass("anim-txt");
                 // $(".Notification-with-button").show(200);
                 // $(".notification_content_left").css('opacity', '0');
                 // setTimeout(function () {
                 //     $(".notification_content_left").addClass("anim-appear no-txt-wrap").css('opacity', '1');
                 // }, 300);
-            }, 600);
+            }, 100);
             // $settingwifisection.addClass('anim-txt').show(00).css('opacity', '0');
             // $(".Settings-wifi-Section").hide();
             // $(".hi-light-copy").hide();
@@ -1756,12 +1759,12 @@ $(document).ready(function () {
     /**** Second Landing page Option Click event ends here */
 
     /**** Cancel copy page Click event Starts here */
-    $(".Cancel-btn").css({ opacity: "0" });
+    $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'default' });
     $(".copy-button .done-but").click(function () {
         $(".Print-content-container").hide(10);
         $topShade.hide(10);
         $bottomShade.hide(10);
-        $(".cancel_icon_container").css({ opacity: "1"});
+        $(".cancel_icon_container").css({ opacity: "1" });
         $cancelBtn.css({ opacity: "1", cursor: "pointer" });
         $(".cancel_icon_container").css({ opacity: '1', cursor: 'pointer' });
         $backBtn.css("opacity", "0");
@@ -1809,7 +1812,7 @@ $(document).ready(function () {
         location.reload();
         $bottomShade.hide();
         $(".Dot-Section").hide();
-        $(".icon-cancel .Cancel-btn").css("opacity", "0");
+        $(".cancel_icon_container, .Cancel-btn").css({ opacity: '0', cursor: 'default' });
         $(".Print-content-container").hide();
     }
     /**** Cancel copy page Click event ends here */
