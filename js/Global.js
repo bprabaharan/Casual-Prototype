@@ -542,6 +542,7 @@ $(document).ready(function () {
             $(".back-btn").addClass("disabledbutton");
             $(".back-btn").css('opacity', '.1');
             $(".Help_nottificationmethod_screen").show();
+            $(".help_process_content").addClass('anim-appear');
             $(activScreen_history[activScreen_history.length - 1]).hide();
             $(".hi-light-copy").hide();
         } else if (activeScreen_help == 'connectionMethodHelp') {
@@ -549,6 +550,7 @@ $(document).ready(function () {
             $(".back-btn").addClass("disabledbutton");
             $(".back-btn").css('opacity', '.1');
             $(".Help_nottificationmethod_screen").show();
+            $(".help_process_content").addClass('anim-appear');
             $(activScreen_history[activScreen_history.length - 1]).hide();
             $(".hi-light-copy").hide();
         }
@@ -1825,11 +1827,6 @@ $(document).ready(function () {
         $(".example4").show();
     });
 
-    // $(".viewdetails").click(function() {
-    //     $(".Settings-wifi-Section").hide();
-    //     $(".Bottom-shade, .Top-shade, .hi-light-copy").hide();
-    //     $(".Notification-with-icon").show();
-    // });
 
     $(".Send-checkbox-faxlist li").click(function (event) {
         if ($(this).find('input[type=checkbox]').prop("checked")) {
