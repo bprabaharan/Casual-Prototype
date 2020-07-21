@@ -138,7 +138,7 @@ function sliderMode() {
     $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
     $(".down2").show();
     $(".Notification-with-button").hide();
-
+    $("#wifiselect").removeAttr('checked');
     $(".hi-light-copy").css('opacity', '1');
     $(".menu-txt-head").css({ "opacity": "1" });
     // $(".menu-txt-head").css({ "margin-left": "2.162em" });

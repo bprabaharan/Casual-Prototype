@@ -365,6 +365,7 @@ $(document).ready(function () {
     $(".Wifi-Connection-Method").hide();
     $(".Settings-network-Section").hide();
     $(".Settings-wifi-Section").hide();
+    $(".ink-level-section").hide();
     $faxContentAddRecipient.hide();
     $processingscreen.hide();
     $Notificationwithicon.hide();
@@ -454,10 +455,11 @@ $(document).ready(function () {
     $(".notification_no_but").click(function () {
         // $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');
         // $(".down2").show();
-        $(".back-btn").css('opacity', '0');
-        document.getElementById("processtext").value = '';
+        // $(".back-btn").css('opacity', '0');
+        // document.getElementById("processtext").value = '';
         // $("#wifiselect").removeAttr('checked');
-        printProcessing("off");
+        // printProcessing("off");
+        sliderMode();
     });
 
     function printProcessing(status) {

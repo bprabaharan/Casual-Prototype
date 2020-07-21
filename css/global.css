@@ -790,7 +790,7 @@ html {
     width: 575px;
 }
 
-.fax-keyboard-section {
+.fax-keyboard-section, .ink-level-section {
     width: 696px;
     margin-left: 15px;
     /* margin-top: 40px; */
