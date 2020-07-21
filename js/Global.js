@@ -1779,6 +1779,8 @@ $(document).ready(function () {
         $(".Dot-Section").show();
         $(".show .show-line").hide();
 
+        var rec_0 = $("rec:eq(" + 0 + ")");
+        $("p.show-line").html(rec_0.text()).fadeIn("slow");
         var index = 0;
         var total = $("rec").size() - 1;
         setInterval(function () {
@@ -1805,12 +1807,11 @@ $(document).ready(function () {
         // $(".Dot-Section").hide(00);
         $(".Dot-Section .copy-gif-anim").hide(00);
         setTimeout(function () {
-
             $(".Cancel-copy").show();
-        }, 600);
+        }, 200);
         $cancelBtn.css({ opacity: "0" }).addClass("disabledbutton");;
         $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
-        setTimeout(nextscreen, 50000);
+        setTimeout(nextscreen, 2000);
     }
 
     function explode() {
