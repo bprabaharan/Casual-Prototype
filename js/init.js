@@ -195,6 +195,8 @@
       var elem = document.querySelector('.carousel');
       var instance = M.Carousel.getInstance(elem);
       instance.set(middle_slide);
+
+       
     })
 
 

@@ -5859,7 +5859,7 @@ var $jscomp$this = this;
         onOpenEnd: null,
         onCloseStart: null,
         onCloseEnd: null,
-        preventScrolling: true
+        preventScrolling: false
     };
 
     /**
