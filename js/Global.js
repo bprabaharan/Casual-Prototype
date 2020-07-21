@@ -1252,6 +1252,7 @@ $(document).ready(function () {
     /**** Menu Mouse Event */
     $('.Menu-Page').on('mouseup mouseout', function () {
         $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_l.svg')");
+       
     });
 
         $('.Menu-Page').mousedown(function () {
@@ -1278,6 +1279,7 @@ $(document).ready(function () {
     /**** FAX Mouse Event */
     $('.Fax-Page').on('mouseup mouseout', function () {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_l.svg')");
+       
     });
 
     $('.Fax-Page').mousedown(function () {
