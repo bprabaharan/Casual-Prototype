@@ -2925,8 +2925,8 @@ input[type=range]+.thumb.active .value {
     float: left;
 }
 
-.Cancel-copy {
-    margin-top: 80px;
+.cancel-txt {
+    margin-top: -35px;
 }
 
 

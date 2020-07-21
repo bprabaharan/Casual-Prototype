@@ -1802,13 +1802,15 @@ $(document).ready(function () {
     function cancelcopying() {
         $(".Dot-Section .show").hide(00);
         $(".cancel_icon_container").css('opacity', '0');
+        // $(".Dot-Section").hide(00);
         $(".Dot-Section .copy-gif-anim").hide(00);
         setTimeout(function () {
+
             $(".Cancel-copy").show();
         }, 600);
         $cancelBtn.css({ opacity: "0" }).addClass("disabledbutton");;
         $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
-        setTimeout(nextscreen, 2000);
+        setTimeout(nextscreen, 50000);
     }
 
     function explode() {
