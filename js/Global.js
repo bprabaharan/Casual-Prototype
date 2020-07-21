@@ -242,7 +242,7 @@ $(document).ready(function () {
                     $(".processing_screen").processingscreen([{
                         "iclass": "processing_screen",
                         "aclass": "process_content",
-                        "content1": "Printing",
+                        "content1": "Printing...",
                         "content2": "Printing complete!",
                         "url1": "./images/Icons_SVG/done_m.svg",
                         "id": "processing_screen"
@@ -595,7 +595,7 @@ $(document).ready(function () {
         $(".processing_screen").processingscreen([{
             "iclass": "processing_screen",
             "aclass": "process_content",
-            "content1": "Printing",
+            "content1": "Printing...",
             "content2": "Printing completed successfully.",
             "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif",
             "id": "processing_screen"
@@ -605,7 +605,7 @@ $(document).ready(function () {
         $(".Bottom-shade, .Top-shade").hide();
         setTimeout(greet, 100);
         function greet() {
-            printvalue.value = "Printing"
+            printvalue.value = "Printing..."
             greet11 = setTimeout(greet1, 8000);
         }
         function greet1() {
@@ -864,11 +864,11 @@ $(document).ready(function () {
         $(".icon-cancel .Cancel-btn").click(function () {
             $cancelBtn.css("opacity", "0").addClass("disabledbutton");
             $(".cancel_icon_container").css({ opacity: '0', cursor: 'auto' });
-            $(".fax-gif-anim").hide();
             $(".fax-animation .show").hide();
             $(".fax-animation-content .cancel-fax").css("display", "block").show(2000);
             setTimeout(function () {
                 $(".Print-content-landing").css("display", "block");
+                $(".fax-gif-anim").hide();
             }, 4000);
             setTimeout(function () {
                 $(".Main-content").hide();
