@@ -1635,7 +1635,7 @@ $(document).ready(function () {
             $(".Wifi-Connection-Method .child1").css("margin-top", "-112px");
         }
     });
-
+    $("#wifiselect, .switch-2-sided").css('cursor', 'pointer');
     $('input[name="wifiselect"]').click(function () {
         if (history_details.indexOf("sliderMode()") === -1) {
             history_details.push("sliderMode()");
