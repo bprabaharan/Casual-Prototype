@@ -532,7 +532,7 @@ $(document).ready(function () {
 
             setTimeout(greet, 100);
             function greet() {
-                printvalue.value = "Cancelling"
+                printvalue.value = "Cancelling..."
                 setTimeout(greet2, 2000);
             }
 
@@ -1380,9 +1380,10 @@ $(document).ready(function () {
         $(this).css('color', "#000");
     });
     /**** Fax keypad Number Mouse Event ends here */
-    if ($(this).hasClass("active")) {
-        $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
-    };
+    $(".dummy_home").click(function (e) {
+        $(".dummy_home").css('pointer-events', 'none');
+        e.preventDefault();
+    });
     /**** Landing page Copy page  Click event start here */
     $("#introduction .copy-page").click(function () {
         if (history_details.indexOf("showCopyLandingPage()") === -1) {
