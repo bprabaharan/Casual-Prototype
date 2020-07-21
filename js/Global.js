@@ -1220,9 +1220,12 @@ $(document).ready(function () {
         $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_l.svg')");
     });
 
-    // $('.copy-page').mousedown(function () {
-    //     $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
-    // });
+    $('.copy-page').mousedown(function () {
+        if ($(this).hasClass("active")) {
+            $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
+        };
+
+    });
     /**** End Copy Mouse Event */
 
     /**** ID Mouse Event */
@@ -1230,9 +1233,13 @@ $(document).ready(function () {
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_l.svg')");
     });
 
-    // $('.ID-Page').mousedown(function () {
-    //     $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_pressed_l.svg')");
-    // });
+    $('.ID-Page').mousedown(function () {
+        if ($(this).hasClass("active")) {
+            $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_pressed_l.svg')");
+        };
+
+    });
+
     /**** End ID Mouse Event */
 
     /**** Smarttask-Page Mouse Event */
@@ -1247,9 +1254,12 @@ $(document).ready(function () {
         $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_l.svg')");
     });
 
-    // $('.Menu-Page').mousedown(function () {
-    //     $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_pressed_l.svg')");
-    // });
+    $('.Menu-Page').mousedown(function () {
+        if ($(this).hasClass("active")) {
+            $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_pressed_l.svg')");
+        };
+
+    });
     /**** End Menu Mouse Event */
 
     /**** Scan Mouse Event */
@@ -1257,9 +1267,12 @@ $(document).ready(function () {
         $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_l.svg')");
     });
 
-    // $('.Scan-Page').mousedown(function () {
-    //     $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_pressed_l.svg')");
-    // });
+    $('.Scan-Page').mousedown(function () {
+        if ($(this).hasClass("active")) {
+            $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_pressed_l.svg')");
+        };
+
+    });
     /**** End Scan Mouse Event */
 
     /**** FAX Mouse Event */
@@ -1267,9 +1280,12 @@ $(document).ready(function () {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_l.svg')");
     });
 
-    // $('.Fax-Page').mousedown(function () {
-    //     $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_pressed_l.svg')");
-    // });
+    $('.Fax-Page').mousedown(function () {
+
+        if ($(this).hasClass("active")) {
+            $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_pressed_l.svg')");
+        };
+    });
     /**** End FAX Mouse Event */
 
     /**** FAX ADD Button Mouse Event */
