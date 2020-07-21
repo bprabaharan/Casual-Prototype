@@ -790,7 +790,7 @@ html {
     width: 575px;
 }
 
-.fax-keyboard-section {
+.fax-keyboard-section, .ink-level-section {
     width: 696px;
     margin-left: 15px;
     /* margin-top: 40px; */
@@ -3148,6 +3148,7 @@ input:checked+.slider-2-sided:before {
 
 .slider-2-sided.round-2-sided {
     border-radius: 34px !important;
+    z-index: -999;
 }
 
 .slider-2-sided .round-2-sided:before {
