@@ -1218,9 +1218,9 @@ $(document).ready(function () {
         $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_l.svg')");
     });
 
-    $('.copy-page').mousedown(function () {
-        $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
-    });
+    // $('.copy-page').mousedown(function () {
+    //     $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
+    // });
     /**** End Copy Mouse Event */
 
     /**** ID Mouse Event */
@@ -1228,16 +1228,16 @@ $(document).ready(function () {
         $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_l.svg')");
     });
 
-    $('.ID-Page').mousedown(function () {
-        $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_pressed_l.svg')");
-    });
+    // $('.ID-Page').mousedown(function () {
+    //     $('.ID-Page').css('background-image', "url('./images/Icons_SVG/id_pressed_l.svg')");
+    // });
     /**** End ID Mouse Event */
 
     /**** Smarttask-Page Mouse Event */
 
-    $('.Smarttask-Page').on('mouseup mousedown mouseout', function () {
-        $('.Smarttask-Page').css('background-image', "url('./images/Icons_SVG/smarttask_l.svg')");
-    });
+    // $('.Smarttask-Page').on('mouseup mousedown mouseout', function () {
+    //     $('.Smarttask-Page').css('background-image', "url('./images/Icons_SVG/smarttask_l.svg')");
+    // });
     /**** End Smarttask-Page Mouse Event */
 
     /**** Menu Mouse Event */
@@ -1245,9 +1245,9 @@ $(document).ready(function () {
         $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_l.svg')");
     });
 
-    $('.Menu-Page').mousedown(function () {
-        $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_pressed_l.svg')");
-    });
+    // $('.Menu-Page').mousedown(function () {
+    //     $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_pressed_l.svg')");
+    // });
     /**** End Menu Mouse Event */
 
     /**** Scan Mouse Event */
@@ -1255,9 +1255,9 @@ $(document).ready(function () {
         $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_l.svg')");
     });
 
-    $('.Scan-Page').mousedown(function () {
-        $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_pressed_l.svg')");
-    });
+    // $('.Scan-Page').mousedown(function () {
+    //     $('.Scan-Page').css('background-image', "url('./images/Icons_SVG/scan_pressed_l.svg')");
+    // });
     /**** End Scan Mouse Event */
 
     /**** FAX Mouse Event */
@@ -1265,9 +1265,9 @@ $(document).ready(function () {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_l.svg')");
     });
 
-    $('.Fax-Page').mousedown(function () {
-        $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_pressed_l.svg')");
-    });
+    // $('.Fax-Page').mousedown(function () {
+    //     $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_pressed_l.svg')");
+    // });
     /**** End FAX Mouse Event */
 
     /**** FAX ADD Button Mouse Event */
@@ -1378,7 +1378,9 @@ $(document).ready(function () {
         $(this).css('color', "#000");
     });
     /**** Fax keypad Number Mouse Event ends here */
-
+    if ($(this).hasClass("active")) {
+        $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
+    };
     /**** Landing page Copy page  Click event start here */
     $("#introduction .copy-page").click(function () {
         if (history_details.indexOf("showCopyLandingPage()") === -1) {
@@ -1388,6 +1390,7 @@ $(document).ready(function () {
             activScreen_history.push(".example1");
         }
         if ($(this).hasClass("active")) {
+            $('.copy-page').css('background-image', "url('./images/Icons_SVG/copy_pressed_l.svg')");
             $scrollspy.css('width', '410px');
             $backBtn.css("opacity", "1");
             $backBtn.css("cursor", "pointer");
