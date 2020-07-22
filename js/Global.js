@@ -599,7 +599,7 @@ $(document).ready(function () {
             "aclass": "process_content",
             "content1": "Printing...",
             "content2": "Printing completed successfully.",
-            "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif",
+            "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif"+"?a="+Math.random(),
             "id": "processing_screen"
         }]);
         document.getElementById("printprocesstext").value = '';
