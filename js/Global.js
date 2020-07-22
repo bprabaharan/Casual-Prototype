@@ -613,7 +613,7 @@ $(document).ready(function () {
         function greet1() {
             $(".cancel_icon_container, .Cancel-btn").addClass('disabledbutton').css({ opacity: '0', cursor: 'default' });
             printvalue.value = "Printing completed successfully."
-            greet22 = setTimeout(greet2, 5500);
+            greet22 = setTimeout(greet2, 4500);
         }
         function greet2() {
             backtowifiscreen();
@@ -2002,7 +2002,7 @@ $(document).ready(function () {
     $(".indicators .indicator-item").eq(1).text("Smart Tasks");
     $(".indicators .indicator-item").eq(0).text("Menu");
     $(".indicators .indicator-item").eq(2).text("Copy");
-    $(".indicators .indicator-item").css("width", "250px");
+    $(".indicators .indicator-item").css({width : "250px"});
     $(".indicators .indicator-item").eq(3).text("ID Copy");
     $(".indicators .indicator-item").eq(4).text("Scan");
     $(".indicators .indicator-item").eq(5).text("Fax");

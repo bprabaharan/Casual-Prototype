@@ -24,14 +24,12 @@
         $(document).ready(function () {
             // $('#buttons').hello();
             // $('.nav-icons').imageload()
-            $("#carousel-disable-left").show(); // if initial carousel first
+            $('.carousel').css({ opacity: '0'});
             $(".Notification-with-icon").notificationwithouticons();
             $(".processing_screen").processingscreen();
             $(".Notification-with-button").notificationwithbuttons();
             $(".Print_btn_processing_screen").notificationwith_buttons();
             // $(".Help_nottificationmethod_screen").notificationconnection_method();
-            // document.getElementById('testDiv').style.pointerEvents = 'none';
-            //$("#testDiv").unbind("click");
            
         });
         
@@ -64,7 +62,7 @@
 >>>>>>> fa6809b438aaf50e9111c554aec2e51cecd79ec3
                 <div id="introduction" class="scrollspy">
                     
-                    <div class="carousel" id="carousel">
+                    <div class="carousel" id="carousel" >
                        
                         <a class="carousel-item Menu-Page" href="#" id="one">
                             <img src="./images/Icons_SVG/menu_l.svg">
@@ -1073,8 +1071,10 @@
             $('#menu-setting-page').listWithoutIcon(menu_setting_page);
             $('#menu-setting-network-page').listWithoutIcon(menu_setting_network_page);
             $('#wifi-connect-method').radioListWithOutIcon(wifi_connect_method, 'wifiConnectMethod');
-
             
+            setTimeout(function () {
+                $('.carousel').css({ opacity: '1'});
+        },300); 
         });
     </script>
     <script src="./js/attribute-chaange.js"></script>
@@ -1090,7 +1090,7 @@
    
 </body>
 <script>
-    
+   
     $('#introduction').on('mouseup mouseout', function () {
         if ($(".Menu-Page").hasClass("active")) {
             $("#carousel-disable-left").show(); // if initial carousel first
@@ -1105,6 +1105,7 @@
             $("#carousel-disable-right").hide(); // if initial carousel first
         } 
     });
+   
    
 </script>
 </html>
