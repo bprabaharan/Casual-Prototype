@@ -675,9 +675,11 @@ html {
 }
 
 .process_img {
+    width: 144px;
+}
+.processing_screen {
     width: 80px;
 }
-
 #processing_screen {
     width: 696px;
 }

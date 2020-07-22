@@ -595,7 +595,7 @@ $(document).ready(function () {
         $(".processing_screen").show();
 
         $(".processing_screen").processingscreen([{
-            "iclass": "processing_screen",
+            "iclass": "process_img",
             "aclass": "process_content",
             "content1": "Printing...",
             "content2": "Printing completed successfully.",

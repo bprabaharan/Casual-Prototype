@@ -63,17 +63,18 @@
 
     $.fn.processingscreen = function (options) {
         var data = [{
-            "iclass": "processing_screen",
+            "iclass": "process_img",
             "aclass": "process_content",
             "content1": "Printing",
             "content2": "Printing completed successfully.",
+
             "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif",
-            "id": "processing_screen"
+            "id": "process_img"
         }];
         var settings = $.extend(data, options);
         $.each(settings, function (i, f) {
             $('#' + f.id + '').empty();
-            $('#' + f.id + '').append("<div class='processcontainer'> <img class='process_img' src=" + f.url1 + "></div><div class=" + f.aclass + "><div class='show'><input type='text' id='printprocesstext'></div>");
+            $('#' + f.id + '').append("<div class='processcontainer'> <img class=" + f.iclass + " src=" + f.url1 + "></div><div class=" + f.aclass + "><div class='show'><input type='text' id='printprocesstext'></div>");
         });
     };
     $.fn.notificationwith_buttons = function (options) {
