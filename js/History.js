@@ -159,7 +159,7 @@ function sliderMode() {
     $(".hi-light-copy").show();
     $(".Top-shade, .Bottom-shade").show();
     history_details.pop();
-    activScreen_history.pop();
+    
 }
 function viewdetailsMode() {
     $(".Top-shade, .Bottom-shade, .swapMe-up, .swapMe-down").css('width', '696px');

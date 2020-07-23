@@ -459,6 +459,7 @@ $(document).ready(function () {
         // document.getElementById("processtext").value = '';
         // $("#wifiselect").removeAttr('checked');
         // printProcessing("off");
+        activScreen_history.pop();
         sliderMode();
     });
 
