@@ -718,8 +718,9 @@ html {
 #Notification-with-button{width: 696px;}
 
 .menu-content2 img {
-    width: 50px;
-    padding-top: 7px;
+    width: 68px;
+    height: 68px;
+    /* padding-top: 7px; */
 }
 
 .Fax-Section ul li,
@@ -3228,3 +3229,44 @@ input:checked+.slider-2-sided:before {
 .breake-word{white-space: break-spaces;}
 .helpcheck_icon{cursor: pointer;}
 .Help_nottificationmethod_screen{line-height: 1.2;}
+#colorink-section img{padding: 30px 40px;}
+.colorcontent span{color: #fff; font-size: 38px;}
+.colorcontent{text-align: center;}
+.anim-top-bottom {
+    animation: animtopbot 0.5s ease-in-out;
+    visibility: visible;
+    white-space: nowrap;
+    position: relative;
+}
+@keyframes animtopbot {
+    from {
+        top: -80px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+.anim-bot-top {
+    animation: animbottop 0.5s ease-in-out;
+    visibility: visible;
+    white-space: nowrap;
+    position: relative;
+}
+@keyframes animbottop {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+    to {
+        top: -180px;
+        opacity: 0;
+    }
+}
+#colorink-section-landing img, .colorink-section-second-landing img{width: 30px; margin-left: 20px;}
+#colorink-section-landing,  #colorink-section-second-landing {overflow-y: scroll;
+    width: 500px;}
+#colorink-section-landing span, .colorink-section-second-landing span{color: #fff; font-size: 36px;}
+.colorink-section-landing-content img{width: 90px;
+    margin: 60px 20px;}

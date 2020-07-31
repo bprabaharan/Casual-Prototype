@@ -300,6 +300,9 @@ $(document).ready(function () {
     /**** Option page Checkbox Click event Ends here */
 
 });
+var $colorink = $(".colorink-section");
+var $colorinksectionlanding = $(".colorink-section-landing");
+var $colorinksectionsecondlanding = $(".colorink-section-second-landing");
 var $example1 = $(".example1");
 var $Notificationwithicon = $(".Notification-with-icon");
 var $processingscreen = $(".processing_screen");
@@ -366,6 +369,9 @@ $(document).ready(function () {
     $(".Settings-network-Section").hide();
     $(".Settings-wifi-Section").hide();
     $(".ink-level-section").hide();
+    $colorink.hide();
+    $colorinksectionlanding.hide();
+    $colorinksectionsecondlanding.hide();
     $faxContentAddRecipient.hide();
     $processingscreen.hide();
     $Notificationwithicon.hide();
@@ -600,7 +606,7 @@ $(document).ready(function () {
             "aclass": "process_content",
             "content1": "Printing...",
             "content2": "Printing completed successfully.",
-            "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif"+"?a="+Math.random(),
+            "url1": "./images/Gif-images/connectivity_globalprinting_animation.gif" + "?a=" + Math.random(),
             "id": "processing_screen"
         }]);
         document.getElementById("printprocesstext").value = '';
@@ -935,7 +941,54 @@ $(document).ready(function () {
             $(".fax-keyboard-confirm-section .done-but").animate({ opacity: '1' }).show(300);
         }, 100);
     });
+    $(".Supplies").click(function () {
+        history_details.push("supplies_his()");
+        if (activScreen_history.indexOf(".colorink-section") === -1) {
+            activScreen_history.push(".colorink-section");
+        }
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            $("#count-checked-checkboxess").val("");
+        }
+        $(".colorink-section").addClass('anim-top-bottom').removeClass('anim-bot-top').show();
+        $(".Menu-Section").removeClass('anim-txt').hide(00);
+        $hiLightCopy.hide(00);
+        $(".Top-shade ,.Bottom-shade").hide();
+    });
 
+    $(".cimg").click(function () {
+        history_details.push("cimg_his()");
+        if (activScreen_history.indexOf(".colorink-section-landing") === -1) {
+            activScreen_history.push(".colorink-section-landing");
+        }
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            $("#count-checked-checkboxess").val("");
+        }
+        $(".colorink-section").removeClass('anim-top-bottom').hide(100);
+        $(".colorink-section-landing").show();
+        $(".colorink-section-landing-content, #colorink-section-landing").hide();
+        setTimeout(function () {
+            $(".colorink-section-landing-content").addClass('opacity-view').show();
+        }, 300);
+        setTimeout(function () {
+            $("#colorink-section-landing").addClass('anim-txt').show();
+        }, 300);
+        $hiLightCopy.hide(00);
+        $(".Top-shade ,.Bottom-shade").hide();
+    });
+
+    $(".colorinktickimg").click(function () {
+        history_details.push("cimg_his()");
+        if (activScreen_history.indexOf(".colorink-section-landing") === -1) {
+            activScreen_history.push(".colorink-section-landing");
+        }
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            $("#count-checked-checkboxess").val("");
+        }
+        $(".colorink-section-landing").hide(100);
+        $(".colorink-section-second-landing").show();
+        $hiLightCopy.hide(00);
+        $(".Top-shade ,.Bottom-shade").hide();
+    });
     $(".send-to-cont").click(function () {
         history_details.push("showFaxsendtocont()");
         activScreen_history.push(".Send-to-contact");
@@ -1253,7 +1306,7 @@ $(document).ready(function () {
     /**** Menu Mouse Event */
     $('.Menu-Page').on('mouseup mouseout', function () {
         $('.Menu-Page').css('background-image', "url('./images/Icons_SVG/menu_l.svg')");
-       
+
     });
 
     $('.Menu-Page').mousedown(function () {
@@ -1280,7 +1333,7 @@ $(document).ready(function () {
     /**** FAX Mouse Event */
     $('.Fax-Page').on('mouseup mouseout', function () {
         $('.Fax-Page').css('background-image', "url('./images/Icons_SVG/fax_l.svg')");
-       
+
     });
 
     $('.Fax-Page').mousedown(function () {
@@ -2003,7 +2056,7 @@ $(document).ready(function () {
     $(".indicators .indicator-item").eq(1).text("Smart Tasks");
     $(".indicators .indicator-item").eq(0).text("Menu");
     $(".indicators .indicator-item").eq(2).text("Copy");
-    $(".indicators .indicator-item").css({width : "250px"});
+    $(".indicators .indicator-item").css({ width: "250px" });
     $(".indicators .indicator-item").eq(3).text("ID Copy");
     $(".indicators .indicator-item").eq(4).text("Scan");
     $(".indicators .indicator-item").eq(5).text("Fax");
