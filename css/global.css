@@ -3270,3 +3270,4 @@ input:checked+.slider-2-sided:before {
 #colorink-section-landing span, .colorink-section-second-landing span{color: #fff; font-size: 36px;}
 .colorink-section-landing-content img{width: 90px;
     margin: 60px 20px;}
+.tickimg, .colorinktickimg {cursor: pointer;}

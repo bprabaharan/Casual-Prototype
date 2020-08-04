@@ -110,6 +110,24 @@ function cimg_his() {
     history_details.pop();
 }
 
+function tickimg_his() {
+    $(".colorink-section").addClass('anim-top-bottom').removeClass('anim-bot-top').hide();
+
+    $(".colorink-section-second-landing").show();
+    $hiLightCopy.hide(00);
+    $(".Top-shade ,.Bottom-shade").hide();
+    history_details.pop();
+}
+function colorinktickimghis() {
+    $(".colorink-section-landing-content").addClass('opacity-view').show(100);
+    $(".colorink-section-landing").show(100);
+    $(".colorink-section-second-landing").hide();
+    $hiLightCopy.hide(00);
+    $(".Top-shade ,.Bottom-shade").hide();
+    history_details.pop();
+}
+
+
 function settings_page() {
     // $(".Settings-Section").addClass('anim-appear').hide(100);
     $(".Settings-Section").removeClass('anim-txt').css('opacity', '0').hide(100);

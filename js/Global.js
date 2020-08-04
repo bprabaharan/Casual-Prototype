@@ -956,6 +956,20 @@ $(document).ready(function () {
         $(".Top-shade ,.Bottom-shade").hide();
     });
 
+    $(".tickimg").click(function () {
+        history_details.push("tickimg_his()");
+        if (activScreen_history.indexOf(".colorink-section-second-landing") === -1) {
+            activScreen_history.push(".colorink-section-second-landing");
+        }
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            $("#count-checked-checkboxess").val("");
+        }
+        $(".colorink-section").addClass('anim-top-bottom').removeClass('anim-bot-top').show();
+
+        $(".colorink-section-second-landing").hide();
+        $hiLightCopy.hide(00);
+        $(".Top-shade ,.Bottom-shade").hide();
+    });
     $(".cimg").click(function () {
         history_details.push("cimg_his()");
         if (activScreen_history.indexOf(".colorink-section-landing") === -1) {
@@ -978,15 +992,20 @@ $(document).ready(function () {
     });
 
     $(".colorinktickimg").click(function () {
-        history_details.push("cimg_his()");
+        history_details.push("colorinktickimghis()");
         if (activScreen_history.indexOf(".colorink-section-landing") === -1) {
             activScreen_history.push(".colorink-section-landing");
         }
         if ($('#count-checked-checkboxess').is(':empty')) {
             $("#count-checked-checkboxess").val("");
         }
-        $(".colorink-section-landing").hide(100);
-        $(".colorink-section-second-landing").show();
+        setTimeout(function () {
+            $(".colorink-section-landing-content").removeClass('opacity-view').hide(300);
+        }, 300);
+        setTimeout(function () {
+            $(".colorink-section-landing").hide(100);
+            $(".colorink-section-second-landing").show(100);
+        }, 300);
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
     });
