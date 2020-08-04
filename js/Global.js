@@ -369,6 +369,7 @@ $(document).ready(function () {
     $(".Settings-network-Section").hide();
     $(".Settings-wifi-Section").hide();
     $(".ink-level-section").hide();
+    $(".help-video-container").hide();
     $colorink.hide();
     $colorinksectionlanding.hide();
     $colorinksectionsecondlanding.hide();
@@ -1602,6 +1603,21 @@ $(document).ready(function () {
     }
 
     /**** Landing page Menu page Click event ends here */
+
+    $(".play-help-video").click(function () {
+        if (history_details.indexOf("help_video()") === -1) {
+            history_details.push("help_video()");
+        }
+        if (activScreen_history.indexOf(".help-video-container") === -1) {
+            activScreen_history.push(".help-video-container");
+        }
+        $(".Menu-Section").removeClass('anim-txt').addClass('anim-re-left-right').hide(100);
+        $(".help-video-container").show(150);
+        setTimeout(play_help_video, 200);
+        // $(".Menu-Section").animate({ left: '-60px' }, { opacity: '0' }).hide(100);
+       
+        historyActiveScreen();
+    });
 
     $(".menu-settings").click(function () {
         if (history_details.indexOf("settings_page()") === -1) {
