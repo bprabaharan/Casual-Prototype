@@ -302,6 +302,7 @@ $(document).ready(function () {
 });
 var $colorink = $(".colorink-section");
 var $colorinksectionlanding = $(".colorink-section-landing");
+var $colorinkmegsectionlanding = $(".colorink-meg-section-landing");
 var $colorinksectionsecondlanding = $(".colorink-section-second-landing");
 var $example1 = $(".example1");
 var $Notificationwithicon = $(".Notification-with-icon");
@@ -371,6 +372,7 @@ $(document).ready(function () {
     $(".ink-level-section").hide();
     $colorink.hide();
     $colorinksectionlanding.hide();
+    $colorinkmegsectionlanding.hide();
     $colorinksectionsecondlanding.hide();
     $faxContentAddRecipient.hide();
     $processingscreen.hide();
@@ -985,6 +987,24 @@ $(document).ready(function () {
         }, 300);
         setTimeout(function () {
             $("#colorink-section-landing").addClass('anim-txt').show();
+        }, 300);
+        $hiLightCopy.hide(00);
+        $(".Top-shade ,.Bottom-shade").hide();
+    });
+
+    $(".mimg").click(function () {
+        history_details.push("mimg_his()");
+        if (activScreen_history.indexOf(".colorink-section") === -1) {
+            activScreen_history.push(".colorink-section");
+        }
+        $(".colorink-section").removeClass('anim-top-bottom').hide(100);
+        $(".colorink-meg-section-landing").show();
+        $(".colorink-meg-section-landing-content, #colorink-meg-section-landing-content").hide();
+        setTimeout(function () {
+            $(".colorink-meg-section-landing-content").addClass('opacity-view').show();
+        }, 300);
+        setTimeout(function () {
+            $("#colorink-meg-section-landing").addClass('anim-txt').show();
         }, 300);
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
