@@ -20,6 +20,7 @@
     <title>Casual UI Protype</title>
     <link href="./css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="./css/help_video.css" rel="stylesheet" type="text/css" media="screen,projection">
     <script>
         $(document).ready(function () {
             // $('#buttons').hello();
@@ -899,6 +900,43 @@
                         </div>
                         <!-- Ink Level Ends here -->
 
+                        <!-- Help Video Starts Here-->
+
+                        <div class="help-video-container">
+                            <div class="help-video-carousel">
+                              <div class="help-video">
+                                <div class="">
+                                  <img class="slide-img" id="slide-img" src="images/Icons_SVG/help_video_image.png" alt="">   
+                                </div>      
+                              </div>
+                              <div class="help-video-controls">
+                                <span class="help-video-arrow prev-slide">          
+                                    <img class="slide-arrow" src="./images/Icons_SVG/Arrowleft_m.svg" />        
+                                </span>
+                                <span class="help-video-arrow next-slide">       
+                                    <img class="slide-arrow" src="./images/Icons_SVG/Arrowright_m.svg" />    
+                                </span>
+                                <div class="slideshow-toggle">
+                                  <span  class="play-slideshow" >
+                                  <img src="./images/Icons_SVG/play_l.svg" style="width: 90px; height: 90px; display: block;"/>
+                                  </span>
+                                  <span class="pause-slideshow">
+                                  <img  src="./images/Icons_SVG/pause_l.svg"  style="width: 90px; height: 90px; display: block;"/>
+                                  </span>
+                                </div>
+                                <ul class="slide-selector">
+                                  <li class="slide-selected"></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                         <!-- Help Video Ends Here-->
+
                         <!-- POP Window Starts here  -->
                         <div id="myModal" class="modal">
                             <!-- Modal content  -->
@@ -1167,6 +1205,7 @@
     <script src="./js/History.js"></script>
     <script src="./js/Global.js"></script>
     <script src="./js/Keyboard.js"></script>
+    <script src="./js/help_video.js"></script>
 
 </body>
 <script>

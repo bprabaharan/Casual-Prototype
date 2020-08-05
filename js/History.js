@@ -136,6 +136,13 @@ function settings_page() {
     history_details.pop();
 }
 
+function help_video(){
+    $(".help-video-container").hide(100);
+
+    $(".Menu-Section").addClass('transitionLR-reload').removeClass('anim-re-left-right').show(100);
+    history_details.pop();
+}
+
 function settings_network_page() {
     $(".Settings-network-Section").removeClass('anim-txt').css('opacity', '0').hide(100);
     $(".Settings-Section").removeClass("anim-appear");
