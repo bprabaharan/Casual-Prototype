@@ -1,0 +1,12 @@
+<svg id="Group_2610" data-name="Group 2610" xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68">
+  <rect id="Rectangle_1507" data-name="Rectangle 1507" width="68" height="68" fill="none"/>
+  <g id="Group_1981" data-name="Group 1981">
+    <rect id="Rectangle_1508" data-name="Rectangle 1508" width="4" height="4" rx="1.852" transform="translate(32 45)" fill="#fff"/>
+    <rect id="Rectangle_1509" data-name="Rectangle 1509" width="4" height="15" rx="2" transform="translate(32 27)" fill="#fff"/>
+  </g>
+  <rect id="Rectangle_1510" data-name="Rectangle 1510" width="68" height="68" transform="translate(0)" fill="none"/>
+  <g id="Path_909" data-name="Path 909" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9.412,53.687A3.6,3.6,0,0,0,12.417,59H55.583a3.6,3.6,0,0,0,3.005-5.313L36.679,10.242a3,3,0,0,0-5.358,0Z" stroke="none"/>
+    <path d="M 54.77029418945313 55 L 34 13.81302928924561 L 13.22970676422119 55 L 54.77029418945313 55 M 55.58300018310547 59 L 12.41699981689453 59 C 9.835000038146973 59 8.189000129699707 56.0890007019043 9.411999702453613 53.6870002746582 L 31.32099914550781 10.24199962615967 C 31.8754997253418 9.142999649047852 32.93775177001953 8.593499183654785 34 8.593499183654785 C 35.06224822998047 8.593499183654785 36.1245002746582 9.142999649047852 36.67900085449219 10.24199962615967 L 58.5880012512207 53.6870002746582 C 59.81100082397461 56.0890007019043 58.16500091552734 59 55.58300018310547 59 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>

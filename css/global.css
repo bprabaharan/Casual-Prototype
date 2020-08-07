@@ -3275,7 +3275,10 @@ input:checked+.slider-2-sided:before {
         opacity: 0;
     }
 }
-#colorink-section-landing img, .colorink-m-section-second-landing img, .colorink-c-section-second-landing img, .colorink-section-second-landing img, .colorink-meg-section-landing img{width: 30px; margin-left: 20px;}
+#colorink-section-landing img, .colorink-m-section-second-landing img, .colorink-c-section-second-landing img, .colorink-section-second-landing img, .colorink-meg-section-landing img{width: 49px;
+    margin-left: 20px;
+    position: relative;
+    float: left;}
 #colorink-section-landing,  #colorink-meg-section-landing, #colorink-section-second-landing {overflow-y: scroll;
     width: 500px;}
 #colorink-section-landing span, .colorink-section-second-landing span, .colorink-meg-section-landing span, .colorink-c-section-second-landing span, .colorink-m-section-second-landing span{color: #fff; font-size: 36px;}
