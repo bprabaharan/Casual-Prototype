@@ -1,5 +1,8 @@
 
  function play_help_video() {
+  if(fromHistory){
+   return false;
+  }
 
  $('#slide-img').animate({ "bottom": "220px" }, 300);
  
@@ -35,13 +38,13 @@
   let sectionIndex = 'indexDefault';
   //let numSlides = document.querySelector(".slide-selector").getElementsByTagName("li").length;
   let numSlides = 5;
-  let slideInterval = 0;
+  let slideInterval;
   let slideReady = true;
   let slidePaused = false;
   let slideModalFix = false;
   let index = 0;
   let position = [{ "bottom": "220px", "left":"0px", "zoom": "100%" },{ "bottom": "80px", "left":"0px", "zoom": "100%" },{ "bottom": "394px", "left":"0px", "zoom": "100%" },{ "bottom": "210px", "left":"0px", "zoom": "100%" },{  "bottom": "270px", "left":"150px", "zoom": "130%" }];
-	clearInterval(slideInterval);
+  
   //slider.style.width = `${(numSlides * 100)}%`;
   // Ensure transitions complete
   $(help_video).on('transitionstart', function() {
@@ -99,6 +102,7 @@
 	 index = index + 1;
 	$('#slide-img').animate(position[index], 300);
 	
+  console.log(index);
 	
   }
 
@@ -231,18 +235,15 @@
   }
 
   slideToggle = () => {
-    if (!slidePaused) {
-      pauseAutoplay();
-      clearInterval(slideInterval);    
-    } else {
+   
       $(helpVideoContainer).on('mouseenter', function(e){
+      
         var onMouEnt = e.type == 'mouseenter' ? clearInterval(slideInterval) : auto() ;
       });
     
       $(helpVideoContainer).on('mouseleave', function(e){ 
         mouseLeaveCheck(e);  
       });
-    }
   }
 
   if (slidePaused == false) {    
@@ -264,34 +265,38 @@
   $(pauseSlideshow).click(function() {
     pauseSlideshow.style.display = 'none';
     playSlideshow.style.display = 'flex';
-
+    console.log("pause");
     pauseAutoplay();
     clearInterval(slideInterval);
-
-    slideToggle();
     slidePaused = true;
-
+    //slideToggle();
+    
   });
 
   $(playSlideshow).click(function() {
     playSlideshow.style.display = 'none';
     pauseSlideshow.style.display = 'block';
     slidePaused = false;
-
-    slideToggle();
+    console.log("play");
+    clearInterval(slideInterval);
+    auto();
+    //slideToggle();
   });
 
   // Autoplay
   auto = () => {
+    console.log('alert');
+   
     slideInterval = setInterval(function() {
       nextSlide();
       nextSectionIndex();
       setIndex();
     }, autoplaySpeed); // interval 
   }
-
+ 
+  // window.clearInterval(slideInterval);
+  
   auto();
-
   // Pause autoplay when window is not in focus
    function addEvent(obj, evType, fn, isCapturing){
     if (isCapturing==null) isCapturing=false; 

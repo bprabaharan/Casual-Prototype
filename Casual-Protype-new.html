@@ -22,6 +22,7 @@
     <link href="./css/global.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="./css/help_video.css" rel="stylesheet" type="text/css" media="screen,projection">
     <script>
+        var fromHistory = 0;
         $(document).ready(function () {
             // $('#buttons').hello();
             // $('.nav-icons').imageload()
@@ -32,6 +33,7 @@
             $(".Notification-with-button").notificationwithbuttons();
             $(".Print_btn_processing_screen").notificationwith_buttons();
             // $(".Help_nottificationmethod_screen").notificationconnection_method();
+
 
         });
 
@@ -616,10 +618,11 @@
                         <!--colorink screen starts here-->
                         <div class="colorink-section Copy-Content">
                             <div id="colorink-section">
-                                <img class="cimg" src="./images/Icons_SVG/u17.png" alt="c" />
-                                <img class="mimg" src="./images/Icons_SVG/u17.png" alt="m" />
-                                <img class="yimg" src="./images/Icons_SVG/u17.png" alt="y" />
-                                <img class="kimg" src="./images/Icons_SVG/u17.png" alt="k" />
+                                <div class="ink-level" ><div class="ink-level-text">C</div><div class="ink-level-img"><img class="cimg" src="./images/inklevels/ink_level_counterfeit_error.gif" alt="c" /></div></div>
+                                
+                                <div class="ink-level" ><div class="ink-level-text">M</div><div class="ink-level-img"><img class="mimg" src="./images/inklevels/ink_level_20_warning.gif" alt="m" /></div></div>
+                                <div class="ink-level" ><div class="ink-level-text">Y</div><div class="ink-level-img"><img class="yimg" src="./images/inklevels/ink_level_80.gif" alt="y" /></div></div>
+                                <div class="ink-level" ><div class="ink-level-text">K</div><div class="ink-level-img"><img class="kimg" src="./images/inklevels/ink_level_90.gif" alt="k" /></div></div>
                             </div>
                             <div class="colorcontent"><span>Estimate only,actual levels may vary</span></div>
                         </div>
@@ -652,11 +655,11 @@
                             <div id="colorink-meg-section-landing">
                                 <div class="">
                                     <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
-                                    <span>Cyan</span>
+                                    <span>Megenta</span>
                                 </div>
                                 <div class="">
                                     <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
-                                    <span>Very low on ink</span>
+                                    <span>Counterfeit ink</span>
                                 </div>
                                 <div class="">
                                     <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
@@ -664,28 +667,39 @@
                                 </div>
                             </div>
                             <div class="colorink-meg-section-landing-content">
-                                <img class="colorinktickimg" src="./images/Icons_SVG/arrow_s.svg" alt="tick-btn" />
+                                <img class="colorinktickmegimg" src="./images/Icons_SVG/arrow_s.svg" alt="tick-btn" />
                             </div>
                         </div>
                         <!--colorink screen  starts here-->
 
                         <!--colorink screen starts here-->
-                        <div class="colorink-section-second-landing Copy-Content dis-flex">
-                            <div id="colorink-section-second-landing">
+                        <div class="colorink-c-section-second-landing Copy-Content dis-flex">
+                            <div id="colorink-c-section-second-landing">
                                 <div class="">
                                     <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
-                                    <span>Cyan</span>
+                                    <span>Very low on ink </span>
+                                   
                                 </div>
-                                <div class="">
-                                    <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
-                                    <span>Very low on ink</span>
-                                </div>
-                                <div class="">
-                                    <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
-                                    <span>Cartridge</span>
-                                </div>
+                                <div style="margin-left: 16px;"> <span >Very low ink can result in poor print quality.</span> </div>
+                               
                             </div>
-                            <div class="colorink-section-landing-content">
+                            <div class="colorink-c-section-landing-content">
+                                <img class="tickimg" src="./images/Icons_SVG/done_m.svg" alt="tick-btn" />
+                            </div>
+                        </div>
+                        <!--colorink screen  starts here-->
+                         <!--colorink screen starts here-->
+                         <div class="colorink-m-section-second-landing Copy-Content dis-flex">
+                            <div id="colorink-m-section-second-landing">
+                                <div class="">
+                                    <img class="c-img" src="./images/Icons_SVG/u17.png" alt="c" />
+                                    <span>Counter fit </span>
+                                   
+                                </div>
+                                <div style="margin-left: 16px;"> <span >Use HP ink only for thr best printer performance.</span> </div>
+                               
+                            </div>
+                            <div class="colorink-m-section-landing-content">
                                 <img class="tickimg" src="./images/Icons_SVG/done_m.svg" alt="tick-btn" />
                             </div>
                         </div>

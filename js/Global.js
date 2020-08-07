@@ -371,6 +371,8 @@ $(document).ready(function () {
     $(".Settings-wifi-Section").hide();
     $(".ink-level-section").hide();
     $(".help-video-container").hide();
+    $(".colorink-c-section-second-landing").hide();
+    $(".colorink-m-section-second-landing").hide();
     $colorink.hide();
     $colorinksectionlanding.hide();
     $colorinkmegsectionlanding.hide();
@@ -945,7 +947,9 @@ $(document).ready(function () {
         }, 100);
     });
     $(".Supplies").click(function () {
-        history_details.push("supplies_his()");
+        if (history_details.indexOf("supplies_his()") === -1) {
+            history_details.push("supplies_his()");
+        }
         if (activScreen_history.indexOf(".colorink-section") === -1) {
             activScreen_history.push(".colorink-section");
         }
@@ -959,21 +963,22 @@ $(document).ready(function () {
     });
 
     $(".tickimg").click(function () {
-        history_details.push("tickimg_his()");
-        if (activScreen_history.indexOf(".colorink-section-second-landing") === -1) {
-            activScreen_history.push(".colorink-section-second-landing");
-        }
+       
+        history_details.splice(2, 3)
+        activScreen_history.splice(2,3)
         if ($('#count-checked-checkboxess').is(':empty')) {
             $("#count-checked-checkboxess").val("");
         }
         $(".colorink-section").addClass('anim-top-bottom').removeClass('anim-bot-top').show();
 
-        $(".colorink-section-second-landing").hide();
+        $(".colorink-m-section-second-landing, .colorink-c-section-second-landing").hide();
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
     });
     $(".cimg").click(function () {
-        history_details.push("cimg_his()");
+        if (history_details.indexOf("cimg_his()") === -1) {
+            history_details.push("cimg_his()");
+        }
         if (activScreen_history.indexOf(".colorink-section-landing") === -1) {
             activScreen_history.push(".colorink-section-landing");
         }
@@ -994,41 +999,69 @@ $(document).ready(function () {
     });
 
     $(".mimg").click(function () {
-        history_details.push("mimg_his()");
-        if (activScreen_history.indexOf(".colorink-section") === -1) {
-            activScreen_history.push(".colorink-section");
+        if (history_details.indexOf("mimg_his()") === -1) {
+            history_details.push("mimg_his()");
+        }
+        if (activScreen_history.indexOf(".colorink-meg-section-landing") === -1) {
+            activScreen_history.push(".colorink-meg-section-landing");
+        }
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            $("#count-checked-checkboxess").val("");
         }
         $(".colorink-section").removeClass('anim-top-bottom').hide(100);
         $(".colorink-meg-section-landing").show();
-        $(".colorink-meg-section-landing-content, #colorink-meg-section-landing-content").hide();
+        $(".colorink-meg-section-landing-content, #colorink-meg-section-landing").hide();
         setTimeout(function () {
             $(".colorink-meg-section-landing-content").addClass('opacity-view').show();
         }, 300);
         setTimeout(function () {
-            $("#colorink-meg-section-landing").addClass('anim-txt').show();
+            $("#colorink-meg-section-landing").show().addClass('anim-txt');
         }, 300);
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
     });
 
     $(".colorinktickimg").click(function () {
-        history_details.push("colorinktickimghis()");
-        if (activScreen_history.indexOf(".colorink-section-landing") === -1) {
-            activScreen_history.push(".colorink-section-landing");
+        if (history_details.indexOf("colorinktickimghis()") === -1) {
+            history_details.push("colorinktickimghis()");
+        }
+        if (activScreen_history.indexOf(".colorink-c-section-second-landing") === -1) {
+            activScreen_history.push(".colorink-c-section-second-landing");
         }
         if ($('#count-checked-checkboxess').is(':empty')) {
             $("#count-checked-checkboxess").val("");
         }
         setTimeout(function () {
-            $(".colorink-section-landing-content").removeClass('opacity-view').hide(300);
+            $(".colorink-section-landing").removeClass('opacity-view').hide(300);
         }, 300);
         setTimeout(function () {
-            $(".colorink-section-landing").hide(100);
-            $(".colorink-section-second-landing").show(100);
+            // $(".colorink-section-landing").hide(100);
+            $(".colorink-c-section-second-landing").show(100);
         }, 300);
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
     });
+    $(".colorinktickmegimg").click(function () {
+        if (history_details.indexOf("colorinktickimgmeghis()") === -1) {
+            history_details.push("colorinktickimgmeghis()");
+        }
+        if (activScreen_history.indexOf(".colorink-m-section-second-landing") === -1) {
+            activScreen_history.push(".colorink-m-section-second-landing");
+        }
+        if ($('#count-checked-checkboxess').is(':empty')) {
+            $("#count-checked-checkboxess").val("");
+        }
+        setTimeout(function () {
+            $(".colorink-meg-section-landing").removeClass('opacity-view').hide(300);
+        }, 300);
+        setTimeout(function () {
+            // $(".colorink-section-landing").hide(100);
+            $(".colorink-m-section-second-landing").show(100);
+        }, 300);
+        $hiLightCopy.hide(00);
+        $(".Top-shade ,.Bottom-shade").hide();
+    });
+    
     $(".send-to-cont").click(function () {
         history_details.push("showFaxsendtocont()");
         activScreen_history.push(".Send-to-contact");

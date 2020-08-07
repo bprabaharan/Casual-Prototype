@@ -110,6 +110,21 @@ function cimg_his() {
     history_details.pop();
 }
 
+function mimg_his() {
+    $(".colorink-section").removeClass('anim-top-bottom').show(100);
+    $(".colorink-meg-section-landing").hide();
+    $(".colorink-section-landing-content, #colorink-section-landing").show();
+    setTimeout(function () {
+        $(".colorink-meg-section-landing").addClass('opacity-view').hide();
+    }, 300);
+    setTimeout(function () {
+        $("#colorink-meg-section-landing").addClass('anim-txt').hide();
+    }, 300);
+    $hiLightCopy.hide(00);
+    $(".Top-shade ,.Bottom-shade").hide();
+    history_details.pop();
+}
+
 function tickimg_his() {
     $(".colorink-section").addClass('anim-top-bottom').removeClass('anim-bot-top').hide();
 
@@ -121,7 +136,16 @@ function tickimg_his() {
 function colorinktickimghis() {
     $(".colorink-section-landing-content").addClass('opacity-view').show(100);
     $(".colorink-section-landing").show(100);
-    $(".colorink-section-second-landing").hide();
+    $(".colorink-c-section-second-landing").hide();
+    $hiLightCopy.hide(00);
+    $(".Top-shade ,.Bottom-shade").hide();
+    history_details.pop();
+}
+
+function colorinktickimgmeghis() {
+    $(".colorink-meg-section-landing-content").addClass('opacity-view').show(100);
+    $(".colorink-meg-section-landing").show(100);
+    $(".colorink-m-section-second-landing").hide();
     $hiLightCopy.hide(00);
     $(".Top-shade ,.Bottom-shade").hide();
     history_details.pop();
@@ -138,7 +162,7 @@ function settings_page() {
 
 function help_video(){
     $(".help-video-container").hide(100);
-
+    fromHistory = 1;
     $(".Menu-Section").addClass('transitionLR-reload').removeClass('anim-re-left-right').show(100);
     history_details.pop();
 }
