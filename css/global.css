@@ -3283,5 +3283,8 @@ input:checked+.slider-2-sided:before {
     width: 500px;}
 #colorink-section-landing span, .colorink-section-second-landing span, .colorink-meg-section-landing span, .colorink-c-section-second-landing span, .colorink-m-section-second-landing span{color: #fff; font-size: 36px;}
 .colorink-section-landing-content img, .colorink-meg-section-landing-content img, .colorink-c-section-landing-content img, .colorink-m-section-landing-content img{width: 90px;
-    margin: 60px 20px;}
-.tickimg, .colorinktickimg {cursor: pointer;}
+    margin: 75px 20px;}
+.tickimg, .colorinktickimg, .colorinktickmegimg {cursor: pointer;}
+.cimg, .mimg {
+    cursor: pointer;
+}
