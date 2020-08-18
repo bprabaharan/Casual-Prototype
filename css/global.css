@@ -3280,10 +3280,12 @@ input:checked+.slider-2-sided:before {
     margin-left: 20px;
     position: relative;
     float: left;}
-#colorink-section-landing,  #colorink-meg-section-landing, #colorink-section-second-landing {overflow-y: scroll;
+#colorink-section-landing,  #colorink-meg-section-landing, #colorink-section-second-landing {overflow-y: auto;
     width: 500px;}
 #colorink-section-landing span, .colorink-section-second-landing span, .colorink-meg-section-landing span, .colorink-c-section-second-landing span, .colorink-m-section-second-landing span{color: #fff; font-size: 36px;}
-.colorink-section-landing-content img, .colorink-meg-section-landing-content img, .colorink-c-section-landing-content img, .colorink-m-section-landing-content img{width: 90px;
+.colorink-section-landing-content img, .colorink-meg-section-landing-content img {width: 120px;
+    margin: 25px 20px;}
+ .colorink-c-section-landing-content img, .colorink-m-section-landing-content img{width: 90px;
     margin: 40px 20px;}
 .tickimg, .colorinktickimg {cursor: pointer;}
 #colorink-meg-section-landing{margin-top: 35px;}
@@ -3293,3 +3295,9 @@ input:checked+.slider-2-sided:before {
 .cimg,.mimg,.colorinktickmegimg{cursor: pointer;}
 #colorink-meg-section-landing span{margin-left: 10px;}
 #colorink-section-landing span{margin-left: 10px;}
+.cimgadjust {
+    width: 35px !important;
+    margin-top: 11px;
+    margin-left: 26px !important;
+    margin-right: 8px;
+}
