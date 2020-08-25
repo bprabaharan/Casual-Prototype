@@ -13,7 +13,7 @@ helpNotification({viewDetailsHelp : [{
                 "aclass": "help_process_content",
                 "content": "With Wi-Fi Direct, you can print wirelessly from any wireless-capable device (such as a computer, smartphone, or tablet) by connecting directly to the printer. No connection to an existing wireless network required!",
                 "content1": "Wi-Fi Direct Help<br>",
-                "url1": "./images/Icons_SVG/u17.png",
+                "url1": "./images/Icons_SVG/wifidirect_m.svg",
                 "url": "./images/Icons_SVG/done_m.svg",
                 "id": "Help_nottificationmethod_screen"
             }],

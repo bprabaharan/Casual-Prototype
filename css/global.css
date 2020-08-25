@@ -3203,7 +3203,7 @@ input:checked+.slider-2-sided:before {
     height: 60px;
 }
 #conn_method{padding-right: 20px;}
-.helpsection{height: 30px; height: 30px;}
+.helpsection{ height: 46px;}
 .helpsec_content{font-size: 42px; font-weight: bold;margin-left: 10px;line-height: 1.2;}
 .help_process_content{
     float: left;
@@ -3279,21 +3279,33 @@ input:checked+.slider-2-sided:before {
 #colorink-section-landing img, .colorink-m-section-second-landing img, .colorink-c-section-second-landing img, .colorink-section-second-landing img, .colorink-meg-section-landing img{width: 49px;
     margin-left: 20px;
     position: relative;
-    margin-top: 7px;
+    margin-top: 12px;
     float: left;}
+    .colorink-meg-section-landing img {
+        margin-top: 9px;
+    }
+    #colorink-section-landing img {
+        margin-top: 7px;
+    }
 #colorink-section-landing,  #colorink-meg-section-landing, #colorink-section-second-landing {overflow-y: auto;
     width: 500px;}
 #colorink-section-landing span, .colorink-section-second-landing span, .colorink-meg-section-landing span, .colorink-c-section-second-landing span, .colorink-m-section-second-landing span{color: #fff; font-size: 36px;}
-.colorink-section-landing-content img, .colorink-meg-section-landing-content img {width: 120px;
-    margin: 25px 20px;}
- .colorink-c-section-landing-content img, .colorink-m-section-landing-content img{width: 90px;
+.colorink-section-landing-content img {width: 120px;
+    margin: 32px 20px;}
+    .colorink-meg-section-landing-content img {width: 120px;
+        margin: 24px 20px;}
+.colorink-m-section-landing-content img{width: 90px;
     margin: 40px 20px;}
+    .colorink-c-section-landing-content img{width: 90px;
+        margin: 37px 20px;}
 .tickimg, .colorinktickimg {cursor: pointer;}
-#colorink-meg-section-landing{margin-top: 35px;}
+#colorink-meg-section-landing{margin-top: 30px;}
 .colorink-meg-section-landing-content{margin-top: 15px;}
-.colorink-m-section-second-landing, .colorink-section-landing, #colorink-c-section-second-landing{margin-top: 35px;}
+.colorink-m-section-second-landing  {margin-top: 27px;}
+.colorink-section-landing, #colorink-c-section-second-landing{margin-top: 24px;}
 .colorink-c-section-landing-content,.colorink-meg-section-landing-content{margin-top: 35px;}
 .cimg,.mimg,.colorinktickmegimg{cursor: pointer;}
+.mimg { height: 116px; margin-top: 2px;}
 #colorink-meg-section-landing span{margin-left: 10px;}
 #colorink-section-landing span{margin-left: 10px;}
 .cimgadjust {
