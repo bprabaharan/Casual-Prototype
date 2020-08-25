@@ -3295,14 +3295,15 @@ input:checked+.slider-2-sided:before {
     .colorink-meg-section-landing-content img {width: 120px;
         margin: 24px 20px;}
 .colorink-m-section-landing-content img{width: 90px;
-    margin: 40px 20px;}
+    margin: 48px 20px;}
     .colorink-c-section-landing-content img{width: 90px;
-        margin: 37px 20px;}
+        margin: 38px 20px;}
 .tickimg, .colorinktickimg {cursor: pointer;}
 #colorink-meg-section-landing{margin-top: 30px;}
 .colorink-meg-section-landing-content{margin-top: 15px;}
 .colorink-m-section-second-landing  {margin-top: 27px;}
-.colorink-section-landing, #colorink-c-section-second-landing{margin-top: 24px;}
+ #colorink-c-section-second-landing{margin-top: 24px;}
+ .colorink-section-landing { margin-top: 28px;}
 .colorink-c-section-landing-content,.colorink-meg-section-landing-content{margin-top: 35px;}
 .cimg,.mimg,.colorinktickmegimg{cursor: pointer;}
 .mimg { height: 116px; margin-top: 2px;}
