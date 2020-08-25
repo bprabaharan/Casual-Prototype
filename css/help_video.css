@@ -103,7 +103,7 @@
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 50px;
-    top: 46%;
+    top: 42%;
 }
 
 .help-video-arrow:hover {
@@ -146,7 +146,7 @@
 
 .slideshow-toggle {
     position: absolute;
-    bottom: 30% !important;
+    bottom: 31% !important;
     right: 37% !important;
     transform: translate(-50%);
     list-style: none;

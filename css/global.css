@@ -813,7 +813,7 @@ html {
 }
 #colorink-section{
     display: flex;
-    margin-top: -5px;
+    margin-top: -7px;
 }
 
 
@@ -3279,6 +3279,7 @@ input:checked+.slider-2-sided:before {
 #colorink-section-landing img, .colorink-m-section-second-landing img, .colorink-c-section-second-landing img, .colorink-section-second-landing img, .colorink-meg-section-landing img{width: 49px;
     margin-left: 20px;
     position: relative;
+    margin-top: 7px;
     float: left;}
 #colorink-section-landing,  #colorink-meg-section-landing, #colorink-section-second-landing {overflow-y: auto;
     width: 500px;}
@@ -3300,4 +3301,11 @@ input:checked+.slider-2-sided:before {
     margin-top: 11px;
     margin-left: 26px !important;
     margin-right: 8px;
+}
+.ink-level-notifi{
+    font-size: 42px !important;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 13px;
+    line-height: 1.5;
 }

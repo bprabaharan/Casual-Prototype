@@ -1088,19 +1088,17 @@ $(document).ready(function () {
     });
 
     function onScreenEntryOptions() {
-        $(".option-content").animate({ marginLeft: "0px" }, 600);
+       $(".option-content").animate({ marginLeft: "0px" }, 600);
 
         setTimeout(function () {
 
             $(".option-content").css({ opacity: "1", visibility: "visible" });
+            $(".option-function").show(00);
+            // $(".option-function").css({ opacity: "1", visibility: "visible" }, 200);
+            $(".option-landing .option-function").addClass('opacity-view');
 
-        }, 600);
-        setTimeout(function () {
-
-            $(".option-function").show(300);
-            $(".option-function").css({ opacity: "1", visibility: "visible" }, 400);
-
-        }, 600);
+        }, 500);
+        
     }
     /*Option landing page list click button event Starts here*/
     $(".option-landing ul .option-scan").click(function (event) {
@@ -1128,6 +1126,7 @@ $(document).ready(function () {
         }, 900);
         setTimeout(function () {
             $optionLandingScanmode.show();
+            $(".option-function").show();
             $(".option-function").css({ opacity: "1", visibility: "visible" });
             historyActiveScreen("");
         }, 900);
@@ -1180,6 +1179,7 @@ $(document).ready(function () {
             $(".option-content").animate({ "margin-left": "1px" }, 600);
             $(".option-landing-sides .option-content").addClass('anim-appear');
             setTimeout(function () {
+                $(".option-function").show();
                 $(".option-landing-sides .option-function").css({
                     visibility: "visible"
                 });
@@ -1220,6 +1220,7 @@ $(document).ready(function () {
         }, 900);
         setTimeout(function () {
             $optionLandingColor.show();
+            $(".option-function").show();
             $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function () {
@@ -1263,6 +1264,7 @@ $(document).ready(function () {
         }, 900);
         setTimeout(function () {
             $optionLandingResize.show();
+            $(".option-function").show();
             $(".option-function").css({ opacity: "1", visibility: "visible" });
         }, 900);
         setTimeout(function () {
@@ -1910,7 +1912,6 @@ $(document).ready(function () {
 
         $(".done-but").hide();
         $example1.addClass("transitionLR");
-
         setTimeout(hideexample1, 600);
         $hiLightCopy.animate({ width: "658px" }, 600);
         setTimeout(hidebut, 700);
@@ -1918,11 +1919,10 @@ $(document).ready(function () {
 
     function hideexample1() {
         $example1.hide();
+        $(".option-landing .option-function").hide();
         $(".Print-content-container .option-landing").show();
         $(".option-landing").removeClass('transitionLR-reload');
         $(".option-landing .option-content").removeClass('transitionLR-reload');
-        $(".option-landing .option-content").addClass('anim-txt').show(300);
-        $(".option-landing .option-function").addClass('opacity-view').show(300);
         historyActiveScreen("");
         onScreenEntryOptions();
         $scrollspy.css({ width: "696px" });
