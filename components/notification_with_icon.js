@@ -25,8 +25,7 @@
             }]
         };
         $.each(data.items, function (i, f) {
-            // $("#icons ul").append("<li class=" + f.class + " id=" + f.id + "><img src='" + f.url + "' / > </li>");
-            $('#' + f.id + '').append("<a class=" + f.aclass + "><img src=" + f.url + "></a>");
+           $('#' + f.id + '').append("<a class=" + f.aclass + "><img src=" + f.url + "></a>");
         });
     };
     $.fn.notificationwithouticons = function (options) {

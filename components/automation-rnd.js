@@ -76,7 +76,6 @@ $(".carousel-item").click(function (event) {
     createPageDom(pageObj);
     setTimeout(function () {
         console.log($(this).hasClass("active"));
-        // if ($(this).hasClass("active")) {
             if (activScreen_history.indexOf("." + pageObj[0].sectionClass + "-page") === -1) {
                         activScreen_history.push("." + pageObj[0].sectionClass + "-page");
                     }
