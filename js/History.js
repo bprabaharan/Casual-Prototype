@@ -133,6 +133,7 @@ function colorinktickimghis() {
     $(".colorink-section-landing-content").addClass('opacity-view').show(100);
     $(".colorink-section-landing").show(100);
     $(".colorink-c-section-second-landing").hide();
+    $(".colorink-section-landing-content").css({ visibility: "visible" });
     $hiLightCopy.hide(00);
     $(".Top-shade ,.Bottom-shade").hide();
     history_details.pop();
@@ -142,6 +143,7 @@ function colorinktickimgmeghis() {
     $(".colorink-meg-section-landing-content").addClass('opacity-view').show(100);
     $(".colorink-meg-section-landing").show(100);
     $(".colorink-m-section-second-landing").hide();
+    $(".colorink-meg-section-landing-content").css({ visibility: "visible" });
     $hiLightCopy.hide(00);
     $(".Top-shade ,.Bottom-shade").hide();
     history_details.pop();

@@ -910,7 +910,7 @@ $(document).ready(function () {
             $("#count-checked-checkboxess").val("");
         }
         $(".colorink-section").addClass('anim-top-bottom').removeClass('anim-bot-top').show();
-
+        $(".colorink-section-landing-content, .colorink-meg-section-landing-content").css({ visibility: "visible" });
         $(".colorink-m-section-second-landing, .colorink-c-section-second-landing").hide();
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
@@ -972,10 +972,16 @@ $(document).ready(function () {
             $("#count-checked-checkboxess").val("");
         }
         setTimeout(function () {
-            $(".colorink-section-landing").removeClass('opacity-view').hide(300);
-        }, 300);
+            $(".colorink-section-landing").removeClass('opacity-view').hide(100).css({ visibility: "hidden" });
+            $("#colorink-c-section-second-landing").css({ visibility: "hidden" });
+            $(".colorink-section-landing-content").css({ visibility: "hidden" });
+        }, 100);
         setTimeout(function () {
-            $(".colorink-c-section-second-landing").show(100);
+            $(".colorink-c-section-second-landing").css({ visibility: "hidden" });
+            setTimeout(function () {
+            $(".colorink-c-section-second-landing").show().css({ visibility: "visible" });
+            $("#colorink-c-section-second-landing").css({ visibility: "visible" }).addClass('anim-txt');
+            }, 100);
         }, 300);
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
@@ -991,10 +997,16 @@ $(document).ready(function () {
             $("#count-checked-checkboxess").val("");
         }
         setTimeout(function () {
-            $(".colorink-meg-section-landing").removeClass('opacity-view').hide(300);
-        }, 300);
+            $(".colorink-meg-section-landing").removeClass('opacity-view').hide(100).css({ visibility: "hidden" });
+            $("#colorink-m-section-second-landing").css({ visibility: "hidden" });
+            $(".colorink-meg-section-landing-content").css({ visibility: "hidden" });
+        }, 100);
         setTimeout(function () {
-            $(".colorink-m-section-second-landing").show(100);
+            $(".colorink-m-section-second-landing").css({ visibility: "hidden" });
+            setTimeout(function () {
+                $(".colorink-m-section-second-landing").show().css({ visibility: "visible" });
+                $("#colorink-m-section-second-landing").css({ visibility: "visible" }).addClass('anim-txt');
+            }, 100);
         }, 300);
         $hiLightCopy.hide(00);
         $(".Top-shade ,.Bottom-shade").hide();
