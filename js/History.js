@@ -134,6 +134,7 @@ function colorinktickimghis() {
     $(".colorink-section-landing").show(100);
     $(".colorink-c-section-second-landing").hide();
     $(".colorink-section-landing-content").css({ visibility: "visible" });
+    $("#colorink-section-landing").show();
     $hiLightCopy.hide(00);
     $(".Top-shade ,.Bottom-shade").hide();
     history_details.pop();
@@ -144,6 +145,7 @@ function colorinktickimgmeghis() {
     $(".colorink-meg-section-landing").show(100);
     $(".colorink-m-section-second-landing").hide();
     $(".colorink-meg-section-landing-content").css({ visibility: "visible" });
+    $("#colorink-meg-section-landing").show();
     $hiLightCopy.hide(00);
     $(".Top-shade ,.Bottom-shade").hide();
     history_details.pop();

@@ -975,6 +975,7 @@ $(document).ready(function () {
             $(".colorink-section-landing").removeClass('opacity-view').hide(100).css({ visibility: "hidden" });
             $("#colorink-c-section-second-landing").css({ visibility: "hidden" });
             $(".colorink-section-landing-content").css({ visibility: "hidden" });
+            $("#colorink-section-landing").hide();
         }, 100);
         setTimeout(function () {
             $(".colorink-c-section-second-landing").css({ visibility: "hidden" });
@@ -1000,6 +1001,7 @@ $(document).ready(function () {
             $(".colorink-meg-section-landing").removeClass('opacity-view').hide(100).css({ visibility: "hidden" });
             $("#colorink-m-section-second-landing").css({ visibility: "hidden" });
             $(".colorink-meg-section-landing-content").css({ visibility: "hidden" });
+            $("#colorink-meg-section-landing").hide();
         }, 100);
         setTimeout(function () {
             $(".colorink-m-section-second-landing").css({ visibility: "hidden" });
